@@ -1724,107 +1724,80 @@
       <img class="hero-claude-logo" src="assets/Claude_Logo_2023-s1280.png" alt="Claude AI" style="margin-top:24px;height:85px;">
       <div class="section-header-divider" style="margin-top:24px;"></div>
     </section>
-
-    <!-- Slide 13: Old Way vs New Way -->
-    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
-      <p class="section-label">Paradigm Shift</p>
-      <h2 class="section-title" style="font-size:44px;margin-bottom:40px;">The Old Way vs. <span class="accent-text">The New Way</span></h2>
-
-      <div class="compare-table-wrapper">
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th style="width:220px;"></th>
-              <th style="width:340px;">
-                <div class="compare-col-header compare-col-header--old">
-                  <span class="compare-col-icon">💬</span>
-                  <span>The Old Way</span>
-                </div>
-                <div class="compare-col-sub">AI Chat &amp; Copy/Pasting</div>
-              </th>
-              <th style="width:340px;">
-                <div class="compare-col-header compare-col-header--new">
-                  <span class="compare-col-icon">⚡</span>
-                  <span>The New Way</span>
-                </div>
-                <div class="compare-col-sub compare-col-sub--new">Claude Cowork</div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>People Cost</td>
-              <td class="compare-cell--old">Still need large teams to execute on AI outputs</td>
-              <td class="compare-cell--new">Lean team — Claude handles the heavy lifting</td>
-            </tr>
-            <tr>
-              <td>Time Cost</td>
-              <td class="compare-cell--old">Hours spent prompting, copying, formatting, fixing</td>
-              <td class="compare-cell--new">Minutes — Claude works directly in your projects</td>
-            </tr>
-            <tr>
-              <td>Productivity</td>
-              <td class="compare-cell--old">Marginal gains — AI assists but you still do 90% of the work</td>
-              <td class="compare-cell--new">10X output — Claude automates 90% of the work</td>
-            </tr>
-            <tr>
-              <td>Speed of Execution</td>
-              <td class="compare-cell--old">Slow — manual handoffs between AI and real work</td>
-              <td class="compare-cell--new">Instant — from idea to execution in one flow</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
     <!-- Slide 14: Paradigm Shift -->
     <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
       <p class="section-label">Paradigm Shift</p>
       <h2 class="section-title" style="font-size:38px;margin-bottom:12px;">Claude Doesn't Just Generate Content <span class="accent-text">Inside</span> The Chat UI</h2>
       <p class="section-desc" style="font-size:22px;margin-bottom:24px;max-width:1100px;">It also completes time-consuming tasks <strong>outside</strong> of the chat UI — tasks that normally require a lot of clicking and context-switching.</p>
-      <div class="paradigm-grid">
-        <div class="paradigm-card">
-          <div class="paradigm-card-before">
-            <div class="paradigm-label paradigm-label--old">Old Way</div>
-            <p>Write in ChatGPT → Copy → Open Instagram → Paste → Format → Schedule → Repeat</p>
-          </div>
-          <div class="paradigm-arrow">→</div>
-          <div class="paradigm-card-after">
-            <img class="paradigm-claude-logo" src="assets/Claude_Logo_2023-s1280.png" alt="Claude">
-            <div class="paradigm-icon">📱</div>
-            <h3>Draft, Schedule, Or Publish Instagram Content</h3>
-            <p>Claude creates and publishes directly — no copy-pasting, no switching apps.</p>
-          </div>
-        </div>
 
-        <div class="paradigm-card">
-          <div class="paradigm-card-before">
-            <div class="paradigm-label paradigm-label--old">Old Way</div>
-            <p>Write in ChatGPT → Copy → Open Klaviyo → Build email → Paste → Format → Send</p>
-          </div>
-          <div class="paradigm-arrow">→</div>
-          <div class="paradigm-card-after">
-            <img class="paradigm-claude-logo" src="assets/Claude_Logo_2023-s1280.png" alt="Claude">
-            <div class="paradigm-icon">✉️</div>
-            <h3>Draft, Schedule, Or Send Emails In Your Platform</h3>
-            <p>Claude drafts and sends emails inside your email marketing tool — end to end.</p>
-          </div>
-        </div>
+      <!-- Old Way Diagram -->
+      <p style="font-size:15px;font-weight:700;letter-spacing:1.5px;color:rgba(0,0,0,0.35);text-transform:uppercase;margin-bottom:10px;">The Old Way</p>
+      <svg class="flowchart-svg" viewBox="0 0 1200 190" style="margin-bottom:32px;">
+        <defs>
+          <filter id="glowOld"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <marker id="arrOld" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker>
+        </defs>
+        <!-- Step 1: INPUT (1/12 of row) — You (purple) -->
+        <text x="52" y="38" text-anchor="middle" font-size="22">👤</text>
+        <rect x="10" y="50" width="85" height="100" rx="12" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="52" y="85" text-anchor="middle" fill="#4F30FE" font-size="11" font-weight="700" letter-spacing="1.2">INPUT</text>
+        <text x="52" y="105" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="600">You</text>
+        <!-- Arrow 1→2 -->
+        <line x1="95" y1="100" x2="120" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arrOld)" stroke-dasharray="6 4" class="animated-dash"/>
+        <!-- Step 2: GENERATE (1/12 of row) — AI (green) -->
+        <image x="155" y="22" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="125" y="50" width="85" height="100" rx="12" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="167" y="85" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="700" letter-spacing="1.2">GENERATE</text>
+        <text x="167" y="105" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="600">AI</text>
+        <!-- Arrow 2→3 -->
+        <line x1="210" y1="100" x2="235" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arrOld)" stroke-dasharray="6 4" class="animated-dash"/>
+        <!-- Steps 3-N: ACTIONS (10/12 of row) — You (purple) -->
+        <text x="715" y="38" text-anchor="middle" font-size="22">👤</text>
+        <rect x="240" y="50" width="950" height="100" rx="12" fill="rgba(79,48,254,0.03)" stroke="rgba(79,48,254,0.35)" stroke-width="2"/>
+        <text x="715" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">ACTIONS (STEPS 3 – N)</text>
+        <text x="715" y="102" text-anchor="middle" fill="#4F30FE" font-size="15" font-weight="600">You — Copy, Paste, Format, Fix, Upload, Schedule, Publish, Repeat...</text>
+        <text x="715" y="122" text-anchor="middle" fill="rgba(79,48,254,0.4)" font-size="13">This is where all the time goes</text>
+        <!-- Repeating dots pattern to emphasize length -->
+        <circle cx="260" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="280" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="300" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="320" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="340" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="360" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="380" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="400" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="420" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="440" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="460" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="480" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="500" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="520" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="540" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="560" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="580" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="600" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="620" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="640" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="660" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="680" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="700" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="720" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="740" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="760" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="780" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="800" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="820" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="840" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="860" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="880" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="900" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="920" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="940" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="960" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="980" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1000" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1020" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1040" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1060" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1080" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1100" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1120" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1140" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1160" cy="140" r="2" fill="rgba(79,48,254,0.15)"/>
+      </svg>
 
-        <div class="paradigm-card">
-          <div class="paradigm-card-before">
-            <div class="paradigm-label paradigm-label--old">Old Way</div>
-            <p>Write copy → Open builder → Create page → Paste → Design → Tweak → Publish</p>
-          </div>
-          <div class="paradigm-arrow">→</div>
-          <div class="paradigm-card-after">
-            <img class="paradigm-claude-logo" src="assets/Claude_Logo_2023-s1280.png" alt="Claude">
-            <div class="paradigm-icon">🌐</div>
-            <h3>Create And Publish Websites, Landing Pages, Sales Pages</h3>
-            <p>Claude builds and ships full pages — from concept to live in one conversation.</p>
-          </div>
-        </div>
-      </div>
+      <!-- The New Way Diagram -->
+      <p style="font-size:15px;font-weight:700;letter-spacing:1.5px;color:rgba(0,0,0,0.35);text-transform:uppercase;margin-bottom:10px;">The New Way</p>
+      <svg class="flowchart-svg" viewBox="0 0 1200 190">
+        <defs>
+          <marker id="arrNew" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker>
+        </defs>
+        <!-- Step 1: INPUT (1/12) — You (purple) -->
+        <text x="52" y="38" text-anchor="middle" font-size="22">👤</text>
+        <rect x="10" y="50" width="85" height="100" rx="12" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="52" y="85" text-anchor="middle" fill="#4F30FE" font-size="11" font-weight="700" letter-spacing="1.2">INPUT</text>
+        <text x="52" y="105" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="600">You</text>
+        <!-- Arrow 1→2 -->
+        <line x1="95" y1="100" x2="120" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arrNew)" stroke-dasharray="6 4" class="animated-dash"/>
+        <!-- Step 2: GENERATE (1/12) — AI (green) -->
+        <image x="155" y="22" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="125" y="50" width="85" height="100" rx="12" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="167" y="85" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="700" letter-spacing="1.2">GENERATE</text>
+        <text x="167" y="105" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="600">AI</text>
+        <!-- Arrow 2→3 -->
+        <line x1="210" y1="100" x2="235" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arrNew)" stroke-dasharray="6 4" class="animated-dash"/>
+        <!-- Step 3: REVIEW (1/12) — You (purple) -->
+        <text x="282" y="38" text-anchor="middle" font-size="22">👤</text>
+        <rect x="240" y="50" width="85" height="100" rx="12" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="282" y="85" text-anchor="middle" fill="#4F30FE" font-size="11" font-weight="700" letter-spacing="1.2">REVIEW</text>
+        <text x="282" y="105" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="600">You</text>
+        <!-- Arrow 3→4 -->
+        <line x1="325" y1="100" x2="350" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arrNew)" stroke-dasharray="6 4" class="animated-dash"/>
+        <!-- Steps 4-N: ACTIONS (10/12) — AI (green) -->
+        <image x="760" y="22" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="355" y="50" width="835" height="100" rx="12" fill="rgba(34,197,94,0.04)" stroke="rgba(34,197,94,0.35)" stroke-width="2"/>
+        <text x="772" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">ACTIONS (STEPS 4 – N)</text>
+        <text x="772" y="102" text-anchor="middle" fill="#22c55e" font-size="15" font-weight="600">AI — Execute, Format, Upload, Schedule, Publish, Repeat...</text>
+        <text x="772" y="122" text-anchor="middle" fill="rgba(34,197,94,0.4)" font-size="13">Claude handles the heavy lifting</text>
+        <!-- Repeating dots pattern -->
+        <circle cx="380" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="400" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="420" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="440" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="460" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="480" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="500" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="520" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="540" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="560" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="580" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="600" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="620" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="640" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="660" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="680" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="700" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="720" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="740" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="760" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="780" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="800" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="820" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="840" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="860" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="880" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="900" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="920" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="940" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="960" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="980" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1000" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1020" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1040" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1060" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1080" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1100" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1120" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1140" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1160" cy="140" r="2" fill="rgba(34,197,94,0.2)"/>
+      </svg>
+
     </section>
 
     <!-- Slide 14b: What/How To Start — Exponential Returns -->
@@ -1905,30 +1878,47 @@
     <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
       <p class="section-label">Secret #1 &middot; Skill</p>
       <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Instagram Carousels</h2>
-      <svg class="flowchart-svg" viewBox="0 0 1000 200">
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
         <defs>
-          <filter id="glow1"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
           <marker id="arr1" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker>
+          <marker id="arr1g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#22c55e"><polygon points="0 0,10 3.5,0 7"/></marker>
+          <marker id="arr1gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker>
+          <marker id="arr1r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker>
         </defs>
-        <!-- Input -->
-        <rect x="20" y="40" width="240" height="120" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
-        <text x="140" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">INPUT</text>
-        <text x="140" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Topic / Idea / Brief</text>
-        <text x="140" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Brand voice, audience, goals</text>
-        <!-- Arrow -->
-        <line x1="260" y1="100" x2="370" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <!-- Actions -->
-        <rect x="370" y="40" width="260" height="120" rx="14" fill="rgba(218,179,255,0.08)" stroke="#DAB3FF" stroke-width="2"/>
-        <text x="500" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">ACTIONS</text>
-        <text x="500" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Claude writes carousel copy</text>
-        <text x="500" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Headlines, slides, CTA, hashtags</text>
-        <!-- Arrow -->
-        <line x1="630" y1="100" x2="740" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <!-- Output -->
-        <rect x="740" y="40" width="240" height="120" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
-        <text x="860" y="75" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="700" letter-spacing="1.5">OUTPUT</text>
-        <text x="860" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Ready-to-post carousel</text>
-        <text x="860" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Drafted or published to IG</text>
+        <!-- Step 1: INPUT — You or AI (purple) -->
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <!-- Arrow 1→2 -->
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
+        <!-- Step 2: GENERATE — AI (green) -->
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <!-- Arrow 2→3 -->
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
+        <!-- Step 3: REVIEW — You (purple) -->
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <!-- Arrow 3→4 (Approve) -->
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr1gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <!-- Step 4: DEPLOY — AI (green) -->
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <!-- Feedback loop: Review → Edit → Generate (curved arrow below) -->
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr1r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
       </svg>
     </section>
 
@@ -1936,22 +1926,39 @@
     <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
       <p class="section-label">Secret #1 &middot; Skill</p>
       <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Instagram Photo Posts</h2>
-      <svg class="flowchart-svg" viewBox="0 0 1000 200">
-        <use href="#glow1"/><use href="#arr1"/>
-        <rect x="20" y="40" width="240" height="120" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
-        <text x="140" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">INPUT</text>
-        <text x="140" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Photo + Context</text>
-        <text x="140" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Image, message angle, CTA</text>
-        <line x1="260" y1="100" x2="370" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <rect x="370" y="40" width="260" height="120" rx="14" fill="rgba(218,179,255,0.08)" stroke="#DAB3FF" stroke-width="2"/>
-        <text x="500" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">ACTIONS</text>
-        <text x="500" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Claude writes caption + hashtags</text>
-        <text x="500" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Hook, body, CTA, tags</text>
-        <line x1="630" y1="100" x2="740" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <rect x="740" y="40" width="240" height="120" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
-        <text x="860" y="75" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="700" letter-spacing="1.5">OUTPUT</text>
-        <text x="860" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Ready-to-post photo post</text>
-        <text x="860" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Drafted or published to IG</text>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs>
+          <marker id="arr2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker>
+          <marker id="arr2g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#22c55e"><polygon points="0 0,10 3.5,0 7"/></marker>
+          <marker id="arr2gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker>
+          <marker id="arr2r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker>
+        </defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr2)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr2)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr2gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr2r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
       </svg>
     </section>
 
@@ -1959,21 +1966,34 @@
     <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
       <p class="section-label">Secret #1 &middot; Skill</p>
       <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">LinkedIn Post</h2>
-      <svg class="flowchart-svg" viewBox="0 0 1000 200">
-        <rect x="20" y="40" width="240" height="120" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
-        <text x="140" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">INPUT</text>
-        <text x="140" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Topic / Key Insight</text>
-        <text x="140" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Audience, tone, objective</text>
-        <line x1="260" y1="100" x2="370" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <rect x="370" y="40" width="260" height="120" rx="14" fill="rgba(218,179,255,0.08)" stroke="#DAB3FF" stroke-width="2"/>
-        <text x="500" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">ACTIONS</text>
-        <text x="500" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Claude writes LinkedIn post</text>
-        <text x="500" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Hook, story, value, CTA</text>
-        <line x1="630" y1="100" x2="740" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <rect x="740" y="40" width="240" height="120" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
-        <text x="860" y="75" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="700" letter-spacing="1.5">OUTPUT</text>
-        <text x="860" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Ready-to-publish post</text>
-        <text x="860" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Formatted for LinkedIn</text>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr3" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr3g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#22c55e"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr3gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr3r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr3)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr3)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr3gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr3r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
       </svg>
     </section>
 
@@ -1981,21 +2001,34 @@
     <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
       <p class="section-label">Secret #1 &middot; Skill</p>
       <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">YouTube Slides</h2>
-      <svg class="flowchart-svg" viewBox="0 0 1000 200">
-        <rect x="20" y="40" width="240" height="120" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
-        <text x="140" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">INPUT</text>
-        <text x="140" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Video Topic / Outline</text>
-        <text x="140" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Script, key points, structure</text>
-        <line x1="260" y1="100" x2="370" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <rect x="370" y="40" width="260" height="120" rx="14" fill="rgba(218,179,255,0.08)" stroke="#DAB3FF" stroke-width="2"/>
-        <text x="500" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">ACTIONS</text>
-        <text x="500" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Claude designs slide pages</text>
-        <text x="500" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Visual components, diagrams, flow</text>
-        <line x1="630" y1="100" x2="740" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <rect x="740" y="40" width="240" height="120" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
-        <text x="860" y="75" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="700" letter-spacing="1.5">OUTPUT</text>
-        <text x="860" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Full HTML slide deck</text>
-        <text x="860" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Ready to screen-record</text>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr4" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr4g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#22c55e"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr4gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr4r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr4)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr4)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr4gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr4r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
       </svg>
     </section>
 
@@ -2003,21 +2036,34 @@
     <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
       <p class="section-label">Secret #1 &middot; Skill</p>
       <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Instagram Reels</h2>
-      <svg class="flowchart-svg" viewBox="0 0 1000 200">
-        <rect x="20" y="40" width="240" height="120" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
-        <text x="140" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">INPUT</text>
-        <text x="140" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Reel Concept / Hook</text>
-        <text x="140" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Trend, message, format</text>
-        <line x1="260" y1="100" x2="370" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <rect x="370" y="40" width="260" height="120" rx="14" fill="rgba(218,179,255,0.08)" stroke="#DAB3FF" stroke-width="2"/>
-        <text x="500" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">ACTIONS</text>
-        <text x="500" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Claude writes reel script</text>
-        <text x="500" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Hook, scenes, captions, CTA</text>
-        <line x1="630" y1="100" x2="740" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <rect x="740" y="40" width="240" height="120" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
-        <text x="860" y="75" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="700" letter-spacing="1.5">OUTPUT</text>
-        <text x="860" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Ready-to-film reel script</text>
-        <text x="860" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">With on-screen text + audio</text>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr5" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr5g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#22c55e"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr5gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr5r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr5)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr5)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr5gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr5r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
       </svg>
     </section>
 
@@ -2025,21 +2071,34 @@
     <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
       <p class="section-label">Secret #1 &middot; Skill</p>
       <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Ad Creatives</h2>
-      <svg class="flowchart-svg" viewBox="0 0 1000 200">
-        <rect x="20" y="40" width="240" height="120" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
-        <text x="140" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">INPUT</text>
-        <text x="140" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Offer / Product / Angle</text>
-        <text x="140" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Target audience, platform, budget</text>
-        <line x1="260" y1="100" x2="370" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <rect x="370" y="40" width="260" height="120" rx="14" fill="rgba(218,179,255,0.08)" stroke="#DAB3FF" stroke-width="2"/>
-        <text x="500" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">ACTIONS</text>
-        <text x="500" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Claude creates ad variations</text>
-        <text x="500" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Headlines, copy, hooks, CTAs</text>
-        <line x1="630" y1="100" x2="740" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <rect x="740" y="40" width="240" height="120" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
-        <text x="860" y="75" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="700" letter-spacing="1.5">OUTPUT</text>
-        <text x="860" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Ad creative package</text>
-        <text x="860" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Multiple variants ready to test</text>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr6" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr6g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#22c55e"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr6gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr6r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr6)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr6)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr6gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr6r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
       </svg>
     </section>
 
@@ -2059,21 +2118,34 @@
     <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
       <p class="section-label">Secret #2 &middot; Skill</p>
       <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Email Writer</h2>
-      <svg class="flowchart-svg" viewBox="0 0 1000 200">
-        <rect x="20" y="40" width="240" height="120" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
-        <text x="140" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">INPUT</text>
-        <text x="140" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Campaign Goal / Offer</text>
-        <text x="140" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Audience segment, sequence type</text>
-        <line x1="260" y1="100" x2="370" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <rect x="370" y="40" width="260" height="120" rx="14" fill="rgba(218,179,255,0.08)" stroke="#DAB3FF" stroke-width="2"/>
-        <text x="500" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">ACTIONS</text>
-        <text x="500" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Claude writes email sequence</text>
-        <text x="500" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Subject, body, CTA, scheduling</text>
-        <line x1="630" y1="100" x2="740" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <rect x="740" y="40" width="240" height="120" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
-        <text x="860" y="75" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="700" letter-spacing="1.5">OUTPUT</text>
-        <text x="860" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Emails drafted in platform</text>
-        <text x="860" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Ready to send in Klaviyo, etc.</text>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr7" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr7gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr7r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr7)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr7)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr7gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr7r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
       </svg>
     </section>
 
@@ -2093,21 +2165,34 @@
     <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
       <p class="section-label">Secret #3 &middot; Skill</p>
       <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Funnel Builder</h2>
-      <svg class="flowchart-svg" viewBox="0 0 1000 200">
-        <rect x="20" y="40" width="240" height="120" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
-        <text x="140" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">INPUT</text>
-        <text x="140" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Offer / Funnel Strategy</text>
-        <text x="140" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Pages, upsells, flow, copy angle</text>
-        <line x1="260" y1="100" x2="370" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <rect x="370" y="40" width="260" height="120" rx="14" fill="rgba(218,179,255,0.08)" stroke="#DAB3FF" stroke-width="2"/>
-        <text x="500" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">ACTIONS</text>
-        <text x="500" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Claude builds full funnel</text>
-        <text x="500" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Opt-in, sales page, checkout, upsells</text>
-        <line x1="630" y1="100" x2="740" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <rect x="740" y="40" width="240" height="120" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
-        <text x="860" y="75" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="700" letter-spacing="1.5">OUTPUT</text>
-        <text x="860" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Complete sales funnel</text>
-        <text x="860" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Ready to publish and drive traffic</text>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr8" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr8gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr8r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr8)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr8)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr8gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr8r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
       </svg>
     </section>
 
@@ -2115,21 +2200,34 @@
     <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
       <p class="section-label">Secret #3 &middot; Skill</p>
       <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Page Builder</h2>
-      <svg class="flowchart-svg" viewBox="0 0 1000 200">
-        <rect x="20" y="40" width="240" height="120" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
-        <text x="140" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">INPUT</text>
-        <text x="140" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Page Brief / Wireframe</text>
-        <text x="140" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Type, sections, copy, design refs</text>
-        <line x1="260" y1="100" x2="370" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <rect x="370" y="40" width="260" height="120" rx="14" fill="rgba(218,179,255,0.08)" stroke="#DAB3FF" stroke-width="2"/>
-        <text x="500" y="75" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="700" letter-spacing="1.5">ACTIONS</text>
-        <text x="500" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Claude builds the full page</text>
-        <text x="500" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Copy, layout, design, code</text>
-        <line x1="630" y1="100" x2="740" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
-        <rect x="740" y="40" width="240" height="120" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
-        <text x="860" y="75" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="700" letter-spacing="1.5">OUTPUT</text>
-        <text x="860" y="100" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Live website / landing page</text>
-        <text x="860" y="122" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="14">Published and ready to convert</text>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr9" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr9gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr9r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr9)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr9)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr9gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr9r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
       </svg>
     </section>
 
