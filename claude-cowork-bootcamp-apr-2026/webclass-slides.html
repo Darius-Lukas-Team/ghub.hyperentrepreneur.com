@@ -2413,8 +2413,8 @@
   (function () {
     'use strict';
 
-    /* If ?scroll=fluid, skip all snap behaviour — allow natural scrolling */
-    if (new URLSearchParams(window.location.search).get('scroll') === 'fluid') return;
+    /* If ?scroll=fluid, skip snap behaviour but keep filmstrip + keyboard nav */
+    var fluidScroll = new URLSearchParams(window.location.search).get('scroll') === 'fluid';
 
     const wrapper = document.querySelector('.page-wrapper');
     if (!wrapper) return;
@@ -2548,6 +2548,7 @@
 
     /* -- wheel -- */
 
+    if (!fluidScroll) {
     window.addEventListener('wheel', function (e) {
       e.preventDefault();
       var isNewGesture = !inGesture;
@@ -2557,6 +2558,7 @@
       if (!isNewGesture || isAnimating) return;
       navigate(e.deltaY > 0 ? +1 : -1);
     }, { passive: false });
+    }
 
     /* -- keyboard -- */
 
@@ -2587,6 +2589,7 @@
           return;
         }
       }
+      if (fluidScroll) return;
       var down = e.key === 'ArrowDown' || e.key === 'PageDown';
       var up   = e.key === 'ArrowUp'   || e.key === 'PageUp';
       if (!down && !up) return;
@@ -2596,6 +2599,7 @@
 
     /* -- touch -- */
 
+    if (!fluidScroll) {
     var ty0 = 0;
     window.addEventListener('touchstart', function (e) {
       ty0 = e.touches[0].clientY;
@@ -2607,9 +2611,11 @@
       if (Math.abs(delta) < 30) return;
       navigate(delta > 0 ? +1 : -1);
     });
+    }
 
     /* -- resize -- */
 
+    if (!fluidScroll) {
     var resizeTimer;
     window.addEventListener('resize', function () {
       clearTimeout(resizeTimer);
@@ -2618,6 +2624,7 @@
         goTo(currentIndex, currentSubPage, 'instant');
       }, 100);
     });
+    }
 
     /* -- slide nav: filmstrip + grid overlay -- */
 
@@ -2793,11 +2800,11 @@
     /* -- init -- */
 
     window.addEventListener('load', function () {
-      updateMargins();
+      if (!fluidScroll) updateMargins();
       injectNavStyles();
       buildFilmstrip();
       buildGridOverlay();
-      goTo(0, 0, 'instant');
+      if (!fluidScroll) goTo(0, 0, 'instant');
     });
 
   }());
