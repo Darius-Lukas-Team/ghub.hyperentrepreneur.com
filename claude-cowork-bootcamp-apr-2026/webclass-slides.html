@@ -205,6 +205,17 @@
       border-radius: 60px;
       margin-bottom: 32px;
       box-shadow: 0 4px 24px rgba(79, 48, 254, 0.25);
+      animation: bannerGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes bannerGlowGold {
+      0%, 100% { box-shadow: 0 4px 24px rgba(245,158,11,0.25); }
+      50% { box-shadow: 0 6px 50px rgba(245,158,11,0.6), 0 0 100px rgba(245,158,11,0.3); }
+    }
+
+    @keyframes bannerGlow {
+      0%, 100% { box-shadow: 0 4px 24px rgba(79, 48, 254, 0.25); }
+      50% { box-shadow: 0 6px 50px rgba(79, 48, 254, 0.6), 0 0 100px rgba(79, 48, 254, 0.3); }
     }
 
     .welcome-banner-dot {
@@ -419,10 +430,10 @@
 
     /* ===== ABOUT HOST ===== */
     .about-tagline {
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 600;
       color: #4F30FE;
-      margin-bottom: 36px;
+      margin-bottom: 20px;
     }
 
     .about-stats {
@@ -434,8 +445,8 @@
     .about-stat-card {
       display: flex;
       align-items: flex-start;
-      gap: 18px;
-      padding: 28px 24px;
+      gap: 12px;
+      padding: 14px 18px;
       background: #ffffff;
       border: 1px solid rgba(0, 0, 0, 0.08);
       border-radius: 14px;
@@ -443,13 +454,13 @@
     }
 
     .about-stat-icon {
-      font-size: 32px;
+      font-size: 22px;
       flex-shrink: 0;
       margin-top: 2px;
     }
 
     .about-stat-text {
-      font-size: 19px;
+      font-size: 15px;
       color: rgba(0, 0, 0, 0.6);
       line-height: 1.55;
     }
@@ -562,6 +573,9 @@
 
     .yt-screenshots-row .yt-thumbnail {
       max-width: 360px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
     }
 
     /* ===== TIMELINE ===== */
@@ -652,7 +666,7 @@
     /* ===== ABOUT HOST LAYOUT ===== */
     .about-host-layout {
       display: grid;
-      grid-template-columns: 1fr 320px;
+      grid-template-columns: 1fr 380px;
       gap: 40px;
       align-items: center;
     }
@@ -1325,7 +1339,31 @@
       </div>
     </section>
 
-    <!-- Slide 2: Hero / Big Promise -->
+    <!-- Slide 2: Welcome / Say Hi -->
+    <section class="hero" id="welcome-sayhi">
+      <div class="welcome-banner" style="background:linear-gradient(135deg, #fde68a, #f59e0b, #d97706);box-shadow:0 4px 24px rgba(245,158,11,0.25);animation:bannerGlowGold 2s ease-in-out infinite;">
+        <span class="welcome-banner-dot" style="background:#fff;box-shadow:0 0 8px rgba(255,255,255,0.6);"></span>
+        <span class="welcome-banner-text">Say Hi in the Zoom chat (your Country + Industry)</span>
+      </div>
+      <img class="hero-logo" src="https://assets.cdn.filesafe.space/lNzgml2EfCzIl04kmDr2/media/69c6dec39fc63ab17f2737ea.png" alt="Logo">
+      <p class="hero-topic">Claude Cowork: Business Growth Bootcamp</p>
+      <h1 class="hero-title">Turn Claude Into Your <span class="hero-title-highlight">High-Performing Marketing Team</span> That Automates 90% Of Your Most Time-Consuming Tasks, Saves You $1,000s Of Costs, And Supercharges Your Business To The Next Level</h1>
+      <img class="hero-claude-logo" src="assets/Claude_Logo_2023-s1280.png" alt="Claude AI">
+
+      <div class="hero-hosts">
+        <span class="hero-hosts-label">Your Hosts</span>
+        <div class="hero-host">
+          <span class="hero-host-dot"></span>
+          Darius Lukas
+        </div>
+        <div class="hero-host">
+          <span class="hero-host-dot"></span>
+          Klemen Struc
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 3: Hero / Big Promise -->
     <section class="hero" id="hero">
       <img class="hero-logo" src="https://assets.cdn.filesafe.space/lNzgml2EfCzIl04kmDr2/media/69c6dec39fc63ab17f2737ea.png" alt="Logo">
       <p class="hero-topic">Claude Cowork: Business Growth Bootcamp</p>
@@ -1345,52 +1383,93 @@
       </div>
     </section>
 
-    <!-- Slide 3: What You'll Learn (1-3) -->
+    <!-- Slide 4: Big Context -->
+    <section class="section-header-slide">
+      <h2 class="section-header-title">We're replacing our entire marketing team with <span style="background:linear-gradient(135deg, #da7756, #c5553a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Claude</span> in a real <span class="hero-title-highlight">$10M business</span> — and showing you the <span class="hero-title-highlight">what/how/why</span> today. Not theory.</h2>
+      <div class="section-header-divider"></div>
+    </section>
+
+    <!-- Slide 5: What You'll Learn Today -->
     <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:60px 44px;">
       <p class="section-label">Agenda</p>
-      <h2 class="section-title" style="font-size:44px;margin-bottom:36px;">What You'll Learn And See Today</h2>
+      <h2 class="section-title" style="font-size:44px;margin-bottom:36px;">What You'll Learn Today</h2>
       <div class="steps">
         <div class="step">
           <div class="step-num">1</div>
           <div class="step-content">
-            <div class="step-title">How to ...</div>
-            <div class="step-desc">...</div>
+            <div class="step-title">The paradigm shift that changes everything</div>
+            <div class="step-desc">Why Claude isn't just a chatbot, and how it completes entire workflows outside the chat UI</div>
           </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <div class="step-content">
-            <div class="step-title">How to ...</div>
-            <div class="step-desc">...</div>
+            <div class="step-title">How to prioritize for exponential returns</div>
+            <div class="step-desc">The framework for choosing which areas of your business to automate first (hint: it's not about saving time)</div>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div class="step-content">
-            <div class="step-title">How to ...</div>
-            <div class="step-desc">...</div>
+            <div class="step-title">How to build your Content Machine</div>
+            <div class="step-desc">The system that scales your customer acquisition across Instagram, YouTube, LinkedIn, and TikTok</div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Slide 4: What You'll Learn (4-5) -->
-    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:60px 44px;">
-      <p class="section-label">Agenda (continued)</p>
-      <h2 class="section-title" style="font-size:44px;margin-bottom:36px;">What You'll Learn And See Today</h2>
-      <div class="steps">
         <div class="step">
           <div class="step-num">4</div>
           <div class="step-content">
-            <div class="step-title">Demo of ...</div>
-            <div class="step-desc">...</div>
+            <div class="step-title">How to build your Email Machine</div>
+            <div class="step-desc">The system that scales your customer monetization on autopilot</div>
           </div>
         </div>
         <div class="step">
           <div class="step-num">5</div>
           <div class="step-content">
-            <div class="step-title">Demo of ...</div>
-            <div class="step-desc">...</div>
+            <div class="step-title">How to build your Launch Machine</div>
+            <div class="step-desc">The system that creates and publishes entire sales funnels in 1/100th the time and cost</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4: What Live Demos You'll See Today -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:60px 44px;">
+      <p class="section-label">Agenda (continued)</p>
+      <h2 class="section-title" style="font-size:44px;margin-bottom:36px;">What Live Demos You'll See Today</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">6</div>
+          <div class="step-content">
+            <div class="step-title"><span style="display:inline-block;font-size:13px;color:#4F30FE;font-weight:600;background:rgba(79,48,254,0.06);padding:3px 10px;border-radius:20px;letter-spacing:0.5px;margin-right:8px;vertical-align:middle;">Live demo</span>Creating/Publishing Video Shorts (Instagram, YouTube, TikTok, LinkedIn)</div>
+            <div class="step-desc">Watch Claude create ready-to-publish short-form video content for Instagram, YouTube, LinkedIn, and TikTok</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">7</div>
+          <div class="step-content">
+            <div class="step-title"><span style="display:inline-block;font-size:13px;color:#4F30FE;font-weight:600;background:rgba(79,48,254,0.06);padding:3px 10px;border-radius:20px;letter-spacing:0.5px;margin-right:8px;vertical-align:middle;">Live demo</span>Creating/Publishing Carousels and Image Posts (Instagram, LinkedIn)</div>
+            <div class="step-desc">See Claude design and produce scroll-stopping visual content in minutes</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">8</div>
+          <div class="step-content">
+            <div class="step-title"><span style="display:inline-block;font-size:13px;color:#4F30FE;font-weight:600;background:rgba(79,48,254,0.06);padding:3px 10px;border-radius:20px;letter-spacing:0.5px;margin-right:8px;vertical-align:middle;">Live demo</span>Creating/Sending Emails (Promos, Sequences, Follow-Ups)</div>
+            <div class="step-desc">Watch Claude write, format, and schedule a complete email campaign</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">9</div>
+          <div class="step-content">
+            <div class="step-title"><span style="display:inline-block;font-size:13px;color:#4F30FE;font-weight:600;background:rgba(79,48,254,0.06);padding:3px 10px;border-radius:20px;letter-spacing:0.5px;margin-right:8px;vertical-align:middle;">Live demo</span>Building/Publishing Funnels (Webinar, Lead Gen, Sales, Calls)</div>
+            <div class="step-desc">See Claude generate a full sales page, checkout page, upsell page, and lead capture page from scratch</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">10</div>
+          <div class="step-content">
+            <div class="step-title"><span style="display:inline-block;font-size:13px;color:#4F30FE;font-weight:600;background:rgba(79,48,254,0.06);padding:3px 10px;border-radius:20px;letter-spacing:0.5px;margin-right:8px;vertical-align:middle;">Live demo</span>Building/Publishing Funnel Pages</div>
+            <div class="step-desc">Watch Claude build and deploy a complete webinar funnel end to end</div>
           </div>
         </div>
       </div>
@@ -1405,85 +1484,46 @@
     </section>
 
     <!-- Slide 6: About Darius Lukas -->
-    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:60px 44px;">
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
       <p class="section-label">Your Host</p>
       <div class="about-host-layout">
         <div class="about-host-info">
           <h2 class="section-title" style="font-size:44px;margin-bottom:6px;">Darius Lukas</h2>
-          <p class="about-tagline">Serial 7-Figure Business Owner</p>
+          <p class="about-tagline">Serial Entrepreneur / Founder of Hyper Entrepreneur</p>
           <div class="about-stats" style="grid-template-columns:1fr;">
             <div class="about-stat-card">
-              <div class="about-stat-icon">🏢</div>
-              <div class="about-stat-text">Own multiple <strong>7-figure businesses</strong></div>
+              <div class="about-stat-icon">👥</div>
+              <div class="about-stat-text">Helped <strong>150,000+ business owners</strong> become AI-powered</div>
             </div>
             <div class="about-stat-card">
-              <div class="about-stat-icon">👥</div>
-              <div class="about-stat-text">Helped over <strong>150,000 founders and freelancers</strong> build AI-first businesses</div>
+              <div class="about-stat-icon">🏢</div>
+              <div class="about-stat-text">Built a <strong>$10M+ business</strong> in AI education and SaaS</div>
             </div>
             <div class="about-stat-card">
               <div class="about-stat-icon">📦</div>
-              <div class="about-stat-text">Developed over <strong>100 online offers</strong>, ranging from low-ticket products to high-value membership communities</div>
+              <div class="about-stat-text"><strong>100+ offers launched</strong> — viral AI products, SaaS, memberships</div>
             </div>
             <div class="about-stat-card">
               <div class="about-stat-icon">📈</div>
-              <div class="about-stat-text">Scaled profitable ad operations with <strong>$4M+ in spend</strong></div>
+              <div class="about-stat-text">Built an audience of <strong>300K people</strong> across multiple channels</div>
             </div>
           </div>
         </div>
         <div class="about-host-photo">
-          <img src="assets/darius-lukas-photo.png" alt="Darius Lukas">
+          <img src="assets/Darius-Lukas-01.png" alt="Darius Lukas">
         </div>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:20px;width:100%;height:180px;">
+        <div style="flex:1;min-width:0;border-radius:10px;overflow:hidden;"><img src="assets/Darius-Lukas-02.png" alt="Darius Lukas" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+        <div style="flex:1;min-width:0;border-radius:10px;overflow:hidden;"><img src="assets/Darius-Lukas-03.png" alt="Darius Lukas" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+        <div style="flex:1;min-width:0;border-radius:10px;overflow:hidden;"><img src="assets/Darius-Lukas-04.png" alt="Darius Lukas" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
       </div>
     </section>
 
-    <!-- Slide 7: Quick Story -->
+    <!-- Slide 7: Quick Story - The Setback -->
     <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:60px 44px;">
       <p class="section-label">Quick Story</p>
-      <h2 class="section-title" style="font-size:44px;margin-bottom:36px;">I Was Paying <span class="accent-text">$7k/mo</span> To A Social Media Manager</h2>
-
-      <div class="social-cards">
-        <!-- Instagram -->
-        <div class="social-column">
-          <a href="https://www.instagram.com/dariuslukas/" target="_blank" class="social-card">
-            <div class="social-card-icon social-card-icon--ig">
-              <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                <circle cx="12" cy="12" r="5"/>
-                <circle cx="17.5" cy="6.5" r="1.2" fill="#fff" stroke="none"/>
-              </svg>
-            </div>
-            <div class="social-card-info">
-              <div class="social-card-platform">Instagram</div>
-              <div class="social-card-handle">@dariuslukas</div>
-              <div class="social-card-stat">111k+ followers</div>
-            </div>
-          </a>
-          <img class="social-screenshot" src="assets/ig-profile.png" alt="Instagram Profile">
-        </div>
-
-        <!-- YouTube -->
-        <div class="social-column">
-          <a href="https://www.youtube.com/@DariusLukas" target="_blank" class="social-card">
-            <div class="social-card-icon social-card-icon--yt">
-              <svg viewBox="0 0 24 24" width="40" height="40" fill="#fff">
-                <path d="M23.5 6.2c-.3-1-1-1.8-2-2.1C19.8 3.5 12 3.5 12 3.5s-7.8 0-9.5.6c-1 .3-1.7 1.1-2 2.1C0 7.9 0 12 0 12s0 4.1.5 5.8c.3 1 1 1.8 2 2.1 1.7.6 9.5.6 9.5.6s7.8 0 9.5-.6c1-.3 1.7-1.1 2-2.1.5-1.7.5-5.8.5-5.8s0-4.1-.5-5.8zM9.6 15.5V8.5l6.4 3.5-6.4 3.5z"/>
-              </svg>
-            </div>
-            <div class="social-card-info">
-              <div class="social-card-platform">YouTube</div>
-              <div class="social-card-handle">@DariusLukas</div>
-              <div class="social-card-stat">7k+ subscribers</div>
-            </div>
-          </a>
-          <img class="social-screenshot" src="assets/yt-profile.png" alt="YouTube Profile">
-        </div>
-      </div>
-    </section>
-
-    <!-- Slide 8: Quick Story - The Setback -->
-    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:60px 44px;">
-      <p class="section-label">Quick Story</p>
-      <h2 class="section-title" style="font-size:44px;margin-bottom:12px;">We Were Doing <span class="accent-text">$300k /mo</span> And On Track For $500k /mo...</h2>
+      <h2 class="section-title" style="font-size:44px;margin-bottom:12px;">We Were Doing <span class="accent-text">$300k - $400k /mo</span>, On Track For $500k /mo...</h2>
       <p class="section-desc" style="font-size:22px;margin-bottom:36px;">Then everything changed overnight.</p>
 
       <div class="timeline">
@@ -1494,7 +1534,7 @@
           </div>
           <div class="timeline-content">
             <div class="timeline-date">The Peak</div>
-            <div class="timeline-title">$300k /mo revenue, scaling fast toward $500k /mo</div>
+            <div class="timeline-title">$300k-$400k /mo revenue, scaling fast toward $500k /mo</div>
             <div class="timeline-desc">Business was firing on all cylinders. Team was growing, ads were profitable, momentum was building.</div>
           </div>
         </div>
@@ -1516,8 +1556,8 @@
           </div>
           <div class="timeline-content">
             <div class="timeline-date">The Fallout</div>
-            <div class="timeline-title">Revenue collapsed on both ends, weaknesses exposed</div>
-            <div class="timeline-desc">Front-end acquisition dried up. Back-end revenue followed. Had to trim expenses, laying off people and cutting operations to the bone.</div>
+            <div class="timeline-title">Revenue and client acquisition collapsed</div>
+            <div class="timeline-desc">Front-end acquisition dried up. Back-end revenue didn't justify the team. We had to pivot fast.</div>
           </div>
         </div>
         <div class="timeline-entry">
@@ -1528,6 +1568,63 @@
             <div class="timeline-date">The Turning Point</div>
             <div class="timeline-title">Started searching for the next breakthrough</div>
             <div class="timeline-desc">Googling, YouTube-ing, Asking AI, etc.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 8: Our Marketing Team: Before vs Today -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <p class="section-label">Quick Story</p>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:28px;">Our Marketing Team: <span class="accent-text">Before</span> vs Today</h2>
+
+      <div style="display:flex;gap:32px;width:100%;">
+        <!-- BEFORE column -->
+        <div style="flex:1;background:rgba(79,48,254,0.03);border:1.5px solid rgba(79,48,254,0.15);border-radius:14px;padding:24px 28px;">
+          <h3 style="font-size:18px;font-weight:700;color:#4F30FE;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:20px;text-align:center;">Before</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.06);">
+              <span style="font-size:15px;color:rgba(0,0,0,0.7);">Senior Marketer/Copywriter</span>
+              <span style="font-size:15px;font-weight:600;color:rgba(0,0,0,0.8);">$5K–$6K /mo</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.06);">
+              <span style="font-size:15px;color:rgba(0,0,0,0.7);">Instagram agency</span>
+              <span style="font-size:15px;font-weight:600;color:rgba(0,0,0,0.8);">$7K /mo</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.06);">
+              <span style="font-size:15px;color:rgba(0,0,0,0.7);">Assistant copywriter</span>
+              <span style="font-size:15px;font-weight:600;color:rgba(0,0,0,0.8);">$2K–$3K /mo</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.06);">
+              <span style="font-size:15px;color:rgba(0,0,0,0.7);">Creative strategist for ads</span>
+              <span style="font-size:15px;font-weight:600;color:rgba(0,0,0,0.8);">$2K–$3K /mo</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.06);">
+              <span style="font-size:15px;color:rgba(0,0,0,0.7);">Junior designers</span>
+              <span style="font-size:15px;font-weight:600;color:rgba(0,0,0,0.8);">$2K–$3K /mo</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;">
+              <span style="font-size:15px;color:rgba(0,0,0,0.7);">Ads teams</span>
+              <span style="font-size:15px;font-weight:600;color:rgba(0,0,0,0.8);">$3K /mo + bonus</span>
+            </div>
+          </div>
+          <div style="border-top:2px solid rgba(79,48,254,0.2);padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:16px;font-weight:700;color:#4F30FE;">TOTAL</span>
+            <div style="text-align:right;">
+              <span style="font-size:22px;font-weight:800;color:#4F30FE;">$25K /month</span>
+              <br><span style="font-size:14px;font-weight:600;color:rgba(79,48,254,0.6);">$300K /year</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TODAY column -->
+        <div style="flex:1;background:rgba(245,158,11,0.03);border:1.5px solid rgba(245,158,11,0.15);border-radius:14px;padding:24px 28px;display:flex;flex-direction:column;align-items:center;text-align:center;">
+          <h3 style="font-size:18px;font-weight:700;color:#d97706;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:auto;">Today</h3>
+          <img src="assets/Claude-ai-icon.svg" alt="Claude AI" style="width:40px;height:40px;margin-bottom:12px;">
+          <span style="font-size:48px;font-weight:800;color:#d97706;">$10K /month</span>
+          <span style="font-size:20px;font-weight:600;color:rgba(217,119,6,0.6);margin-top:8px;">$120K /year</span>
+          <div style="margin-top:24px;margin-bottom:auto;padding:12px 24px;background:rgba(245,158,11,0.08);border-radius:10px;">
+            <span style="font-size:16px;font-weight:700;color:#d97706;">Saving $180K /year</span>
           </div>
         </div>
       </div>
@@ -1746,9 +1843,9 @@
         <line x1="95" y1="100" x2="120" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arrOld)" stroke-dasharray="6 4" class="animated-dash"/>
         <!-- Step 2: GENERATE (1/12 of row) — AI (green) -->
         <image x="155" y="22" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
-        <rect x="125" y="50" width="85" height="100" rx="12" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
-        <text x="167" y="85" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="700" letter-spacing="1.2">GENERATE</text>
-        <text x="167" y="105" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="600">AI</text>
+        <rect x="125" y="50" width="85" height="100" rx="12" fill="rgba(245,158,11,0.05)" stroke="#f59e0b" stroke-width="2"/>
+        <text x="167" y="85" text-anchor="middle" fill="#f59e0b" font-size="11" font-weight="700" letter-spacing="1.2">GENERATE</text>
+        <text x="167" y="105" text-anchor="middle" fill="#f59e0b" font-size="13" font-weight="600">AI</text>
         <!-- Arrow 2→3 -->
         <line x1="210" y1="100" x2="235" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arrOld)" stroke-dasharray="6 4" class="animated-dash"/>
         <!-- Steps 3-N: ACTIONS (10/12 of row) — You (purple) -->
@@ -1767,18 +1864,21 @@
         <defs>
           <marker id="arrNew" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker>
         </defs>
-        <!-- Step 1: INPUT (1/12) — You (purple) -->
+        <!-- Step 1: INPUT (1/12) — You or AI (purple) -->
         <text x="52" y="38" text-anchor="middle" font-size="22">👤</text>
         <rect x="10" y="50" width="85" height="100" rx="12" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
-        <text x="52" y="85" text-anchor="middle" fill="#4F30FE" font-size="11" font-weight="700" letter-spacing="1.2">INPUT</text>
-        <text x="52" y="105" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="600">You</text>
+        <text x="52" y="82" text-anchor="middle" fill="#4F30FE" font-size="11" font-weight="700" letter-spacing="1.2">INPUT</text>
+        <text x="52" y="100" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="600">You</text>
+        <rect x="19" y="112" width="65" height="28" rx="8" fill="rgba(245,158,11,0.1)" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="52" y="131" text-anchor="middle" fill="#f59e0b" font-size="12" font-weight="700">AI</text>
+        <image x="40" y="155" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
         <!-- Arrow 1→2 -->
         <line x1="95" y1="100" x2="120" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arrNew)" stroke-dasharray="6 4" class="animated-dash"/>
         <!-- Step 2: GENERATE (1/12) — AI (green) -->
         <image x="155" y="22" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
-        <rect x="125" y="50" width="85" height="100" rx="12" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
-        <text x="167" y="85" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="700" letter-spacing="1.2">GENERATE</text>
-        <text x="167" y="105" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="600">AI</text>
+        <rect x="125" y="50" width="85" height="100" rx="12" fill="rgba(245,158,11,0.05)" stroke="#f59e0b" stroke-width="2"/>
+        <text x="167" y="85" text-anchor="middle" fill="#f59e0b" font-size="11" font-weight="700" letter-spacing="1.2">GENERATE</text>
+        <text x="167" y="105" text-anchor="middle" fill="#f59e0b" font-size="13" font-weight="600">AI</text>
         <!-- Arrow 2→3 -->
         <line x1="210" y1="100" x2="235" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arrNew)" stroke-dasharray="6 4" class="animated-dash"/>
         <!-- Step 3: REVIEW (1/12) — You (purple) -->
@@ -1790,12 +1890,12 @@
         <line x1="325" y1="100" x2="350" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arrNew)" stroke-dasharray="6 4" class="animated-dash"/>
         <!-- Steps 4-N: ACTIONS (10/12) — AI (green) -->
         <image x="760" y="22" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
-        <rect x="355" y="50" width="835" height="100" rx="12" fill="rgba(34,197,94,0.04)" stroke="rgba(34,197,94,0.35)" stroke-width="2"/>
-        <text x="772" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">ACTIONS (STEPS 4 – N)</text>
-        <text x="772" y="102" text-anchor="middle" fill="#22c55e" font-size="15" font-weight="600">AI — Execute, Format, Upload, Schedule, Publish, Repeat...</text>
-        <text x="772" y="122" text-anchor="middle" fill="rgba(34,197,94,0.4)" font-size="13">Claude handles the heavy lifting</text>
+        <rect x="355" y="50" width="835" height="100" rx="12" fill="rgba(245,158,11,0.04)" stroke="rgba(245,158,11,0.35)" stroke-width="2"/>
+        <text x="772" y="80" text-anchor="middle" fill="#f59e0b" font-size="12" font-weight="700" letter-spacing="1.5">ACTIONS (STEPS 4 – N)</text>
+        <text x="772" y="102" text-anchor="middle" fill="#f59e0b" font-size="15" font-weight="600">AI — Execute, Format, Upload, Schedule, Publish, Repeat...</text>
+        <text x="772" y="122" text-anchor="middle" fill="rgba(245,158,11,0.4)" font-size="13">Claude handles the heavy lifting</text>
         <!-- Repeating dots pattern -->
-        <circle cx="380" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="400" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="420" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="440" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="460" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="480" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="500" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="520" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="540" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="560" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="580" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="600" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="620" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="640" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="660" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="680" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="700" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="720" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="740" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="760" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="780" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="800" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="820" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="840" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="860" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="880" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="900" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="920" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="940" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="960" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="980" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1000" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1020" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1040" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1060" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1080" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1100" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1120" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1140" cy="140" r="2" fill="rgba(34,197,94,0.2)"/><circle cx="1160" cy="140" r="2" fill="rgba(34,197,94,0.2)"/>
+        <circle cx="380" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="400" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="420" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="440" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="460" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="480" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="500" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="520" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="540" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="560" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="580" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="600" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="620" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="640" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="660" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="680" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="700" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="720" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="740" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="760" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="780" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="800" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="820" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="840" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="860" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="880" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="900" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="920" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="940" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="960" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="980" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1000" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1020" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1040" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1060" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1080" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1100" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1120" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1140" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1160" cy="140" r="2" fill="rgba(245,158,11,0.2)"/>
       </svg>
 
     </section>
@@ -1807,13 +1907,15 @@
         <h2 class="section-title" style="font-size:40px;margin-bottom:8px;">Key: Prioritize For <span class="accent-text">Exponential Returns</span></h2>
         <p class="section-desc" style="font-size:20px;margin-bottom:20px;">Start with areas of your business that require small, manageable, or low-cost investment (input) and produce disproportionately massive, compounding, or ongoing returns (output).</p>
         <div style="display:flex;gap:16px;margin-bottom:28px;">
-          <div style="flex:1;padding:14px 20px;border-radius:10px;background:rgba(224,48,48,0.06);border:1.5px solid rgba(224,48,48,0.18);text-align:center;">
-            <span style="color:#e03030;font-weight:600;font-size:17px;">&#10005; Do not prioritize what will save you more time.</span>
-            <span style="color:rgba(224,48,48,0.55);font-size:15px;margin-left:6px;">(common mistake)</span>
+          <div style="flex:1;padding:14px 20px;border-radius:10px;background:rgba(224,48,48,0.06);border:1.5px solid rgba(224,48,48,0.18);display:flex;align-items:center;justify-content:center;gap:10px;">
+            <span style="color:#e03030;font-size:20px;line-height:1;flex-shrink:0;">&#x2715;</span>
+            <span style="color:#e03030;font-weight:600;font-size:17px;">Do not prioritize what will save you more time.</span>
+            <span style="color:rgba(224,48,48,0.55);font-size:15px;white-space:nowrap;">(common mistake)</span>
           </div>
-          <div style="flex:1;padding:14px 20px;border-radius:10px;background:rgba(26,154,58,0.06);border:1.5px solid rgba(26,154,58,0.18);text-align:center;">
-            <span style="color:#1a9a3a;font-weight:600;font-size:17px;">&#10003; Prioritize what will give you the biggest returns in the shortest time.</span>
-            <span style="color:rgba(26,154,58,0.55);font-size:15px;margin-left:6px;">(smart move)</span>
+          <div style="flex:1;padding:14px 20px;border-radius:10px;background:rgba(26,154,58,0.06);border:1.5px solid rgba(26,154,58,0.18);display:flex;align-items:center;justify-content:center;gap:10px;">
+            <span style="color:#1a9a3a;font-size:20px;line-height:1;flex-shrink:0;">&#x2713;</span>
+            <span style="color:#1a9a3a;font-weight:600;font-size:17px;">Prioritize what will give you the biggest returns in the shortest time.</span>
+            <span style="color:rgba(26,154,58,0.55);font-size:15px;white-space:nowrap;">(smart move)</span>
           </div>
         </div>
       </div>
