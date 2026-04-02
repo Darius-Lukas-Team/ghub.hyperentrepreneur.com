@@ -1165,66 +1165,86 @@
     /* ===== CURRICULUM ===== */
     .curriculum-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
       gap: 20px;
       max-width: 900px;
       width: 100%;
+      margin: 0 auto;
     }
 
     .curriculum-card {
       background: #ffffff;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      border-radius: 14px;
-      padding: 28px 24px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 18px;
+      padding: 40px 44px;
       text-align: left;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      box-shadow: 0 4px 24px rgba(79, 48, 254, 0.06), 0 2px 8px rgba(0, 0, 0, 0.03);
+      position: relative;
     }
 
     .curriculum-week {
-      font-size: 13px;
-      font-weight: 600;
+      font-size: 15px;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       color: #4F30FE;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+    }
+
+    .curriculum-date {
+      position: absolute;
+      top: 40px;
+      right: 44px;
+      font-size: 20px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.55);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .curriculum-date-icon {
+      flex-shrink: 0;
+      opacity: 0.5;
     }
 
     .curriculum-title {
-      font-size: 20px;
-      font-weight: 600;
+      font-size: 28px;
+      font-weight: 700;
       color: #000;
-      margin-bottom: 14px;
+      margin-bottom: 20px;
       line-height: 1.3;
     }
 
     .curriculum-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
     }
 
     .curriculum-tag {
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 600;
       color: rgba(0, 0, 0, 0.5);
-      background: rgba(0, 0, 0, 0.04);
-      padding: 5px 12px;
-      border-radius: 6px;
+      background: rgba(79, 48, 254, 0.05);
+      padding: 7px 16px;
+      border-radius: 8px;
     }
 
     .curriculum-includes {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-top: 14px;
-      padding-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+      padding-top: 24px;
       border-top: 1px solid rgba(0, 0, 0, 0.06);
+      text-align: center;
     }
 
     .curriculum-include {
-      font-size: 14px;
-      color: rgba(0, 0, 0, 0.5);
-      font-weight: 500;
+      font-size: 19px;
+      color: rgba(0, 0, 0, 0.55);
+      font-weight: 600;
     }
 
     /* ===== PROGRAM INTRO ===== */
@@ -2509,16 +2529,17 @@
       <p class="section-header-label">Introducing The 4-Week Deep-Dive Program</p>
       <h2 class="section-header-title"><span class="hero-title-highlight">Claude Cowork:</span> Business Growth Bootcamp</h2>
       <p class="program-desc">We'll build your Claude Skills for you, help you install them, and turn your business into an AI-native business.</p>
-      <img class="program-image" src="assets/program-product-image.webp" alt="Claude Cowork: Business Growth Bootcamp">
+      <img class="program-image" src="assets/product/Course-Cover.png" alt="Claude Cowork: Business Growth Bootcamp">
     </section>
 
-    <!-- Slide 33: Curriculum -->
-    <section class="section-header-slide" id="curriculum" style="gap:0;">
+    <!-- Slide 33: Curriculum — Week 1 -->
+    <section class="section-header-slide" id="curriculum-week-1" style="gap:0;">
       <p class="section-header-label">Curriculum</p>
       <h2 class="section-header-title" style="font-size:48px;margin-bottom:36px;">What We'll Build <span class="hero-title-highlight">Together</span></h2>
       <div class="curriculum-grid">
         <div class="curriculum-card">
           <div class="curriculum-week">Week 1</div>
+          <div class="curriculum-date"><svg class="curriculum-date-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Thursday, April 16 · 11 AM ET</div>
           <h3 class="curriculum-title">Build Your Content Machine — Part 1</h3>
           <div class="curriculum-tags">
             <span class="curriculum-tag">Image Ads</span>
@@ -2531,8 +2552,17 @@
             <div class="curriculum-include">❓ Q&A Session</div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Slide 34: Curriculum — Week 2 -->
+    <section class="section-header-slide" id="curriculum-week-2" style="gap:0;">
+      <p class="section-header-label">Curriculum</p>
+      <h2 class="section-header-title" style="font-size:48px;margin-bottom:36px;">What We'll Build <span class="hero-title-highlight">Together</span></h2>
+      <div class="curriculum-grid">
         <div class="curriculum-card">
           <div class="curriculum-week">Week 2</div>
+          <div class="curriculum-date"><svg class="curriculum-date-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Thursday, April 23 · 11 AM ET</div>
           <h3 class="curriculum-title">Build Your Content Machine — Part 2</h3>
           <div class="curriculum-tags">
             <span class="curriculum-tag">Instagram Reels</span>
@@ -2546,8 +2576,17 @@
             <div class="curriculum-include">❓ Q&A Session</div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Slide 35: Curriculum — Week 3 -->
+    <section class="section-header-slide" id="curriculum-week-3" style="gap:0;">
+      <p class="section-header-label">Curriculum</p>
+      <h2 class="section-header-title" style="font-size:48px;margin-bottom:36px;">What We'll Build <span class="hero-title-highlight">Together</span></h2>
+      <div class="curriculum-grid">
         <div class="curriculum-card">
           <div class="curriculum-week">Week 3</div>
+          <div class="curriculum-date"><svg class="curriculum-date-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Thursday, April 30 · 11 AM ET</div>
           <h3 class="curriculum-title">Build Your Email Machine</h3>
           <div class="curriculum-tags">
             <span class="curriculum-tag">Promo Emails</span>
@@ -2561,8 +2600,17 @@
             <div class="curriculum-include">❓ Q&A Session</div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Slide 36: Curriculum — Week 4 -->
+    <section class="section-header-slide" id="curriculum-week-4" style="gap:0;">
+      <p class="section-header-label">Curriculum</p>
+      <h2 class="section-header-title" style="font-size:48px;margin-bottom:36px;">What We'll Build <span class="hero-title-highlight">Together</span></h2>
+      <div class="curriculum-grid">
         <div class="curriculum-card">
           <div class="curriculum-week">Week 4</div>
+          <div class="curriculum-date"><svg class="curriculum-date-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Thursday, May 7 · 11 AM ET</div>
           <h3 class="curriculum-title">Build Your Launch Machine</h3>
           <div class="curriculum-tags">
             <span class="curriculum-tag">Lead Gen Funnels</span>
@@ -2726,15 +2774,19 @@
       </div>
     </section>
 
-    <!-- Price Reveal Slide -->
-    <section class="section-header-slide" id="price-reveal">
+    <!-- Price Reveal Slide 1: Crossed-out prices -->
+    <section class="section-header-slide" id="price-reveal-1">
       <p class="section-header-label">Enrollment Fee</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:20px;margin-bottom:36px;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:20px;">
         <p style="font-size:44px;color:rgba(0,0,0,0.35);text-decoration:line-through;">$12,970</p>
         <p style="font-size:44px;color:rgba(0,0,0,0.35);text-decoration:line-through;">$5,000</p>
         <p style="font-size:44px;color:rgba(0,0,0,0.35);text-decoration:line-through;">$2,000</p>
       </div>
-      <div class="section-header-divider" style="margin-bottom:28px;"></div>
+    </section>
+
+    <!-- Price Reveal Slide 2: Actual price -->
+    <section class="section-header-slide" id="price-reveal-2">
+      <p class="section-header-label">Enrollment Fee</p>
       <h2 class="section-header-title" style="font-size:48px;">The standard price is just <span class="hero-title-highlight">$997</span></h2>
     </section>
 
@@ -2763,6 +2815,13 @@
       <p style="font-size:32px;font-weight:700;color:#4F30FE;margin-bottom:40px;">go.hyperentrepreneur.com/join</p>
       <p style="font-size:20px;color:rgba(0,0,0,0.5);margin-bottom:16px;font-weight:500;">Or scan this QR Code</p>
       <img src="assets/QR-Code-Join.png" alt="QR Code" style="width:300px;height:300px;border-radius:50px;border:2px dashed #CCC;">
+    </section>
+
+    <!-- Q&A Slide -->
+    <section class="section-header-slide" id="qa">
+      <p class="section-header-label">Let's Talk</p>
+      <h2 class="section-header-title"><span class="hero-title-highlight">Q&A</span></h2>
+      <div class="section-header-divider"></div>
     </section>
 
   </div>

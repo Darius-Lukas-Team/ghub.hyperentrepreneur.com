@@ -114,11 +114,14 @@
     <a href="#" class="hidden md:flex items-center gap-3">
       <img id="nav-logo"
            src="https://assets.cdn.filesafe.space/lNzgml2EfCzIl04kmDr2/media/69c6dec39fc63ab17f2737ea.png"
-           alt="Hyper AI University" class="max-h-10 w-auto opacity-70" loading="eager">
+           alt="Hyper AI University" class="max-h-7 w-auto opacity-70" loading="eager">
     </a>
     <div class="flex items-center gap-2 md:gap-4 flex-1 md:flex-none justify-between md:justify-end">
-      <div class="flex items-center gap-2 md:gap-3">
-        <span class="text-xs md:text-sm font-extrabold px-2 py-0.5 md:px-3 md:py-1 rounded-full whitespace-nowrap" style="background: rgba(79,48,254,0.1); color: var(--color-primary); border: 1px solid var(--color-primary);">Limited Offer</span>
+      <div class="leading-tight md:leading-normal">
+        <span class="text-xs md:text-sm font-bold" style="color: var(--color-primary);">50% OFF</span>
+        <span class="text-xs md:text-sm" style="color: var(--color-text-light);">Expires In</span>
+        <br class="md:hidden">
+        <span id="nav-cd" class="text-xs md:text-sm font-bold tabular-nums" style="color: var(--color-primary);"></span>
       </div>
       <button data-cta="true" class="cta-btn text-xs md:text-sm whitespace-nowrap">Enroll Today <span style="margin-left:4px;">&#9654;</span></button>
     </div>
@@ -130,13 +133,16 @@
      ============================================ -->
 <section id="hero" class="section-rich relative pt-24 pb-16 md:pt-32 md:pb-20">
   <div class="max-w-6xl mx-auto px-5 md:px-10 w-full">
-    <div class="max-w-4xl mx-auto text-center mb-10 reveal">
+    <div class="max-w-4xl mx-auto text-center mb-5 reveal">
       <span class="text-xs font-bold uppercase tracking-widest mb-6 block" style="color: var(--color-primary);">For Founders And Business Owners</span>
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6" style="color: #000000;">
-        Turn Claude Into Your High-Performing Marketing Team That <span class="gradient-text">Automates 90% Of Your Most Time-Consuming Tasks</span>, Saves You $1,000s Of Costs, And Supercharges Your Business To The Next Level
+      <h1 class="text-xl md:text-2xl lg:text-3xl font-extrabold leading-tight mb-5" style="color: #000000;">
+        Turn Claude Into Your High-Performing Marketing Team That <span class="gradient-text">Automates 90% Of Your Most Time-Consuming Tasks</span>, Cuts Thousands In Costs, And Grows Your Revenue — One Tool. No Team. No Overwhelm.
       </h1>
-      <p class="text-lg md:text-xl mb-4" style="color: var(--color-text-light);">
-        Join a serial 7-figure business owner, Darius Lukas, and Mindvalley's former CMO with $300M+ in online sales, Klemen Struc, in this online bootcamp to get more reach, traffic, leads, clients, and revenue growth with Claude -- without adding more AI tools, more spend, or more chaos.
+      <p class="text-base md:text-lg mb-3" style="color: var(--color-text-light);">
+        Serial 7-figure founder Darius Lukas of Hyper Entrepreneur and Mindvalley's former CMO Klemen Struc ($300M+ in online sales) built 23 done-for-you Claude .Skills covering content, emails, ads, and funnels.
+      </p>
+      <p class="text-sm md:text-base font-semibold" style="color: var(--color-primary);">
+        Join Claude Cowork: Business Growth Bootcamp LIVE — install in minutes, let Claude run your marketing from day one.
       </p>
     </div>
     <div class="max-w-4xl mx-auto reveal mb-10">
@@ -145,12 +151,65 @@
       <style>wistia-player[media-id='ncg1fniula']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ncg1fniula/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
       <wistia-player media-id="ncg1fniula" aspect="1.7777777777777777"></wistia-player>
     </div>
+    <!-- Countdown / Urgency -->
+    <div class="max-w-2xl mx-auto text-center reveal mb-8">
+      <h3 class="text-xl md:text-2xl lg:text-3xl font-bold mb-2 md:whitespace-nowrap">Enroll Now At 50% Off Before The Price Goes Up</h3>
+      <p class="text-lg mb-5" style="color: var(--color-text-light);">50% Discount Expires On Sunday, April 5, 2026</p>
+      <div id="hero-countdown" class="flex justify-center gap-3 md:gap-5">
+        <div class="flex flex-col items-center">
+          <span id="cd-days" class="text-3xl md:text-4xl font-extrabold" style="color: var(--color-primary);">00</span>
+          <span class="text-xs uppercase tracking-widest mt-1" style="color: var(--color-text-dim);">Days</span>
+        </div>
+        <span class="text-3xl md:text-4xl font-bold" style="color: var(--color-primary);">:</span>
+        <div class="flex flex-col items-center">
+          <span id="cd-hours" class="text-3xl md:text-4xl font-extrabold" style="color: var(--color-primary);">00</span>
+          <span class="text-xs uppercase tracking-widest mt-1" style="color: var(--color-text-dim);">Hours</span>
+        </div>
+        <span class="text-3xl md:text-4xl font-bold" style="color: var(--color-primary);">:</span>
+        <div class="flex flex-col items-center">
+          <span id="cd-minutes" class="text-3xl md:text-4xl font-extrabold" style="color: var(--color-primary);">00</span>
+          <span class="text-xs uppercase tracking-widest mt-1" style="color: var(--color-text-dim);">Minutes</span>
+        </div>
+        <span class="text-3xl md:text-4xl font-bold" style="color: var(--color-primary);">:</span>
+        <div class="flex flex-col items-center">
+          <span id="cd-seconds" class="text-3xl md:text-4xl font-extrabold" style="color: var(--color-primary);">00</span>
+          <span class="text-xs uppercase tracking-widest mt-1" style="color: var(--color-text-dim);">Seconds</span>
+        </div>
+      </div>
+    </div>
     <div class="text-center reveal">
       <button data-cta="true" class="cta-btn text-lg mb-4">
         Enroll Today
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <p class="text-sm" style="color: var(--color-text-dim);">100% money-back guarantee &middot; Instant access</p>
+      <p class="text-sm" style="color: var(--color-text-dim);">100% money-back guarantee</p>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-3xl mx-auto"><hr style="border: none; border-top: 1px solid rgba(0,0,0,0.08);"></div>
+
+<!-- ============================================
+     SECTION: SOLUTION BRIDGE (section-rich, LIGHT)
+     ============================================ -->
+<section id="solution" class="section-rich py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-5 md:px-10">
+    <div class="max-w-3xl mx-auto text-center reveal">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">What If Someone Built Your Entire Claude-Powered Marketing System <span style="color: var(--color-primary);">FOR You</span> — And All You Had To Do Was Install It And Hit Run?</h2>
+      <p class="text-lg font-semibold mb-4" style="color: var(--color-text);">Open Claude. Load your Claude .Skill.</p>
+      <p class="text-base md:text-lg mb-4" style="color: var(--color-text-light);">
+        A complete library of expert-built Claude .Skills — ready to create your content, write your emails, build your funnels, run your ads, and launch your offers.
+      </p>
+      <p class="text-base md:text-lg mb-4" style="color: var(--color-text-light);">
+        No prompting from scratch. No figuring it out yourself. No team needed.
+      </p>
+      <p class="text-base md:text-lg mb-6" style="color: var(--color-text-light);">
+        Just install, configure for your brand, and let Claude do the heavy lifting.
+      </p>
+      <p class="text-base md:text-lg font-semibold" style="color: var(--color-text);">
+        23 done-for-you Claude .Skills built by Darius Lukas and Klemen Struc — two operators who've generated over $300M in online revenue. Install in minutes. Claude does the rest.
+      </p>
+      <div class="accent-bar w-24 mx-auto mt-10"></div>
     </div>
   </div>
 </section>
@@ -162,7 +221,7 @@
   <div class="max-w-6xl mx-auto px-5 md:px-10">
     <!-- Survey-backed intro -->
     <div class="max-w-3xl mx-auto text-center mb-12 reveal">
-      <span class="text-xs font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">We Surveyed Hundreds Of Business Owners</span>
+      <span class="text-xs font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">Do Any Of These Sound Familiar?</span>
       <h2 class="text-3xl md:text-4xl font-bold mb-6">These Are The <span style="color: var(--color-primary);">3 Biggest Challenges</span> They're Facing Right Now</h2>
       <p class="text-lg" style="color: var(--color-text-light);">We asked hundreds of founders and business owners what's holding them back. Here's what they told us &mdash; and exactly how this bootcamp solves each one.</p>
     </div>
@@ -186,7 +245,7 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="mt-0.5 flex-shrink-0"><circle cx="12" cy="12" r="10" fill="rgba(34,197,94,0.15)"/><path d="M8 12l3 3 5-5" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <div>
                 <p class="text-sm font-bold mb-1" style="color: #16a34a;">How This Bootcamp Solves It</p>
-                <p class="text-sm" style="color: var(--color-text-light);">You don't need 10 tools. You need one: <strong>Claude</strong>. We build 23 done-for-you .Skills for you &mdash; no choosing, no researching, no overwhelm. Just install and run.</p>
+                <p class="text-sm" style="color: var(--color-text-light);">You don't need 10 tools. You need one: <strong>Claude</strong>. We build 23 done-for-you Claude .Skills for you &mdash; no choosing, no researching, no overwhelm. Just install and run.</p>
               </div>
             </div>
           </div>
@@ -213,7 +272,7 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="mt-0.5 flex-shrink-0"><circle cx="12" cy="12" r="10" fill="rgba(34,197,94,0.15)"/><path d="M8 12l3 3 5-5" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <div>
                 <p class="text-sm font-bold mb-1" style="color: #16a34a;">How This Bootcamp Solves It</p>
-                <p class="text-sm" style="color: var(--color-text-light);">You get <strong>10 done-for-you funnel .Skills</strong> (5 for lead gen, 5 for sales) plus <strong>Meta Ads .Skills</strong> that generate high-converting ad copy on demand. Claude builds your entire client acquisition machine.</p>
+                <p class="text-sm" style="color: var(--color-text-light);">You get <strong>10 done-for-you funnel Claude .Skills</strong> (5 for lead gen, 5 for sales) plus <strong>Meta Ads Claude .Skills</strong> that generate high-converting ad copy on demand. Claude builds your entire client acquisition machine.</p>
               </div>
             </div>
           </div>
@@ -240,7 +299,7 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="mt-0.5 flex-shrink-0"><circle cx="12" cy="12" r="10" fill="rgba(34,197,94,0.15)"/><path d="M8 12l3 3 5-5" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <div>
                 <p class="text-sm font-bold mb-1" style="color: #16a34a;">How This Bootcamp Solves It</p>
-                <p class="text-sm" style="color: var(--color-text-light);">No coding. No technical skills needed. Every .Skill is <strong>pre-built and tested</strong>. You install it in Claude and hit run. The video walkthroughs show you exactly what to do, step by step.</p>
+                <p class="text-sm" style="color: var(--color-text-light);">No coding. No technical skills needed. Every Claude .Skill is <strong>pre-built and tested</strong>. You install it in Claude and hit run. The video walkthroughs show you exactly what to do, step by step.</p>
               </div>
             </div>
           </div>
@@ -259,7 +318,7 @@
           <h4 class="text-base font-bold mb-3">Information Overload &amp; No Clear Roadmap</h4>
           <p class="text-sm italic" style="color: var(--color-text-dim);">"Hard to know who is right and who to trust" &middot; "No blueprint from A to Z"</p>
           <div class="mt-4 pt-4" style="border-top: 1px solid var(--color-card-border);">
-            <p class="text-xs font-bold" style="color: #16a34a;">We give you the complete blueprint &mdash; 23 .Skills across 7 categories, delivered over 4 weeks.</p>
+            <p class="text-xs font-bold" style="color: #16a34a;">We give you the complete blueprint &mdash; 23 Claude .Skills across 7 categories, delivered over 4 weeks.</p>
           </div>
         </div>
         <div class="brand-card p-6 md:p-8 text-center">
@@ -267,7 +326,7 @@
           <h4 class="text-base font-bold mb-3">Lack of Knowledge &amp; Technical Skills</h4>
           <p class="text-sm italic" style="color: var(--color-text-dim);">"Too overwhelming for non-technical people" &middot; "Hard to configure and correct prompting"</p>
           <div class="mt-4 pt-4" style="border-top: 1px solid var(--color-card-border);">
-            <p class="text-xs font-bold" style="color: #16a34a;">Zero technical skills needed. We build the .Skills, you install them. Video walkthroughs + live Q&amp;A included.</p>
+            <p class="text-xs font-bold" style="color: #16a34a;">Zero technical skills needed. We build the Claude .Skills, you install them. Video walkthroughs + live Q&amp;A included.</p>
           </div>
         </div>
         <div class="brand-card p-6 md:p-8 text-center">
@@ -283,23 +342,6 @@
   </div>
 </section>
 
-<!-- ============================================
-     SECTION 4: SOLUTION BRIDGE (section-rich, LIGHT)
-     ============================================ -->
-<section id="solution" class="section-rich py-16 md:py-24">
-  <div class="max-w-6xl mx-auto px-5 md:px-10">
-    <div class="max-w-3xl mx-auto text-center reveal">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">What If Someone Built Your Entire Claude-Powered Marketing System <span style="color: var(--color-primary);">FOR You</span> -- And All You Had To Do Was Install It And Hit Run?</h2>
-      <p class="text-lg mb-6" style="color: var(--color-text-light);">
-        Imagine opening Claude and having a complete library of expert-built .Skills -- ready to create your content, write your emails, build your funnels, and run your ads. No prompting from scratch. No figuring it out yourself. Just install, configure for your brand, and let Claude do the heavy lifting.
-      </p>
-      <p class="text-lg font-semibold" style="color: var(--color-text);">
-        That's exactly what we've built for you. 23 done-for-you Claude .Skills, created by two people who have collectively generated over $300M in online revenue.
-      </p>
-      <div class="accent-bar w-24 mx-auto mt-10"></div>
-    </div>
-  </div>
-</section>
 
 <!-- ============================================
      SECTION 5: PRODUCT INTRODUCTION (section-solid, LIGHT)
@@ -314,7 +356,7 @@
         <span class="text-xs font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">Introducing</span>
         <h2 class="text-3xl md:text-4xl font-bold mb-6">Claude Cowork: Business Growth Bootcamp</h2>
         <p class="text-lg mb-6" style="color: var(--color-text-light);">
-          23 done-for-you Claude .Skills built by Darius Lukas and Klemen Struc -- covering content creation, email marketing, Meta ads, lead generation funnels, and sales funnels. Each .Skill is ready to install and run inside Claude.
+          23 done-for-you Claude .Skills built by Darius Lukas and Klemen Struc – covering content creation, email marketing, Meta ads, lead generation funnels, and sales funnels. Each Claude .Skill is ready to install and run inside Claude.
         </p>
         <p class="text-lg mb-8" style="color: var(--color-text-light);">
           Plus 4 deep-dive video walkthroughs and 4 live Q&A sessions to help you install everything, configure it for your business, and get maximum results from day one.
@@ -322,11 +364,11 @@
         <div class="space-y-4">
           <div class="flex items-start gap-3">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="mt-1 flex-shrink-0"><circle cx="12" cy="12" r="10" fill="rgba(79,48,254,0.1)"/><path d="M8 12l3 3 5-5" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span class="text-base" style="color: var(--color-text-light);"><strong style="color: var(--color-text);">Done for you:</strong> We build the .Skills, you install them. No prompting from scratch.</span>
+            <span class="text-base" style="color: var(--color-text-light);"><strong style="color: var(--color-text);">Done for you:</strong> We build the Claude .Skills, you install them. No prompting from scratch.</span>
           </div>
           <div class="flex items-start gap-3">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="mt-1 flex-shrink-0"><circle cx="12" cy="12" r="10" fill="rgba(79,48,254,0.1)"/><path d="M8 12l3 3 5-5" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span class="text-base" style="color: var(--color-text-light);"><strong style="color: var(--color-text);">Plug-and-play:</strong> Each .Skill works out of the box. Install in minutes, run immediately.</span>
+            <span class="text-base" style="color: var(--color-text-light);"><strong style="color: var(--color-text);">Plug-and-play:</strong> Each Claude .Skill works out of the box. Install in minutes, run immediately.</span>
           </div>
           <div class="flex items-start gap-3">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="mt-1 flex-shrink-0"><circle cx="12" cy="12" r="10" fill="rgba(79,48,254,0.1)"/><path d="M8 12l3 3 5-5" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -345,7 +387,7 @@
   <div class="max-w-6xl mx-auto px-5 md:px-10">
     <div class="text-center mb-12 reveal">
       <span class="text-xs font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">Your Done-For-You Delivery Schedule</span>
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">4 Weeks. 23 .Skills. All Built For You.</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">4 Weeks. 23 Claude .Skills. All Built For You.</h2>
       <p class="text-lg max-w-2xl mx-auto" style="color: var(--color-text-light);">Each week, we deliver a new set of ready-made Claude .Skills with a video walkthrough and live Q&A to help you install and run them.</p>
     </div>
     <div class="space-y-8 max-w-4xl mx-auto">
@@ -353,11 +395,11 @@
       <div class="brand-card p-6 md:p-10 reveal" style="border-left: 4px solid var(--color-primary);">
         <span class="inline-block text-sm font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4" style="background: var(--gradient-primary); color: #fff;">Module 1</span>
         <h3 class="text-2xl md:text-3xl font-bold mb-4">Build Your Content Machine &mdash; Part 1</h3>
-        <p class="text-base md:text-lg mb-6" style="color: var(--color-text-light);">We build your Instagram, YouTube, and LinkedIn .Skills &mdash; ready to install. Claude handles your social content creation across all three platforms. Just configure your brand voice and hit run.</p>
+        <p class="text-base md:text-lg mb-6" style="color: var(--color-text-light);">We build your Instagram, YouTube, and LinkedIn Claude .Skills &mdash; ready to install. Claude handles your social content creation across all three platforms. Just configure your brand voice and hit run.</p>
         <div class="flex flex-wrap gap-3 mb-6">
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(79,48,254,0.08); color: var(--color-primary);">3 Instagram .Skills</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(79,48,254,0.08); color: var(--color-primary);">3 YouTube .Skills</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(79,48,254,0.08); color: var(--color-primary);">3 LinkedIn .Skills</span>
+          <span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(79,48,254,0.08); color: var(--color-primary);">3 Instagram Claude .Skills</span>
+          <span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(79,48,254,0.08); color: var(--color-primary);">3 YouTube Claude .Skills</span>
+          <span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(79,48,254,0.08); color: var(--color-primary);">3 LinkedIn Claude .Skills</span>
         </div>
         <div class="grid gap-5 sm:grid-cols-3 pt-6" style="border-top: 1px solid var(--color-card-border);">
           <div class="flex items-start gap-3">
@@ -366,7 +408,7 @@
             </div>
             <div>
               <p class="text-sm font-bold mb-1">Claude .Skills Done For You</p>
-              <p class="text-sm" style="color: var(--color-text-dim);">9 plug-and-play .Skills for Instagram, YouTube, and LinkedIn &mdash; built, tested, and ready to install.</p>
+              <p class="text-sm" style="color: var(--color-text-dim);">9 plug-and-play Claude .Skills for Instagram, YouTube, and LinkedIn &mdash; built, tested, and ready to install.</p>
             </div>
           </div>
           <div class="flex items-start gap-3">
@@ -375,7 +417,7 @@
             </div>
             <div>
               <p class="text-sm font-bold mb-1">Video Training with Darius and Klemen</p>
-              <p class="text-sm" style="color: var(--color-text-dim);">Step-by-step walkthrough showing you exactly how to install, configure, and run your content .Skills.</p>
+              <p class="text-sm" style="color: var(--color-text-dim);">Step-by-step walkthrough showing you exactly how to install, configure, and run your content Claude .Skills.</p>
             </div>
           </div>
           <div class="flex items-start gap-3">
@@ -393,9 +435,9 @@
       <div class="brand-card p-6 md:p-10 reveal" style="border-left: 4px solid var(--color-primary);">
         <span class="inline-block text-sm font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4" style="background: var(--gradient-primary); color: #fff;">Module 2</span>
         <h3 class="text-2xl md:text-3xl font-bold mb-4">Build Your Content Machine &mdash; Part 2</h3>
-        <p class="text-base md:text-lg mb-6" style="color: var(--color-text-light);">We deliver your Meta Ads .Skills so Claude can write your ad copy, headlines, and creative variations. Plug them in and let Claude generate high-converting ad assets on demand.</p>
+        <p class="text-base md:text-lg mb-6" style="color: var(--color-text-light);">We deliver your Meta Ads Claude .Skills so Claude can write your ad copy, headlines, and creative variations. Plug them in and let Claude generate high-converting ad assets on demand.</p>
         <div class="flex flex-wrap gap-3 mb-6">
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(79,48,254,0.08); color: var(--color-primary);">2 Meta Ads .Skills</span>
+          <span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(79,48,254,0.08); color: var(--color-primary);">2 Meta Ads Claude .Skills</span>
         </div>
         <div class="grid gap-5 sm:grid-cols-3 pt-6" style="border-top: 1px solid var(--color-card-border);">
           <div class="flex items-start gap-3">
@@ -404,7 +446,7 @@
             </div>
             <div>
               <p class="text-sm font-bold mb-1">Claude .Skills Done For You</p>
-              <p class="text-sm" style="color: var(--color-text-dim);">2 expert-built .Skills for Meta Ads &mdash; generate ad copy, headlines, and creative variations in seconds.</p>
+              <p class="text-sm" style="color: var(--color-text-dim);">2 expert-built Claude .Skills for Meta Ads &mdash; generate ad copy, headlines, and creative variations in seconds.</p>
             </div>
           </div>
           <div class="flex items-start gap-3">
@@ -422,7 +464,7 @@
             </div>
             <div>
               <p class="text-sm font-bold mb-1">Q&A Session with Darius and Klemen</p>
-              <p class="text-sm" style="color: var(--color-text-dim);">Get live feedback on your ad strategy, review your .Skills output, and fine-tune for your niche.</p>
+              <p class="text-sm" style="color: var(--color-text-dim);">Get live feedback on your ad strategy, review your Claude .Skills output, and fine-tune for your niche.</p>
             </div>
           </div>
         </div>
@@ -431,9 +473,9 @@
       <div class="brand-card p-6 md:p-10 reveal" style="border-left: 4px solid var(--color-primary);">
         <span class="inline-block text-sm font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4" style="background: var(--gradient-primary); color: #fff;">Module 3</span>
         <h3 class="text-2xl md:text-3xl font-bold mb-4">Build Your Email Machine</h3>
-        <p class="text-base md:text-lg mb-6" style="color: var(--color-text-light);">Your email .Skills arrive &mdash; ready to generate launch sequences, nurture campaigns, and newsletters. Install them and let Claude write emails that drive opens, clicks, and sales.</p>
+        <p class="text-base md:text-lg mb-6" style="color: var(--color-text-light);">Your email Claude .Skills arrive &mdash; ready to generate launch sequences, nurture campaigns, and newsletters. Install them and let Claude write emails that drive opens, clicks, and sales.</p>
         <div class="flex flex-wrap gap-3 mb-6">
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(79,48,254,0.08); color: var(--color-primary);">2 Email .Skills</span>
+          <span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(79,48,254,0.08); color: var(--color-primary);">2 Email Claude .Skills</span>
         </div>
         <div class="grid gap-5 sm:grid-cols-3 pt-6" style="border-top: 1px solid var(--color-card-border);">
           <div class="flex items-start gap-3">
@@ -442,7 +484,7 @@
             </div>
             <div>
               <p class="text-sm font-bold mb-1">Claude .Skills Done For You</p>
-              <p class="text-sm" style="color: var(--color-text-dim);">2 ready-to-run .Skills for email &mdash; launch sequences, nurture flows, and newsletters on autopilot.</p>
+              <p class="text-sm" style="color: var(--color-text-dim);">2 ready-to-run Claude .Skills for email &mdash; launch sequences, nurture flows, and newsletters on autopilot.</p>
             </div>
           </div>
           <div class="flex items-start gap-3">
@@ -451,7 +493,7 @@
             </div>
             <div>
               <p class="text-sm font-bold mb-1">Video Training with Darius and Klemen</p>
-              <p class="text-sm" style="color: var(--color-text-dim);">How to install your email .Skills and configure them for your audience, offers, and brand voice.</p>
+              <p class="text-sm" style="color: var(--color-text-dim);">How to install your email Claude .Skills and configure them for your audience, offers, and brand voice.</p>
             </div>
           </div>
           <div class="flex items-start gap-3">
@@ -469,10 +511,10 @@
       <div class="brand-card p-6 md:p-10 reveal" style="border-left: 4px solid var(--color-primary);">
         <span class="inline-block text-sm font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4" style="background: var(--gradient-primary); color: #fff;">Module 4</span>
         <h3 class="text-2xl md:text-3xl font-bold mb-4">Build Your Launch Machine</h3>
-        <p class="text-base md:text-lg mb-6" style="color: var(--color-text-light);">The final delivery: your lead generation and sales funnel .Skills. Claude builds your landing pages, opt-in flows, sales pages, and complete funnel copy. Install and launch.</p>
+        <p class="text-base md:text-lg mb-6" style="color: var(--color-text-light);">The final delivery: your lead generation and sales funnel Claude .Skills. Claude builds your landing pages, opt-in flows, sales pages, and complete funnel copy. Install and launch.</p>
         <div class="flex flex-wrap gap-3 mb-6">
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(79,48,254,0.08); color: var(--color-primary);">5 Lead Gen Funnel .Skills</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(79,48,254,0.08); color: var(--color-primary);">5 Sales Funnel .Skills</span>
+          <span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(79,48,254,0.08); color: var(--color-primary);">5 Lead Gen Funnel Claude .Skills</span>
+          <span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(79,48,254,0.08); color: var(--color-primary);">5 Sales Funnel Claude .Skills</span>
         </div>
         <div class="grid gap-5 sm:grid-cols-3 pt-6" style="border-top: 1px solid var(--color-card-border);">
           <div class="flex items-start gap-3">
@@ -481,7 +523,7 @@
             </div>
             <div>
               <p class="text-sm font-bold mb-1">Claude .Skills Done For You</p>
-              <p class="text-sm" style="color: var(--color-text-dim);">10 .Skills for lead gen and sales funnels &mdash; landing pages, opt-ins, sales copy, and full funnel flows.</p>
+              <p class="text-sm" style="color: var(--color-text-dim);">10 Claude .Skills for lead gen and sales funnels &mdash; landing pages, opt-ins, sales copy, and full funnel flows.</p>
             </div>
           </div>
           <div class="flex items-start gap-3">
@@ -490,7 +532,7 @@
             </div>
             <div>
               <p class="text-sm font-bold mb-1">Video Training with Darius and Klemen</p>
-              <p class="text-sm" style="color: var(--color-text-dim);">Full walkthrough on building and launching high-converting funnels with your done-for-you .Skills.</p>
+              <p class="text-sm" style="color: var(--color-text-dim);">Full walkthrough on building and launching high-converting funnels with your done-for-you Claude .Skills.</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -524,36 +566,36 @@
         <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(79,48,254,0.1);">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3 class="text-lg font-bold mb-2">Plug-and-Play .Skills</h3>
-        <p class="text-base" style="color: var(--color-text-light);">Every .Skill is built and tested before you receive it. Install in minutes, configure for your brand, and start producing results immediately.</p>
+        <h3 class="text-lg font-bold mb-2">Plug-and-Play Claude .Skills</h3>
+        <p class="text-base" style="color: var(--color-text-light);">Every Claude .Skill is built and tested before you receive it. Install in minutes, configure for your brand, and start producing results immediately.</p>
       </div>
       <div class="brand-card p-6 md:p-8 reveal">
         <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(79,48,254,0.1);">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h3 class="text-lg font-bold mb-2">No Coding Needed</h3>
-        <p class="text-base" style="color: var(--color-text-light);">If you can use Claude, you can use these .Skills. Zero technical knowledge required. Just install and run -- the video walkthroughs show you exactly how.</p>
+        <p class="text-base" style="color: var(--color-text-light);">If you can use Claude, you can use these Claude .Skills. Zero technical knowledge required. Just install and run – the video walkthroughs show you exactly how.</p>
       </div>
       <div class="brand-card p-6 md:p-8 reveal">
         <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(79,48,254,0.1);">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="var(--color-primary)" stroke-width="2"/><path d="M3 9h18M9 21V9" stroke="var(--color-primary)" stroke-width="2"/></svg>
         </div>
         <h3 class="text-lg font-bold mb-2">Multi-Platform Coverage</h3>
-        <p class="text-base" style="color: var(--color-text-light);">Instagram, YouTube, LinkedIn, Email, Meta Ads, Lead Gen Funnels, Sales Funnels. One set of .Skills covers your entire marketing stack.</p>
+        <p class="text-base" style="color: var(--color-text-light);">Instagram, YouTube, LinkedIn, Email, Meta Ads, Lead Gen Funnels, Sales Funnels. One set of Claude .Skills covers your entire marketing stack.</p>
       </div>
       <div class="brand-card p-6 md:p-8 reveal">
         <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(79,48,254,0.1);">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="var(--color-primary)" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="var(--color-primary)" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="var(--color-primary)" stroke-width="2"/></svg>
         </div>
         <h3 class="text-lg font-bold mb-2">Expert-Built Quality</h3>
-        <p class="text-base" style="color: var(--color-text-light);">Built by a serial 7-figure business owner and Mindvalley's former CMO. These .Skills encode the strategies behind $300M+ in online sales.</p>
+        <p class="text-base" style="color: var(--color-text-light);">Built by a serial 7-figure business owner and Mindvalley's former CMO. These Claude .Skills encode the strategies behind $300M+ in online sales.</p>
       </div>
       <div class="brand-card p-6 md:p-8 reveal">
         <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(79,48,254,0.1);">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="var(--color-primary)" stroke-width="2"/><path d="M12 6v6l4 2" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
         <h3 class="text-lg font-bold mb-2">Install In Minutes</h3>
-        <p class="text-base" style="color: var(--color-text-light);">No complex setup. No integrations. No configuration headaches. Each .Skill installs directly into Claude and is ready to produce output immediately.</p>
+        <p class="text-base" style="color: var(--color-text-light);">No complex setup. No integrations. No configuration headaches. Each Claude .Skill installs directly into Claude and is ready to produce output immediately.</p>
       </div>
       <div class="brand-card p-6 md:p-8 reveal">
         <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(79,48,254,0.1);">
@@ -645,7 +687,7 @@
           </div>
           <p class="text-sm mb-4" style="color: rgba(255,255,255,0.5);">Creating an Instagram post:</p>
           <div class="space-y-2">
-            <div class="flex items-center gap-2 text-sm" style="color: rgba(255,255,255,0.8);"><span style="color: var(--color-primary);">1.</span> Run your Instagram .Skill in Claude</div>
+            <div class="flex items-center gap-2 text-sm" style="color: rgba(255,255,255,0.8);"><span style="color: var(--color-primary);">1.</span> Run your Instagram Claude .Skill in Claude</div>
             <div class="flex items-center gap-2 text-sm" style="color: rgba(255,255,255,0.8);"><span style="color: var(--color-primary);">2.</span> Claude drafts, formats, and schedules &mdash; done</div>
           </div>
           <div class="mt-6 pt-4 text-sm font-semibold" style="border-top: 1px solid rgba(255,255,255,0.06); color: var(--color-primary);">~2 minutes per post</div>
@@ -885,7 +927,7 @@
         </div>
         <div class="p-6 md:p-8 flex flex-col justify-center">
           <h3 class="text-xl font-bold mb-3 text-white">4 Video Classes with Darius Lukas &amp; Klemen Struc</h3>
-          <p class="text-base mb-4" style="color: rgba(255,255,255,0.6);">Deep-dive video sessions where Darius and Klemen walk you through every .Skill, live. Watch them build, customize, and deploy &mdash; then do it yourself with confidence.</p>
+          <p class="text-base mb-4" style="color: rgba(255,255,255,0.6);">Deep-dive video sessions where Darius and Klemen walk you through every Claude .Skill, live. Watch them build, customize, and deploy &mdash; then do it yourself with confidence.</p>
           <span class="self-start text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full" style="background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3);">$1,997 Value</span>
         </div>
       </div>
@@ -907,30 +949,30 @@
         </div>
       </div>
 
-      <!-- Item 3: Instagram .Skills -->
+      <!-- Item 3: Instagram Claude .Skills -->
       <div class="brand-card reveal flex flex-col md:flex-row items-stretch" style="overflow: hidden;">
         <div class="md:w-2/5 flex-shrink-0">
           <svg width="480" height="300" viewBox="0 0 480 300" fill="none" class="w-full h-full" style="min-height: 200px;" loading="lazy">
             <rect width="480" height="300" fill="rgba(79,48,254,0.06)"/>
             <rect x="3" y="3" width="474" height="294" stroke="var(--color-primary)" stroke-width="1.5" stroke-dasharray="6 3" opacity="0.3"/>
-            <text x="240" y="145" text-anchor="middle" font-family="DM Sans" font-size="13" font-weight="600" fill="rgba(79,48,254,0.5)">Instagram .Skills — 480&times;300</text>
+            <text x="240" y="145" text-anchor="middle" font-family="DM Sans" font-size="13" font-weight="600" fill="rgba(79,48,254,0.5)">Instagram Claude .Skills — 480&times;300</text>
             <text x="240" y="165" text-anchor="middle" font-family="DM Sans" font-size="11" fill="rgba(79,48,254,0.35)">Replace with image</text>
           </svg>
         </div>
         <div class="p-6 md:p-8 flex flex-col justify-center">
           <h3 class="text-xl font-bold mb-3 text-white">Claude .Skills Done For You: Instagram</h3>
-          <p class="text-base mb-4" style="color: rgba(255,255,255,0.6);">Pre-built .Skills that create captions, carousels, and stories in your brand voice. Just run them and post &mdash; no prompting required.</p>
+          <p class="text-base mb-4" style="color: rgba(255,255,255,0.6);">Pre-built Claude .Skills that create captions, carousels, and stories in your brand voice. Just run them and post &mdash; no prompting required.</p>
           <span class="self-start text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full" style="background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3);">$997 Value</span>
         </div>
       </div>
 
-      <!-- Item 4: YouTube .Skills -->
+      <!-- Item 4: YouTube Claude .Skills -->
       <div class="brand-card reveal flex flex-col md:flex-row-reverse items-stretch" style="overflow: hidden;">
         <div class="md:w-2/5 flex-shrink-0">
           <svg width="480" height="300" viewBox="0 0 480 300" fill="none" class="w-full h-full" style="min-height: 200px;" loading="lazy">
             <rect width="480" height="300" fill="rgba(79,48,254,0.06)"/>
             <rect x="3" y="3" width="474" height="294" stroke="var(--color-primary)" stroke-width="1.5" stroke-dasharray="6 3" opacity="0.3"/>
-            <text x="240" y="145" text-anchor="middle" font-family="DM Sans" font-size="13" font-weight="600" fill="rgba(79,48,254,0.5)">YouTube .Skills — 480&times;300</text>
+            <text x="240" y="145" text-anchor="middle" font-family="DM Sans" font-size="13" font-weight="600" fill="rgba(79,48,254,0.5)">YouTube Claude .Skills — 480&times;300</text>
             <text x="240" y="165" text-anchor="middle" font-family="DM Sans" font-size="11" fill="rgba(79,48,254,0.35)">Replace with image</text>
           </svg>
         </div>
@@ -941,13 +983,13 @@
         </div>
       </div>
 
-      <!-- Item 5: LinkedIn .Skills -->
+      <!-- Item 5: LinkedIn Claude .Skills -->
       <div class="brand-card reveal flex flex-col md:flex-row items-stretch" style="overflow: hidden;">
         <div class="md:w-2/5 flex-shrink-0">
           <svg width="480" height="300" viewBox="0 0 480 300" fill="none" class="w-full h-full" style="min-height: 200px;" loading="lazy">
             <rect width="480" height="300" fill="rgba(79,48,254,0.06)"/>
             <rect x="3" y="3" width="474" height="294" stroke="var(--color-primary)" stroke-width="1.5" stroke-dasharray="6 3" opacity="0.3"/>
-            <text x="240" y="145" text-anchor="middle" font-family="DM Sans" font-size="13" font-weight="600" fill="rgba(79,48,254,0.5)">LinkedIn .Skills — 480&times;300</text>
+            <text x="240" y="145" text-anchor="middle" font-family="DM Sans" font-size="13" font-weight="600" fill="rgba(79,48,254,0.5)">LinkedIn Claude .Skills — 480&times;300</text>
             <text x="240" y="165" text-anchor="middle" font-family="DM Sans" font-size="11" fill="rgba(79,48,254,0.35)">Replace with image</text>
           </svg>
         </div>
@@ -958,13 +1000,13 @@
         </div>
       </div>
 
-      <!-- Item 6: Meta Ads .Skills -->
+      <!-- Item 6: Meta Ads Claude .Skills -->
       <div class="brand-card reveal flex flex-col md:flex-row-reverse items-stretch" style="overflow: hidden;">
         <div class="md:w-2/5 flex-shrink-0">
           <svg width="480" height="300" viewBox="0 0 480 300" fill="none" class="w-full h-full" style="min-height: 200px;" loading="lazy">
             <rect width="480" height="300" fill="rgba(79,48,254,0.06)"/>
             <rect x="3" y="3" width="474" height="294" stroke="var(--color-primary)" stroke-width="1.5" stroke-dasharray="6 3" opacity="0.3"/>
-            <text x="240" y="145" text-anchor="middle" font-family="DM Sans" font-size="13" font-weight="600" fill="rgba(79,48,254,0.5)">Meta Ads .Skills — 480&times;300</text>
+            <text x="240" y="145" text-anchor="middle" font-family="DM Sans" font-size="13" font-weight="600" fill="rgba(79,48,254,0.5)">Meta Ads Claude .Skills — 480&times;300</text>
             <text x="240" y="165" text-anchor="middle" font-family="DM Sans" font-size="11" fill="rgba(79,48,254,0.35)">Replace with image</text>
           </svg>
         </div>
@@ -975,13 +1017,13 @@
         </div>
       </div>
 
-      <!-- Item 7: Emails .Skills -->
+      <!-- Item 7: Emails Claude .Skills -->
       <div class="brand-card reveal flex flex-col md:flex-row items-stretch" style="overflow: hidden;">
         <div class="md:w-2/5 flex-shrink-0">
           <svg width="480" height="300" viewBox="0 0 480 300" fill="none" class="w-full h-full" style="min-height: 200px;" loading="lazy">
             <rect width="480" height="300" fill="rgba(79,48,254,0.06)"/>
             <rect x="3" y="3" width="474" height="294" stroke="var(--color-primary)" stroke-width="1.5" stroke-dasharray="6 3" opacity="0.3"/>
-            <text x="240" y="145" text-anchor="middle" font-family="DM Sans" font-size="13" font-weight="600" fill="rgba(79,48,254,0.5)">Email .Skills — 480&times;300</text>
+            <text x="240" y="145" text-anchor="middle" font-family="DM Sans" font-size="13" font-weight="600" fill="rgba(79,48,254,0.5)">Email Claude .Skills — 480&times;300</text>
             <text x="240" y="165" text-anchor="middle" font-family="DM Sans" font-size="11" fill="rgba(79,48,254,0.35)">Replace with image</text>
           </svg>
         </div>
@@ -992,7 +1034,7 @@
         </div>
       </div>
 
-      <!-- Item 8: Lead Generation Funnels .Skills -->
+      <!-- Item 8: Lead Generation Funnels Claude .Skills -->
       <div class="brand-card reveal flex flex-col md:flex-row-reverse items-stretch" style="overflow: hidden;">
         <div class="md:w-2/5 flex-shrink-0">
           <svg width="480" height="300" viewBox="0 0 480 300" fill="none" class="w-full h-full" style="min-height: 200px;" loading="lazy">
@@ -1009,7 +1051,7 @@
         </div>
       </div>
 
-      <!-- Item 9: Sales Funnels .Skills -->
+      <!-- Item 9: Sales Funnels Claude .Skills -->
       <div class="brand-card reveal flex flex-col md:flex-row items-stretch" style="overflow: hidden;">
         <div class="md:w-2/5 flex-shrink-0">
           <svg width="480" height="300" viewBox="0 0 480 300" fill="none" class="w-full h-full" style="min-height: 200px;" loading="lazy">
@@ -1144,6 +1186,10 @@
         <span class="text-lg font-bold">Total Value</span>
         <span class="text-2xl font-extrabold line-through" style="color: var(--color-text-dim);">$10,973+</span>
       </div>
+      <div class="flex justify-between items-center py-4 mb-2">
+        <span class="text-lg font-bold">Standard Price</span>
+        <span class="text-2xl font-extrabold line-through" style="color: var(--color-text-dim);">$997</span>
+      </div>
       <div class="flex justify-between items-center py-4 brand-card px-6 rounded-xl mb-8">
         <span class="text-lg font-bold">Your Price Today</span>
         <span class="text-3xl font-extrabold" style="color: var(--color-primary);">$497</span>
@@ -1166,14 +1212,14 @@
     <div class="text-center mb-12 reveal">
       <span class="text-xs font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">Get Started</span>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Choose Your Package</h2>
-      <p class="text-lg max-w-xl mx-auto" style="color: rgba(255,255,255,0.6);">One-time payment. Lifetime access to your .Skills. No subscriptions, no hidden fees.</p>
+      <p class="text-lg max-w-xl mx-auto" style="color: rgba(255,255,255,0.6);">One-time payment. Lifetime access to your Claude .Skills. No subscriptions, no hidden fees.</p>
     </div>
     <div id="pricing-tiers" class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
       <!-- Gold Tier -->
       <div class="brand-card p-8 reveal">
         <div class="text-center mb-6">
           <h3 class="text-2xl font-bold mb-2 text-white">Gold</h3>
-          <p class="text-sm mb-4" style="color: rgba(255,255,255,0.5);">The complete done-for-you .Skills package</p>
+          <p class="text-sm mb-4" style="color: rgba(255,255,255,0.5);">The complete done-for-you Claude .Skills package</p>
         </div>
         <ul class="space-y-3 mb-6">
           <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.7);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>3 Claude .Skills For Instagram <span style="color: #22c55e;">($997 Value)</span></span></li>
@@ -1263,7 +1309,7 @@
         <div class="flex flex-col items-center text-center mb-6">
           <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/lNzgml2EfCzIl04kmDr2/media/69c51c2c7794bf2c0c372664.jpg" alt="Darius Lukas" class="w-32 h-32 rounded-full object-cover mb-4" loading="lazy">
           <h3 class="text-2xl font-bold mb-1">Darius Lukas</h3>
-          <p class="text-sm font-semibold" style="color: var(--color-primary);">Serial 7-Figure Business Owner</p>
+          <p class="text-base font-semibold" style="color: var(--color-primary);">Serial 7-Figure Business Owner</p>
         </div>
         <ul class="space-y-3">
           <li class="flex items-start gap-3">
@@ -1289,7 +1335,7 @@
         <div class="flex flex-col items-center text-center mb-6">
           <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/lNzgml2EfCzIl04kmDr2/media/69c51c2cbec77fb5003ebaa6.jpg" alt="Klemen Struc" class="w-32 h-32 rounded-full object-cover mb-4" loading="lazy">
           <h3 class="text-2xl font-bold mb-1">Klemen Struc</h3>
-          <p class="text-sm font-semibold" style="color: var(--color-primary);">Mindvalley's Former CMO & Head of Growth</p>
+          <p class="text-base font-semibold" style="color: var(--color-primary);">Mindvalley's Former CMO & Head of Growth</p>
         </div>
         <ul class="space-y-3">
           <li class="flex items-start gap-3">
@@ -1326,8 +1372,11 @@
         </div>
         <div class="flex-1 text-center md:text-left">
           <h2 class="text-2xl md:text-3xl font-bold mb-4">100% Money-Back Guarantee</h2>
+          <p class="text-lg mb-4" style="color: var(--color-text-light);">
+            Enroll today completely risk-free. Get instant access to the private group and warm-up content. Start the program with everyone else on Thursday, April 16, 2026.
+          </p>
           <p class="text-lg" style="color: var(--color-text-light);">
-            Enroll today completely risk-free. Install the .Skills, run them with Claude, and see the results for yourself. If you don't feel the bootcamp delivered on its promise, simply email us within 30 days for a full refund. No questions, no hoops, no hard feelings.
+            Install the Claude .Skills, run them with Claude, and see the results for yourself. If you don't feel the program delivered on its promise, simply email us within 15 days from the start of the program and you will get a full instant refund. No questions, no hoops, no hard feelings.
           </p>
         </div>
       </div>
@@ -1342,16 +1391,43 @@
   <div class="max-w-6xl mx-auto px-5 md:px-10">
     <div class="text-center mb-12 reveal">
       <span class="text-xs font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">FAQ</span>
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Common Questions</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
     </div>
     <div class="max-w-3xl mx-auto reveal">
+      <div class="faq-item py-5">
+        <div class="faq-question flex items-center justify-between" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-semibold pr-4">When do I get access?</h3>
+          <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="faq-answer">
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Immediately. As soon as you enroll, you get instant access to the private group, warm-up content, Zoom links, and everything you need to be ready when the program kicks off.</p>
+        </div>
+      </div>
+      <div class="faq-item py-5">
+        <div class="faq-question flex items-center justify-between" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-semibold pr-4">When does the program start?</h3>
+          <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="faq-answer">
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Module 1 begins on Thursday, April 16, 2026. You'll get access to the private group and warm-up content as soon as you enroll, so you'll be fully prepared before day one.</p>
+        </div>
+      </div>
+      <div class="faq-item py-5">
+        <div class="faq-question flex items-center justify-between" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-semibold pr-4">Will I have access to replays of live sessions?</h3>
+          <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="faq-answer">
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Yes, of course. Replays will be available within 24 hours after each live session has ended.</p>
+        </div>
+      </div>
       <div class="faq-item py-5">
         <div class="faq-question flex items-center justify-between" onclick="toggleFaq(this)">
           <h3 class="text-lg font-semibold pr-4">What exactly are Claude .Skills?</h3>
           <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="faq-answer">
-          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Claude .Skills are pre-built instruction sets that you install into Claude. Think of them as expert marketing playbooks that Claude can execute on command. Instead of writing prompts from scratch, you install a .Skill and Claude knows exactly what to do -- whether that is creating Instagram content, writing email sequences, or building sales funnel copy.</p>
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Claude .Skills are pre-built instruction sets that you install into Claude. Think of them as expert marketing playbooks that Claude can execute on command. Instead of writing prompts from scratch, you install a Claude .Skill and Claude knows exactly what to do – whether that is creating Instagram content, writing email sequences, or building sales funnel copy.</p>
         </div>
       </div>
       <div class="faq-item py-5">
@@ -1360,25 +1436,25 @@
           <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="faq-answer">
-          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Not at all. If you can use Claude (type a message and get a response), you can use these .Skills. Installation takes minutes, and the video walkthroughs show you exactly how to set everything up step by step.</p>
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Not at all. If you can use Claude (type a message and get a response), you can use these Claude .Skills. Installation takes minutes, and the video walkthroughs show you exactly how to set everything up step by step.</p>
         </div>
       </div>
       <div class="faq-item py-5">
         <div class="faq-question flex items-center justify-between" onclick="toggleFaq(this)">
-          <h3 class="text-lg font-semibold pr-4">What platforms do the .Skills cover?</h3>
+          <h3 class="text-lg font-semibold pr-4">What platforms do the Claude .Skills cover?</h3>
           <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="faq-answer">
-          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">The 23 .Skills cover Instagram, YouTube, LinkedIn, Email, Meta Ads, Lead Generation Funnels, and Sales Funnels. That is your complete marketing stack -- all powered by Claude, with no additional tools or subscriptions required.</p>
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">The 23 Claude .Skills cover Instagram, YouTube, LinkedIn, Email, Meta Ads, Lead Generation Funnels, and Sales Funnels. That is your complete marketing stack – all powered by Claude, with no additional tools or subscriptions required.</p>
         </div>
       </div>
       <div class="faq-item py-5">
         <div class="faq-question flex items-center justify-between" onclick="toggleFaq(this)">
-          <h3 class="text-lg font-semibold pr-4">How do I install the .Skills?</h3>
+          <h3 class="text-lg font-semibold pr-4">How do I install the Claude .Skills?</h3>
           <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="faq-answer">
-          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Each .Skill comes with clear installation instructions. You add them to your Claude workspace, configure a few brand-specific settings (like your business name and tone of voice), and you are ready to go. The video walkthroughs cover this in detail.</p>
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Each Claude .Skill comes with clear installation instructions. You add them to your Claude workspace, configure a few brand-specific settings (like your business name and tone of voice), and you are ready to go. The video walkthroughs cover this in detail.</p>
         </div>
       </div>
       <div class="faq-item py-5">
@@ -1387,16 +1463,16 @@
           <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="faq-answer">
-          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">The 4 video classes walk you through each week's .Skills delivery -- showing you how to install, configure, and get maximum results. The 4 Q&A sessions give you direct access to Darius and Klemen to ask questions, troubleshoot, and get personalized guidance for your business.</p>
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">The 4 video classes walk you through each week's Claude .Skills delivery – showing you how to install, configure, and get maximum results. The 4 Q&A sessions give you direct access to Darius and Klemen to ask questions, troubleshoot, and get personalized guidance for your business.</p>
         </div>
       </div>
       <div class="faq-item py-5">
         <div class="faq-question flex items-center justify-between" onclick="toggleFaq(this)">
-          <h3 class="text-lg font-semibold pr-4">What if the .Skills don't work for my business?</h3>
+          <h3 class="text-lg font-semibold pr-4">What if the Claude .Skills don't work for my business?</h3>
           <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="faq-answer">
-          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">The .Skills are designed to work for any business that uses content, email, or funnels for marketing (which is most businesses). They are customizable to your brand, voice, and industry. And if you are not satisfied for any reason, you are covered by a 100% money-back guarantee within 30 days.</p>
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">The Claude .Skills are designed to work for any business that uses content, email, or funnels for marketing (which is most businesses). They are customizable to your brand, voice, and industry. And if you are not satisfied for any reason, you are covered by a 100% money-back guarantee within 30 days.</p>
         </div>
       </div>
       <div class="faq-item py-5">
@@ -1405,7 +1481,7 @@
           <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="faq-answer">
-          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Lifetime. Once you enroll, you have permanent access to all 23 .Skills, the video classes, and any future updates. The Q&A session recordings are also available permanently.</p>
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Lifetime. Once you enroll, you have permanent access to all 23 Claude .Skills, the video classes, and any future updates. The Q&A session recordings are also available permanently.</p>
         </div>
       </div>
       <div class="faq-item py-5">
@@ -1414,7 +1490,16 @@
           <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="faq-answer">
-          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Gold includes all 23 done-for-you .Skills, 4 video classes, and 4 Q&A sessions. VIP includes everything in Gold plus 12 months of Hyper AI University membership, the AI Consultant Certification, the Vibe Coding Bootcamp, and personal VIP coaching calls with both Darius and Klemen.</p>
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Gold includes all 23 done-for-you Claude .Skills, 4 video classes, and 4 Q&A sessions. VIP includes everything in Gold plus 12 months of Hyper AI University membership, the AI Consultant Certification, the Vibe Coding Bootcamp, and personal VIP coaching calls with both Darius and Klemen.</p>
+        </div>
+      </div>
+      <div class="faq-item py-5">
+        <div class="faq-question flex items-center justify-between" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-semibold pr-4">Can I get a refund?</h3>
+          <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="faq-answer">
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Yes, 100%. You're covered by a full money-back guarantee. If you don't feel the program delivered on its promise, simply email us within 15 days from the start of the program and you will get a full instant refund. No questions, no hoops, no hard feelings.</p>
         </div>
       </div>
     </div>
@@ -1523,6 +1608,39 @@ function toggleFaq(questionEl) {
     item.classList.add('open');
   }
 }
+
+/* ============================================
+   COUNTDOWN TIMER — April 5, 2026 midnight UTC
+   ============================================ */
+(function() {
+  const deadline = new Date('2026-04-05T23:59:59Z').getTime();
+  const $d = document.getElementById('cd-days');
+  const $h = document.getElementById('cd-hours');
+  const $m = document.getElementById('cd-minutes');
+  const $s = document.getElementById('cd-seconds');
+  const $nav = document.getElementById('nav-cd');
+
+  function tick() {
+    const now = Date.now();
+    const diff = Math.max(0, deadline - now);
+    const days  = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins  = Math.floor((diff % 3600000) / 60000);
+    const secs  = Math.floor((diff % 60000) / 1000);
+    const dd = String(days).padStart(2, '0');
+    const hh = String(hours).padStart(2, '0');
+    const mm = String(mins).padStart(2, '0');
+    const ss = String(secs).padStart(2, '0');
+    $d.textContent = dd;
+    $h.textContent = hh;
+    $m.textContent = mm;
+    $s.textContent = ss;
+    $nav.textContent = dd + 'd ' + hh + 'h ' + mm + 'm ' + ss + 's';
+    if (diff > 0) requestAnimationFrame(tick);
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
 </script>
 
 </body>
