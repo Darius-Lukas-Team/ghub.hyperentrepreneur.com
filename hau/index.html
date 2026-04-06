@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyper AI University — The AI Skills Campus for Entrepreneurs Who Want Results</title>
+  <meta name="description" content="Live AI trainings, ready-to-use tools and templates, weekly AI trend reports, and a private community of entrepreneurs. Save time, cut costs, and scale your business with AI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              purple: 'var(--color-primary)',
+              dark: 'var(--color-primary-dark)',
+              accent: 'var(--color-accent)',
+              bg: 'var(--color-bg)',
+              'bg-alt': 'var(--color-bg-alt)',
+              card: 'var(--color-card-bg)',
+            }
+          },
+          fontFamily: {
+            sans: ['DM Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/brand.css">
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #C084FC, #7C3AED);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Pricing tier highlight */
+    .tier-featured {
+      border-color: var(--color-primary) !important;
+      box-shadow: 0 0 40px rgba(79, 48, 254, 0.1);
+      position: relative;
+    }
+    .tier-featured::before {
+      content: 'Most Popular';
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gradient-primary);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 20px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Image placeholders */
+    .image-placeholder {
+      background: #F0EDFF;
+      border: 2px dashed var(--color-primary);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary);
+      font-weight: 600;
+      font-size: 14px;
+      text-align: center;
+      padding: 20px;
+    }
+    .section-dark .image-placeholder {
+      background: rgba(79, 48, 254, 0.1);
+      border-color: rgba(79, 48, 254, 0.4);
+    }
+
+    /* Pillar cards */
+    .pillar-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(79, 48, 254, 0.1);
+      flex-shrink: 0;
+    }
+
+    /* Topic pills */
+    .topic-pill {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 100px;
+      background: rgba(79, 48, 254, 0.08);
+      color: var(--color-primary);
+      transition: background 0.2s;
+    }
+    .topic-pill:hover {
+      background: rgba(79, 48, 254, 0.15);
+    }
+
+    /* Event row */
+    .event-row {
+      display: grid;
+      grid-template-columns: 1fr auto auto auto;
+      gap: 16px;
+      align-items: center;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--color-card-border);
+    }
+    @media (max-width: 768px) {
+      .event-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+  </style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1027396201405198');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1027396201405198&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Hyros Code -->
+<script>
+var head = document.head;
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = "https://t.dariuslukas.academy/v1/lst/universal-script?ph=8658404946c463288b1b217969fd706884b419377db10c2941fd39451dc39688&tag=!clicked&ref_url=" + encodeURI(document.URL);
+head.appendChild(script);
+</script>
+<!-- End Hyros Code -->
+
+</head>
+<body>
+
+<!-- ============================================
+     NAV BAR
+     ============================================ -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background: transparent;">
+  <div class="max-w-6xl mx-auto px-3 md:px-10 flex items-center justify-between h-14 md:h-20">
+    <a href="#" class="flex items-center gap-3">
+      <img id="nav-logo"
+           src="https://assets.cdn.filesafe.space/lNzgml2EfCzIl04kmDr2/media/69c6dec39fc63ab17f2737ea.png"
+           alt="Hyper AI University" class="max-h-7 w-auto opacity-70" loading="eager">
+    </a>
+    <div class="flex items-center gap-4">
+      <a href="#pricing" class="hidden md:inline text-sm font-semibold" style="color: var(--color-text-light);">Pricing</a>
+      <button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" class="cta-btn text-xs md:text-sm whitespace-nowrap">Join Hyper AI University <span style="margin-left:4px;">&#9654;</span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================
+     SECTION 1: HERO
+     ============================================ -->
+<section id="hero" class="relative pt-24 pb-16 md:pt-32 md:pb-20" style="background: linear-gradient(180deg, #ffffff 0%, #F0F0F5 100%);">
+  <div class="max-w-6xl mx-auto px-5 md:px-10 w-full">
+    <div class="max-w-4xl mx-auto text-center mb-5 reveal">
+      <span class="text-sm font-bold uppercase tracking-widest mb-6 block" style="color: var(--color-primary);">For Founders, Entrepreneurs, And Business Owners</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6" style="color: #000000;">
+        The Only AI Skills Campus That Helps You <span class="gradient-text">Save Time, Cut Costs, and Scale Your Business</span> With AI
+      </h1>
+      <p class="text-lg md:text-xl mb-6" style="color: var(--color-text-light);">
+        Get live AI trainings from world-class experts, ready-to-use tools and templates, weekly AI trend reports, and a private community of thousands of entrepreneurs &mdash; all in one membership.
+      </p>
+      <p class="text-base md:text-lg font-semibold" style="color: var(--color-primary);">
+        Join 70,000+ entrepreneurs who are already using AI to work smarter, not harder.
+      </p>
+    </div>
+
+    <!-- VSL Video Placeholder -->
+    <div class="max-w-4xl mx-auto reveal mb-10">
+      <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 300px;">
+        Image Here: VSL Video Embed
+      </div>
+    </div>
+
+    <div class="text-center reveal">
+      <button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" class="cta-btn text-lg mb-4">
+        Join Hyper AI University
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="text-sm" style="color: var(--color-text-dim);">Cancel anytime. No long-term commitment.</p>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-3xl mx-auto"><hr style="border: none; border-top: 1px solid rgba(0,0,0,0.08);"></div>
+
+<!-- ============================================
+     SECTION 2: PROBLEMS
+     ============================================ -->
+<section id="problems" class="section-rich py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-5 md:px-10">
+    <div class="max-w-3xl mx-auto text-center mb-12 reveal">
+      <span class="text-sm font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">Sound Familiar?</span>
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">You Know AI Is Changing Everything. <span style="color: var(--color-primary);">But You're Stuck.</span></h2>
+      <p class="text-lg" style="color: var(--color-text-light);">You've heard the success stories. You've tried the tools. But something isn't clicking. Here's what we hear from entrepreneurs every single day:</p>
+    </div>
+
+    <div class="max-w-3xl mx-auto space-y-5 reveal">
+      <!-- Problem 1 -->
+      <div class="brand-card p-6 md:p-8" style="border-left: 4px solid var(--color-primary);">
+        <h3 class="text-lg md:text-xl font-bold mb-2">Too Many Tools, No Clear Starting Point</h3>
+        <p class="text-base" style="color: var(--color-text-light);">New AI tools launch every week. You've signed up for a dozen of them, watched countless tutorials, and still don't know which ones actually move the needle for your business. The overwhelm is real &mdash; and it's keeping you stuck.</p>
+      </div>
+      <!-- Problem 2 -->
+      <div class="brand-card p-6 md:p-8" style="border-left: 4px solid var(--color-primary);">
+        <h3 class="text-lg md:text-xl font-bold mb-2">Mediocre Results From AI</h3>
+        <p class="text-base" style="color: var(--color-text-light);">You've tried ChatGPT, Claude, and other AI tools &mdash; but the outputs feel generic. You're not sure if you're prompting wrong, using the wrong tool, or missing something entirely. You know AI can do more, but you can't figure out how to unlock it.</p>
+      </div>
+      <!-- Problem 3 -->
+      <div class="brand-card p-6 md:p-8" style="border-left: 4px solid var(--color-primary);">
+        <h3 class="text-lg md:text-xl font-bold mb-2">No System to Turn AI Into Business Results</h3>
+        <p class="text-base" style="color: var(--color-text-light);">Playing with AI is one thing. Using it to generate leads, close clients, cut costs, and free up your time is another. You don't have a clear system that connects AI to real business outcomes &mdash; more revenue, fewer hours, lower costs.</p>
+      </div>
+      <!-- Problem 4 -->
+      <div class="brand-card p-6 md:p-8" style="border-left: 4px solid var(--color-primary);">
+        <h3 class="text-lg md:text-xl font-bold mb-2">AI Changes Every Week &mdash; And You Can't Keep Up</h3>
+        <p class="text-base" style="color: var(--color-text-light);">New models, new features, new tools. Keeping up with AI developments feels like a second full-time job. By the time you learn one tool, three better ones have already launched. You need a way to stay current without drowning in information.</p>
+      </div>
+      <!-- Problem 5 -->
+      <div class="brand-card p-6 md:p-8" style="border-left: 4px solid var(--color-primary);">
+        <h3 class="text-lg md:text-xl font-bold mb-2">Your Competitors Are Moving Faster Than You</h3>
+        <p class="text-base" style="color: var(--color-text-light);">You see other businesses cutting costs by 40%, landing bigger clients, and scaling without adding staff. The gap between AI-first businesses and everyone else is growing wider every month. And you're on the wrong side of it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 3: INTRO TO HAU
+     ============================================ -->
+<section id="intro" class="py-16 md:py-24" style="background: #fff;">
+  <div class="max-w-6xl mx-auto px-5 md:px-10">
+    <div class="reveal" style="background: linear-gradient(180deg, #0a0a1a 0%, #110e2e 100%); border-radius: 24px; padding: 48px 24px 56px; position: relative; overflow: hidden;">
+      <!-- Subtle grid/glow overlay -->
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 80%, rgba(79,48,254,0.10) 0%, transparent 60%);pointer-events:none;"></div>
+
+      <div class="max-w-4xl mx-auto text-center relative" style="z-index:1;">
+        <!-- Profile photo placeholders -->
+        <div class="flex items-center justify-center mb-8" style="gap: -8px;">
+          <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#3a2d6e,#5b4a9e);border:2px solid rgba(255,255,255,0.15);margin-right:-10px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;z-index:5;">
+            <svg width="22" height="22" fill="rgba(255,255,255,0.4)" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          </div>
+          <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#3a2d6e,#5b4a9e);border:2px solid rgba(255,255,255,0.15);margin-right:-10px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;z-index:4;">
+            <svg width="22" height="22" fill="rgba(255,255,255,0.4)" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          </div>
+          <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#3a2d6e,#5b4a9e);border:2px solid rgba(255,255,255,0.15);margin-right:-10px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;z-index:3;">
+            <svg width="22" height="22" fill="rgba(255,255,255,0.4)" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          </div>
+          <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#3a2d6e,#5b4a9e);border:2px solid rgba(255,255,255,0.15);margin-right:-10px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;z-index:2;">
+            <svg width="22" height="22" fill="rgba(255,255,255,0.4)" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          </div>
+          <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#3a2d6e,#5b4a9e);border:2px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;z-index:1;">
+            <svg width="22" height="22" fill="rgba(255,255,255,0.4)" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          </div>
+        </div>
+
+        <span class="text-sm font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">Introducing</span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Hyper AI University</h2>
+        <p class="text-xl md:text-2xl font-semibold mb-6" style="background: linear-gradient(135deg, #DAB3FF, #262DFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">The Next-Generation AI School for Entrepreneurs, Freelancers, and Professionals Who Want Results</p>
+        <p class="text-lg mb-10 max-w-2xl mx-auto" style="color: rgba(255,255,255,0.6);">
+          We built Hyper AI University to help you navigate this shift better than any MBA &mdash; at a fraction of the cost. Everything you need to save time, cut costs, and scale your business with AI. All in one place.
+        </p>
+
+        <button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" class="cta-btn text-lg mb-10">
+          Join Hyper AI University
+          <span style="margin-left:6px;">&#9654;</span>
+        </button>
+
+        <!-- Device Mockup Placeholder -->
+        <div class="image-placeholder" style="aspect-ratio: 16/9; max-width: 700px; margin-left: auto; margin-right: auto; min-height: 250px; background: rgba(79, 48, 254, 0.1); border-color: rgba(79, 48, 254, 0.4);">
+          Image Here: HAU Platform on Multiple Devices (Laptop, Tablet, Phone)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 4: DREAM OUTCOMES
+     ============================================ -->
+<section id="outcomes" class="section-solid py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-5 md:px-10">
+    <div class="text-center mb-12 reveal">
+      <span class="text-sm font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">What You'll Achieve</span>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Here's What Happens When You <span style="color: var(--color-primary);">Join Hyper AI University</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <!-- Outcome 1 -->
+      <div class="brand-card p-6 md:p-8 reveal">
+        <div class="pillar-icon mb-5">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="text-lg font-bold mb-2">Save Thousands in People and Software Costs</h3>
+        <p class="text-base" style="color: var(--color-text-light);">Learn how to replace expensive tools and outsourced tasks with AI-powered workflows. Members regularly save $2,000&ndash;$10,000+ in the first 6&ndash;12 months.</p>
+      </div>
+      <!-- Outcome 2 -->
+      <div class="brand-card p-6 md:p-8 reveal">
+        <div class="pillar-icon mb-5">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M23 6l-9.5 9.5-5-5L1 18" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 6h6v6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="text-lg font-bold mb-2">2X&ndash;3X Your Business in 6&ndash;12 Months</h3>
+        <p class="text-base" style="color: var(--color-text-light);">Get proven AI workflows for lead generation, content creation, sales funnels, and customer acquisition that directly drive revenue growth.</p>
+      </div>
+      <!-- Outcome 3 -->
+      <div class="brand-card p-6 md:p-8 reveal">
+        <div class="pillar-icon mb-5">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="var(--color-primary)" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="var(--color-primary)" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="var(--color-primary)" stroke-width="2"/></svg>
+        </div>
+        <h3 class="text-lg font-bold mb-2">Make Your Team 10X More Productive</h3>
+        <p class="text-base" style="color: var(--color-text-light);">Deploy AI tools and templates across your team so one person can produce the output of five. Work smarter, not harder &mdash; from day one.</p>
+      </div>
+      <!-- Outcome 4 -->
+      <div class="brand-card p-6 md:p-8 reveal">
+        <div class="pillar-icon mb-5">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="var(--color-primary)" stroke-width="2"/><path d="M12 6v6l4 2" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="text-lg font-bold mb-2">Reclaim Up to 50 Hours of Your Time Every Month</h3>
+        <p class="text-base" style="color: var(--color-text-light);">Automate repetitive tasks like content creation, email writing, reporting, and admin work. Get your time back for strategy, clients, and life.</p>
+      </div>
+      <!-- Outcome 5 -->
+      <div class="brand-card p-6 md:p-8 reveal">
+        <div class="pillar-icon mb-5">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="text-lg font-bold mb-2">Stay Ahead of AI Trends Before Your Competitors</h3>
+        <p class="text-base" style="color: var(--color-text-light);">Get curated AI trend reports and live trainings on the latest breakthroughs &mdash; so you act on new opportunities while others are still reading about them.</p>
+      </div>
+      <!-- Outcome 6 -->
+      <div class="brand-card p-6 md:p-8 reveal">
+        <div class="pillar-icon mb-5">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="text-lg font-bold mb-2">Build Confidence and Clarity With AI</h3>
+        <p class="text-base" style="color: var(--color-text-light);">Stop second-guessing which tools to use and how to use them. Get a clear system, expert guidance, and a community that keeps you on track.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 5: SOCIAL PROOF
+     ============================================ -->
+<section id="testimonials" class="section-rich py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-5 md:px-10">
+    <div class="text-center mb-12 reveal">
+      <span class="text-sm font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">70,000+ Members</span>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Real Results From Real Entrepreneurs</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+
+      <!-- Testimonial 1: Remi Oerlemans -->
+      <div class="brand-card p-6 md:p-8 reveal">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <img src="https://framerusercontent.com/images/O0Uz4w0CLiyjqUYOthYCDBbErU.png?scale-down-to=512&width=3576&height=1236" alt="Remi Oerlemans" class="w-12 h-12 rounded-full object-cover flex-shrink-0">
+            <div>
+              <p class="font-bold text-base">Remi Oerlemans</p>
+              <p class="text-sm" style="color: var(--color-text-light);">Strategic Marketeer</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 flex-shrink-0">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+          </div>
+        </div>
+        <p class="text-base font-bold mb-3" style="color: var(--color-primary);">&ldquo;I've been able to focus more on work that actually brings in revenue&rdquo;</p>
+        <p class="text-base" style="color: var(--color-text-light); line-height: 1.7;">I was struggling with time management and felt like I was always behind. Now I changed the way I approach my daily tasks, especially in automating processes like my emails. It's really helped me handle the large volume of calls and messages I get everyday, without feeling so overwhelmed. Definitely worth joining.</p>
+      </div>
+
+      <!-- Testimonial 2: Dr. A'Shellarien -->
+      <div class="brand-card p-6 md:p-8 reveal">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <img src="https://framerusercontent.com/images/7Kv96uewOQaPm46V25qiaxr4j0o.jpg?scale-down-to=512&width=756&height=756" alt="Dr. A'Shellarien" class="w-12 h-12 rounded-full object-cover flex-shrink-0">
+            <div>
+              <p class="font-bold text-base">Dr. A'Shellarien</p>
+              <p class="text-sm" style="color: var(--color-text-light);">Army Chaplain &amp; Author</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 flex-shrink-0">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+          </div>
+        </div>
+        <p class="text-base font-bold mb-3" style="color: var(--color-primary);">&ldquo;I cut tasks from 8 hours to 3&rdquo;</p>
+        <p class="text-base" style="color: var(--color-text-light); line-height: 1.7;">Before joining, I was juggling life as an Army chaplain, author, and business owner, always overwhelmed. Now I do more with less of me. I've automated my workflows, cut tasks from 8 hours to 3, and delegate to a digital team. The program was practical, not just theory &mdash; with real tools I could use right away.</p>
+      </div>
+
+      <!-- Testimonial 3: Jacqueline Guerra -->
+      <div class="brand-card p-6 md:p-8 reveal">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <img src="https://framerusercontent.com/images/uvVrWXlFsyxuJdhCOeZBbm7FAw.png?scale-down-to=512&width=905&height=679" alt="Jacqueline Guerra" class="w-12 h-12 rounded-full object-cover flex-shrink-0">
+            <div>
+              <p class="font-bold text-base">Jacqueline Guerra</p>
+              <p class="text-sm" style="color: var(--color-text-light);">Marketing Consultant</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 flex-shrink-0">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+          </div>
+        </div>
+        <p class="text-base font-bold mb-3" style="color: var(--color-primary);">&ldquo;I went from 3 to 12 leads in just two weeks&rdquo;</p>
+        <p class="text-base" style="color: var(--color-text-light); line-height: 1.7;">Before joining, I worked a 50-hour week and couldn't imagine fitting anything else in. But this program changed everything. It gave me practical tools I could apply right away. I now use AI to generate leads, automate social posts, and support other businesses. Most importantly, I got my time back.</p>
+      </div>
+
+      <!-- Testimonial 4: Shantrece Davis -->
+      <div class="brand-card p-6 md:p-8 reveal">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <img src="https://framerusercontent.com/images/kQtnopa58PZO2Uupt4MpkyKDSmk.jpeg?scale-down-to=512&width=3088&height=2316" alt="Shantrece Davis" class="w-12 h-12 rounded-full object-cover flex-shrink-0">
+            <div>
+              <p class="font-bold text-base">Shantrece Davis</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 flex-shrink-0">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+          </div>
+        </div>
+        <p class="text-base font-bold mb-3" style="color: var(--color-primary);">&ldquo;Saved me 10+ hours a week&rdquo;</p>
+        <p class="text-base" style="color: var(--color-text-light); line-height: 1.7;">The trainings helped me integrate AI into my business without feeling overwhelmed. In the last 30&ndash;60 days, it's given me clarity, structure, and practical tools that have streamlined my content creation and saved me 10+ hours a week. The frameworks improved my social media strategy and allowed me to focus more on revenue-generating client work.</p>
+      </div>
+
+      <!-- Testimonial 5: Hyosang Kim -->
+      <div class="brand-card p-6 md:p-8 reveal">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <img src="https://framerusercontent.com/images/f00PfgTWLIH0PXsXfXZbsfbRc.jpg?scale-down-to=512&width=1024&height=1024" alt="Hyosang Kim" class="w-12 h-12 rounded-full object-cover flex-shrink-0">
+            <div>
+              <p class="font-bold text-base">Hyosang Kim</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 flex-shrink-0">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+          </div>
+        </div>
+        <p class="text-base font-bold mb-3" style="color: var(--color-primary);">&ldquo;A game-changer for my business growth&rdquo;</p>
+        <p class="text-base" style="color: var(--color-text-light); line-height: 1.7;">The community has saved me countless hours by providing proven templates and shortcuts for content creation and automation. The structured resources and expert advice helped me focus on what really works for my niche. I found clarity and the right direction in my business growth strategy.</p>
+      </div>
+
+      <!-- Testimonial 6: JC Ma -->
+      <div class="brand-card p-6 md:p-8 reveal">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <img src="https://framerusercontent.com/images/OOV3JvIdpGF65IU0EsXm3fKmKt8.jpg?scale-down-to=512&width=5120&height=2880" alt="JC Ma" class="w-12 h-12 rounded-full object-cover flex-shrink-0">
+            <div>
+              <p class="font-bold text-base">JC Ma</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 flex-shrink-0">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z"/></svg>
+          </div>
+        </div>
+        <p class="text-base font-bold mb-3" style="color: var(--color-primary);">&ldquo;It helped me break through the fear that was holding me back&rdquo;</p>
+        <p class="text-base" style="color: var(--color-text-light); line-height: 1.7;">I was stuck and unclear on my goals, doubting myself, and scared to take risks. The strategies and tools in this community gave me direction, structure, and confidence. I became more organised, set up better systems, and that's already translating into more income.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 6: TEACHERS
+     ============================================ -->
+<section id="teachers" class="section-solid py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-5 md:px-10">
+    <div class="text-center mb-12 reveal">
+      <span class="text-sm font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">Your Instructors</span>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Meet the Experts Behind <span style="color: var(--color-primary);">Hyper AI University</span></h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+      <!-- Darius Lukas -->
+      <div class="reveal">
+        <div style="border-radius:16px; overflow:hidden; aspect-ratio:3/4; position:relative;">
+          <img src="assets/darius-lukas.jpg" alt="Darius Lukas" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:28px 20px;padding-top:80px;background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.1) 70%, transparent 100%);">
+            <h3 class="text-xl font-extrabold text-white leading-tight">Darius Lukas</h3>
+          </div>
+        </div>
+        <div class="mt-4">
+          <ul class="space-y-1.5 text-base" style="color: var(--color-text-light);">
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> AI Expert &amp; Entrepreneur</li>
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> Multiple 7-figure businesses</li>
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> Helped 150,000+ entrepreneurs</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bogdan Vaida -->
+      <div class="reveal">
+        <div style="border-radius:16px; overflow:hidden; aspect-ratio:3/4; position:relative;">
+          <img src="assets/bogdan-vaida.png" alt="Bogdan Vaida" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:28px 20px;padding-top:80px;background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.1) 70%, transparent 100%);">
+            <h3 class="text-xl font-extrabold text-white leading-tight">Bogdan Vaida</h3>
+          </div>
+        </div>
+        <div class="mt-4">
+          <ul class="space-y-1.5 text-base" style="color: var(--color-text-light);">
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> AI Automations Expert</li>
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> AI workflows &amp; prompting specialist</li>
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> Clear, practical teaching style</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Valeriya Pilkevich -->
+      <div class="reveal">
+        <div style="border-radius:16px; overflow:hidden; aspect-ratio:3/4; position:relative;">
+          <img src="assets/valeriya-pilkevich.png" alt="Valeriya Pilkevich" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:28px 20px;padding-top:80px;background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.1) 70%, transparent 100%);">
+            <h3 class="text-xl font-extrabold text-white leading-tight">Valeriya Pilkevich</h3>
+          </div>
+        </div>
+        <div class="mt-4">
+          <ul class="space-y-1.5 text-base" style="color: var(--color-text-light);">
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> AI Consultant &amp; Trainer</li>
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> AI agents &amp; chatbot expert</li>
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> LLM comparison &amp; selection</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Laura Kaye Chamberlain -->
+      <div class="reveal">
+        <div style="border-radius:16px; overflow:hidden; aspect-ratio:3/4; position:relative;">
+          <img src="assets/laura-kaye-chamberlain.jpg" alt="Laura Kaye Chamberlain" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:28px 20px;padding-top:80px;background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.1) 70%, transparent 100%);">
+            <h3 class="text-xl font-extrabold text-white leading-tight">Laura Kaye Chamberlain</h3>
+          </div>
+        </div>
+        <div class="mt-4">
+          <ul class="space-y-1.5 text-base" style="color: var(--color-text-light);">
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> AI Consultant</li>
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> AI tool demos &amp; reviews</li>
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> Business productivity expert</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Denisa Spiridon -->
+      <div class="reveal">
+        <div style="border-radius:16px; overflow:hidden; aspect-ratio:3/4; position:relative;">
+          <img src="assets/denisa-spiridon.png" alt="Denisa Spiridon" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:28px 20px;padding-top:80px;background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.1) 70%, transparent 100%);">
+            <h3 class="text-xl font-extrabold text-white leading-tight">Denisa Spiridon</h3>
+          </div>
+        </div>
+        <div class="mt-4">
+          <ul class="space-y-1.5 text-base" style="color: var(--color-text-light);">
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> AI Expert</li>
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> AI content &amp; marketing specialist</li>
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> Automation workflows</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Klemen Struc -->
+      <div class="reveal">
+        <div style="border-radius:16px; overflow:hidden; aspect-ratio:3/4; position:relative;">
+          <img src="assets/klemen-struc.webp" alt="Klemen Struc" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:28px 20px;padding-top:80px;background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.1) 70%, transparent 100%);">
+            <h3 class="text-xl font-extrabold text-white leading-tight">Klemen Struc</h3>
+          </div>
+        </div>
+        <div class="mt-4">
+          <ul class="space-y-1.5 text-base" style="color: var(--color-text-light);">
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> Former CMO at Mindvalley</li>
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> $300M+ in online sales generated</li>
+            <li class="flex items-center gap-2"><span style="color: var(--color-primary);">&bull;</span> Scaled Mindvalley 5X to $100M+/yr</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 7: WHAT YOU GET — BREAKDOWN (4 Pillars)
+     ============================================ -->
+<section id="what-you-get" class="py-16 md:py-24" style="background: #fff;">
+  <div class="max-w-6xl mx-auto px-5 md:px-10">
+    <div class="text-center mb-12 reveal">
+      <span class="text-sm font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">What's Inside</span>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: #111;">Everything You Get Inside <span style="color: var(--color-primary);">Hyper AI University</span></h2>
+      <p class="text-lg max-w-2xl mx-auto mb-0" style="color: #666;">Four pillars designed to take you from AI-curious to AI-confident &mdash; and keep you there as the landscape evolves.</p>
+    </div>
+
+    <!-- Venn Diagram -->
+    <div class="reveal" style="max-width: 700px; margin: 0 auto 56px; position: relative; aspect-ratio: 1/1;">
+      <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+        <defs>
+          <linearGradient id="venn-center" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#C084FC;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1"/>
+          </linearGradient>
+        </defs>
+        <!-- Top-left: Education -->
+        <circle cx="195" cy="195" r="140" fill="rgba(124,58,237,0.06)" stroke="rgba(124,58,237,0.15)" stroke-width="1.5"/>
+        <!-- Top-right: Tools -->
+        <circle cx="305" cy="195" r="140" fill="rgba(192,132,252,0.06)" stroke="rgba(192,132,252,0.2)" stroke-width="1.5"/>
+        <!-- Bottom-left: Trends -->
+        <circle cx="195" cy="305" r="140" fill="rgba(192,132,252,0.06)" stroke="rgba(192,132,252,0.2)" stroke-width="1.5"/>
+        <!-- Bottom-right: Community -->
+        <circle cx="305" cy="305" r="140" fill="rgba(124,58,237,0.06)" stroke="rgba(124,58,237,0.15)" stroke-width="1.5"/>
+
+        <!-- Center highlight -->
+        <circle cx="250" cy="250" r="62" fill="url(#venn-center)" opacity="0.95"/>
+
+        <!-- Center text -->
+        <text x="250" y="243" text-anchor="middle" fill="#fff" font-family="DM Sans, sans-serif" font-weight="700" font-size="11" letter-spacing="0.5">HYPER AI</text>
+        <text x="250" y="260" text-anchor="middle" fill="#fff" font-family="DM Sans, sans-serif" font-weight="700" font-size="11" letter-spacing="0.5">UNIVERSITY</text>
+
+        <!-- Bubble labels -->
+        <text x="140" y="155" text-anchor="middle" fill="#333" font-family="DM Sans, sans-serif" font-weight="700" font-size="16">AI Education</text>
+
+        <text x="360" y="155" text-anchor="middle" fill="#333" font-family="DM Sans, sans-serif" font-weight="700" font-size="16">AI Tools</text>
+
+        <text x="140" y="355" text-anchor="middle" fill="#333" font-family="DM Sans, sans-serif" font-weight="700" font-size="16">AI Trends</text>
+
+        <text x="360" y="355" text-anchor="middle" fill="#333" font-family="DM Sans, sans-serif" font-weight="700" font-size="16">AI Community</text>
+      </svg>
+    </div>
+
+    <div class="space-y-6 max-w-4xl mx-auto">
+
+      <!-- Pillar 1: Education -->
+      <div class="p-6 md:p-8 reveal" style="background: #f5f5f7; border-radius: 16px;">
+        <div class="flex items-start gap-4 mb-5">
+          <div class="pillar-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="2.5" y="3.75" width="19" height="16.5" rx="2.5" stroke="var(--color-primary)" stroke-width="2"/><path d="M8 9l4 3-4 3V9z" fill="var(--color-primary)"/></svg>
+          </div>
+          <div>
+            <span class="text-sm font-bold uppercase tracking-widest block mb-1" style="color: var(--color-primary);">Pillar 1</span>
+            <h3 class="text-xl font-bold" style="color: #111;">AI Education &amp; Live Trainings</h3>
+          </div>
+        </div>
+        <p class="text-base mb-5" style="color: #555;">Weekly live trainings, webclasses, and Q&amp;A sessions with AI experts. Every training includes a video recording and an executive summary so you can learn at your own pace.</p>
+        <div class="image-placeholder mb-5" style="aspect-ratio: 16/9; min-height: 160px;">Image Here: Live Training Screenshot</div>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2 text-lg" style="color: #444;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>4+ live expert-led trainings every month</span>
+          </li>
+          <li class="flex items-start gap-2 text-lg" style="color: #444;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>250+ on-demand training recordings in the library</span>
+          </li>
+          <li class="flex items-start gap-2 text-lg" style="color: #444;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Each training = video + executive summary</span>
+          </li>
+          <li class="flex items-start gap-2 text-lg" style="color: #444;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Live Q&amp;A sessions to get your questions answered</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Pillar 2: Tools -->
+      <div class="p-6 md:p-8 reveal" style="background: #f5f5f7; border-radius: 16px;">
+        <div class="flex items-start gap-4 mb-5">
+          <div class="pillar-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <span class="text-sm font-bold uppercase tracking-widest block mb-1" style="color: var(--color-primary);">Pillar 2</span>
+            <h3 class="text-xl font-bold" style="color: #111;">AI Tools, Templates &amp; Skills</h3>
+          </div>
+        </div>
+        <p class="text-base mb-5" style="color: #555;">Ready-to-use Claude .Skills, AI plugins, templates, and automation helpers that you can install and start using immediately. No building from scratch.</p>
+        <div class="image-placeholder mb-5" style="aspect-ratio: 16/9; min-height: 160px;">Image Here: Tools &amp; Templates Library Screenshot</div>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2 text-lg" style="color: #444;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Claude .Skills for content, emails, ads, and funnels</span>
+          </li>
+          <li class="flex items-start gap-2 text-lg" style="color: #444;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>AI automation templates and plugins</span>
+          </li>
+          <li class="flex items-start gap-2 text-lg" style="color: #444;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Plug-and-play &mdash; install in minutes, run immediately</span>
+          </li>
+          <li class="flex items-start gap-2 text-lg" style="color: #444;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>New tools added regularly</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Pillar 3: AI Reports -->
+      <div class="p-6 md:p-8 reveal" style="background: #f5f5f7; border-radius: 16px;">
+        <div class="flex items-start gap-4 mb-5">
+          <div class="pillar-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="var(--color-primary)" stroke-width="2"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <span class="text-sm font-bold uppercase tracking-widest block mb-1" style="color: var(--color-primary);">Pillar 3</span>
+            <h3 class="text-xl font-bold" style="color: #111;">AI Trend Reports</h3>
+          </div>
+        </div>
+        <p class="text-base mb-5" style="color: #555;">Stay ahead with bite-sized summaries of AI trends and developments, created specifically for founders and entrepreneurs. New reports delivered weekly.</p>
+        <div class="image-placeholder mb-5" style="aspect-ratio: 16/9; min-height: 160px;">Image Here: AI Reports Library Screenshot</div>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2 text-lg" style="color: #444;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>120+ AI reports in the library</span>
+          </li>
+          <li class="flex items-start gap-2 text-lg" style="color: #444;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>New briefs delivered every week</span>
+          </li>
+          <li class="flex items-start gap-2 text-lg" style="color: #444;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Featured tools, shortcut demos, and strategic insights</span>
+          </li>
+          <li class="flex items-start gap-2 text-lg" style="color: #444;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Curated for business relevance, not tech hype</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Pillar 4: Community -->
+      <div class="p-6 md:p-8 reveal" style="background: #f5f5f7; border-radius: 16px;">
+        <div class="flex items-start gap-4 mb-5">
+          <div class="pillar-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="var(--color-primary)" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="var(--color-primary)" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="var(--color-primary)" stroke-width="2"/></svg>
+          </div>
+          <div>
+            <span class="text-sm font-bold uppercase tracking-widest block mb-1" style="color: var(--color-primary);">Pillar 4</span>
+            <h3 class="text-xl font-bold" style="color: #111;">Private Community</h3>
+          </div>
+        </div>
+        <p class="text-base mb-5" style="color: #555;">Join a private community of thousands of entrepreneurs who are implementing AI in their businesses. Ask questions, share wins, and get help from peers and experts.</p>
+        <div class="image-placeholder mb-5" style="aspect-ratio: 16/9; min-height: 160px;">Image Here: Community Screenshot</div>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2 text-lg" style="color: #444;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Thousands of active members</span>
+          </li>
+          <li class="flex items-start gap-2 text-lg" style="color: #444;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Direct access to instructors and experts</span>
+          </li>
+          <li class="flex items-start gap-2 text-lg" style="color: #444;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Share strategies, templates, and wins</span>
+          </li>
+          <li class="flex items-start gap-2 text-lg" style="color: #444;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Accountability and support to stay on track</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 8: TOPICS
+     ============================================ -->
+<section id="topics" class="section-rich py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-5 md:px-10">
+    <div class="text-center mb-12 reveal">
+      <span class="text-sm font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">What We Cover</span>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Topics Inside <span style="color: var(--color-primary);">Hyper AI University</span></h2>
+      <p class="text-lg max-w-2xl mx-auto" style="color: var(--color-text-light);">We cover AI from two angles: the business outcomes you want, and the AI tools and trends that get you there.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto reveal">
+      <!-- By Business Outcome -->
+      <div class="brand-card p-6 md:p-8">
+        <h3 class="text-xl font-bold mb-5">By Business Outcome</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="topic-pill">Social Media Growth</span>
+          <span class="topic-pill">Lead Generation</span>
+          <span class="topic-pill">Customer Acquisition</span>
+          <span class="topic-pill">Customer Monetization</span>
+          <span class="topic-pill">Customer Retention</span>
+          <span class="topic-pill">Recurring Revenue</span>
+          <span class="topic-pill">Launching Offers</span>
+          <span class="topic-pill">Content Creation</span>
+          <span class="topic-pill">Email Marketing</span>
+          <span class="topic-pill">Paid Ads</span>
+          <span class="topic-pill">Sales Funnels</span>
+          <span class="topic-pill">Team Productivity</span>
+        </div>
+      </div>
+
+      <!-- By AI Trend -->
+      <div class="brand-card p-6 md:p-8">
+        <h3 class="text-xl font-bold mb-5">By AI Tool &amp; Trend</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="topic-pill">Claude &amp; Claude .Skills</span>
+          <span class="topic-pill">ChatGPT &amp; GPTs</span>
+          <span class="topic-pill">AI Agents</span>
+          <span class="topic-pill">AI Automations</span>
+          <span class="topic-pill">Manus AI</span>
+          <span class="topic-pill">Microsoft Copilot</span>
+          <span class="topic-pill">Perplexity</span>
+          <span class="topic-pill">Runway &amp; AI Video</span>
+          <span class="topic-pill">AI for Coding</span>
+          <span class="topic-pill">AI for Design</span>
+          <span class="topic-pill">AI for Writing</span>
+          <span class="topic-pill">And More...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 9: UPCOMING EVENTS
+     ============================================ -->
+<section id="events" class="section-solid py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-5 md:px-10">
+    <div class="text-center mb-12 reveal">
+      <span class="text-sm font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">Live Events</span>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Upcoming Live Trainings &amp; Events</h2>
+      <p class="text-lg max-w-2xl mx-auto" style="color: var(--color-text-light);">New live trainings every week. Join live or watch the replay &mdash; your call.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto reveal">
+
+      <!-- Event 1 -->
+      <div class="brand-card overflow-hidden reveal">
+        <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 180px; border-radius: 0; border: none; border-bottom: 1px solid var(--color-card-border);">Image Here: AI Automations Cover</div>
+        <div class="p-5 md:p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full" style="background: #e8222b; color: #fff;">
+              <span style="width:8px;height:8px;background:#fff;border-radius:50%;display:inline-block;"></span>
+              Live
+            </span>
+            <span class="text-sm font-semibold" style="color: var(--color-text-light);">April 15, 2026 &middot; 6:00 PM CET</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2">AI Automations for Your Business</h3>
+          <p class="text-base mb-4" style="color: var(--color-text-dim);">Learn how to build no-code AI automations that save 10+ hours per week. From email workflows to client onboarding.</p>
+          <div class="flex items-center gap-2">
+            <img src="assets/bogdan-vaida.png" alt="Bogdan Vaida" style="width:28px;height:28px;border-radius:50%;object-fit:cover;">
+            <span class="text-base font-medium" style="color: var(--color-text-light);">Bogdan Vaida</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 2 -->
+      <div class="brand-card overflow-hidden reveal">
+        <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 180px; border-radius: 0; border: none; border-bottom: 1px solid var(--color-card-border);">Image Here: AI Marketing Cover</div>
+        <div class="p-5 md:p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full" style="background: #e8222b; color: #fff;">
+              <span style="width:8px;height:8px;background:#fff;border-radius:50%;display:inline-block;"></span>
+              Live
+            </span>
+            <span class="text-sm font-semibold" style="color: var(--color-text-light);">April 22, 2026 &middot; 6:00 PM CET</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2">AI-Powered Marketing &amp; Content Creation</h3>
+          <p class="text-base mb-4" style="color: var(--color-text-dim);">Create weeks of content in hours. Master AI tools for social media, ads, email campaigns, and more.</p>
+          <div class="flex items-center gap-2">
+            <img src="assets/darius-lukas.jpg" alt="Darius Lukas" style="width:28px;height:28px;border-radius:50%;object-fit:cover;">
+            <span class="text-base font-medium" style="color: var(--color-text-light);">Darius Lukas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="brand-card overflow-hidden reveal">
+        <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 180px; border-radius: 0; border: none; border-bottom: 1px solid var(--color-card-border);">Image Here: AI Agents Cover</div>
+        <div class="p-5 md:p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full" style="background: #e8222b; color: #fff;">
+              <span style="width:8px;height:8px;background:#fff;border-radius:50%;display:inline-block;"></span>
+              Live
+            </span>
+            <span class="text-sm font-semibold" style="color: var(--color-text-light);">April 29, 2026 &middot; 6:00 PM CET</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Building AI Agents &amp; Chatbots</h3>
+          <p class="text-base mb-4" style="color: var(--color-text-dim);">Deploy AI agents that handle customer support, lead qualification, and internal tasks &mdash; without writing code.</p>
+          <div class="flex items-center gap-2">
+            <img src="assets/valeriya-pilkevich.png" alt="Valeriya Pilkevich" style="width:28px;height:28px;border-radius:50%;object-fit:cover;">
+            <span class="text-base font-medium" style="color: var(--color-text-light);">Valeriya Pilkevich</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 4 -->
+      <div class="brand-card overflow-hidden reveal">
+        <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 180px; border-radius: 0; border: none; border-bottom: 1px solid var(--color-card-border);">Image Here: AI Funnels Cover</div>
+        <div class="p-5 md:p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full" style="background: #e8222b; color: #fff;">
+              <span style="width:8px;height:8px;background:#fff;border-radius:50%;display:inline-block;"></span>
+              Live
+            </span>
+            <span class="text-sm font-semibold" style="color: var(--color-text-light);">May 6, 2026 &middot; 6:00 PM CET</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2">AI Funnels &amp; Sales Systems</h3>
+          <p class="text-base mb-4" style="color: var(--color-text-dim);">Build high-converting funnels with AI. From landing pages to follow-up sequences &mdash; all optimized by AI.</p>
+          <div class="flex items-center gap-2">
+            <img src="assets/klemen-struc.webp" alt="Klemen Struc" style="width:28px;height:28px;border-radius:50%;object-fit:cover;">
+            <span class="text-base font-medium" style="color: var(--color-text-light);">Klemen Struc</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 10: WHAT YOU GET — SUMMARY
+     ============================================ -->
+<section id="summary" class="section-rich py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-5 md:px-10">
+    <div class="text-center mb-12 reveal">
+      <span class="text-sm font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">Summary</span>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Everything Inside Your Membership</h2>
+    </div>
+    <div class="max-w-3xl mx-auto reveal">
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3 py-3" style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" class="mt-0.5 flex-shrink-0"><circle cx="11" cy="11" r="9" fill="rgba(34,197,94,0.15)"/><path d="M7 11l3 3 5-5" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-base font-medium">250+ on-demand AI trainings covering every tool and tactic</span>
+        </li>
+        <li class="flex items-start gap-3 py-3" style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" class="mt-0.5 flex-shrink-0"><circle cx="11" cy="11" r="9" fill="rgba(34,197,94,0.15)"/><path d="M7 11l3 3 5-5" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-base font-medium">4+ live expert-led AI trainings every month</span>
+        </li>
+        <li class="flex items-start gap-3 py-3" style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" class="mt-0.5 flex-shrink-0"><circle cx="11" cy="11" r="9" fill="rgba(34,197,94,0.15)"/><path d="M7 11l3 3 5-5" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-base font-medium">Full access to the 3-Part AI Growth System (Save Time, Make Money, Stay Ahead)</span>
+        </li>
+        <li class="flex items-start gap-3 py-3" style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" class="mt-0.5 flex-shrink-0"><circle cx="11" cy="11" r="9" fill="rgba(34,197,94,0.15)"/><path d="M7 11l3 3 5-5" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-base font-medium">AI tools, Claude .Skills, templates, and automation helpers</span>
+        </li>
+        <li class="flex items-start gap-3 py-3" style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" class="mt-0.5 flex-shrink-0"><circle cx="11" cy="11" r="9" fill="rgba(34,197,94,0.15)"/><path d="M7 11l3 3 5-5" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-base font-medium">120+ AI Reports (with new ones delivered every week)</span>
+        </li>
+        <li class="flex items-start gap-3 py-3">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" class="mt-0.5 flex-shrink-0"><circle cx="11" cy="11" r="9" fill="rgba(34,197,94,0.15)"/><path d="M7 11l3 3 5-5" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-base font-medium">Access to our private community of thousands of entrepreneurs</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 11: PRICING / ORDER MENU
+     ============================================ -->
+<section id="pricing" class="section-dark py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-5 md:px-10">
+    <div class="text-center mb-12 reveal">
+      <span class="text-sm font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">Pricing</span>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Master &amp; Monetize AI for <span style="background: linear-gradient(135deg, #DAB3FF, #262DFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Less Than $1 a Day</span></h2>
+      <p class="text-lg max-w-xl mx-auto" style="color: rgba(255,255,255,0.6);">Choose the plan that fits your goals. Cancel anytime.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+      <!-- Monthly -->
+      <div class="brand-card p-8 reveal">
+        <div class="text-center mb-6">
+          <h3 class="text-2xl font-bold mb-2 text-white">Monthly</h3>
+          <p class="text-sm mb-4" style="color: rgba(255,255,255,0.5);">Full access, billed monthly</p>
+          <div class="mt-4">
+            <span class="text-5xl font-extrabold text-white">$97</span>
+            <span class="text-lg" style="color: rgba(255,255,255,0.5);">/month</span>
+          </div>
+          <p class="text-xs mt-2" style="color: rgba(255,255,255,0.4);">Cancel anytime</p>
+        </div>
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.7);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>250+ on-demand AI trainings</span></li>
+          <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.7);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>4+ live trainings every month</span></li>
+          <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.7);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>AI tools, templates &amp; Claude .Skills</span></li>
+          <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.7);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>120+ AI Reports</span></li>
+          <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.7);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Private community access</span></li>
+        </ul>
+        <a href="#" class="cta-btn cta-btn-outline w-full text-center" style="color: #ffffff; border-color: rgba(255,255,255,0.3);">Join Monthly</a>
+      </div>
+
+      <!-- Bi-Yearly (Featured) -->
+      <div class="brand-card tier-featured p-8 reveal">
+        <div class="text-center mb-6">
+          <h3 class="text-2xl font-bold mb-2 text-white">Bi-Yearly</h3>
+          <p class="text-sm mb-4" style="color: rgba(255,255,255,0.5);">Full access, billed every 6 months</p>
+          <div class="mt-4">
+            <span class="text-5xl font-extrabold text-white">$497</span>
+            <span class="text-lg" style="color: rgba(255,255,255,0.5);">/6 months</span>
+          </div>
+          <p class="text-xs mt-2" style="color: #22c55e; font-weight: 700;">SAVE 15% &mdash; $82.83/mo instead of $97</p>
+        </div>
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.7);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>250+ on-demand AI trainings</span></li>
+          <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.7);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>4+ live trainings every month</span></li>
+          <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.7);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>AI tools, templates &amp; Claude .Skills</span></li>
+          <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.7);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>120+ AI Reports</span></li>
+          <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.7);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Private community access</span></li>
+        </ul>
+        <a href="#" class="cta-btn w-full text-center">Join Bi-Yearly &mdash; Save 15%</a>
+      </div>
+
+      <!-- Yearly -->
+      <div class="brand-card p-8 reveal">
+        <div class="text-center mb-6">
+          <h3 class="text-2xl font-bold mb-2 text-white">Yearly</h3>
+          <p class="text-sm mb-4" style="color: rgba(255,255,255,0.5);">Full access, billed annually</p>
+          <div class="mt-4">
+            <span class="text-5xl font-extrabold text-white">$697</span>
+            <span class="text-lg" style="color: rgba(255,255,255,0.5);">/year</span>
+          </div>
+          <p class="text-xs mt-2" style="color: #22c55e; font-weight: 700;">SAVE 40% &mdash; $58.08/mo instead of $97</p>
+        </div>
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.7);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>250+ on-demand AI trainings</span></li>
+          <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.7);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>4+ live trainings every month</span></li>
+          <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.7);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>AI tools, templates &amp; Claude .Skills</span></li>
+          <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.7);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>120+ AI Reports</span></li>
+          <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.7);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Private community access</span></li>
+        </ul>
+        <a href="#" class="cta-btn cta-btn-outline w-full text-center" style="color: #ffffff; border-color: rgba(255,255,255,0.3);">Join Yearly &mdash; Save 40%</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 12: FAQ
+     ============================================ -->
+<section id="faq" class="section-solid py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-5 md:px-10">
+    <div class="text-center mb-12 reveal">
+      <span class="text-sm font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">FAQ</span>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+    </div>
+    <div class="max-w-3xl mx-auto reveal">
+      <div class="faq-item py-5">
+        <div class="faq-question flex items-center justify-between" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-semibold pr-4">What do I get when I join Hyper AI University?</h3>
+          <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="faq-answer">
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">You get instant access to 250+ on-demand AI trainings, 4+ live expert-led trainings every month, ready-to-use AI tools and templates, 120+ AI trend reports (with new ones delivered weekly), and a private community of thousands of entrepreneurs. Everything you need to save time, cut costs, and scale your business with AI.</p>
+        </div>
+      </div>
+      <div class="faq-item py-5">
+        <div class="faq-question flex items-center justify-between" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-semibold pr-4">Who is this for?</h3>
+          <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="faq-answer">
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Hyper AI University is built for entrepreneurs, freelancers, and professionals who want to use AI to grow their business and career. Whether you're a complete beginner or already using AI tools, we help you go from AI-curious to AI-confident with practical, actionable training.</p>
+        </div>
+      </div>
+      <div class="faq-item py-5">
+        <div class="faq-question flex items-center justify-between" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-semibold pr-4">Do I need technical skills?</h3>
+          <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="faq-answer">
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Not at all. Our trainings are designed for non-technical business owners. We explain everything in plain language with step-by-step instructions. If you can use a computer and follow along, you can use everything inside Hyper AI University.</p>
+        </div>
+      </div>
+      <div class="faq-item py-5">
+        <div class="faq-question flex items-center justify-between" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-semibold pr-4">How is this different from free YouTube tutorials?</h3>
+          <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="faq-answer">
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Free content gives you scattered tips. Hyper AI University gives you a complete system &mdash; curated trainings, ready-to-use tools, weekly AI trend reports, and a community of entrepreneurs who are implementing AI right now. You get structured, actionable content from vetted experts, not random advice from strangers.</p>
+        </div>
+      </div>
+      <div class="faq-item py-5">
+        <div class="faq-question flex items-center justify-between" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-semibold pr-4">Can I cancel anytime?</h3>
+          <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="faq-answer">
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Yes. All plans can be cancelled at any time. There are no long-term contracts or commitments. If you cancel, you'll keep access until the end of your current billing period.</p>
+        </div>
+      </div>
+      <div class="faq-item py-5">
+        <div class="faq-question flex items-center justify-between" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-semibold pr-4">How often is new content added?</h3>
+          <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="faq-answer">
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Every week. We host 4+ live trainings per month, publish new AI trend reports weekly, and regularly add new tools and templates to the library. The curriculum is never fixed &mdash; it evolves as fast as AI does.</p>
+        </div>
+      </div>
+      <div class="faq-item py-5">
+        <div class="faq-question flex items-center justify-between" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-semibold pr-4">What if I can't attend the live trainings?</h3>
+          <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="faq-answer">
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">No problem. Every live training is recorded and added to the on-demand library within 24 hours, along with an executive summary. You can watch at your own pace, on your own schedule.</p>
+        </div>
+      </div>
+      <div class="faq-item py-5">
+        <div class="faq-question flex items-center justify-between" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-semibold pr-4">I'm already using AI. Is this still worth it?</h3>
+          <svg class="faq-chevron flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="faq-answer">
+          <p class="text-base pt-3 pb-2" style="color: var(--color-text-light);">Absolutely. Most of our members are already using AI tools. What they get from Hyper AI University is advanced strategies, expert-built templates, and weekly updates on new AI developments that help them stay ahead. If you're already using AI, this will help you use it better and faster.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FINAL CTA
+     ============================================ -->
+<section class="section-dark py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-5 md:px-10">
+    <div class="max-w-3xl mx-auto text-center reveal">
+      <!-- Instructor Avatars Placeholder -->
+      <div class="image-placeholder w-full mb-8" style="height: 80px; max-width: 300px; margin-left: auto; margin-right: auto;">Image Here: Instructor Avatar Row</div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Join Hyper AI University</h2>
+      <p class="text-xl md:text-2xl font-semibold mb-4" style="background: linear-gradient(135deg, #DAB3FF, #262DFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">The Next-Generation AI School for Entrepreneurs, Freelancers, and Professionals Who Want Results</p>
+      <p class="text-lg mb-8" style="color: rgba(255,255,255,0.6);">We built Hyper AI University to help you navigate this shift better than any MBA &mdash; at a fraction of the cost.</p>
+      <button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" class="cta-btn text-lg mb-4">
+        Join Hyper AI University
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="py-12" style="background: linear-gradient(145deg, #1B1C49, #100E24); border-top: 1px solid rgba(255,255,255,0.06);">
+  <div class="max-w-6xl mx-auto px-5 md:px-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+      <img src="https://assets.cdn.filesafe.space/lNzgml2EfCzIl04kmDr2/media/69c6dec39fc63ab17f2737ea.png" alt="Hyper AI University" class="max-h-7 w-auto opacity-50" loading="lazy">
+      <div class="flex items-center gap-6 text-sm" style="color: rgba(255,255,255,0.4);">
+        <a href="#" style="color: rgba(255,255,255,0.4);">About</a>
+        <a href="#" style="color: rgba(255,255,255,0.4);">Newsletter</a>
+        <a href="#" style="color: rgba(255,255,255,0.4);">Testimonials</a>
+        <a href="#" style="color: rgba(255,255,255,0.4);">Contact</a>
+        <a href="#" style="color: rgba(255,255,255,0.4);">Login</a>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 text-xs" style="color: rgba(255,255,255,0.3);">
+      <div>
+        <p class="font-bold mb-2">Disclaimer</p>
+        <p>"Get rich quickly" does not exist. Instead, hard work, creating value, and serving others work. By law, we cannot and do not make any guarantees regarding your ability to achieve results or earn money. Please also familiarize yourself with the Privacy Policy, Terms &amp; Conditions, and Site &amp; Product Disclaimer before purchasing the product. If you have any questions about Darius Lukas Pte Ltd., please email team@dariuslukas.com</p>
+      </div>
+      <div>
+        <p class="font-bold mb-2">*Disclaimer for Lifetime All-Access Pass</p>
+        <p>Your membership grants you access to the entire Hyper AI University library as it exists today, as well as any future content or programs added during your membership. Given that we provide access to products worth over $5,000 and offer you an outstanding value for a very small fee, we do not offer refunds for this offer. Please refer to the full Terms &amp; Conditions for details.</p>
+      </div>
+      <div>
+        <p class="font-bold mb-2">Important</p>
+        <p>This site is not part of the Facebook website or Facebook, Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a registered trademark of FACEBOOK, Inc.</p>
+      </div>
+    </div>
+    <div class="mt-8 text-xs text-center" style="color: rgba(255,255,255,0.2);">
+      &copy; 2026. All rights reserved Darius Lukas Pte.Ltd.
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     SCRIPTS
+     ============================================ -->
+<script>
+  // Scroll reveal
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Sticky nav
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('nav-scrolled');
+    } else {
+      navbar.classList.remove('nav-scrolled');
+    }
+  });
+
+  // FAQ toggle
+  function toggleFaq(el) {
+    const item = el.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+</script>
+
+</body>
+</html>
