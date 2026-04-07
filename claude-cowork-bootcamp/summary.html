@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Cowork: Business Growth Bootcamp</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* =============================================
+       HE BRAND — MASTER STYLESHEET
+       ============================================= */
+
+    /* ===== RESET & BASE ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #000000;
+      overflow-x: hidden;
+    }
+
+    /* ===== BACKGROUND LAYERS ===== */
+    .bg-layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #ffffff;
+      z-index: -2;
+    }
+
+    .bg-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(79,48,254,0.03), rgba(38,45,255,0.04));
+      z-index: -1;
+    }
+
+    .page-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+      position: relative;
+      z-index: 0;
+    }
+
+    /* ===== GRADIENT & ACCENT TEXT UTILITIES ===== */
+    .gradient-text {
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .accent-text {
+      color: #4F30FE;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      color: #ffffff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 40px 60px;
+      max-width: 1200px;
+    }
+
+    .hero-logo {
+      height: 42px;
+      margin-bottom: 28px;
+      opacity: 0.7;
+    }
+
+    .hero-topic {
+      font-size: 56px;
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: -0.5px;
+      color: #000;
+      margin-bottom: 20px;
+      line-height: 1.15;
+    }
+
+    .hero-title {
+      font-size: 32px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.6);
+      line-height: 1.45;
+      margin-bottom: 20px;
+      max-width: 1000px;
+    }
+
+    .hero-title-highlight {
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 24px;
+      color: rgba(0, 0, 0, 0.6);
+      line-height: 1.5;
+      max-width: 850px;
+      margin-bottom: 8px;
+    }
+
+    .hero-promises {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: stretch;
+      gap: 16px;
+      width: 100%;
+      max-width: 960px;
+      margin-top: 40px;
+    }
+
+    .hero-promise {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 22px 24px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.8);
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    /* ===== HOSTS BAR ===== */
+    .hero-hosts {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 36px;
+    }
+
+    .hero-host {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-host-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #4F30FE;
+    }
+
+    /* ===== WELCOME NOTIFICATION BANNER ===== */
+    .welcome-banner {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 32px;
+      background: linear-gradient(135deg, #DAB3FF, #4F30FE, #262DFF);
+      border-radius: 60px;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 24px rgba(79, 48, 254, 0.25);
+      animation: bannerGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes bannerGlowGold {
+      0%, 100% { box-shadow: 0 4px 24px rgba(245,158,11,0.25); }
+      50% { box-shadow: 0 6px 50px rgba(245,158,11,0.6), 0 0 100px rgba(245,158,11,0.3); }
+    }
+
+    @keyframes bannerGlow {
+      0%, 100% { box-shadow: 0 4px 24px rgba(79, 48, 254, 0.25); }
+      50% { box-shadow: 0 6px 50px rgba(79, 48, 254, 0.6), 0 0 100px rgba(79, 48, 254, 0.3); }
+    }
+
+    .welcome-banner-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+      animation: welcomePulse 2s ease-in-out infinite;
+    }
+
+    @keyframes welcomePulse {
+      0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(34, 197, 94, 0.6); }
+      50% { opacity: 0.6; box-shadow: 0 0 16px rgba(34, 197, 94, 0.8); }
+    }
+
+    .welcome-banner-text {
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== SECTION CONTAINER ===== */
+    .section {
+      background: transparent;
+      border-radius: 0;
+      padding: 40px 44px;
+      border: none;
+      box-shadow: none;
+    }
+
+    .section-label {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #4F30FE;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 38px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    /* ===== STEP SEQUENCE ===== */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+      padding: 22px 28px;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .step-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      color: #fff;
+      font-size: 22px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-content {
+      flex: 1;
+    }
+
+    .step-title {
+      font-size: 21px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 6px;
+    }
+
+    .step-desc {
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.45);
+      line-height: 1.6;
+    }
+
+    /* ===== SECTION HEADER SLIDE ===== */
+    .section-header-slide {
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 40px;
+    }
+
+    .section-header-label {
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #4F30FE;
+      margin-bottom: 20px;
+    }
+
+    .section-header-title {
+      font-size: 56px;
+      font-weight: 600;
+      color: #000;
+      line-height: 1.2;
+      max-width: 800px;
+      margin-bottom: 24px;
+    }
+
+    .section-header-divider {
+      width: 120px;
+      height: 3px;
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      border-radius: 2px;
+    }
+
+    /* ===== ABOUT ME SECTION ===== */
+    .about-me {
+      background: transparent;
+      border-radius: 0;
+      padding: 40px 44px;
+      border: none;
+      box-shadow: none;
+    }
+
+    .about-name {
+      font-size: 38px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 8px;
+    }
+
+    .about-objectives {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .about-objective {
+      font-size: 20px;
+      color: rgba(0,0,0,0.6);
+      line-height: 1.5;
+    }
+
+    .about-objective strong {
+      color: #4F30FE;
+    }
+
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .credential-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      font-size: 16px;
+      color: rgba(0,0,0,0.65);
+    }
+
+    .credential-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(79, 48, 254, 0.12);
+      color: #4F30FE;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    /* ===== ABOUT HOST ===== */
+    .about-tagline {
+      font-size: 18px;
+      font-weight: 600;
+      color: #4F30FE;
+      margin-bottom: 20px;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .about-stat-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 18px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .about-stat-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .about-stat-text {
+      font-size: 15px;
+      color: rgba(0, 0, 0, 0.6);
+      line-height: 1.55;
+    }
+
+    .about-stat-text strong {
+      color: #000;
+    }
+
+    /* ===== SOCIAL CARDS ===== */
+    .social-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .social-card {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 32px 28px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+      text-decoration: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .social-card:hover {
+      border-color: rgba(79, 48, 254, 0.3);
+      box-shadow: 0 4px 20px rgba(79, 48, 254, 0.08);
+    }
+
+    .social-card-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .social-card-icon--ig {
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+
+    .social-card-icon--yt {
+      background: #FF0000;
+    }
+
+    .social-card-platform {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(0, 0, 0, 0.35);
+      margin-bottom: 4px;
+    }
+
+    .social-card-handle {
+      font-size: 22px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 6px;
+    }
+
+    .social-card-stat {
+      font-size: 28px;
+      font-weight: 600;
+      color: #4F30FE;
+    }
+
+    /* ===== YT THUMBNAIL ===== */
+    .yt-thumbnail-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-top: 32px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .yt-thumbnail {
+      display: block;
+      max-width: 720px;
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    .yt-play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.9;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+    }
+
+    .yt-screenshots-row {
+      display: flex;
+      gap: 16px;
+      margin-top: 32px;
+      align-items: flex-start;
+    }
+
+    .yt-screenshots-row .yt-thumbnail-wrapper {
+      margin-top: 0;
+    }
+
+    .yt-screenshots-row .yt-thumbnail {
+      max-width: 360px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* ===== TIMELINE ===== */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding-left: 20px;
+    }
+
+    .timeline-entry {
+      display: flex;
+      gap: 28px;
+      min-height: 110px;
+    }
+
+    .timeline-marker {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      width: 24px;
+    }
+
+    .timeline-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #4F30FE;
+      flex-shrink: 0;
+      box-shadow: 0 0 10px rgba(79, 48, 254, 0.15);
+    }
+
+    .timeline-line {
+      width: 2px;
+      flex: 1;
+      background: rgba(0, 0, 0, 0.08);
+    }
+
+    .timeline-content {
+      padding-bottom: 36px;
+    }
+
+    .timeline-date {
+      font-size: 15px;
+      font-weight: 600;
+      color: #4F30FE;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .timeline-title {
+      font-size: 22px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 8px;
+    }
+
+    .timeline-desc {
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.45);
+      line-height: 1.6;
+    }
+
+    /* ===== SECTION DESC ===== */
+    .section-desc {
+      font-size: 20px;
+      color: rgba(0, 0, 0, 0.55);
+      line-height: 1.6;
+      margin-bottom: 28px;
+      max-width: 850px;
+    }
+
+    .social-column {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .social-screenshot {
+      width: 67%;
+      border-radius: 14px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    /* ===== ABOUT HOST LAYOUT ===== */
+    .about-host-layout {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-host-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .about-host-photo img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    /* ===== PARADIGM SHIFT ===== */
+    .paradigm-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .paradigm-card {
+      display: grid;
+      grid-template-columns: 1fr 40px 1fr;
+      align-items: center;
+      gap: 0;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .paradigm-card-before {
+      padding: 16px 24px;
+      background: rgba(255, 70, 46, 0.03);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .paradigm-card-before p {
+      font-size: 15px;
+      color: rgba(196, 80, 80, 0.6);
+      line-height: 1.6;
+    }
+
+    .paradigm-arrow {
+      font-size: 24px;
+      font-weight: 600;
+      color: #4F30FE;
+      text-align: center;
+    }
+
+    .paradigm-card-after {
+      padding: 16px 24px;
+      background: rgba(34, 197, 94, 0.03);
+      border-left: 3px solid rgba(34, 197, 94, 0.2);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .paradigm-claude-logo {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      height: 24px;
+      opacity: 0.5;
+    }
+
+    .paradigm-card-after h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 4px;
+    }
+
+    .paradigm-card-after p {
+      font-size: 15px;
+      color: rgba(0, 0, 0, 0.45);
+      line-height: 1.45;
+    }
+
+    .paradigm-icon {
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    .paradigm-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 6px;
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 5px;
+    }
+
+    .paradigm-label--old {
+      color: #ff462e;
+      background: rgba(255, 70, 46, 0.08);
+    }
+
+    .paradigm-label--new {
+      color: #4F30FE;
+      background: rgba(79, 48, 254, 0.08);
+    }
+
+    /* ===== COMPARISON TABLE ===== */
+    .compare-table-wrapper {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .compare-table th,
+    .compare-table td {
+      padding: 20px 24px;
+      text-align: left;
+      font-size: 18px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .compare-table thead th {
+      background: rgba(0, 0, 0, 0.02);
+      padding: 24px 24px 16px;
+      vertical-align: top;
+    }
+
+    .compare-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .compare-table td:first-child {
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.75);
+      font-size: 17px;
+    }
+
+    .compare-col-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .compare-col-header--old {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    .compare-col-header--new {
+      color: #4F30FE;
+    }
+
+    .compare-col-icon {
+      font-size: 22px;
+    }
+
+    .compare-col-sub {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.3);
+      margin-top: 4px;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .compare-col-sub--new {
+      color: rgba(79, 48, 254, 0.6);
+    }
+
+    .compare-cell--old {
+      color: rgba(0, 0, 0, 0.45);
+      font-size: 17px;
+    }
+
+    .compare-cell--new {
+      color: #000;
+      font-weight: 500;
+      font-size: 17px;
+      background: rgba(79, 48, 254, 0.02);
+    }
+
+    /* ===== PARTNERSHIP TIMELINE ===== */
+    .partnership-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .partnership-step {
+      display: flex;
+      gap: 24px;
+    }
+
+    .partnership-step-indicator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      width: 48px;
+    }
+
+    .partnership-step-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 16px rgba(79, 48, 254, 0.2);
+    }
+
+    .partnership-step-line {
+      width: 2px;
+      flex: 1;
+      min-height: 24px;
+      background: linear-gradient(180deg, rgba(79, 48, 254, 0.25), rgba(79, 48, 254, 0.05));
+    }
+
+    .partnership-step-card {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 28px 28px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 14px;
+      margin-bottom: 16px;
+      transition: border-color 0.2s;
+    }
+
+    .partnership-step-card--highlight {
+      border: 2px solid rgba(79, 48, 254, 0.3);
+      background: linear-gradient(135deg, rgba(79, 48, 254, 0.03), rgba(218, 179, 255, 0.06));
+      box-shadow: 0 4px 24px rgba(79, 48, 254, 0.08);
+    }
+
+    .partnership-step-icon {
+      font-size: 36px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .partnership-step-content {
+      flex: 1;
+    }
+
+    .partnership-step-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 8px;
+    }
+
+    .partnership-step-desc {
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.5);
+      line-height: 1.6;
+    }
+
+    .partnership-key-badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #4F30FE;
+      background: rgba(79, 48, 254, 0.1);
+      padding: 4px 14px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    /* ===== SLIDE NUMBER ===== */
+    .slide-number {
+      position: fixed;
+      bottom: 20px;
+      right: 28px;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.25);
+      z-index: 99;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    /* ===== VALUE STACK ===== */
+    .vs-number {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      color: #fff;
+      font-size: 28px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(79, 48, 254, 0.2);
+    }
+
+    .vs-value {
+      font-size: 24px;
+      font-weight: 600;
+      color: #4F30FE;
+      margin-top: -12px;
+    }
+
+    .vs-stack {
+      max-width: 750px;
+      width: 100%;
+      background: #ffffff;
+      border: 2px solid rgba(79, 48, 254, 0.15);
+      border-radius: 16px;
+      padding: 28px 36px;
+      box-shadow: 0 4px 24px rgba(79, 48, 254, 0.06);
+    }
+
+    .vs-stack-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .vs-stack-item:last-of-type {
+      border-bottom: none;
+    }
+
+    .vs-stack-name {
+      font-size: 17px;
+      color: rgba(0, 0, 0, 0.55);
+      font-weight: 500;
+    }
+
+    .vs-stack-val {
+      font-size: 17px;
+      color: rgba(0, 0, 0, 0.35);
+      font-weight: 600;
+      white-space: nowrap;
+      margin-left: 24px;
+    }
+
+    .vs-stack-item--active .vs-stack-name {
+      color: #000;
+      font-weight: 600;
+    }
+
+    .vs-stack-item--active .vs-stack-val {
+      color: #4F30FE;
+    }
+
+    .vs-stack-item--highlight {
+      background: rgba(79, 48, 254, 0.04);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 4px -16px;
+      border-bottom: none;
+    }
+
+    .vs-stack-item--highlight .vs-stack-name {
+      color: #4F30FE;
+      font-weight: 600;
+    }
+
+    .vs-stack-item--highlight .vs-stack-val {
+      color: #4F30FE;
+      font-weight: 600;
+    }
+
+    .vs-stack-divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(79, 48, 254, 0.15), transparent);
+      margin: 16px 0;
+    }
+
+    .vs-stack-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    .vs-stack-total-val {
+      font-size: 32px;
+      font-weight: 600;
+      color: #4F30FE;
+    }
+
+    /* ===== MACHINES GRID ===== */
+    .machines-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .machine-card {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      padding: 32px 28px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .machine-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      color: #fff;
+      font-size: 22px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .machine-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 14px;
+    }
+
+    .machine-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .machine-tag {
+      font-size: 14px;
+      font-weight: 500;
+      color: #4F30FE;
+      background: rgba(79, 48, 254, 0.08);
+      padding: 5px 14px;
+      border-radius: 6px;
+    }
+
+    /* ===== AREA CHART ===== */
+    .area-chart-container {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .area-chart-container canvas {
+      width: 100% !important;
+      height: 320px !important;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.55);
+      font-weight: 500;
+    }
+
+    .legend-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ===== CURRICULUM ===== */
+    .curriculum-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .curriculum-card {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 18px;
+      padding: 40px 44px;
+      text-align: left;
+      box-shadow: 0 4px 24px rgba(79, 48, 254, 0.06), 0 2px 8px rgba(0, 0, 0, 0.03);
+      position: relative;
+    }
+
+    .curriculum-week {
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #4F30FE;
+      margin-bottom: 12px;
+    }
+
+    .curriculum-date {
+      position: absolute;
+      top: 40px;
+      right: 44px;
+      font-size: 20px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.55);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .curriculum-date-icon {
+      flex-shrink: 0;
+      opacity: 0.5;
+    }
+
+    .curriculum-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .curriculum-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .curriculum-tag {
+      font-size: 15px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.5);
+      background: rgba(79, 48, 254, 0.05);
+      padding: 7px 16px;
+      border-radius: 8px;
+    }
+
+    .curriculum-includes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      text-align: center;
+    }
+
+    .curriculum-include {
+      font-size: 19px;
+      color: rgba(0, 0, 0, 0.55);
+      font-weight: 600;
+    }
+
+    /* ===== PROGRAM INTRO ===== */
+    .program-desc {
+      font-size: 22px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.5);
+      max-width: 750px;
+      line-height: 1.55;
+      margin-top: -12px;
+      margin-bottom: 36px;
+    }
+
+    .program-image {
+      max-width: 680px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    /* ===== TRANSITION QUESTIONS ===== */
+    .transition-questions {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 700px;
+      width: 100%;
+    }
+
+    .transition-question {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 28px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 14px;
+      font-size: 21px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .transition-question--highlight {
+      border: 2px solid rgba(79, 48, 254, 0.25);
+      background: rgba(79, 48, 254, 0.03);
+      font-weight: 600;
+      color: #000;
+    }
+
+    .transition-question-icon {
+      font-size: 26px;
+      flex-shrink: 0;
+    }
+
+    .secret-objective {
+      font-size: 22px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.45);
+      margin-top: 0;
+    }
+
+    .gift-icon {
+      font-size: 72px;
+      margin-bottom: 24px;
+    }
+
+    /* ===== CLAUDE LOGO ===== */
+    .hero-claude-logo {
+      height: 64px;
+      margin-top: 12px;
+      margin-bottom: 8px;
+    }
+
+    .hero-hosts-label {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    /* ===== WEBCLASS SUMMARY STYLES ===== */
+    .summary-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+
+    .summary-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #4F30FE;
+      background: rgba(79, 48, 254, 0.06);
+      border: 1px solid rgba(79, 48, 254, 0.15);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .summary-nav a:hover {
+      background: rgba(79, 48, 254, 0.12);
+      border-color: rgba(79, 48, 254, 0.3);
+    }
+
+    .summary-section {
+      max-width: 900px;
+      margin: 0 auto 56px;
+      padding: 0 20px;
+    }
+
+    .summary-section-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid rgba(79, 48, 254, 0.12);
+    }
+
+    .summary-section-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      color: #fff;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .summary-section-title {
+      font-size: 32px;
+      font-weight: 600;
+      color: #000;
+      line-height: 1.25;
+    }
+
+    .summary-body {
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.65);
+      line-height: 1.75;
+    }
+
+    .summary-body p {
+      margin-bottom: 16px;
+    }
+
+    .summary-body ul, .summary-body ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+
+    .summary-body li {
+      margin-bottom: 10px;
+    }
+
+    .summary-body li strong {
+      color: #000;
+    }
+
+    .summary-placeholder {
+      padding: 32px;
+      background: rgba(79, 48, 254, 0.03);
+      border: 1px dashed rgba(79, 48, 254, 0.2);
+      border-radius: 12px;
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 16px;
+      font-style: italic;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .summary-divider {
+      width: 100%;
+      max-width: 900px;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.06);
+      margin: 0 auto 56px;
+    }
+
+    .qa-item {
+      margin-bottom: 28px;
+      padding: 24px 28px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .qa-question {
+      font-size: 19px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .qa-question-label {
+      color: #4F30FE;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .qa-answer {
+      font-size: 17px;
+      color: rgba(0, 0, 0, 0.6);
+      line-height: 1.7;
+      padding-left: 30px;
+    }
+
+    .summary-footer {
+      text-align: center;
+      padding: 48px 20px 60px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .summary-footer p {
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.4);
+      line-height: 1.6;
+    }
+  </style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1027396201405198');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1027396201405198&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Hyros Code -->
+<script>
+var head = document.head;
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = "https://t.dariuslukas.academy/v1/lst/universal-script?ph=8658404946c463288b1b217969fd706884b419377db10c2941fd39451dc39688&tag=!clicked&ref_url=" + encodeURI(document.URL) ;
+head.appendChild(script);
+</script>
+<!-- End Hyros Code -->
+
+</head>
+<body>
+  <!-- Sticky Header Banner -->
+  <div style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(79,48,254,0.1);padding:8px 16px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;font-family:'DM Sans',sans-serif;">
+    <span style="font-size:13px;color:rgba(0,0,0,0.6);display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center;text-align:center;">
+      This page was created by <img src="assets/Claude-ai-icon.svg" alt="Claude" style="height:18px;width:18px;display:inline-block;vertical-align:middle;">. Watch the webclass replay to see how.
+    </span>
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:4px;background:linear-gradient(135deg,#DAB3FF,#4F30FE);color:#fff;font-size:12px;font-weight:700;padding:5px 14px;border-radius:8px;text-decoration:none;white-space:nowrap;">Watch Now</a>
+  </div>
+  <div style="height:44px;"></div>
+  <div class="bg-layer"></div>
+  <div class="bg-overlay"></div>
+  <div class="slide-number" id="slide-number" style="display:none;">1</div>
+
+  <div class="page-wrapper">
+
+    <!-- Hero: Webclass Summary Header -->
+    <section class="hero" id="top">
+      <img class="hero-logo" src="https://assets.cdn.filesafe.space/lNzgml2EfCzIl04kmDr2/media/69c6dec39fc63ab17f2737ea.png" alt="Logo">
+      <p class="hero-topic">Claude Cowork: Business Growth Bootcamp</p>
+      <h1 class="hero-title"><span class="hero-title-highlight">Webclass Summary</span></h1>
+      <p class="hero-subtitle">Everything covered in the webclass, distilled into an easy-to-read summary with key highlights, paradigm shifts, golden nuggets, and Q&A.</p>
+      <img class="hero-claude-logo" src="assets/Claude_Logo_2023-s1280.png" alt="Claude AI">
+
+      <div class="hero-hosts">
+        <span class="hero-hosts-label">Your Hosts</span>
+        <div class="hero-host">
+          <span class="hero-host-dot"></span>
+          Darius Lukas
+        </div>
+        <div class="hero-host">
+          <span class="hero-host-dot"></span>
+          Klemen Struc
+        </div>
+      </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <div class="summary-nav">
+      <a href="#key-highlights">Key Highlights</a>
+      <a href="#paradigm-shifts">Paradigm Shifts</a>
+      <a href="#golden-nuggets">Golden Nuggets</a>
+      <a href="#action-steps">Action Steps</a>
+      <a href="#tools-resources">Tools &amp; Resources</a>
+      <a href="#questions-answers">Q&amp;A</a>
+      <a href="#next-steps">Next Steps</a>
+    </div>
+
+    <!-- ==================== -->
+    <!-- SECTION: Key Highlights -->
+    <!-- ==================== -->
+    <div class="summary-section" id="key-highlights">
+      <div class="summary-section-header">
+        <div class="summary-section-icon">1</div>
+        <h2 class="summary-section-title">Key Highlights</h2>
+      </div>
+      <div class="summary-body">
+        <ul>
+          <li><strong>Claude as your marketing team:</strong> Claude can become your high-performing marketing team that automates up to 90% of your most time-consuming tasks, saving thousands in costs and taking your business to the next level.</li>
+          <li><strong>Real business, real results:</strong> Darius and Klemen shared the exact internal process they are using to build a virtual, Claude-powered marketing team inside their real $10M business &mdash; not theory, but a live roadmap.</li>
+          <li><strong>Marketing team cost slashed from $25&ndash;30K/month to ~$10K/month:</strong> After a Facebook ad account ban forced a pivot, Darius and Klemen replaced expensive agency and team costs by rebuilding the marketing function on Claude.</li>
+          <li><strong>Three growth engines identified:</strong> Content Machine (reach &amp; traffic), Email Machine (nurturing &amp; cash flow), and Launch Machine (offers, webinars, funnels) &mdash; the key levers for exponential business returns.</li>
+          <li><strong>Human-in-the-loop workflow:</strong> Every automation follows a four-step process: Input &rarr; Claude generates &rarr; You review &amp; approve &rarr; Claude publishes/executes. Quality control stays with you.</li>
+          <li><strong>Live demos of real Claude Skills:</strong> Video shorts created and published to Instagram (one post generated 150+ webinar opt-ins in under 24 hours), carousels with auto-generated images, image posts pushed to LinkedIn, email campaigns drafted into Klaviyo, and full sales funnels &mdash; all built and executed through Claude Cowork.</li>
+          <li><strong>Notion as the collaboration hub:</strong> Notion was identified as the best platform for storing structured and unstructured content where both human beings and AI agents can collaborate, review, and approve work in the same workflow.</li>
+          <li><strong>Full funnel builder demo:</strong> Claude generated complete sales pages, checkout pages with order bumps and one-click upsells, webinar registration pages, and lead capture pages &mdash; all as pure HTML/CSS, mobile-friendly, without ever touching ClickFunnels, Go High Level, or Canva.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="summary-divider"></div>
+
+    <!-- ==================== -->
+    <!-- SECTION: Paradigm Shifts -->
+    <!-- ==================== -->
+    <div class="summary-section" id="paradigm-shifts">
+      <div class="summary-section-header">
+        <div class="summary-section-icon">2</div>
+        <h2 class="summary-section-title">Paradigm Shifts</h2>
+      </div>
+      <div class="summary-body">
+        <ul>
+          <li><strong>From chatbot to operator:</strong> Stop thinking of Claude as a chatbot that just generates text. Claude Cowork is an operator and director that performs and executes tasks for you &mdash; including actions outside the chat interface like publishing content, scheduling emails, and building pages.</li>
+          <li><strong>From "chat-locked" to end-to-end execution:</strong> The old way: prompt AI &rarr; get output &rarr; manually copy-paste, switch tabs, edit, upload everywhere. The new way with Claude Cowork: prompt or schedule &rarr; Claude generates &rarr; you review &rarr; Claude publishes and executes. The most time-consuming implementation steps are handled for you.</li>
+          <li><strong>From time-saving to exponential returns:</strong> Don't see AI as something that saves you time. See it as an amplifier that increases your productivity and throughput 10&ndash;100x. Prioritize automations that give you the biggest returns in the shortest time, not just the easiest things to automate.</li>
+          <li><strong>From hiring to delegating to AI:</strong> As business owners, you are now "gently forced to delegate" to Claude. The mental shift is moving from "I need to hire someone for this" to "I can instruct Claude to do this" &mdash; whether that's creating slides, publishing content, or managing email campaigns.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="summary-divider"></div>
+
+    <!-- ==================== -->
+    <!-- SECTION: Golden Nuggets -->
+    <!-- ==================== -->
+    <div class="summary-section" id="golden-nuggets">
+      <div class="summary-section-header">
+        <div class="summary-section-icon">3</div>
+        <h2 class="summary-section-title">Golden Nuggets</h2>
+      </div>
+      <div class="summary-body">
+        <ul>
+          <li><strong>Prioritize for exponential returns, not time savings:</strong> When deciding what to automate, ask: "Where will I get the biggest exponential returns in the shortest amount of time with the least energy and investment?" Automating customer support might save time, but automating content creation compounds &mdash; more reach, more traffic, more leads, stacking up over time.</li>
+          <li><strong>The $300K wake-up call:</strong> Darius was spending $25&ndash;30K/month ($300K+ annually) on a marketing team: senior marketer, Instagram agency ($7K/month alone), copywriters, junior designers, and ad teams. A Facebook page ban forced a rethink, and that entire function is now being rebuilt on Claude for ~$10K/month.</li>
+          <li><strong>AI-native, not AI-added:</strong> Klemen's first recommendation was to make the entire company AI-native &mdash; not just bolt AI onto existing processes, but fundamentally rebuild how marketing operates with Claude at the core.</li>
+          <li><strong>Claude built these very slides:</strong> The webclass presentation itself was built entirely by Claude &mdash; pure HTML/CSS with 50+ slide components, hosted on GitHub Pages. No Canva, no Google Slides, no PowerPoint. Even last-minute changes 15 minutes before going live were made by instructing Claude in chat.</li>
+          <li><strong>Proactive AI input:</strong> Claude can be scheduled to autonomously do research every day and generate fresh content ideas, storing them in Notion &mdash; freeing your cognitive power before you even open the laptop.</li>
+          <li><strong>This applies to solopreneurs too:</strong> Even if you have a team of one, you still need to perform all marketing functions. Claude becomes the team you don't have, regardless of your business size.</li>
+          <li><strong>Notion is the ultimate collaboration layer:</strong> Notion is "hands down the best platform" to store structured and unstructured content that both human beings and AI agents can easily access, edit, and understand. Not Google Docs &mdash; Notion.</li>
+          <li><strong>Action videos outperform talking head videos:</strong> Simple 5&ndash;10 second video clips with text overlays (not talking head) consistently get more engagement. One such reel posted less than 24 hours before the webclass generated 150+ webinar registrations.</li>
+          <li><strong>HTML-first approach for everything:</strong> The best way to generate carousels, slides, and pages is to first generate HTML files, then convert to images (JPEG/PNG) when needed. This is faster, cheaper on tokens, and produces higher quality results than any other method.</li>
+          <li><strong>Reduce the cost of producing value, not just time:</strong> Inspired by Elon Musk's obsession with reducing production costs &mdash; the first version of anything is always the worst, but each next version is better AND takes less time and energy to create.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="summary-divider"></div>
+
+    <!-- ==================== -->
+    <!-- SECTION: Action Steps -->
+    <!-- ==================== -->
+    <div class="summary-section" id="action-steps">
+      <div class="summary-section-header">
+        <div class="summary-section-icon">4</div>
+        <h2 class="summary-section-title">Action Steps</h2>
+      </div>
+      <div class="summary-body">
+        <ol>
+          <li><strong>Identify your highest-return levers:</strong> Look at your business and ask where exponential returns live. For most businesses, this is content (reach &amp; traffic), email (nurturing &amp; revenue), and launches (new offers &amp; funnels).</li>
+          <li><strong>Get your tech stack ready:</strong> You need a paid Claude subscription (Claude Cowork), a free Notion account, and a Google account (for Google Drive). That's the foundation &mdash; everything else is optional.</li>
+          <li><strong>Set up your Content Machine (Part 1 &mdash; Image content):</strong> Start with the quickest wins: image posts and carousels. Claude generates the copy, captions, and images (as HTML converted to JPEG/PNG), stores everything in a Notion database, and publishes to Instagram and LinkedIn after your review.</li>
+          <li><strong>Set up your Content Machine (Part 2 &mdash; Video content):</strong> Move to video shorts (Instagram Reels, YouTube Shorts, LinkedIn, TikTok). Film a simple 5&ndash;10 second action clip, let Claude add text overlays and generate the caption. Claude stores the video in Google Drive for review, then publishes to all platforms.</li>
+          <li><strong>Set up your Email Machine:</strong> Use Claude to generate email sequences (promo emails, value emails, follow-up automations). Claude stores drafts in Notion for review, then creates draft campaigns in Klaviyo (or your email platform). A human always does the final review before scheduling.</li>
+          <li><strong>Set up your Launch Machine:</strong> Use Claude to build complete sales funnels: sales pages, checkout pages with order bumps and one-click upsells, webinar registration pages, and lead capture pages &mdash; all generated as HTML code and deployed via GitHub Pages.</li>
+          <li><strong>Adopt the human-in-the-loop workflow for everything:</strong> For every automation, follow: Input (prompt or schedule) &rarr; Claude generates &rarr; You review &amp; approve in Notion &rarr; Claude publishes. Never let AI publish without your review.</li>
+          <li><strong>Start delegating to Claude daily:</strong> Shift your mindset from doing to delegating. Schedule Claude to proactively research ideas, draft content, and prepare assets &mdash; so your day starts with output ready for review, not a blank screen.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="summary-divider"></div>
+
+    <!-- ==================== -->
+    <!-- SECTION: Tools & Resources -->
+    <!-- ==================== -->
+    <div class="summary-section" id="tools-resources">
+      <div class="summary-section-header">
+        <div class="summary-section-icon">5</div>
+        <h2 class="summary-section-title">Tools &amp; Resources Mentioned</h2>
+      </div>
+      <div class="summary-body">
+        <ul>
+          <li><strong>Claude / Claude Cowork:</strong> The core AI platform used to build the entire virtual marketing team &mdash; generating content, emails, slides, pages, and executing tasks outside the chat. A paid subscription is required.</li>
+          <li><strong>Notion:</strong> "Hands down the best platform" for the collaboration layer. Used as the review and approval hub where Claude stores generated content in structured databases (video shorts, carousels, image posts, emails) for human review. Free plan available.</li>
+          <li><strong>Google Drive:</strong> Used for storing generated video files and other media assets for review before publishing.</li>
+          <li><strong>GitHub / GitHub Pages:</strong> Used to host and deploy web assets like presentation slides, sales pages, and landing pages &mdash; all generated as HTML/CSS code by Claude.</li>
+          <li><strong>Klaviyo:</strong> Email marketing platform where Claude drafts email campaigns. Claude creates the draft; a human does the final review and scheduling.</li>
+          <li><strong>Instagram:</strong> Key social media channel for content distribution. Previously managed by a $7K/month agency, now handled through Claude-powered content workflows. Reels, carousels, and image posts all published via Claude.</li>
+          <li><strong>LinkedIn:</strong> Used for carousels, image posts, and long-form text content. Klemen recommended publishing blog-style content on LinkedIn first for faster discovery in Google and AI search.</li>
+          <li><strong>YouTube:</strong> Claude generates HTML slide decks optimized for screen recording with Loom, producing YouTube videos with minimal editing.</li>
+          <li><strong>Facebook / Meta Ads:</strong> Referenced as the ad platform. Claude generates ad creatives (images + primary text, or video + text) using the same workflows as organic content.</li>
+          <li><strong>Canva:</strong> Mentioned as something you no longer need for carousels and slides. However, useful as inspiration &mdash; you can screenshot Canva designs and ask Claude to create something similar.</li>
+          <li><strong>Go High Level / ClickFunnels / ThriveCart:</strong> Mentioned as funnel-building and checkout platforms. The Launch Machine aims to reduce or replace dependency on these with Claude-generated HTML pages.</li>
+          <li><strong>Loom:</strong> Klemen's preferred screen recording tool for creating YouTube videos and video sales letters over Claude-generated HTML slides.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="summary-divider"></div>
+
+    <!-- ==================== -->
+    <!-- SECTION: Questions And Answers -->
+    <!-- ==================== -->
+    <div class="summary-section" id="questions-answers">
+      <div class="summary-section-header">
+        <div class="summary-section-icon">6</div>
+        <h2 class="summary-section-title">Questions And Answers</h2>
+      </div>
+      <div class="summary-body">
+        <ul>
+          <li><strong>"What level of knowledge do I need to succeed?"</strong><br>Somewhere between beginner and intermediate. It won't be advanced, but it will gently push you outside your comfort zone. The emphasis is on learning by doing &mdash; you install and modify existing skills first, then build your own. Darius and Klemen are there to help with troubleshooting on every call.</li>
+          <li><strong>"What tech stack do I need to get started?"</strong><br>A paid Claude subscription (Claude Cowork), a free Notion account, and a Google account (for Google Drive). That's the essential foundation. You'll also need the social media accounts you plan to publish to (Instagram, LinkedIn, etc.).</li>
+          <li><strong>"Does this apply to my specific business type?"</strong><br>Yes &mdash; this works for e-learning, courses, digital products, memberships, coaching, consulting, services (remote or local), and even e-commerce. Whether you're a hairstylist, hotel owner, drop shipper, or plumber, at minimum 70% of the <a href="index.html" target="_blank">program</a> is directly usable. The skills are intelligent and adapt to your business model.</li>
+          <li><strong>"Will we learn to build our own skills, or just install yours?"</strong><br>Both. You first install and modify the pre-built skills (easiest way to get started), and through that process you learn the meta skill &mdash; how to create any workflow for anything. Klemen will also show you how to build skills from simple to advanced.</li>
+          <li><strong>"Can I transfer this knowledge to another domain like coaching?"</strong><br>Absolutely. As long as you are in an ethically acceptable and legal industry, the skills and the entire system are adaptable. The program is created by founders for founders &mdash; it's about growing your business, not just installing automations.</li>
+          <li><strong>"Are these slides really built with Claude?"</strong><br>Yes. The entire presentation is pure HTML/CSS &mdash; a website, essentially &mdash; built entirely inside Claude Cowork with 50+ different section components. No Canva, no Google Slides, no PowerPoint. Pushed to GitHub Pages for hosting.</li>
+          <li><strong>"How much time per week should I dedicate?"</strong><br>Minimum 2&ndash;3 hours per week. 60&ndash;90 minutes for the live class, plus implementation time. The more you put in, the faster you see results. The emphasis is on doing, not just watching.</li>
+          <li><strong>"Will workshops be recorded?"</strong><br>Yes. All sessions are recorded and available as modules you can watch at your own pace. Nothing is held back.</li>
+          <li><strong>"Can my team member join the calls?"</strong><br>Yes &mdash; you can bring your marketing manager or a team member to relevant sessions.</li>
+          <li><strong>"Will we get Notion templates too?"</strong><br>Yes. Pre-built Notion templates are included that you can clone or import into your own account. The skills themselves will also propose an initial structure even without the templates.</li>
+          <li><strong>"Can I supply my own photos and videos?"</strong><br>Absolutely. Save your images or videos in a folder, point Claude to the location, and it will use your own media in the content it generates.</li>
+          <li><strong>"What about blogging?"</strong><br>Klemen's advice: start with publishing text content on external platforms like LinkedIn first, where you rank faster in Google and AI search, rather than only on your own website.</li>
+          <li><strong>"Do I need both paid ads and organic content?"</strong><br>Ideally yes. Start with organic content to learn the ropes, then add paid ads as rocket fuel. You need organic presence because when people see your ads, they will look you up &mdash; supporting organic content helps paid ads perform with better ROI. Plus, being over-dependent on paid ads is risky (as Darius learned with the Facebook ban).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="summary-divider"></div>
+
+    <!-- ==================== -->
+    <!-- SECTION: Next Steps -->
+    <!-- ==================== -->
+    <div class="summary-section" id="next-steps">
+      <div class="summary-section-header">
+        <div class="summary-section-icon">7</div>
+        <h2 class="summary-section-title">Next Steps</h2>
+      </div>
+      <div class="summary-body">
+        <ul>
+          <li><strong><a href="index.html" target="_blank">Join the Claude Cowork Business Growth Bootcamp &rarr;</a></strong> A 4-week implementation program starting Thursday, April 16th, running every Thursday at 11 AM ET. Each week delivers Claude Skills to install, a live video training session (~90 minutes), and a live Q&amp;A session with Darius and Klemen.</li>
+          <li><strong>Week 1 &mdash; Content Machine Part 1:</strong> Image posts, carousels, and image ads. The quickest wins to get your content engine running.</li>
+          <li><strong>Week 2 &mdash; Content Machine Part 2:</strong> Video shorts (Instagram Reels, YouTube Shorts, LinkedIn, TikTok), YouTube videos, and video ads.</li>
+          <li><strong>Week 3 &mdash; Email Machine:</strong> Promo emails, value emails, follow-up sequences, and newsletter automations.</li>
+          <li><strong>Week 4 &mdash; Launch Machine:</strong> Lead generation funnels, sales funnels, checkout pages, webinar registration pages &mdash; everything you need to launch offers.</li>
+          <li><strong>What you get:</strong> All done-for-you Claude Skills for Instagram, YouTube, LinkedIn, Meta Ads, email, and funnels. Pre-built Notion templates. 4 deep-dive video classes. 4 Q&amp;A sessions. Access to a private group. Lifetime access to all skills and recordings.</li>
+          <li><strong>Pricing:</strong> Standard price $997 &mdash; webclass attendees received a 50% discount at $497 (one-time payment, no recurring fees). Time-limited offer. <a href="index.html" target="_blank">View pricing &amp; enroll &rarr;</a></li>
+          <li><strong>Risk-free guarantee:</strong> 100% money-back guarantee within 15 days after the program starts (not from purchase date). If you request a refund, you still get to keep all the Claude Skills.</li>
+          <li><strong>VIP tier available:</strong> Includes everything in Gold plus 12 months of Hyper AI University membership (4 monthly calls with AI experts), AI Consultant Certification (8-milestone program), Vibe Coding Bootcamp, and 2 additional personal coaching sessions with Darius and Klemen focused on business growth. <a href="index.html" target="_blank">Compare plans &rarr;</a></li>
+          <li><strong>This is implementation, not theory:</strong> This is a workshop where you roll up your sleeves and build alongside Darius and Klemen &mdash; not another course to watch. Everything they build for their own business, they deliver to you.</li>
+        </ul>
+        <p style="text-align: center; margin-top: 32px;"><a href="index.html" target="_blank" class="btn-primary">Join the Bootcamp &rarr;</a></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="summary-footer">
+      <p>This summary was generated from the Claude Cowork: Business Growth Bootcamp webclass (April 2, 2026) hosted by Darius Lukas and Klemen Struc.</p>
+    </div>
+
+    <!-- Old slide content removed -->
+
+
+  </div>
+
+  <!-- ===== CHART.JS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+  <script>
+  (function() {
+    var ctx = document.getElementById('asymmetric-chart');
+    if (!ctx) return;
+    var labels = ['Week 1','Week 2','Week 3','Week 4','Week 5','Week 6','Week 7','Week 8','Week 9','Week 10','Week 11','Week 12'];
+    var inputData  = [10, 12, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
+    var outputData = [12, 22, 34, 48, 65, 85, 110, 140, 175, 215, 260, 310];
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: 'Input / Investment',
+            data: inputData,
+            borderColor: 'rgba(255,70,46,0.7)',
+            backgroundColor: 'rgba(255,70,46,0.06)',
+            fill: true,
+            tension: 0.4,
+            borderWidth: 3,
+            pointRadius: 0
+          },
+          {
+            label: 'Output / Return',
+            data: outputData,
+            borderColor: '#4F30FE',
+            backgroundColor: 'rgba(79,48,254,0.08)',
+            fill: true,
+            tension: 0.4,
+            borderWidth: 3,
+            pointRadius: 0
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(0,0,0,0.04)' },
+            ticks: { font: { family: 'DM Sans', size: 13 }, color: 'rgba(0,0,0,0.35)' }
+          },
+          y: {
+            grid: { color: 'rgba(0,0,0,0.04)' },
+            ticks: { display: false },
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  })();
+  </script>
+
+  <!-- ===== SLIDE SCROLL SNAP ===== -->
+  <script>
+  (function () {
+    'use strict';
+
+    /* Fluid scrolling enabled — no snap behaviour */
+    var fluidScroll = true;
+
+    const wrapper = document.querySelector('.page-wrapper');
+    if (!wrapper) return;
+
+    const slides = Array.from(wrapper.children);
+    let currentIndex   = 0;
+    let currentSubPage = 0;
+    let isAnimating    = false;
+    let animTimer      = null;
+    let inGesture      = false;
+    let gestureEnd     = null;
+
+    /* -- position helpers -- */
+
+    function absTop(el) {
+      return el.getBoundingClientRect().top + window.scrollY;
+    }
+
+    function snapY(slide) {
+      const vh = window.innerHeight;
+      const h  = slide.offsetHeight;
+      const t  = absTop(slide);
+      return h <= vh
+        ? Math.max(0, t - (vh - h) / 2)
+        : Math.max(0, t - 20);
+    }
+
+    function subPagePositions(slide) {
+      const vh = window.innerHeight;
+      const h  = slide.offsetHeight;
+      if (h <= vh) return null;
+
+      const top    = Math.max(0, absTop(slide) - 20);
+      const bottom = Math.max(0, absTop(slide) + h - vh + 20);
+      const positions = [top];
+
+      let pos = top + vh;
+      while (pos < bottom) { positions.push(pos); pos += vh; }
+      if (bottom - positions[positions.length - 1] > 10) positions.push(bottom);
+      return positions;
+    }
+
+    /* -- dynamic margins -- */
+
+    function updateMargins() {
+      const vh = window.innerHeight;
+      slides.forEach(function (slide, i) {
+        var h   = slide.offsetHeight;
+        var gap = h < vh ? Math.ceil((vh - h) / 2) + 10 : 40;
+        slide.style.marginTop    = (i === 0 ? '0' : gap + 'px');
+        slide.style.marginBottom = gap + 'px';
+      });
+    }
+
+    /* -- find closest slide/sub-page -- */
+
+    function closestIndex() {
+      var sy = window.scrollY;
+      return slides.reduce(function (best, slide, i) {
+        var dist = Math.abs(snapY(slide) - sy);
+        return dist < best.dist ? { i: i, dist: dist } : best;
+      }, { i: 0, dist: Infinity }).i;
+    }
+
+    function closestSubPage(index) {
+      var subPages = subPagePositions(slides[index]);
+      if (!subPages) return 0;
+      var sy   = window.scrollY;
+      var best = { sub: 0, dist: Infinity };
+      subPages.forEach(function (pos, sub) {
+        var dist = Math.abs(pos - sy);
+        if (dist < best.dist) best = { sub: sub, dist: dist };
+      });
+      return best.sub;
+    }
+
+    /* -- scroll to a slide and sub-page -- */
+
+    function goTo(index, subPage, behavior) {
+      if (behavior === undefined) behavior = 'smooth';
+      if (index < 0) index = 0;
+      if (index >= slides.length) index = slides.length - 1;
+
+      var slide    = slides[index];
+      var subPages = subPagePositions(slide);
+      var maxSub   = subPages ? subPages.length - 1 : 0;
+
+      if (subPage === undefined || subPage === null) subPage = 0;
+      if (subPage < 0)      subPage = 0;
+      if (subPage > maxSub) subPage = maxSub;
+
+      currentIndex   = index;
+      currentSubPage = subPage;
+      isAnimating    = true;
+      clearTimeout(animTimer);
+      window.scrollTo({ top: subPages ? subPages[subPage] : snapY(slide), behavior: behavior });
+      animTimer = setTimeout(function () { isAnimating = false; }, 900);
+      updateFilmstripActive(index);
+    }
+
+    /* -- navigate one step -- */
+
+    function navigate(direction) {
+      if (isAnimating) return;
+
+      currentIndex   = closestIndex();
+      currentSubPage = closestSubPage(currentIndex);
+
+      var slide    = slides[currentIndex];
+      var subPages = subPagePositions(slide);
+      var maxSub   = subPages ? subPages.length - 1 : 0;
+
+      if (direction < 0 && currentIndex === 0 && currentSubPage === 0) return;
+      if (direction > 0 && currentIndex === slides.length - 1 && currentSubPage === maxSub) return;
+
+      var nextSub = currentSubPage + direction;
+
+      if (subPages && nextSub >= 0 && nextSub <= maxSub) {
+        goTo(currentIndex, nextSub);
+        return;
+      }
+
+      if (direction > 0) {
+        goTo(currentIndex + 1, 0);
+      } else {
+        var prevIndex = currentIndex - 1;
+        var prevSubs  = prevIndex >= 0 ? subPagePositions(slides[prevIndex]) : null;
+        goTo(prevIndex, prevSubs ? prevSubs.length - 1 : 0);
+      }
+    }
+
+    /* -- wheel -- */
+
+    if (!fluidScroll) {
+    window.addEventListener('wheel', function (e) {
+      e.preventDefault();
+      var isNewGesture = !inGesture;
+      inGesture = true;
+      clearTimeout(gestureEnd);
+      gestureEnd = setTimeout(function () { inGesture = false; }, 150);
+      if (!isNewGesture || isAnimating) return;
+      navigate(e.deltaY > 0 ? +1 : -1);
+    }, { passive: false });
+    }
+
+    /* -- keyboard -- */
+
+    window.addEventListener('keydown', function (e) {
+      if (e.key === 'g' || e.key === 'G') {
+        if (!gridOverlay) return;
+        if (gridOverlay.classList.contains('sn-visible')) { hideGridOverlay(); } else { showGridOverlay(); }
+        e.preventDefault();
+        return;
+      }
+      if (e.key === 'Escape') {
+        if (gridOverlay && gridOverlay.classList.contains('sn-visible')) { hideGridOverlay(); e.preventDefault(); return; }
+        if (filmstrip && filmstrip.classList.contains('sn-visible')) { hideFilmstrip(); e.preventDefault(); return; }
+        return;
+      }
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        if (filmstrip) { filmstrip.classList.contains('sn-visible') ? hideFilmstrip() : showFilmstrip(); }
+        return;
+      }
+      if (gridOverlay && gridOverlay.classList.contains('sn-visible')) {
+        if (e.key >= '0' && e.key <= '9') { gridInput += e.key; updateGridInput(); e.preventDefault(); return; }
+        if (e.key === 'Backspace') { gridInput = gridInput.slice(0, -1); updateGridInput(); e.preventDefault(); return; }
+        if (e.key === 'Enter' && gridInput.length > 0) {
+          var num = parseInt(gridInput, 10);
+          if (num >= 1 && num <= slides.length) { goTo(num - 1, 0); hideGridOverlay(); }
+          e.preventDefault();
+          return;
+        }
+      }
+      if (fluidScroll) return;
+      var down = e.key === 'ArrowDown' || e.key === 'PageDown';
+      var up   = e.key === 'ArrowUp'   || e.key === 'PageUp';
+      if (!down && !up) return;
+      e.preventDefault();
+      navigate(down ? +1 : -1);
+    });
+
+    /* -- touch -- */
+
+    if (!fluidScroll) {
+    var ty0 = 0;
+    window.addEventListener('touchstart', function (e) {
+      ty0 = e.touches[0].clientY;
+    }, { passive: true });
+
+    window.addEventListener('touchend', function (e) {
+      if (isAnimating) return;
+      var delta = ty0 - e.changedTouches[0].clientY;
+      if (Math.abs(delta) < 30) return;
+      navigate(delta > 0 ? +1 : -1);
+    });
+    }
+
+    /* -- resize -- */
+
+    if (!fluidScroll) {
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        updateMargins();
+        goTo(currentIndex, currentSubPage, 'instant');
+      }, 100);
+    });
+    }
+
+    /* -- slide nav: filmstrip + grid overlay -- */
+
+    var filmstrip    = null;
+    var filmstripBoxes = [];
+    var filmstripHideTimer = null;
+    var gridOverlay  = null;
+    var gridCards    = [];
+    var gridInput    = '';
+    var gridInputEl  = null;
+
+    function getSlideTitle(slide) {
+      var el = slide.querySelector('.section-label, h2, .hero-topic');
+      if (el) {
+        var t = el.textContent.trim();
+        return t.length > 22 ? t.slice(0, 20) + '...' : t;
+      }
+      return '';
+    }
+
+    function injectNavStyles() {
+      var s = document.createElement('style');
+      s.textContent = [
+        '.sn-filmstrip{position:fixed;bottom:0;left:0;right:0;height:96px;z-index:9999;',
+        'background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-top:1px solid rgba(0,0,0,0.08);',
+        'box-shadow:0 -4px 20px rgba(0,0,0,0.06);',
+        'display:flex;align-items:center;gap:8px;padding:16px 20px;overflow-x:auto;scroll-behavior:smooth;',
+        'transform:translateY(100%);transition:transform 0.3s ease;scrollbar-width:none;}',
+        '.sn-filmstrip::-webkit-scrollbar{display:none;}',
+        '.sn-filmstrip.sn-visible{transform:translateY(0);}',
+        '.sn-box{flex-shrink:0;width:120px;height:60px;background:#f0f0f0;',
+        'border-radius:8px;border:2px solid rgba(0,0,0,0.06);cursor:pointer;padding:6px 10px;',
+        'display:flex;flex-direction:column;justify-content:center;transition:border-color 0.2s,background 0.2s,box-shadow 0.2s;',
+        'font-family:DM Sans,sans-serif;overflow:hidden;}',
+        '.sn-box:hover{border-color:rgba(79,48,254,0.4);background:#eeebff;}',
+        '.sn-box.sn-active{border-color:#4F30FE;background:#f0edff;box-shadow:0 0 8px rgba(79,48,254,0.15);}',
+        '.sn-box-num{font-size:11px;color:#4F30FE;font-weight:600;margin-bottom:2px;}',
+        '.sn-box-title{font-size:11px;color:rgba(0,0,0,0.55);font-weight:500;white-space:nowrap;',
+        'overflow:hidden;text-overflow:ellipsis;}',
+        '.sn-grid-overlay{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.35);',
+        'backdrop-filter:blur(12px);display:flex;flex-direction:column;align-items:center;justify-content:center;',
+        'opacity:0;pointer-events:none;transition:opacity 0.25s ease;}',
+        '.sn-grid-overlay.sn-visible{opacity:1;pointer-events:auto;}',
+        '.sn-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));',
+        'gap:14px;max-width:1200px;width:100%;padding:40px;overflow-y:auto;max-height:calc(100vh - 80px);}',
+        '.sn-card{background:#ffffff;border-radius:10px;border:2px solid rgba(0,0,0,0.06);',
+        'cursor:pointer;padding:14px 16px;text-align:center;transition:border-color 0.2s,background 0.2s,box-shadow 0.2s;',
+        'font-family:DM Sans,sans-serif;box-shadow:0 1px 4px rgba(0,0,0,0.04);}',
+        '.sn-card:hover{border-color:rgba(79,48,254,0.4);background:#f8f6ff;}',
+        '.sn-card.sn-active{border-color:#4F30FE;background:#f0edff;box-shadow:0 0 10px rgba(79,48,254,0.15);}',
+        '.sn-card-num{font-size:26px;font-weight:600;color:#4F30FE;margin-bottom:2px;}',
+        '.sn-card-title{font-size:11px;color:rgba(0,0,0,0.5);line-height:1.3;display:-webkit-box;',
+        '-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;white-space:normal;}',
+        '.sn-grid-input{margin-top:16px;font-family:DM Sans,sans-serif;font-size:18px;color:#4F30FE;',
+        'background:#ffffff;border:1px solid rgba(79,48,254,0.3);border-radius:8px;',
+        'padding:8px 16px;min-width:120px;text-align:center;pointer-events:none;}',
+        '.sn-grid-hint{font-size:14px;color:rgba(255,255,255,0.7);margin-top:8px;font-family:DM Sans,sans-serif;}'
+      ].join('\n');
+      document.head.appendChild(s);
+    }
+
+    function buildFilmstrip() {
+      filmstrip = document.createElement('div');
+      filmstrip.className = 'sn-filmstrip';
+      slides.forEach(function (slide, i) {
+        var box = document.createElement('div');
+        box.className = 'sn-box' + (i === 0 ? ' sn-active' : '');
+        box.innerHTML = '<div class="sn-box-num">' + (i + 1) + '</div>' +
+                        '<div class="sn-box-title">' + (getSlideTitle(slide) || 'Slide ' + (i + 1)) + '</div>';
+        box.addEventListener('click', function () { goTo(i, 0); });
+        filmstrip.appendChild(box);
+        filmstripBoxes.push(box);
+      });
+      filmstrip.addEventListener('mouseenter', function () { clearTimeout(filmstripHideTimer); });
+      filmstrip.addEventListener('mouseleave', function () { scheduleHideFilmstrip(); });
+      filmstrip.addEventListener('wheel', function (e) { e.stopPropagation(); filmstrip.scrollLeft += e.deltaY; }, { passive: true });
+      document.body.appendChild(filmstrip);
+    }
+
+    function buildGridOverlay() {
+      gridOverlay = document.createElement('div');
+      gridOverlay.className = 'sn-grid-overlay';
+      var grid = document.createElement('div');
+      grid.className = 'sn-grid';
+      slides.forEach(function (slide, i) {
+        var card = document.createElement('div');
+        card.className = 'sn-card' + (i === currentIndex ? ' sn-active' : '');
+        card.innerHTML = '<div class="sn-card-num">' + (i + 1) + '</div>' +
+                         '<div class="sn-card-title">' + (getSlideTitle(slide) || 'Slide ' + (i + 1)) + '</div>';
+        card.addEventListener('click', function () { goTo(i, 0); hideGridOverlay(); });
+        grid.appendChild(card);
+        gridCards.push(card);
+      });
+      gridOverlay.appendChild(grid);
+      gridInputEl = document.createElement('div');
+      gridInputEl.className = 'sn-grid-input';
+      gridInputEl.textContent = 'Type slide #...';
+      gridOverlay.appendChild(gridInputEl);
+      var hint = document.createElement('div');
+      hint.className = 'sn-grid-hint';
+      hint.textContent = 'Enter number + Return to jump  |  Esc to close';
+      gridOverlay.appendChild(hint);
+      gridOverlay.addEventListener('click', function (e) {
+        if (e.target === gridOverlay) hideGridOverlay();
+      });
+      document.body.appendChild(gridOverlay);
+    }
+
+    function updateFilmstripActive(index) {
+      var numEl = document.getElementById('slide-number');
+      if (numEl) numEl.textContent = (index + 1);
+      filmstripBoxes.forEach(function (box, i) {
+        box.classList.toggle('sn-active', i === index);
+      });
+      gridCards.forEach(function (card, i) {
+        card.classList.toggle('sn-active', i === index);
+      });
+      if (filmstrip && filmstripBoxes[index]) {
+        var box = filmstripBoxes[index];
+        var left = box.offsetLeft - filmstrip.offsetWidth / 2 + box.offsetWidth / 2;
+        filmstrip.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
+      }
+    }
+
+    function showFilmstrip() {
+      if (!filmstrip) return;
+      filmstrip.classList.add('sn-visible');
+      clearTimeout(filmstripHideTimer);
+      scheduleHideFilmstrip();
+    }
+
+    function hideFilmstrip() {
+      if (!filmstrip) return;
+      filmstrip.classList.remove('sn-visible');
+      clearTimeout(filmstripHideTimer);
+    }
+
+    function scheduleHideFilmstrip() {
+      clearTimeout(filmstripHideTimer);
+      filmstripHideTimer = setTimeout(hideFilmstrip, 2500);
+    }
+
+    function showGridOverlay() {
+      if (!gridOverlay) return;
+      gridInput = '';
+      updateGridInput();
+      updateFilmstripActive(currentIndex);
+      gridOverlay.classList.add('sn-visible');
+      hideFilmstrip();
+    }
+
+    function hideGridOverlay() {
+      if (!gridOverlay) return;
+      gridOverlay.classList.remove('sn-visible');
+      gridInput = '';
+    }
+
+    function updateGridInput() {
+      if (!gridInputEl) return;
+      gridInputEl.textContent = gridInput.length > 0 ? 'Go to slide ' + gridInput : 'Type slide #...';
+    }
+
+    /* -- mouse proximity for filmstrip -- */
+
+    window.addEventListener('mousemove', function (e) {
+      if (!filmstrip) return;
+      if (gridOverlay && gridOverlay.classList.contains('sn-visible')) return;
+      if (e.clientY > window.innerHeight - 60) {
+        showFilmstrip();
+      }
+    });
+
+    /* -- init -- */
+
+    window.addEventListener('load', function () {
+      if (!fluidScroll) updateMargins();
+      injectNavStyles();
+      buildFilmstrip();
+      buildGridOverlay();
+      if (!fluidScroll) goTo(0, 0, 'instant');
+    });
+
+  }());
+  </script>
+</body>
+</html>

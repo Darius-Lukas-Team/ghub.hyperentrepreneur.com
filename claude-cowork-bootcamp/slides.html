@@ -1,0 +1,3320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Cowork: Business Growth Bootcamp</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* =============================================
+       HE BRAND — MASTER STYLESHEET
+       ============================================= */
+
+    /* ===== RESET & BASE ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #000000;
+      overflow-x: hidden;
+    }
+
+    /* ===== BACKGROUND LAYERS ===== */
+    .bg-layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #ffffff;
+      z-index: -2;
+    }
+
+    .bg-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(79,48,254,0.03), rgba(38,45,255,0.04));
+      z-index: -1;
+    }
+
+    .page-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+      position: relative;
+      z-index: 0;
+    }
+
+    /* ===== GRADIENT & ACCENT TEXT UTILITIES ===== */
+    .gradient-text {
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .accent-text {
+      color: #4F30FE;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      color: #ffffff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 40px;
+      max-width: 1200px;
+    }
+
+    .hero-logo {
+      height: 42px;
+      margin-bottom: 28px;
+      opacity: 0.7;
+    }
+
+    .hero-topic {
+      font-size: 56px;
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: -0.5px;
+      color: #000;
+      margin-bottom: 20px;
+      line-height: 1.15;
+    }
+
+    .hero-title {
+      font-size: 32px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.6);
+      line-height: 1.45;
+      margin-bottom: 20px;
+      max-width: 1000px;
+    }
+
+    .hero-title-highlight {
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 24px;
+      color: rgba(0, 0, 0, 0.6);
+      line-height: 1.5;
+      max-width: 850px;
+      margin-bottom: 8px;
+    }
+
+    .hero-promises {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: stretch;
+      gap: 16px;
+      width: 100%;
+      max-width: 960px;
+      margin-top: 40px;
+    }
+
+    .hero-promise {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 22px 24px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.8);
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    /* ===== HOSTS BAR ===== */
+    .hero-hosts {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 36px;
+    }
+
+    .hero-host {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-host-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #4F30FE;
+    }
+
+    /* ===== WELCOME NOTIFICATION BANNER ===== */
+    .welcome-banner {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 32px;
+      background: linear-gradient(135deg, #DAB3FF, #4F30FE, #262DFF);
+      border-radius: 60px;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 24px rgba(79, 48, 254, 0.25);
+      animation: bannerGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes bannerGlowGold {
+      0%, 100% { box-shadow: 0 4px 24px rgba(245,158,11,0.25); }
+      50% { box-shadow: 0 6px 50px rgba(245,158,11,0.6), 0 0 100px rgba(245,158,11,0.3); }
+    }
+
+    @keyframes bannerGlow {
+      0%, 100% { box-shadow: 0 4px 24px rgba(79, 48, 254, 0.25); }
+      50% { box-shadow: 0 6px 50px rgba(79, 48, 254, 0.6), 0 0 100px rgba(79, 48, 254, 0.3); }
+    }
+
+    .welcome-banner-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+      animation: welcomePulse 2s ease-in-out infinite;
+    }
+
+    @keyframes welcomePulse {
+      0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(34, 197, 94, 0.6); }
+      50% { opacity: 0.6; box-shadow: 0 0 16px rgba(34, 197, 94, 0.8); }
+    }
+
+    .welcome-banner-text {
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== SECTION CONTAINER ===== */
+    .section {
+      background: transparent;
+      border-radius: 0;
+      padding: 40px 44px;
+      border: none;
+      box-shadow: none;
+    }
+
+    .section-label {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #4F30FE;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 38px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    /* ===== STEP SEQUENCE ===== */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+      padding: 22px 28px;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .step-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      color: #fff;
+      font-size: 22px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-content {
+      flex: 1;
+    }
+
+    .step-title {
+      font-size: 21px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 6px;
+    }
+
+    .step-desc {
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.45);
+      line-height: 1.6;
+    }
+
+    /* ===== SECTION HEADER SLIDE ===== */
+    .section-header-slide {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 40px;
+    }
+
+    .section-header-label {
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #4F30FE;
+      margin-bottom: 20px;
+    }
+
+    .section-header-title {
+      font-size: 56px;
+      font-weight: 600;
+      color: #000;
+      line-height: 1.2;
+      max-width: 800px;
+      margin-bottom: 24px;
+    }
+
+    .section-header-divider {
+      width: 120px;
+      height: 3px;
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      border-radius: 2px;
+    }
+
+    /* ===== ABOUT ME SECTION ===== */
+    .about-me {
+      background: transparent;
+      border-radius: 0;
+      padding: 40px 44px;
+      border: none;
+      box-shadow: none;
+    }
+
+    .about-name {
+      font-size: 38px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 8px;
+    }
+
+    .about-objectives {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .about-objective {
+      font-size: 20px;
+      color: rgba(0,0,0,0.6);
+      line-height: 1.5;
+    }
+
+    .about-objective strong {
+      color: #4F30FE;
+    }
+
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .credential-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      font-size: 16px;
+      color: rgba(0,0,0,0.65);
+    }
+
+    .credential-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(79, 48, 254, 0.12);
+      color: #4F30FE;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    /* ===== ABOUT HOST ===== */
+    .about-tagline {
+      font-size: 18px;
+      font-weight: 600;
+      color: #4F30FE;
+      margin-bottom: 20px;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .about-stat-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 18px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .about-stat-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .about-stat-text {
+      font-size: 15px;
+      color: rgba(0, 0, 0, 0.6);
+      line-height: 1.55;
+    }
+
+    .about-stat-text strong {
+      color: #000;
+    }
+
+    /* ===== SOCIAL CARDS ===== */
+    .social-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .social-card {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 32px 28px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+      text-decoration: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .social-card:hover {
+      border-color: rgba(79, 48, 254, 0.3);
+      box-shadow: 0 4px 20px rgba(79, 48, 254, 0.08);
+    }
+
+    .social-card-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .social-card-icon--ig {
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+
+    .social-card-icon--yt {
+      background: #FF0000;
+    }
+
+    .social-card-platform {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(0, 0, 0, 0.35);
+      margin-bottom: 4px;
+    }
+
+    .social-card-handle {
+      font-size: 22px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 6px;
+    }
+
+    .social-card-stat {
+      font-size: 28px;
+      font-weight: 600;
+      color: #4F30FE;
+    }
+
+    /* ===== YT THUMBNAIL ===== */
+    .yt-thumbnail-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-top: 32px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .yt-thumbnail {
+      display: block;
+      max-width: 720px;
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    .yt-play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.9;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+    }
+
+    .yt-screenshots-row {
+      display: flex;
+      gap: 16px;
+      margin-top: 32px;
+      align-items: flex-start;
+    }
+
+    .yt-screenshots-row .yt-thumbnail-wrapper {
+      margin-top: 0;
+    }
+
+    .yt-screenshots-row .yt-thumbnail {
+      max-width: 360px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* ===== TIMELINE ===== */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding-left: 20px;
+    }
+
+    .timeline-entry {
+      display: flex;
+      gap: 28px;
+      min-height: 110px;
+    }
+
+    .timeline-marker {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      width: 24px;
+    }
+
+    .timeline-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #4F30FE;
+      flex-shrink: 0;
+      box-shadow: 0 0 10px rgba(79, 48, 254, 0.15);
+    }
+
+    .timeline-line {
+      width: 2px;
+      flex: 1;
+      background: rgba(0, 0, 0, 0.08);
+    }
+
+    .timeline-content {
+      padding-bottom: 36px;
+    }
+
+    .timeline-date {
+      font-size: 15px;
+      font-weight: 600;
+      color: #4F30FE;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .timeline-title {
+      font-size: 22px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 8px;
+    }
+
+    .timeline-desc {
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.45);
+      line-height: 1.6;
+    }
+
+    /* ===== SECTION DESC ===== */
+    .section-desc {
+      font-size: 20px;
+      color: rgba(0, 0, 0, 0.55);
+      line-height: 1.6;
+      margin-bottom: 28px;
+      max-width: 850px;
+    }
+
+    .social-column {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .social-screenshot {
+      width: 67%;
+      border-radius: 14px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    /* ===== ABOUT HOST LAYOUT ===== */
+    .about-host-layout {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-host-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .about-host-photo img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    /* ===== PARADIGM SHIFT ===== */
+    .paradigm-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .paradigm-card {
+      display: grid;
+      grid-template-columns: 1fr 40px 1fr;
+      align-items: center;
+      gap: 0;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .paradigm-card-before {
+      padding: 16px 24px;
+      background: rgba(255, 70, 46, 0.03);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .paradigm-card-before p {
+      font-size: 15px;
+      color: rgba(196, 80, 80, 0.6);
+      line-height: 1.6;
+    }
+
+    .paradigm-arrow {
+      font-size: 24px;
+      font-weight: 600;
+      color: #4F30FE;
+      text-align: center;
+    }
+
+    .paradigm-card-after {
+      padding: 16px 24px;
+      background: rgba(34, 197, 94, 0.03);
+      border-left: 3px solid rgba(34, 197, 94, 0.2);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .paradigm-claude-logo {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      height: 24px;
+      opacity: 0.5;
+    }
+
+    .paradigm-card-after h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 4px;
+    }
+
+    .paradigm-card-after p {
+      font-size: 15px;
+      color: rgba(0, 0, 0, 0.45);
+      line-height: 1.45;
+    }
+
+    .paradigm-icon {
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    .paradigm-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 6px;
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 5px;
+    }
+
+    .paradigm-label--old {
+      color: #ff462e;
+      background: rgba(255, 70, 46, 0.08);
+    }
+
+    .paradigm-label--new {
+      color: #4F30FE;
+      background: rgba(79, 48, 254, 0.08);
+    }
+
+    /* ===== COMPARISON TABLE ===== */
+    .compare-table-wrapper {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .compare-table th,
+    .compare-table td {
+      padding: 20px 24px;
+      text-align: left;
+      font-size: 18px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .compare-table thead th {
+      background: rgba(0, 0, 0, 0.02);
+      padding: 24px 24px 16px;
+      vertical-align: top;
+    }
+
+    .compare-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .compare-table td:first-child {
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.75);
+      font-size: 17px;
+    }
+
+    .compare-col-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .compare-col-header--old {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    .compare-col-header--new {
+      color: #4F30FE;
+    }
+
+    .compare-col-icon {
+      font-size: 22px;
+    }
+
+    .compare-col-sub {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.3);
+      margin-top: 4px;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .compare-col-sub--new {
+      color: rgba(79, 48, 254, 0.6);
+    }
+
+    .compare-cell--old {
+      color: rgba(0, 0, 0, 0.45);
+      font-size: 17px;
+    }
+
+    .compare-cell--new {
+      color: #000;
+      font-weight: 500;
+      font-size: 17px;
+      background: rgba(79, 48, 254, 0.02);
+    }
+
+    /* ===== PARTNERSHIP TIMELINE ===== */
+    .partnership-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .partnership-step {
+      display: flex;
+      gap: 24px;
+    }
+
+    .partnership-step-indicator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      width: 48px;
+    }
+
+    .partnership-step-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 16px rgba(79, 48, 254, 0.2);
+    }
+
+    .partnership-step-line {
+      width: 2px;
+      flex: 1;
+      min-height: 24px;
+      background: linear-gradient(180deg, rgba(79, 48, 254, 0.25), rgba(79, 48, 254, 0.05));
+    }
+
+    .partnership-step-card {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 28px 28px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 14px;
+      margin-bottom: 16px;
+      transition: border-color 0.2s;
+    }
+
+    .partnership-step-card--highlight {
+      border: 2px solid rgba(79, 48, 254, 0.3);
+      background: linear-gradient(135deg, rgba(79, 48, 254, 0.03), rgba(218, 179, 255, 0.06));
+      box-shadow: 0 4px 24px rgba(79, 48, 254, 0.08);
+    }
+
+    .partnership-step-icon {
+      font-size: 36px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .partnership-step-content {
+      flex: 1;
+    }
+
+    .partnership-step-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 8px;
+    }
+
+    .partnership-step-desc {
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.5);
+      line-height: 1.6;
+    }
+
+    .partnership-key-badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #4F30FE;
+      background: rgba(79, 48, 254, 0.1);
+      padding: 4px 14px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    /* ===== SLIDE NUMBER ===== */
+    .slide-number {
+      position: fixed;
+      bottom: 20px;
+      right: 28px;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.25);
+      z-index: 99;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    /* ===== VALUE STACK ===== */
+    .vs-number {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      color: #fff;
+      font-size: 28px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(79, 48, 254, 0.2);
+    }
+
+    .vs-value {
+      font-size: 24px;
+      font-weight: 600;
+      color: #4F30FE;
+      margin-top: -12px;
+    }
+
+    .vs-stack {
+      max-width: 750px;
+      width: 100%;
+      background: #ffffff;
+      border: 2px solid rgba(79, 48, 254, 0.15);
+      border-radius: 16px;
+      padding: 28px 36px;
+      box-shadow: 0 4px 24px rgba(79, 48, 254, 0.06);
+    }
+
+    .vs-stack-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .vs-stack-item:last-of-type {
+      border-bottom: none;
+    }
+
+    .vs-stack-name {
+      font-size: 17px;
+      color: rgba(0, 0, 0, 0.55);
+      font-weight: 500;
+    }
+
+    .vs-stack-val {
+      font-size: 17px;
+      color: rgba(0, 0, 0, 0.35);
+      font-weight: 600;
+      white-space: nowrap;
+      margin-left: 24px;
+    }
+
+    .vs-stack-item--active .vs-stack-name {
+      color: #000;
+      font-weight: 600;
+    }
+
+    .vs-stack-item--active .vs-stack-val {
+      color: #4F30FE;
+    }
+
+    .vs-stack-item--highlight {
+      background: rgba(79, 48, 254, 0.04);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 4px -16px;
+      border-bottom: none;
+    }
+
+    .vs-stack-item--highlight .vs-stack-name {
+      color: #4F30FE;
+      font-weight: 600;
+    }
+
+    .vs-stack-item--highlight .vs-stack-val {
+      color: #4F30FE;
+      font-weight: 600;
+    }
+
+    .vs-stack-divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(79, 48, 254, 0.15), transparent);
+      margin: 16px 0;
+    }
+
+    .vs-stack-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    .vs-stack-total-val {
+      font-size: 32px;
+      font-weight: 600;
+      color: #4F30FE;
+    }
+
+    /* ===== MACHINES GRID ===== */
+    .machines-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .machine-card {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      padding: 32px 28px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .machine-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      color: #fff;
+      font-size: 22px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .machine-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 14px;
+    }
+
+    .machine-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .machine-tag {
+      font-size: 14px;
+      font-weight: 500;
+      color: #4F30FE;
+      background: rgba(79, 48, 254, 0.08);
+      padding: 5px 14px;
+      border-radius: 6px;
+    }
+
+    /* ===== AREA CHART ===== */
+    .area-chart-container {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .area-chart-container canvas {
+      width: 100% !important;
+      height: 320px !important;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.55);
+      font-weight: 500;
+    }
+
+    .legend-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ===== CURRICULUM ===== */
+    .curriculum-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .curriculum-card {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 18px;
+      padding: 40px 44px;
+      text-align: left;
+      box-shadow: 0 4px 24px rgba(79, 48, 254, 0.06), 0 2px 8px rgba(0, 0, 0, 0.03);
+      position: relative;
+    }
+
+    .curriculum-week {
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #4F30FE;
+      margin-bottom: 12px;
+    }
+
+    .curriculum-date {
+      position: absolute;
+      top: 40px;
+      right: 44px;
+      font-size: 20px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.55);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .curriculum-date-icon {
+      flex-shrink: 0;
+      opacity: 0.5;
+    }
+
+    .curriculum-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .curriculum-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .curriculum-tag {
+      font-size: 15px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.5);
+      background: rgba(79, 48, 254, 0.05);
+      padding: 7px 16px;
+      border-radius: 8px;
+    }
+
+    .curriculum-includes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      text-align: center;
+    }
+
+    .curriculum-include {
+      font-size: 19px;
+      color: rgba(0, 0, 0, 0.55);
+      font-weight: 600;
+    }
+
+    /* ===== PROGRAM INTRO ===== */
+    .program-desc {
+      font-size: 22px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.5);
+      max-width: 750px;
+      line-height: 1.55;
+      margin-top: -12px;
+      margin-bottom: 36px;
+    }
+
+    .program-image {
+      max-width: 680px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    /* ===== TRANSITION QUESTIONS ===== */
+    .transition-questions {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 700px;
+      width: 100%;
+    }
+
+    .transition-question {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 28px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 14px;
+      font-size: 21px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .transition-question--highlight {
+      border: 2px solid rgba(79, 48, 254, 0.25);
+      background: rgba(79, 48, 254, 0.03);
+      font-weight: 600;
+      color: #000;
+    }
+
+    .transition-question-icon {
+      font-size: 26px;
+      flex-shrink: 0;
+    }
+
+    .secret-objective {
+      font-size: 22px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.45);
+      margin-top: 0;
+    }
+
+    .gift-icon {
+      font-size: 72px;
+      margin-bottom: 24px;
+    }
+
+    /* ===== CLAUDE LOGO ===== */
+    .hero-claude-logo {
+      height: 64px;
+      margin-top: 12px;
+      margin-bottom: 8px;
+    }
+
+    .hero-hosts-label {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(0, 0, 0, 0.3);
+    }
+    .replay-demo-btn {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 14px 36px;
+      background: linear-gradient(135deg, #DAB3FF, #4F30FE);
+      color: #fff !important;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none !important;
+      opacity: 1 !important;
+      letter-spacing: 0.3px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(79, 48, 254, 0.25);
+    }
+    .replay-demo-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(79, 48, 254, 0.35);
+    }
+  </style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1027396201405198');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1027396201405198&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Hyros Code -->
+<script>
+var head = document.head;
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = "https://t.dariuslukas.academy/v1/lst/universal-script?ph=8658404946c463288b1b217969fd706884b419377db10c2941fd39451dc39688&tag=!clicked&ref_url=" + encodeURI(document.URL) ;
+head.appendChild(script);
+</script>
+<!-- End Hyros Code -->
+
+</head>
+<body>
+  <!-- Sticky Header Banner -->
+  <div style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(79,48,254,0.1);padding:8px 16px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;font-family:'DM Sans',sans-serif;">
+    <span style="font-size:13px;color:rgba(0,0,0,0.6);display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center;text-align:center;">
+      This page was created by <img src="assets/Claude-ai-icon.svg" alt="Claude" style="height:18px;width:18px;display:inline-block;vertical-align:middle;">. Watch the webclass replay to see how.
+    </span>
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:4px;background:linear-gradient(135deg,#DAB3FF,#4F30FE);color:#fff;font-size:12px;font-weight:700;padding:5px 14px;border-radius:8px;text-decoration:none;white-space:nowrap;">Watch Now</a>
+  </div>
+  <div style="height:44px;"></div>
+  <div class="bg-layer"></div>
+  <div class="bg-overlay"></div>
+  <div class="slide-number" id="slide-number">1</div>
+
+  <div class="page-wrapper">
+
+    <!-- Slide 2: Hero / Big Promise -->
+    <section class="hero" id="hero">
+      <img class="hero-logo" src="https://assets.cdn.filesafe.space/lNzgml2EfCzIl04kmDr2/media/69c6dec39fc63ab17f2737ea.png" alt="Logo">
+      <p class="hero-topic">Claude Cowork: Business Growth Bootcamp</p>
+      <h1 class="hero-title">Turn Claude Into Your <span class="hero-title-highlight">High-Performing Marketing Team</span> That Automates 90% Of Your Most Time-Consuming Tasks, Saves You $1,000s Of Costs, And Supercharges Your Business To The Next Level</h1>
+      <img class="hero-claude-logo" src="assets/Claude_Logo_2023-s1280.png" alt="Claude AI">
+
+      <div class="hero-hosts">
+        <span class="hero-hosts-label">Your Hosts</span>
+        <div class="hero-host">
+          <span class="hero-host-dot"></span>
+          Darius Lukas
+        </div>
+        <div class="hero-host">
+          <span class="hero-host-dot"></span>
+          Klemen Struc
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4: Big Context -->
+    <section class="section-header-slide">
+      <h2 class="section-header-title">We're replacing our entire marketing team with <span style="background:linear-gradient(135deg, #da7756, #c5553a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Claude</span> in a real <span class="hero-title-highlight">$10M business</span> — and showing you the <span class="hero-title-highlight">what/how/why</span> today. Not theory.</h2>
+      <div class="section-header-divider"></div>
+    </section>
+
+    <!-- Slide 5: What You'll Learn Today -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:60px 44px;">
+      <p class="section-label">Agenda</p>
+      <h2 class="section-title" style="font-size:44px;margin-bottom:36px;">What You'll Learn Today</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">The paradigm shift that changes everything</div>
+            <div class="step-desc">Why Claude isn't just a chatbot, and how it completes entire workflows outside the chat UI</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">How to prioritize for exponential returns</div>
+            <div class="step-desc">The framework for choosing which areas of your business to automate first (hint: it's not about saving time)</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">How to build your Content Machine</div>
+            <div class="step-desc">The system that scales your customer acquisition across Instagram, YouTube, LinkedIn, and TikTok</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">How to build your Email Machine</div>
+            <div class="step-desc">The system that scales your customer monetization on autopilot</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">How to build your Launch Machine</div>
+            <div class="step-desc">The system that creates and publishes entire sales funnels in 1/100th the time and cost</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4: What Live Demos You'll See Today -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:60px 44px;">
+      <p class="section-label">Agenda (continued)</p>
+      <h2 class="section-title" style="font-size:44px;margin-bottom:36px;">What Live Demos You'll See Today</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">6</div>
+          <div class="step-content">
+            <div class="step-title"><span style="display:inline-block;font-size:13px;color:#4F30FE;font-weight:600;background:rgba(79,48,254,0.06);padding:3px 10px;border-radius:20px;letter-spacing:0.5px;margin-right:8px;vertical-align:middle;">Live demo</span>Creating/Publishing Video Shorts (Instagram, YouTube, TikTok, LinkedIn)</div>
+            <div class="step-desc">Watch Claude create ready-to-publish short-form video content for Instagram, YouTube, LinkedIn, and TikTok</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">7</div>
+          <div class="step-content">
+            <div class="step-title"><span style="display:inline-block;font-size:13px;color:#4F30FE;font-weight:600;background:rgba(79,48,254,0.06);padding:3px 10px;border-radius:20px;letter-spacing:0.5px;margin-right:8px;vertical-align:middle;">Live demo</span>Creating/Publishing Carousels and Image Posts (Instagram, LinkedIn)</div>
+            <div class="step-desc">See Claude design and produce scroll-stopping visual content in minutes</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">8</div>
+          <div class="step-content">
+            <div class="step-title"><span style="display:inline-block;font-size:13px;color:#4F30FE;font-weight:600;background:rgba(79,48,254,0.06);padding:3px 10px;border-radius:20px;letter-spacing:0.5px;margin-right:8px;vertical-align:middle;">Live demo</span>Creating/Sending Emails (Promos, Sequences, Follow-Ups)</div>
+            <div class="step-desc">Watch Claude write, format, and schedule a complete email campaign</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">9</div>
+          <div class="step-content">
+            <div class="step-title"><span style="display:inline-block;font-size:13px;color:#4F30FE;font-weight:600;background:rgba(79,48,254,0.06);padding:3px 10px;border-radius:20px;letter-spacing:0.5px;margin-right:8px;vertical-align:middle;">Live demo</span>Building/Publishing Funnels (Webinar, Lead Gen, Sales, Calls)</div>
+            <div class="step-desc">See Claude generate a full sales page, checkout page, upsell page, and lead capture page from scratch</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">10</div>
+          <div class="step-content">
+            <div class="step-title"><span style="display:inline-block;font-size:13px;color:#4F30FE;font-weight:600;background:rgba(79,48,254,0.06);padding:3px 10px;border-radius:20px;letter-spacing:0.5px;margin-right:8px;vertical-align:middle;">Live demo</span>Building/Publishing Funnel Pages</div>
+            <div class="step-desc">Watch Claude build and deploy a complete webinar funnel end to end</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 5: Surprise Gift -->
+    <section class="section-header-slide" id="surprise-gift">
+      <div class="gift-icon">🎁</div>
+      <p class="section-header-label">Surprise Gift</p>
+      <h2 class="section-header-title">Stay Until The End, We Have A <span class="hero-title-highlight">Special Surprise</span> And Gift For You</h2>
+      <div class="section-header-divider"></div>
+    </section>
+
+    <!-- Slide 6: About Darius Lukas -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <p class="section-label">Your Host</p>
+      <div class="about-host-layout">
+        <div class="about-host-info">
+          <h2 class="section-title" style="font-size:44px;margin-bottom:6px;">Darius Lukas</h2>
+          <p class="about-tagline">Serial Entrepreneur / Founder of Hyper Entrepreneur</p>
+          <div class="about-stats" style="grid-template-columns:1fr;">
+            <div class="about-stat-card">
+              <div class="about-stat-icon">👥</div>
+              <div class="about-stat-text">Helped <strong>150,000+ business owners</strong> become AI-powered</div>
+            </div>
+            <div class="about-stat-card">
+              <div class="about-stat-icon">🏢</div>
+              <div class="about-stat-text">Built a <strong>$10M+ business</strong> in AI education and SaaS</div>
+            </div>
+            <div class="about-stat-card">
+              <div class="about-stat-icon">📦</div>
+              <div class="about-stat-text"><strong>100+ offers launched</strong> — viral AI products, SaaS, memberships</div>
+            </div>
+            <div class="about-stat-card">
+              <div class="about-stat-icon">📈</div>
+              <div class="about-stat-text">Built an audience of <strong>300K people</strong> across multiple channels</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-host-photo">
+          <img src="assets/Darius-Lukas-01.png" alt="Darius Lukas">
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:20px;width:100%;height:180px;">
+        <div style="flex:1;min-width:0;border-radius:10px;overflow:hidden;"><img src="assets/Darius-Lukas-02.png" alt="Darius Lukas" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+        <div style="flex:1;min-width:0;border-radius:10px;overflow:hidden;"><img src="assets/Darius-Lukas-03.png" alt="Darius Lukas" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+        <div style="flex:1;min-width:0;border-radius:10px;overflow:hidden;"><img src="assets/Darius-Lukas-04.png" alt="Darius Lukas" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+      </div>
+    </section>
+
+    <!-- Slide 7: Quick Story - The Setback -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:60px 44px;">
+      <p class="section-label">Quick Story</p>
+      <h2 class="section-title" style="font-size:44px;margin-bottom:12px;">We Were Doing <span class="accent-text">$300k - $400k /mo</span>, On Track For $500k /mo...</h2>
+      <p class="section-desc" style="font-size:22px;margin-bottom:36px;">Then everything changed overnight.</p>
+
+      <div class="timeline">
+        <div class="timeline-entry">
+          <div class="timeline-marker">
+            <div class="timeline-dot" style="background:#22c55e;box-shadow:0 0 10px rgba(34,197,94,0.3);"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">The Peak</div>
+            <div class="timeline-title">$300k-$400k /mo revenue, scaling fast toward $500k /mo</div>
+            <div class="timeline-desc">Business was firing on all cylinders. Team was growing, ads were profitable, momentum was building.</div>
+          </div>
+        </div>
+        <div class="timeline-entry">
+          <div class="timeline-marker">
+            <div class="timeline-dot" style="background:#ff462e;box-shadow:0 0 10px rgba(255,70,46,0.3);"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">The Hit</div>
+            <div class="timeline-title">Our Facebook page got banned</div>
+            <div class="timeline-desc">Our primary traffic source disappeared overnight. No warning, no appeal, no backup plan.</div>
+          </div>
+        </div>
+        <div class="timeline-entry">
+          <div class="timeline-marker">
+            <div class="timeline-dot" style="background:#ff462e;box-shadow:0 0 10px rgba(255,70,46,0.3);"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">The Fallout</div>
+            <div class="timeline-title">Revenue and client acquisition collapsed</div>
+            <div class="timeline-desc">Front-end acquisition dried up. Back-end revenue didn't justify the team. We had to pivot fast.</div>
+          </div>
+        </div>
+        <div class="timeline-entry">
+          <div class="timeline-marker">
+            <div class="timeline-dot" style="background:#4F30FE;box-shadow:0 0 10px rgba(79,48,254,0.3);"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">The Turning Point</div>
+            <div class="timeline-title">Started searching for the next breakthrough</div>
+            <div class="timeline-desc">Googling, YouTube-ing, Asking AI, etc.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 8: Our Marketing Team: Before vs Today -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <p class="section-label">Quick Story</p>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:28px;">Our Marketing Team: <span class="accent-text">Before</span> vs Today</h2>
+
+      <div style="display:flex;gap:32px;width:100%;">
+        <!-- BEFORE column -->
+        <div style="flex:1;background:rgba(79,48,254,0.03);border:1.5px solid rgba(79,48,254,0.15);border-radius:14px;padding:24px 28px;">
+          <h3 style="font-size:18px;font-weight:700;color:#4F30FE;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:20px;text-align:center;">Before</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.06);">
+              <span style="font-size:15px;color:rgba(0,0,0,0.7);">Senior Marketer/Copywriter</span>
+              <span style="font-size:15px;font-weight:600;color:rgba(0,0,0,0.8);">$5K–$6K /mo</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.06);">
+              <span style="font-size:15px;color:rgba(0,0,0,0.7);">Instagram agency</span>
+              <span style="font-size:15px;font-weight:600;color:rgba(0,0,0,0.8);">$7K /mo</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.06);">
+              <span style="font-size:15px;color:rgba(0,0,0,0.7);">Assistant copywriter</span>
+              <span style="font-size:15px;font-weight:600;color:rgba(0,0,0,0.8);">$2K–$3K /mo</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.06);">
+              <span style="font-size:15px;color:rgba(0,0,0,0.7);">Creative strategist for ads</span>
+              <span style="font-size:15px;font-weight:600;color:rgba(0,0,0,0.8);">$2K–$3K /mo</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.06);">
+              <span style="font-size:15px;color:rgba(0,0,0,0.7);">Junior designers</span>
+              <span style="font-size:15px;font-weight:600;color:rgba(0,0,0,0.8);">$2K–$3K /mo</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;">
+              <span style="font-size:15px;color:rgba(0,0,0,0.7);">Ads teams</span>
+              <span style="font-size:15px;font-weight:600;color:rgba(0,0,0,0.8);">$3K /mo + bonus</span>
+            </div>
+          </div>
+          <div style="border-top:2px solid rgba(79,48,254,0.2);padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:16px;font-weight:700;color:#4F30FE;">TOTAL</span>
+            <div style="text-align:right;">
+              <span style="font-size:22px;font-weight:800;color:#4F30FE;">$25K /month</span>
+              <br><span style="font-size:14px;font-weight:600;color:rgba(79,48,254,0.6);">$300K /year</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TODAY column -->
+        <div style="flex:1;background:rgba(245,158,11,0.03);border:1.5px solid rgba(245,158,11,0.15);border-radius:14px;padding:24px 28px;display:flex;flex-direction:column;align-items:center;text-align:center;">
+          <h3 style="font-size:18px;font-weight:700;color:#d97706;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:auto;">Today</h3>
+          <img src="assets/Claude-ai-icon.svg" alt="Claude AI" style="width:40px;height:40px;margin-bottom:12px;">
+          <span style="font-size:48px;font-weight:800;color:#d97706;">$10K /month</span>
+          <span style="font-size:20px;font-weight:600;color:rgba(217,119,6,0.6);margin-top:8px;">$120K /year</span>
+          <div style="margin-top:24px;margin-bottom:auto;padding:12px 24px;background:rgba(245,158,11,0.08);border-radius:10px;">
+            <span style="font-size:16px;font-weight:700;color:#d97706;">Saving $180K /year</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 9: Stumbled Upon This YouTube Video -->
+    <section class="section-header-slide" id="stumbled-upon">
+      <p class="section-header-label">Then I Stumbled Upon This YouTube Video</p>
+      <h2 class="section-header-title">"How We Scaled Mindvalley From $20M To $100M"</h2>
+      <p style="font-size:20px;font-weight:500;color:rgba(0,0,0,0.45);margin-top:-16px;margin-bottom:8px;">by Klemen Struc</p>
+      <div class="yt-screenshots-row">
+        <div class="yt-thumbnail-wrapper">
+          <img class="yt-thumbnail" src="assets/klemen-yt-mindvalley.png" alt="How We Scaled Mindvalley From $20M To $100M">
+          <div class="yt-play-btn">
+            <svg viewBox="0 0 68 48" width="68" height="48">
+              <path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.3.2 34 .2 34 .2S12.7.2 7.4 1.7c-2.9.8-5.2 3-5.9 6C0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.7 47.8 34 47.8 34 47.8s21.3 0 26.6-1.5c2.9-.8 5.2-3 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="rgba(255,0,0,0.85)"/>
+              <path d="M27 34l18-10-18-10z" fill="#fff"/>
+            </svg>
+          </div>
+        </div>
+        <div class="yt-thumbnail-wrapper">
+          <img class="yt-thumbnail" src="assets/klemen-yt-mindvalley-2.png" alt="Mindvalley video screenshot - outline">
+        </div>
+        <div class="yt-thumbnail-wrapper">
+          <img class="yt-thumbnail" src="assets/klemen-yt-mindvalley-3.png" alt="Mindvalley video screenshot - whiteboard">
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 10: About Klemen Struc -->
+    <section class="about-me" id="about-me" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;">
+      <div class="section-label">Meet</div>
+      <h2 class="about-name">Klemen Struc</h2>
+      <p class="about-tagline">Mindvalley's Former CMO & Head of Growth</p>
+
+      <div class="credentials-grid" style="grid-template-columns:repeat(2, 1fr);">
+        <div class="credential-item">
+          <div class="credential-icon">📈</div>
+          Helped Mindvalley scale 5X from $20M to $100M+ /Year.
+        </div>
+        <div class="credential-item">
+          <div class="credential-icon">💰</div>
+          Generated over $300M in online sales.
+        </div>
+        <div class="credential-item">
+          <div class="credential-icon">📊</div>
+          Managed over $100M in online advertising budget.
+        </div>
+        <div class="credential-item">
+          <div class="credential-icon">🏆</div>
+          Scaled and sold one 7-figure business.
+        </div>
+      </div>
+
+      <div class="photo-grid">
+        <img src="https://assets.cdn.filesafe.space/9plAmnl1B14xbSsaXQYM/media/66a75aa4161e923492565b86.png" alt="Klemen Struc">
+        <img src="https://assets.cdn.filesafe.space/Wm49ibJ5Pda601r4ybZu/media/534ec84c-50db-4903-bad3-1117ba9a12a5.jpeg" alt="Klemen Struc">
+        <img src="https://assets.cdn.filesafe.space/Wm49ibJ5Pda601r4ybZu/media/c0bd9a17-af79-4f7e-9fef-daa03a3b0824.jpeg" alt="Klemen Struc">
+        <img src="https://assets.cdn.filesafe.space/Wm49ibJ5Pda601r4ybZu/media/d87e2b14-30e9-4764-9683-462e66850672.jpeg" alt="Klemen Struc">
+        <img src="https://assets.cdn.filesafe.space/Wm49ibJ5Pda601r4ybZu/media/1bdfa5fd-2ed1-4488-ba61-d6aeccf124ca.png" alt="Klemen Struc">
+        <img src="https://assets.cdn.filesafe.space/Wm49ibJ5Pda601r4ybZu/media/a3a4ae8a-925f-4726-9871-1e35a043f70c.jpeg" alt="Klemen Struc">
+        <img src="https://assets.cdn.filesafe.space/Wm49ibJ5Pda601r4ybZu/media/e33fe091-ce24-4d78-a135-77df55be791b.jpeg" alt="Klemen Struc">
+        <img src="https://assets.cdn.filesafe.space/Wm49ibJ5Pda601r4ybZu/media/c4d114ef-e600-4797-92f6-45976955fddc.jpeg" alt="Klemen Struc">
+      </div>
+    </section>
+
+    <!-- Slide 11: The Partnership -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:60px 44px;">
+      <p class="section-label">The Partnership</p>
+      <h2 class="section-title" style="font-size:44px;margin-bottom:40px;">I Reached Out To Klemen And <span class="accent-text">We Partnered Up</span></h2>
+
+      <div class="partnership-timeline">
+        <!-- Step 1 -->
+        <div class="partnership-step">
+          <div class="partnership-step-indicator">
+            <div class="partnership-step-number">1</div>
+            <div class="partnership-step-line"></div>
+          </div>
+          <div class="partnership-step-card">
+            <div class="partnership-step-icon">🔍</div>
+            <div class="partnership-step-content">
+              <h3 class="partnership-step-title">Identified Problems & Opportunities</h3>
+              <p class="partnership-step-desc">Klemen quickly diagnosed the weaknesses in our business and growth model — and spotted the untapped opportunities we were missing.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="partnership-step">
+          <div class="partnership-step-indicator">
+            <div class="partnership-step-number">2</div>
+            <div class="partnership-step-line"></div>
+          </div>
+          <div class="partnership-step-card">
+            <div class="partnership-step-icon">🗺️</div>
+            <div class="partnership-step-content">
+              <h3 class="partnership-step-title">Created A Growth Plan With Priorities</h3>
+              <p class="partnership-step-desc">We mapped out a clear, prioritized roadmap to rebuild and scale — focused on what would move the needle fastest.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 — The Key Priority -->
+        <div class="partnership-step">
+          <div class="partnership-step-indicator">
+            <div class="partnership-step-number">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg>
+            </div>
+          </div>
+          <div class="partnership-step-card partnership-step-card--highlight">
+            <div class="partnership-step-icon">🤖</div>
+            <div class="partnership-step-content">
+              <div class="partnership-key-badge">Key Priority</div>
+              <h3 class="partnership-step-title">Become A Fully AI-Native Team</h3>
+              <p class="partnership-step-desc">Don't hire more people. Build and leverage AI agents instead.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 11b: Survey Results — Title -->
+    <section class="section-header-slide">
+      <p class="section-header-label">Survey Results</p>
+      <h2 class="section-header-title">Biggest <span class="hero-title-highlight">Challenges</span> In Running An AI-Powered Business</h2>
+      <div class="section-header-divider"></div>
+      <p style="font-size:22px;color:rgba(0,0,0,0.55);margin-top:24px;font-weight:500;">Comment or say YES if you recognize yourself in any of these.</p>
+    </section>
+
+    <!-- Slide 11c: Survey — Biggest Challenges -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <p class="section-label">Survey Results</p>
+      <h2 class="section-title" style="font-size:36px;margin-bottom:32px;">Top 3 <span class="accent-text">Challenges</span></h2>
+
+      <div style="display:flex;flex-direction:column;gap:20px;max-width:1000px;">
+
+        <!-- Challenge 1 -->
+        <div class="card" style="margin:0;">
+          <div class="card-accent" style="background:linear-gradient(90deg,#4F30FE,#DAB3FF);"></div>
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:130px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 0;border-right:1px solid rgba(0,0,0,0.06);">
+              <div style="font-size:42px;font-weight:800;color:#4F30FE;line-height:1;">~32%</div>
+            </div>
+            <div style="flex:1;padding:20px 28px;">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+                <div style="width:32px;height:32px;border-radius:8px;background:rgba(79,48,254,0.1);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#4F30FE;">1</div>
+                <h3 style="font-size:22px;font-weight:600;color:#1a1a1a;margin:0;">Tool Overwhelm &amp; No Clear Starting Point</h3>
+              </div>
+              <p style="font-size:15px;color:rgba(0,0,0,0.45);line-height:1.6;margin:0;font-style:italic;">"Too many tools to choose from" · "Don't know where to start" · "So many options, overwhelmed with choices so not taking action" · "No blueprint and steps to follow"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Challenge 2 -->
+        <div class="card" style="margin:0;">
+          <div class="card-accent" style="background:linear-gradient(90deg,#4F30FE,#6EC1E4);"></div>
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:130px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 0;border-right:1px solid rgba(0,0,0,0.06);">
+              <div style="font-size:42px;font-weight:800;color:#4F30FE;line-height:1;">~21%</div>
+            </div>
+            <div style="flex:1;padding:20px 28px;">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+                <div style="width:32px;height:32px;border-radius:8px;background:rgba(79,48,254,0.1);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#4F30FE;">2</div>
+                <h3 style="font-size:22px;font-weight:600;color:#1a1a1a;margin:0;">Lead Generation, Getting Clients &amp; Sales</h3>
+              </div>
+              <p style="font-size:15px;color:rgba(0,0,0,0.45);line-height:1.6;margin:0;font-style:italic;">"Lead generation and conversion" · "Finding clients willing to pay" · "Don't know how to create effective funnels" · "Saturated space" · "Finding prospects — super expensive"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Challenge 3 -->
+        <div class="card" style="margin:0;">
+          <div class="card-accent" style="background:linear-gradient(90deg,#4F30FE,#3d857a);"></div>
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:130px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 0;border-right:1px solid rgba(0,0,0,0.06);">
+              <div style="font-size:42px;font-weight:800;color:#4F30FE;line-height:1;">~17%</div>
+            </div>
+            <div style="flex:1;padding:20px 28px;">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+                <div style="width:32px;height:32px;border-radius:8px;background:rgba(79,48,254,0.1);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#4F30FE;">3</div>
+                <h3 style="font-size:22px;font-weight:600;color:#1a1a1a;margin:0;">Automation, AI Agents &amp; Technical Setup</h3>
+              </div>
+              <p style="font-size:15px;color:rgba(0,0,0,0.45);line-height:1.6;margin:0;font-style:italic;">"Scaling automated flows — team struggles to embrace the tools" · "Create an AI agent to replace me — difficult to build on my own" · "How to make AI tools talk to each other" · "Lack of customer service automation"</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Slide 12: The One Thing -->
+    <section class="section-header-slide" id="the-one-thing">
+      <p class="section-header-label">The One Thing</p>
+      <img class="hero-claude-logo" src="assets/Claude_Logo_2023-s1280.png" alt="Claude AI" style="margin-top:24px;height:85px;">
+      <div class="section-header-divider" style="margin-top:24px;"></div>
+    </section>
+    <!-- Slide 14: Paradigm Shift -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <p class="section-label">Paradigm Shift</p>
+      <h2 class="section-title" style="font-size:38px;margin-bottom:12px;">Claude Doesn't Just Generate Content <span class="accent-text">Inside</span> The Chat UI</h2>
+      <p class="section-desc" style="font-size:22px;margin-bottom:24px;max-width:1100px;">It also completes time-consuming tasks <strong>outside</strong> of the chat UI — tasks that normally require a lot of clicking and context-switching.</p>
+
+      <!-- Old Way Diagram -->
+      <p style="font-size:15px;font-weight:700;letter-spacing:1.5px;color:rgba(0,0,0,0.35);text-transform:uppercase;margin-bottom:10px;">The Old Way</p>
+      <svg class="flowchart-svg" viewBox="0 0 1200 190" style="margin-bottom:32px;">
+        <defs>
+          <filter id="glowOld"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <marker id="arrOld" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker>
+        </defs>
+        <!-- Step 1: INPUT (1/12 of row) — You (purple) -->
+        <text x="52" y="38" text-anchor="middle" font-size="22">👤</text>
+        <rect x="10" y="50" width="85" height="100" rx="12" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="52" y="85" text-anchor="middle" fill="#4F30FE" font-size="11" font-weight="700" letter-spacing="1.2">INPUT</text>
+        <text x="52" y="105" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="600">You</text>
+        <!-- Arrow 1→2 -->
+        <line x1="95" y1="100" x2="120" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arrOld)" stroke-dasharray="6 4" class="animated-dash"/>
+        <!-- Step 2: GENERATE (1/12 of row) — AI (green) -->
+        <image x="155" y="22" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="125" y="50" width="85" height="100" rx="12" fill="rgba(245,158,11,0.05)" stroke="#f59e0b" stroke-width="2"/>
+        <text x="167" y="85" text-anchor="middle" fill="#f59e0b" font-size="11" font-weight="700" letter-spacing="1.2">GENERATE</text>
+        <text x="167" y="105" text-anchor="middle" fill="#f59e0b" font-size="13" font-weight="600">AI</text>
+        <!-- Arrow 2→3 -->
+        <line x1="210" y1="100" x2="235" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arrOld)" stroke-dasharray="6 4" class="animated-dash"/>
+        <!-- Steps 3-N: ACTIONS (10/12 of row) — You (purple) -->
+        <text x="715" y="38" text-anchor="middle" font-size="22">👤</text>
+        <rect x="240" y="50" width="950" height="100" rx="12" fill="rgba(79,48,254,0.03)" stroke="rgba(79,48,254,0.35)" stroke-width="2"/>
+        <text x="715" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">ACTIONS (STEPS 3 – N)</text>
+        <text x="715" y="102" text-anchor="middle" fill="#4F30FE" font-size="15" font-weight="600">You — Copy, Paste, Format, Fix, Upload, Schedule, Publish, Repeat...</text>
+        <text x="715" y="122" text-anchor="middle" fill="rgba(79,48,254,0.4)" font-size="13">This is where all the time goes</text>
+        <!-- Repeating dots pattern to emphasize length -->
+        <circle cx="260" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="280" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="300" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="320" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="340" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="360" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="380" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="400" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="420" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="440" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="460" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="480" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="500" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="520" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="540" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="560" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="580" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="600" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="620" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="640" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="660" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="680" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="700" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="720" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="740" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="760" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="780" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="800" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="820" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="840" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="860" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="880" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="900" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="920" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="940" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="960" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="980" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1000" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1020" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1040" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1060" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1080" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1100" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1120" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1140" cy="140" r="2" fill="rgba(79,48,254,0.15)"/><circle cx="1160" cy="140" r="2" fill="rgba(79,48,254,0.15)"/>
+      </svg>
+
+      <!-- The New Way Diagram -->
+      <p style="font-size:15px;font-weight:700;letter-spacing:1.5px;color:rgba(0,0,0,0.35);text-transform:uppercase;margin-bottom:10px;">The New Way</p>
+      <svg class="flowchart-svg" viewBox="0 0 1200 190">
+        <defs>
+          <marker id="arrNew" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker>
+        </defs>
+        <!-- Step 1: INPUT (1/12) — You or AI (purple) -->
+        <text x="52" y="38" text-anchor="middle" font-size="22">👤</text>
+        <rect x="10" y="50" width="85" height="100" rx="12" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="52" y="82" text-anchor="middle" fill="#4F30FE" font-size="11" font-weight="700" letter-spacing="1.2">INPUT</text>
+        <text x="52" y="100" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="600">You</text>
+        <rect x="19" y="112" width="65" height="28" rx="8" fill="rgba(245,158,11,0.1)" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="52" y="131" text-anchor="middle" fill="#f59e0b" font-size="12" font-weight="700">AI</text>
+        <image x="40" y="155" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <!-- Arrow 1→2 -->
+        <line x1="95" y1="100" x2="120" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arrNew)" stroke-dasharray="6 4" class="animated-dash"/>
+        <!-- Step 2: GENERATE (1/12) — AI (green) -->
+        <image x="155" y="22" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="125" y="50" width="85" height="100" rx="12" fill="rgba(245,158,11,0.05)" stroke="#f59e0b" stroke-width="2"/>
+        <text x="167" y="85" text-anchor="middle" fill="#f59e0b" font-size="11" font-weight="700" letter-spacing="1.2">GENERATE</text>
+        <text x="167" y="105" text-anchor="middle" fill="#f59e0b" font-size="13" font-weight="600">AI</text>
+        <!-- Arrow 2→3 -->
+        <line x1="210" y1="100" x2="235" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arrNew)" stroke-dasharray="6 4" class="animated-dash"/>
+        <!-- Step 3: REVIEW (1/12) — You (purple) -->
+        <text x="282" y="38" text-anchor="middle" font-size="22">👤</text>
+        <rect x="240" y="50" width="85" height="100" rx="12" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="282" y="85" text-anchor="middle" fill="#4F30FE" font-size="11" font-weight="700" letter-spacing="1.2">REVIEW</text>
+        <text x="282" y="105" text-anchor="middle" fill="#4F30FE" font-size="13" font-weight="600">You</text>
+        <!-- Arrow 3→4 -->
+        <line x1="325" y1="100" x2="350" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arrNew)" stroke-dasharray="6 4" class="animated-dash"/>
+        <!-- Steps 4-N: ACTIONS (10/12) — AI (green) -->
+        <image x="760" y="22" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="355" y="50" width="835" height="100" rx="12" fill="rgba(245,158,11,0.04)" stroke="rgba(245,158,11,0.35)" stroke-width="2"/>
+        <text x="772" y="80" text-anchor="middle" fill="#f59e0b" font-size="12" font-weight="700" letter-spacing="1.5">ACTIONS (STEPS 4 – N)</text>
+        <text x="772" y="102" text-anchor="middle" fill="#f59e0b" font-size="15" font-weight="600">AI — Execute, Format, Upload, Schedule, Publish, Repeat...</text>
+        <text x="772" y="122" text-anchor="middle" fill="rgba(245,158,11,0.4)" font-size="13">Claude handles the heavy lifting</text>
+        <!-- Repeating dots pattern -->
+        <circle cx="380" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="400" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="420" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="440" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="460" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="480" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="500" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="520" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="540" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="560" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="580" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="600" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="620" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="640" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="660" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="680" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="700" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="720" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="740" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="760" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="780" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="800" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="820" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="840" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="860" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="880" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="900" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="920" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="940" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="960" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="980" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1000" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1020" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1040" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1060" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1080" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1100" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1120" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1140" cy="140" r="2" fill="rgba(245,158,11,0.2)"/><circle cx="1160" cy="140" r="2" fill="rgba(245,158,11,0.2)"/>
+      </svg>
+
+    </section>
+
+    <!-- Slide 14b: What/How To Start — Exponential Returns -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:32px 44px;">
+      <div style="width:900px;max-width:100%;text-align:center;">
+        <p class="section-label">Where/How To Start (And Prevent Overwhelm)</p>
+        <h2 class="section-title" style="font-size:40px;margin-bottom:8px;">Key: Prioritize For <span class="accent-text">Exponential Returns</span></h2>
+        <p class="section-desc" style="font-size:20px;margin-bottom:20px;">Start with areas of your business that require small, manageable, or low-cost investment (input) and produce disproportionately massive, compounding, or ongoing returns (output).</p>
+        <div style="display:flex;gap:16px;margin-bottom:28px;">
+          <div style="flex:1;padding:14px 20px;border-radius:10px;background:rgba(224,48,48,0.06);border:1.5px solid rgba(224,48,48,0.18);display:flex;align-items:center;justify-content:center;gap:10px;">
+            <span style="color:#e03030;font-size:20px;line-height:1;flex-shrink:0;">&#x2715;</span>
+            <span style="color:#e03030;font-weight:600;font-size:17px;">Do not prioritize what will save you more time.</span>
+            <span style="color:rgba(224,48,48,0.55);font-size:15px;white-space:nowrap;">(common mistake)</span>
+          </div>
+          <div style="flex:1;padding:14px 20px;border-radius:10px;background:rgba(26,154,58,0.06);border:1.5px solid rgba(26,154,58,0.18);display:flex;align-items:center;justify-content:center;gap:10px;">
+            <span style="color:#1a9a3a;font-size:20px;line-height:1;flex-shrink:0;">&#x2713;</span>
+            <span style="color:#1a9a3a;font-weight:600;font-size:17px;">Prioritize what will give you the biggest returns in the shortest time.</span>
+            <span style="color:rgba(26,154,58,0.55);font-size:15px;white-space:nowrap;">(smart move)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="area-chart-container">
+        <canvas id="asymmetric-chart" width="900" height="360"></canvas>
+        <div class="area-chart-legend" style="display:flex;gap:32px;justify-content:center;margin-top:16px;">
+          <div class="legend-item"><span class="legend-dot" style="background:rgba(255,70,46,0.7);"></span> Input / Investment</div>
+          <div class="legend-item"><span class="legend-dot" style="background:#4F30FE;"></span> Output / Return</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 14c: Where/How To Start — 3 Machines -->
+    <section class="section-header-slide" id="three-machines">
+      <p class="section-header-label">Where/How To Start (And Prevent Overwhelm)</p>
+      <h2 class="section-header-title" style="font-size:48px;margin-bottom:40px;">3 Areas Of <span class="hero-title-highlight">Exponential Returns</span></h2>
+      <div class="machines-grid">
+        <div class="machine-card">
+          <div class="machine-number">1</div>
+          <h3 class="machine-title">Content Machine</h3>
+          <div class="machine-tags">
+            <span class="machine-tag">More Reach and Traffic</span>
+            <span class="machine-tag">More Leads</span>
+            <span class="machine-tag">More New Customers</span>
+          </div>
+        </div>
+        <div class="machine-card">
+          <div class="machine-number">2</div>
+          <h3 class="machine-title">Email Machine</h3>
+          <div class="machine-tags">
+            <span class="machine-tag">Build Trust</span>
+            <span class="machine-tag">Nurture Leads</span>
+            <span class="machine-tag">Boost Cash Flow</span>
+          </div>
+        </div>
+        <div class="machine-card">
+          <div class="machine-number">3</div>
+          <h3 class="machine-title">Launch Machine</h3>
+          <div class="machine-tags">
+            <span class="machine-tag">Launch Offers and Funnel Faster</span>
+            <span class="machine-tag">Test Faster</span>
+            <span class="machine-tag">Optimize Faster</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- SECRET #1: CONTENT MACHINE                    -->
+    <!-- ============================================= -->
+
+    <!-- Slide 15: Secret #1 Title -->
+    <section class="section-header-slide" id="secret-1">
+      <p class="section-header-label">Secret #1</p>
+      <h2 class="section-header-title">How To Create Your <span class="hero-title-highlight">Content Machine</span> That Scales Your Customer Acquisition</h2>
+      <div class="section-header-divider" style="margin-bottom:24px;"></div>
+      <p class="secret-objective">Objective: Acquire customers profitably, predictably, consistently</p>
+    </section>
+
+    <!-- Slide 16: Skill — Video Shorts (Instagram, YouTube, LinkedIn, TikTok) -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+        <p class="section-label" style="margin-bottom:0;">Secret #1 &middot; Skill</p>
+      </div>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Video Shorts (Instagram, YouTube, LinkedIn, TikTok)</h2>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr5" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr5g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#22c55e"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr5gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr5r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr5)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr5)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr5gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr5r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
+      </svg>
+      <div style="text-align:center;">
+        <a href="index.html" target="_blank" class="replay-demo-btn">Watch the replay to see the demo &#x2197;</a>
+      </div>
+    </section>
+
+    <!-- Slide 17: Skill — Carousels (Instagram, LinkedIn) -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+        <p class="section-label" style="margin-bottom:0;">Secret #1 &middot; Skill</p>
+      </div>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Carousels (Instagram, LinkedIn)</h2>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs>
+          <marker id="arr1" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker>
+          <marker id="arr1g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#22c55e"><polygon points="0 0,10 3.5,0 7"/></marker>
+          <marker id="arr1gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker>
+          <marker id="arr1r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker>
+        </defs>
+        <!-- Step 1: INPUT — You or AI (purple) -->
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <!-- Arrow 1→2 -->
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
+        <!-- Step 2: GENERATE — AI (green) -->
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <!-- Arrow 2→3 -->
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="6 4" class="animated-dash"/>
+        <!-- Step 3: REVIEW — You (purple) -->
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <!-- Arrow 3→4 (Approve) -->
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr1gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <!-- Step 4: DEPLOY — AI (green) -->
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <!-- Feedback loop: Review → Edit → Generate (curved arrow below) -->
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr1r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
+      </svg>
+      <div style="text-align:center;">
+        <a href="index.html" target="_blank" class="replay-demo-btn">Watch the replay to see the demo &#x2197;</a>
+      </div>
+    </section>
+
+    <!-- Slide 18: Skill — Image Posts (Instagram, LinkedIn) -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+        <p class="section-label" style="margin-bottom:0;">Secret #1 &middot; Skill</p>
+      </div>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Image Posts (Instagram, LinkedIn)</h2>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs>
+          <marker id="arr2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker>
+          <marker id="arr2g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#22c55e"><polygon points="0 0,10 3.5,0 7"/></marker>
+          <marker id="arr2gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker>
+          <marker id="arr2r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker>
+        </defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr2)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr2)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr2gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr2r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
+      </svg>
+      <div style="text-align:center;">
+        <a href="index.html" target="_blank" class="replay-demo-btn">Watch the replay to see the demo &#x2197;</a>
+      </div>
+    </section>
+
+    <!-- Slide 19: Skill — YouTube Slides -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+        <p class="section-label" style="margin-bottom:0;">Secret #1 &middot; Skill</p>
+      </div>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">YouTube Slides</h2>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr4" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr4g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#22c55e"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr4gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr4r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr4)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr4)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr4gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr4r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
+      </svg>
+      <div style="text-align:center;">
+        <a href="index.html" target="_blank" class="replay-demo-btn">Watch the replay to see the demo &#x2197;</a>
+      </div>
+    </section>
+
+    <!-- Slide 20: Skill — Ad Creatives -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <p class="section-label">Secret #1 &middot; Skill</p>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Ad Creatives</h2>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr6" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr6g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#22c55e"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr6gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr6r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr6)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr6)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr6gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr6r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
+      </svg>
+      <div style="text-align:center;">
+        <a href="index.html" target="_blank" class="replay-demo-btn">Watch the replay to see the demo &#x2197;</a>
+      </div>
+    </section>
+
+    <!-- SECRET #2: EMAIL MACHINE                      -->
+    <!-- ============================================= -->
+
+    <!-- Slide 22: Secret #2 Title -->
+    <section class="section-header-slide" id="secret-2">
+      <p class="section-header-label">Secret #2</p>
+      <h2 class="section-header-title">How To Create Your <span class="hero-title-highlight">Email Machine</span> That Scales Your Customer Monetization</h2>
+      <div class="section-header-divider" style="margin-bottom:24px;"></div>
+      <p class="secret-objective">Objective: Monetize leads and customers</p>
+    </section>
+
+    <!-- Slide 23: Skill — Emails -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+        <p class="section-label" style="margin-bottom:0;">Secret #2 &middot; Skill</p>
+      </div>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Emails</h2>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr7" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr7gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr7r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr7)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr7)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr7gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr7r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
+      </svg>
+      <div style="text-align:center;">
+        <a href="index.html" target="_blank" class="replay-demo-btn">Watch the replay to see the demo &#x2197;</a>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- SECRET #3: LAUNCH MACHINE                     -->
+    <!-- ============================================= -->
+
+    <!-- Slide 24: Secret #3 Title -->
+    <section class="section-header-slide" id="secret-3">
+      <p class="section-header-label">Secret #3</p>
+      <h2 class="section-header-title">How To Create Your <span class="hero-title-highlight">Launch Machine</span> That Creates And Publishes Sales Funnels In 1/100th The Time And Cost</h2>
+      <div class="section-header-divider" style="margin-bottom:24px;"></div>
+      <p class="secret-objective">Objective: Launch offers and funnels at unprecedented speed</p>
+    </section>
+
+    <!-- Slide 25: Skill — Funnel Builder -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <p class="section-label">Secret #3 &middot; Skill</p>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Funnel Builder</h2>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr8" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr8gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr8r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr8)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr8)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr8gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr8r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
+      </svg>
+      <div style="display:flex;align-items:center;gap:40px;margin-top:32px;">
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;align-items:center;gap:12px;"><span style="width:8px;height:8px;border-radius:50%;background:#4F30FE;flex-shrink:0;"></span><span style="font-size:18px;font-weight:600;color:rgba(0,0,0,0.75);">Live Webinar Funnel</span></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span style="width:8px;height:8px;border-radius:50%;background:#4F30FE;flex-shrink:0;"></span><span style="font-size:18px;font-weight:600;color:rgba(0,0,0,0.75);">Autopilot Webinar Funnel</span></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span style="width:8px;height:8px;border-radius:50%;background:#4F30FE;flex-shrink:0;"></span><span style="font-size:18px;font-weight:600;color:rgba(0,0,0,0.75);">Direct Sales Funnel (Low-Ticket)</span></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span style="width:8px;height:8px;border-radius:50%;background:#4F30FE;flex-shrink:0;"></span><span style="font-size:18px;font-weight:600;color:rgba(0,0,0,0.75);">Freebie Lead Gen Funnel</span></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span style="width:8px;height:8px;border-radius:50%;background:#4F30FE;flex-shrink:0;"></span><span style="font-size:18px;font-weight:600;color:rgba(0,0,0,0.75);">Quiz Funnel</span></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span style="width:8px;height:8px;border-radius:50%;background:#4F30FE;flex-shrink:0;"></span><span style="font-size:18px;font-weight:600;color:rgba(0,0,0,0.75);">Appointment Funnel</span></div>
+          <p style="font-size:16px;font-weight:500;color:rgba(0,0,0,0.35);margin:4px 0 0 20px;font-style:italic;">And more.</p>
+        </div>
+        <img src="assets/Funnel-Diagram-01.png" alt="Funnel Diagram" style="max-width:50%;border:1px solid #CCC;border-radius:20px;margin-left:auto;">
+      </div>
+    </section>
+
+    <!-- Slide 26: Skill — Sales Page -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+        <p class="section-label" style="margin-bottom:0;">Secret #3 &middot; Skill</p>
+      </div>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Sales Page</h2>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr9" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr9gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr9r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr9)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr9)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr9gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr9r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
+      </svg>
+      <div style="text-align:center;">
+        <a href="index.html" target="_blank" class="replay-demo-btn">Watch the replay to see the demo &#x2197;</a>
+      </div>
+    </section>
+
+    <!-- Slide 27: Skill — Checkout Page -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+        <p class="section-label" style="margin-bottom:0;">Secret #3 &middot; Skill</p>
+      </div>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Checkout Page</h2>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr10" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr10gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr10r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr10)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr10)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr10gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr10r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
+      </svg>
+      <div style="text-align:center;">
+        <a href="index.html" target="_blank" class="replay-demo-btn">Watch the replay to see the demo &#x2197;</a>
+      </div>
+    </section>
+
+    <!-- Slide 28: Skill — 1-Click Upsell Page -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+        <p class="section-label" style="margin-bottom:0;">Secret #3 &middot; Skill</p>
+      </div>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">1-Click Upsell Page</h2>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr11" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr11gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr11r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr11)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr11)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr11gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr11r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
+      </svg>
+      <div style="text-align:center;">
+        <a href="index.html" target="_blank" class="replay-demo-btn">Watch the replay to see the demo &#x2197;</a>
+      </div>
+    </section>
+
+    <!-- Slide 29: Skill — Webinar Registration Page -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+        <p class="section-label" style="margin-bottom:0;">Secret #3 &middot; Skill</p>
+      </div>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Webinar Registration Page</h2>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr12" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr12gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr12r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr12)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr12)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr12gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr12r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
+      </svg>
+      <div style="text-align:center;">
+        <a href="index.html" target="_blank" class="replay-demo-btn">Watch the replay to see the demo &#x2197;</a>
+      </div>
+    </section>
+
+    <!-- Slide 30: Skill — Lead Capture Page -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:32px 44px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+        <p class="section-label" style="margin-bottom:0;">Secret #3 &middot; Skill</p>
+      </div>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Lead Capture Page</h2>
+      <svg class="flowchart-svg" viewBox="0 -30 1100 270">
+        <defs><marker id="arr13" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr13gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr13r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
+        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
+        <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
+        <text x="135" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Prompt, Scheduled Task</text>
+        <line x1="250" y1="100" x2="285" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr13)" stroke-dasharray="6 4" class="animated-dash"/>
+        <image x="415" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="290" y="50" width="260" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="420" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">GENERATE</text>
+        <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
+        <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr13)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
+        <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
+        <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
+        <text x="710" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Approve, Edit</text>
+        <path d="M 750 50 L 750 10 Q 750 -10 770 -10 L 960 -10 Q 980 -10 980 10 L 980 40" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr13gd)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="865" y="-16" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Approve</text>
+        <image x="996" y="8" width="24" height="24" href="assets/Claude-ai-icon.svg"/>
+        <rect x="870" y="50" width="220" height="100" rx="14" fill="rgba(34,197,94,0.05)" stroke="#22c55e" stroke-width="2"/>
+        <text x="980" y="80" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" letter-spacing="1.5">DEPLOY</text>
+        <text x="980" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
+        <text x="980" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Schedule, Publish, Send</text>
+        <path d="M 710 150 L 710 190 Q 710 210 690 210 L 440 210 Q 420 210 420 190 L 420 155" stroke="rgba(224,48,48,0.5)" stroke-width="2" fill="none" marker-end="url(#arr13r)" stroke-dasharray="6 4" class="animated-dash"/>
+        <text x="565" y="225" text-anchor="middle" fill="rgba(224,48,48,0.5)" font-size="11" font-weight="600">Edit</text>
+      </svg>
+      <div style="text-align:center;">
+        <a href="index.html" target="_blank" class="replay-demo-btn">Watch the replay to see the demo &#x2197;</a>
+      </div>
+    </section>
+
+    <!-- Slide 31: Transition to Offer -->
+    <section class="section-header-slide" id="transition">
+      <p class="section-header-label">Before We Continue...</p>
+      <h2 class="section-header-title">Let Us Ask You A <span class="hero-title-highlight">Few Questions</span></h2>
+      <div class="section-header-divider" style="margin-bottom:40px;"></div>
+      <div class="transition-questions">
+        <div class="transition-question">
+          <span class="transition-question-icon">✨</span>
+          <span>Feeling inspired to bring Claude to your business?</span>
+        </div>
+        <div class="transition-question">
+          <span class="transition-question-icon">💡</span>
+          <span>Learned or saw anything new today?</span>
+        </div>
+        <div class="transition-question">
+          <span class="transition-question-icon">🎯</span>
+          <span>Have more clarity where/how to start?</span>
+        </div>
+        <div class="transition-question transition-question--highlight">
+          <span class="transition-question-icon">🚀</span>
+          <span>Want us to build your AI-first team and growth engine for you?</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 32: Introducing The Program -->
+    <section class="section-header-slide" id="the-program">
+      <p class="section-header-label">Introducing The 4-Week Deep-Dive Program</p>
+      <h2 class="section-header-title"><span class="hero-title-highlight">Claude Cowork:</span> Business Growth Bootcamp</h2>
+      <p class="program-desc">We'll build your Claude Skills for you, help you install them, and turn your business into an AI-native business.</p>
+      <img class="program-image" src="assets/product/Course-Cover.png" alt="Claude Cowork: Business Growth Bootcamp">
+    </section>
+
+    <!-- Slide 33: Curriculum — Week 1 -->
+    <section class="section-header-slide" id="curriculum-week-1" style="gap:0;">
+      <p class="section-header-label">Curriculum</p>
+      <h2 class="section-header-title" style="font-size:48px;margin-bottom:36px;">What We'll Build <span class="hero-title-highlight">Together</span></h2>
+      <div class="curriculum-grid">
+        <div class="curriculum-card">
+          <div class="curriculum-week">Week 1</div>
+          <div class="curriculum-date"><svg class="curriculum-date-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Thursday, April 16 · 11 AM ET</div>
+          <h3 class="curriculum-title">Build Your Content Machine — Part 1</h3>
+          <div class="curriculum-tags">
+            <span class="curriculum-tag">Image Ads</span>
+            <span class="curriculum-tag">Posts</span>
+            <span class="curriculum-tag">Carousels</span>
+          </div>
+          <div class="curriculum-includes">
+            <div class="curriculum-include">🛠️ Claude .Skills Done-For-You</div>
+            <div class="curriculum-include">🎬 Video Training</div>
+            <div class="curriculum-include">❓ Q&A Session</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 34: Curriculum — Week 2 -->
+    <section class="section-header-slide" id="curriculum-week-2" style="gap:0;">
+      <p class="section-header-label">Curriculum</p>
+      <h2 class="section-header-title" style="font-size:48px;margin-bottom:36px;">What We'll Build <span class="hero-title-highlight">Together</span></h2>
+      <div class="curriculum-grid">
+        <div class="curriculum-card">
+          <div class="curriculum-week">Week 2</div>
+          <div class="curriculum-date"><svg class="curriculum-date-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Thursday, April 23 · 11 AM ET</div>
+          <h3 class="curriculum-title">Build Your Content Machine — Part 2</h3>
+          <div class="curriculum-tags">
+            <span class="curriculum-tag">Instagram Reels</span>
+            <span class="curriculum-tag">YouTube Shorts</span>
+            <span class="curriculum-tag">YouTube Videos</span>
+            <span class="curriculum-tag">Video Ads</span>
+          </div>
+          <div class="curriculum-includes">
+            <div class="curriculum-include">🛠️ Claude .Skills Done-For-You</div>
+            <div class="curriculum-include">🎬 Video Training</div>
+            <div class="curriculum-include">❓ Q&A Session</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 35: Curriculum — Week 3 -->
+    <section class="section-header-slide" id="curriculum-week-3" style="gap:0;">
+      <p class="section-header-label">Curriculum</p>
+      <h2 class="section-header-title" style="font-size:48px;margin-bottom:36px;">What We'll Build <span class="hero-title-highlight">Together</span></h2>
+      <div class="curriculum-grid">
+        <div class="curriculum-card">
+          <div class="curriculum-week">Week 3</div>
+          <div class="curriculum-date"><svg class="curriculum-date-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Thursday, April 30 · 11 AM ET</div>
+          <h3 class="curriculum-title">Build Your Email Machine</h3>
+          <div class="curriculum-tags">
+            <span class="curriculum-tag">Promo Emails</span>
+            <span class="curriculum-tag">Launch Emails</span>
+            <span class="curriculum-tag">Follow-up Emails</span>
+            <span class="curriculum-tag">Value Emails</span>
+          </div>
+          <div class="curriculum-includes">
+            <div class="curriculum-include">🛠️ Claude .Skills Done-For-You</div>
+            <div class="curriculum-include">🎬 Video Training</div>
+            <div class="curriculum-include">❓ Q&A Session</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 36: Curriculum — Week 4 -->
+    <section class="section-header-slide" id="curriculum-week-4" style="gap:0;">
+      <p class="section-header-label">Curriculum</p>
+      <h2 class="section-header-title" style="font-size:48px;margin-bottom:36px;">What We'll Build <span class="hero-title-highlight">Together</span></h2>
+      <div class="curriculum-grid">
+        <div class="curriculum-card">
+          <div class="curriculum-week">Week 4</div>
+          <div class="curriculum-date"><svg class="curriculum-date-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Thursday, May 7 · 11 AM ET</div>
+          <h3 class="curriculum-title">Build Your Launch Machine</h3>
+          <div class="curriculum-tags">
+            <span class="curriculum-tag">Lead Gen Funnels</span>
+            <span class="curriculum-tag">Sales Funnels</span>
+            <span class="curriculum-tag">Pages</span>
+          </div>
+          <div class="curriculum-includes">
+            <div class="curriculum-include">🛠️ Claude .Skills Done-For-You</div>
+            <div class="curriculum-include">🎬 Video Training</div>
+            <div class="curriculum-include">❓ Q&A Session</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 34: What You Get Title -->
+    <section class="section-header-slide" id="what-you-get">
+      <p class="section-header-label">The Offer</p>
+      <h2 class="section-header-title">What You <span class="hero-title-highlight">Get</span></h2>
+      <div class="section-header-divider"></div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- VALUE STACK                                    -->
+    <!-- ============================================= -->
+
+    <!-- VS Item 1 -->
+    <section class="section-header-slide" id="vs-1">
+      <div class="vs-number">1</div>
+      <h2 class="section-header-title" style="font-size:44px;">Claude .Skills Done For You: <span class="hero-title-highlight">Instagram</span></h2>
+      <p class="vs-value">$997 value</p>
+    </section>
+
+    <!-- VS Item 2 -->
+    <section class="section-header-slide" id="vs-2">
+      <div class="vs-number">2</div>
+      <h2 class="section-header-title" style="font-size:44px;">Claude .Skills Done For You: <span class="hero-title-highlight">YouTube</span></h2>
+      <p class="vs-value">$997 value</p>
+    </section>
+
+    <!-- VS Item 3 -->
+    <section class="section-header-slide" id="vs-3">
+      <div class="vs-number">3</div>
+      <h2 class="section-header-title" style="font-size:44px;">Claude .Skills Done For You: <span class="hero-title-highlight">LinkedIn</span></h2>
+      <p class="vs-value">$997 value</p>
+    </section>
+
+    <!-- VS Summary 1-3 -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:32px 44px;">
+      <p class="section-label">Value Stack</p>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">What You're Getting</h2>
+      <div class="vs-stack">
+        <div class="vs-stack-item vs-stack-item--active"><span class="vs-stack-name">Claude .Skills Done For You: Instagram</span><span class="vs-stack-val">$997</span></div>
+        <div class="vs-stack-item vs-stack-item--active"><span class="vs-stack-name">Claude .Skills Done For You: YouTube</span><span class="vs-stack-val">$997</span></div>
+        <div class="vs-stack-item vs-stack-item--active"><span class="vs-stack-name">Claude .Skills Done For You: LinkedIn</span><span class="vs-stack-val">$997</span></div>
+        <div class="vs-stack-divider"></div>
+        <div class="vs-stack-total"><span>Total Value So Far</span><span class="vs-stack-total-val">$2,991</span></div>
+      </div>
+    </section>
+
+    <!-- VS Item 4 -->
+    <section class="section-header-slide" id="vs-4">
+      <div class="vs-number">4</div>
+      <h2 class="section-header-title" style="font-size:44px;">Claude .Skills Done For You: <span class="hero-title-highlight">Meta Ads</span></h2>
+      <p class="vs-value">$997 value</p>
+    </section>
+
+    <!-- VS Item 5 -->
+    <section class="section-header-slide" id="vs-5">
+      <div class="vs-number">5</div>
+      <h2 class="section-header-title" style="font-size:44px;">Claude .Skills Done For You: <span class="hero-title-highlight">Email</span></h2>
+      <p class="vs-value">$997 value</p>
+    </section>
+
+    <!-- VS Item 6 -->
+    <section class="section-header-slide" id="vs-6">
+      <div class="vs-number">6</div>
+      <h2 class="section-header-title" style="font-size:44px;">Claude .Skills Done For You: <span class="hero-title-highlight">Lead Gen Funnels</span></h2>
+      <p class="vs-value">$997 value</p>
+    </section>
+
+    <!-- VS Summary 1-6 -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:32px 44px;">
+      <p class="section-label">Value Stack</p>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">What You're Getting</h2>
+      <div class="vs-stack">
+        <div class="vs-stack-item"><span class="vs-stack-name">Claude .Skills Done For You: Instagram</span><span class="vs-stack-val">$997</span></div>
+        <div class="vs-stack-item"><span class="vs-stack-name">Claude .Skills Done For You: YouTube</span><span class="vs-stack-val">$997</span></div>
+        <div class="vs-stack-item"><span class="vs-stack-name">Claude .Skills Done For You: LinkedIn</span><span class="vs-stack-val">$997</span></div>
+        <div class="vs-stack-item vs-stack-item--active"><span class="vs-stack-name">Claude .Skills Done For You: Meta Ads</span><span class="vs-stack-val">$997</span></div>
+        <div class="vs-stack-item vs-stack-item--active"><span class="vs-stack-name">Claude .Skills Done For You: Email</span><span class="vs-stack-val">$997</span></div>
+        <div class="vs-stack-item vs-stack-item--active"><span class="vs-stack-name">Claude .Skills Done For You: Lead Gen Funnels</span><span class="vs-stack-val">$997</span></div>
+        <div class="vs-stack-divider"></div>
+        <div class="vs-stack-total"><span>Total Value So Far</span><span class="vs-stack-total-val">$5,982</span></div>
+      </div>
+    </section>
+
+    <!-- VS Item 7 -->
+    <section class="section-header-slide" id="vs-7">
+      <div class="vs-number">7</div>
+      <h2 class="section-header-title" style="font-size:44px;">Claude .Skills Done For You: <span class="hero-title-highlight">Sales Funnels</span></h2>
+      <p class="vs-value">$997 value</p>
+    </section>
+
+    <!-- VS Item 8 -->
+    <section class="section-header-slide" id="vs-8">
+      <div class="vs-number">8</div>
+      <h2 class="section-header-title" style="font-size:44px;">4 Deep-Dive Video Classes With <span class="hero-title-highlight">Darius And Klemen</span></h2>
+      <p class="vs-value">$1,997 value</p>
+    </section>
+
+    <!-- VS Item 9 -->
+    <section class="section-header-slide" id="vs-9">
+      <div class="vs-number">9</div>
+      <h2 class="section-header-title" style="font-size:44px;">4 Q&A Sessions With <span class="hero-title-highlight">Darius And Klemen</span></h2>
+      <p class="vs-value">$1,997 value</p>
+    </section>
+
+    <!-- VS Item 10 -->
+    <section class="section-header-slide" id="vs-10">
+      <div class="vs-number">10</div>
+      <h2 class="section-header-title" style="font-size:44px;">Private Group To Connect And Interact With <span class="hero-title-highlight">Darius, Klemen, And Other Founders</span></h2>
+      <p class="vs-value">$1,997 value</p>
+    </section>
+
+    <!-- VS Final Summary — All 10 Items -->
+    <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:32px 44px;">
+      <p class="section-label">Complete Value Stack</p>
+      <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Everything You're Getting</h2>
+      <div class="vs-stack">
+        <div class="vs-stack-item"><span class="vs-stack-name">Claude .Skills Done For You: Instagram</span><span class="vs-stack-val">$997</span></div>
+        <div class="vs-stack-item"><span class="vs-stack-name">Claude .Skills Done For You: YouTube</span><span class="vs-stack-val">$997</span></div>
+        <div class="vs-stack-item"><span class="vs-stack-name">Claude .Skills Done For You: LinkedIn</span><span class="vs-stack-val">$997</span></div>
+        <div class="vs-stack-item"><span class="vs-stack-name">Claude .Skills Done For You: Meta Ads</span><span class="vs-stack-val">$997</span></div>
+        <div class="vs-stack-item"><span class="vs-stack-name">Claude .Skills Done For You: Email</span><span class="vs-stack-val">$997</span></div>
+        <div class="vs-stack-item"><span class="vs-stack-name">Claude .Skills Done For You: Lead Gen Funnels</span><span class="vs-stack-val">$997</span></div>
+        <div class="vs-stack-item"><span class="vs-stack-name">Claude .Skills Done For You: Sales Funnels</span><span class="vs-stack-val">$997</span></div>
+        <div class="vs-stack-item"><span class="vs-stack-name">4 Deep-Dive Video Classes With Darius And Klemen</span><span class="vs-stack-val">$1,997</span></div>
+        <div class="vs-stack-item"><span class="vs-stack-name">4 Q&A Sessions With Darius And Klemen</span><span class="vs-stack-val">$1,997</span></div>
+        <div class="vs-stack-item"><span class="vs-stack-name">Private Group To Connect And Interact With Darius, Klemen, And Other Founders</span><span class="vs-stack-val">$1,997</span></div>
+        <div class="vs-stack-item vs-stack-item--highlight"><span class="vs-stack-name">100% Money-Back Guarantee</span><span class="vs-stack-val">Priceless</span></div>
+        <div class="vs-stack-divider"></div>
+        <div class="vs-stack-total"><span>Total Value</span><span class="vs-stack-total-val">$12,970+</span></div>
+      </div>
+    </section>
+
+    <!-- Total Value Slide -->
+    <section class="section-header-slide" id="total-value">
+      <p class="section-header-label">Total Value Of Everything You're Getting</p>
+      <h2 class="section-header-title" style="font-size:72px;"><span class="hero-title-highlight">$12,970+</span></h2>
+      <div class="section-header-divider" style="margin-top:24px;margin-bottom:40px;"></div>
+      <div style="display:flex;flex-direction:column;gap:20px;max-width:700px;text-align:left;">
+        <div style="display:flex;align-items:flex-start;gap:14px;">
+          <span style="font-size:28px;color:#4F30FE;font-weight:700;line-height:1.2;">1.</span>
+          <p style="font-size:22px;color:rgba(0,0,0,0.7);line-height:1.4;">Save <strong style="color:#000;">$10,000 to $50,000</strong> in people costs in the next 12 months</p>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:14px;">
+          <span style="font-size:28px;color:#4F30FE;font-weight:700;line-height:1.2;">2.</span>
+          <p style="font-size:22px;color:rgba(0,0,0,0.7);line-height:1.4;"><strong style="color:#000;">3X your business</strong> in the next 12 months</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Price Reveal Slide 1: Crossed-out prices -->
+    <section class="section-header-slide" id="price-reveal-1">
+      <p class="section-header-label">Enrollment Fee</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:20px;">
+        <p style="font-size:44px;color:rgba(0,0,0,0.35);text-decoration:line-through;">$12,970</p>
+        <p style="font-size:44px;color:rgba(0,0,0,0.35);text-decoration:line-through;">$5,000</p>
+        <p style="font-size:44px;color:rgba(0,0,0,0.35);text-decoration:line-through;">$2,000</p>
+      </div>
+    </section>
+
+    <!-- Price Reveal Slide 2: Actual price -->
+    <section class="section-header-slide" id="price-reveal-2">
+      <p class="section-header-label">Enrollment Fee</p>
+      <h2 class="section-header-title" style="font-size:48px;">The standard price is just <span class="hero-title-highlight">$997</span></h2>
+    </section>
+
+    <!-- Special Surprise Gift Slide -->
+    <section class="section-header-slide" id="surprise-discount">
+      <p class="section-header-label">Special Surprise Gift</p>
+      <h2 class="section-header-title" style="font-size:52px;margin-bottom:20px;"><span class="hero-title-highlight">50% OFF</span> Discount</h2>
+      <div class="section-header-divider" style="margin-bottom:32px;"></div>
+      <h2 class="section-header-title" style="font-size:42px;margin-bottom:12px;">You can enroll for just <span class="hero-title-highlight">$497</span>!</h2>
+      <p style="font-size:22px;color:rgba(0,0,0,0.5);margin-top:16px;font-weight:500;">Time-limited. Expires very soon.</p>
+    </section>
+
+    <!-- Money-Back Guarantee Slide -->
+    <section class="section-header-slide" id="vs-11">
+      <div class="vs-number">11</div>
+      <h2 class="section-header-title" style="font-size:44px;">100% <span class="hero-title-highlight">Money-Back</span> Guarantee</h2>
+      <p class="vs-value">Priceless</p>
+    </section>
+
+    <!-- CTA Slide -->
+    <section class="section-header-slide" id="cta-enroll">
+      <p class="section-header-label">Next Step</p>
+      <h2 class="section-header-title" style="font-size:56px;margin-bottom:12px;"><span class="hero-title-highlight">Enroll Now & Try It Risk-Free</span></h2>
+      <div class="section-header-divider" style="margin-bottom:36px;"></div>
+      <p style="font-size:24px;color:rgba(0,0,0,0.7);margin-bottom:8px;font-weight:500;">Visit</p>
+      <p style="font-size:32px;font-weight:700;color:#4F30FE;margin-bottom:40px;">go.hyperentrepreneur.com/join</p>
+      <p style="font-size:20px;color:rgba(0,0,0,0.5);margin-bottom:16px;font-weight:500;">Or scan this QR Code</p>
+      <img src="assets/QR-Code-Join.png" alt="QR Code" style="width:300px;height:300px;border-radius:50px;border:2px dashed #CCC;">
+    </section>
+
+    <!-- Q&A Slide -->
+    <section class="section-header-slide" id="qa">
+      <p class="section-header-label">Let's Talk</p>
+      <h2 class="section-header-title"><span class="hero-title-highlight">Q&A</span></h2>
+      <div class="section-header-divider"></div>
+    </section>
+
+  </div>
+
+  <!-- ===== CHART.JS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+  <script>
+  (function() {
+    var ctx = document.getElementById('asymmetric-chart');
+    if (!ctx) return;
+    var labels = ['Week 1','Week 2','Week 3','Week 4','Week 5','Week 6','Week 7','Week 8','Week 9','Week 10','Week 11','Week 12'];
+    var inputData  = [10, 12, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
+    var outputData = [12, 22, 34, 48, 65, 85, 110, 140, 175, 215, 260, 310];
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: 'Input / Investment',
+            data: inputData,
+            borderColor: 'rgba(255,70,46,0.7)',
+            backgroundColor: 'rgba(255,70,46,0.06)',
+            fill: true,
+            tension: 0.4,
+            borderWidth: 3,
+            pointRadius: 0
+          },
+          {
+            label: 'Output / Return',
+            data: outputData,
+            borderColor: '#4F30FE',
+            backgroundColor: 'rgba(79,48,254,0.08)',
+            fill: true,
+            tension: 0.4,
+            borderWidth: 3,
+            pointRadius: 0
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(0,0,0,0.04)' },
+            ticks: { font: { family: 'DM Sans', size: 13 }, color: 'rgba(0,0,0,0.35)' }
+          },
+          y: {
+            grid: { color: 'rgba(0,0,0,0.04)' },
+            ticks: { display: false },
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  })();
+  </script>
+
+  <!-- ===== SLIDE SCROLL SNAP ===== -->
+  <script>
+  (function () {
+    'use strict';
+
+    /* If ?scroll=fluid, skip snap behaviour but keep filmstrip + keyboard nav */
+    var fluidScroll = true;
+
+    const wrapper = document.querySelector('.page-wrapper');
+    if (!wrapper) return;
+
+    const slides = Array.from(wrapper.children);
+    let currentIndex   = 0;
+    let currentSubPage = 0;
+    let isAnimating    = false;
+    let animTimer      = null;
+    let inGesture      = false;
+    let gestureEnd     = null;
+
+    /* -- position helpers -- */
+
+    function absTop(el) {
+      return el.getBoundingClientRect().top + window.scrollY;
+    }
+
+    function snapY(slide) {
+      const vh = window.innerHeight;
+      const h  = slide.offsetHeight;
+      const t  = absTop(slide);
+      return h <= vh
+        ? Math.max(0, t - (vh - h) / 2)
+        : Math.max(0, t - 20);
+    }
+
+    function subPagePositions(slide) {
+      const vh = window.innerHeight;
+      const h  = slide.offsetHeight;
+      if (h <= vh) return null;
+
+      const top    = Math.max(0, absTop(slide) - 20);
+      const bottom = Math.max(0, absTop(slide) + h - vh + 20);
+      const positions = [top];
+
+      let pos = top + vh;
+      while (pos < bottom) { positions.push(pos); pos += vh; }
+      if (bottom - positions[positions.length - 1] > 10) positions.push(bottom);
+      return positions;
+    }
+
+    /* -- dynamic margins -- */
+
+    function updateMargins() {
+      const vh = window.innerHeight;
+      slides.forEach(function (slide, i) {
+        var h   = slide.offsetHeight;
+        var gap = h < vh ? Math.ceil((vh - h) / 2) + 10 : 40;
+        slide.style.marginTop    = (i === 0 ? '0' : gap + 'px');
+        slide.style.marginBottom = gap + 'px';
+      });
+    }
+
+    /* -- find closest slide/sub-page -- */
+
+    function closestIndex() {
+      var sy = window.scrollY;
+      return slides.reduce(function (best, slide, i) {
+        var dist = Math.abs(snapY(slide) - sy);
+        return dist < best.dist ? { i: i, dist: dist } : best;
+      }, { i: 0, dist: Infinity }).i;
+    }
+
+    function closestSubPage(index) {
+      var subPages = subPagePositions(slides[index]);
+      if (!subPages) return 0;
+      var sy   = window.scrollY;
+      var best = { sub: 0, dist: Infinity };
+      subPages.forEach(function (pos, sub) {
+        var dist = Math.abs(pos - sy);
+        if (dist < best.dist) best = { sub: sub, dist: dist };
+      });
+      return best.sub;
+    }
+
+    /* -- scroll to a slide and sub-page -- */
+
+    function goTo(index, subPage, behavior) {
+      if (behavior === undefined) behavior = 'smooth';
+      if (index < 0) index = 0;
+      if (index >= slides.length) index = slides.length - 1;
+
+      var slide    = slides[index];
+      var subPages = subPagePositions(slide);
+      var maxSub   = subPages ? subPages.length - 1 : 0;
+
+      if (subPage === undefined || subPage === null) subPage = 0;
+      if (subPage < 0)      subPage = 0;
+      if (subPage > maxSub) subPage = maxSub;
+
+      currentIndex   = index;
+      currentSubPage = subPage;
+      isAnimating    = true;
+      clearTimeout(animTimer);
+      window.scrollTo({ top: subPages ? subPages[subPage] : snapY(slide), behavior: behavior });
+      animTimer = setTimeout(function () { isAnimating = false; }, 900);
+      updateFilmstripActive(index);
+    }
+
+    /* -- navigate one step -- */
+
+    function navigate(direction) {
+      if (isAnimating) return;
+
+      currentIndex   = closestIndex();
+      currentSubPage = closestSubPage(currentIndex);
+
+      var slide    = slides[currentIndex];
+      var subPages = subPagePositions(slide);
+      var maxSub   = subPages ? subPages.length - 1 : 0;
+
+      if (direction < 0 && currentIndex === 0 && currentSubPage === 0) return;
+      if (direction > 0 && currentIndex === slides.length - 1 && currentSubPage === maxSub) return;
+
+      var nextSub = currentSubPage + direction;
+
+      if (subPages && nextSub >= 0 && nextSub <= maxSub) {
+        goTo(currentIndex, nextSub);
+        return;
+      }
+
+      if (direction > 0) {
+        goTo(currentIndex + 1, 0);
+      } else {
+        var prevIndex = currentIndex - 1;
+        var prevSubs  = prevIndex >= 0 ? subPagePositions(slides[prevIndex]) : null;
+        goTo(prevIndex, prevSubs ? prevSubs.length - 1 : 0);
+      }
+    }
+
+    /* -- wheel -- */
+
+    if (!fluidScroll) {
+    window.addEventListener('wheel', function (e) {
+      e.preventDefault();
+      var isNewGesture = !inGesture;
+      inGesture = true;
+      clearTimeout(gestureEnd);
+      gestureEnd = setTimeout(function () { inGesture = false; }, 150);
+      if (!isNewGesture || isAnimating) return;
+      navigate(e.deltaY > 0 ? +1 : -1);
+    }, { passive: false });
+    }
+
+    /* -- keyboard -- */
+
+    window.addEventListener('keydown', function (e) {
+      if (e.key === 'g' || e.key === 'G') {
+        if (!gridOverlay) return;
+        if (gridOverlay.classList.contains('sn-visible')) { hideGridOverlay(); } else { showGridOverlay(); }
+        e.preventDefault();
+        return;
+      }
+      if (e.key === 'Escape') {
+        if (gridOverlay && gridOverlay.classList.contains('sn-visible')) { hideGridOverlay(); e.preventDefault(); return; }
+        if (filmstrip && filmstrip.classList.contains('sn-visible')) { hideFilmstrip(); e.preventDefault(); return; }
+        return;
+      }
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        if (filmstrip) { filmstrip.classList.contains('sn-visible') ? hideFilmstrip() : showFilmstrip(); }
+        return;
+      }
+      if (gridOverlay && gridOverlay.classList.contains('sn-visible')) {
+        if (e.key >= '0' && e.key <= '9') { gridInput += e.key; updateGridInput(); e.preventDefault(); return; }
+        if (e.key === 'Backspace') { gridInput = gridInput.slice(0, -1); updateGridInput(); e.preventDefault(); return; }
+        if (e.key === 'Enter' && gridInput.length > 0) {
+          var num = parseInt(gridInput, 10);
+          if (num >= 1 && num <= slides.length) { goTo(num - 1, 0); hideGridOverlay(); }
+          e.preventDefault();
+          return;
+        }
+      }
+      if (fluidScroll) return;
+      var down = e.key === 'ArrowDown' || e.key === 'PageDown';
+      var up   = e.key === 'ArrowUp'   || e.key === 'PageUp';
+      if (!down && !up) return;
+      e.preventDefault();
+      navigate(down ? +1 : -1);
+    });
+
+    /* -- touch -- */
+
+    if (!fluidScroll) {
+    var ty0 = 0;
+    window.addEventListener('touchstart', function (e) {
+      ty0 = e.touches[0].clientY;
+    }, { passive: true });
+
+    window.addEventListener('touchend', function (e) {
+      if (isAnimating) return;
+      var delta = ty0 - e.changedTouches[0].clientY;
+      if (Math.abs(delta) < 30) return;
+      navigate(delta > 0 ? +1 : -1);
+    });
+    }
+
+    /* -- resize -- */
+
+    if (!fluidScroll) {
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        updateMargins();
+        goTo(currentIndex, currentSubPage, 'instant');
+      }, 100);
+    });
+    }
+
+    /* -- slide nav: filmstrip + grid overlay -- */
+
+    var filmstrip    = null;
+    var filmstripBoxes = [];
+    var filmstripHideTimer = null;
+    var gridOverlay  = null;
+    var gridCards    = [];
+    var gridInput    = '';
+    var gridInputEl  = null;
+
+    function getSlideTitle(slide) {
+      var el = slide.querySelector('.section-label, h2, .hero-topic');
+      if (el) {
+        var t = el.textContent.trim();
+        return t.length > 22 ? t.slice(0, 20) + '...' : t;
+      }
+      return '';
+    }
+
+    function injectNavStyles() {
+      var s = document.createElement('style');
+      s.textContent = [
+        '.sn-filmstrip{position:fixed;bottom:0;left:0;right:0;height:96px;z-index:9999;',
+        'background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-top:1px solid rgba(0,0,0,0.08);',
+        'box-shadow:0 -4px 20px rgba(0,0,0,0.06);',
+        'display:flex;align-items:center;gap:8px;padding:16px 20px;overflow-x:auto;scroll-behavior:smooth;',
+        'transform:translateY(100%);transition:transform 0.3s ease;scrollbar-width:none;}',
+        '.sn-filmstrip::-webkit-scrollbar{display:none;}',
+        '.sn-filmstrip.sn-visible{transform:translateY(0);}',
+        '.sn-box{flex-shrink:0;width:120px;height:60px;background:#f0f0f0;',
+        'border-radius:8px;border:2px solid rgba(0,0,0,0.06);cursor:pointer;padding:6px 10px;',
+        'display:flex;flex-direction:column;justify-content:center;transition:border-color 0.2s,background 0.2s,box-shadow 0.2s;',
+        'font-family:DM Sans,sans-serif;overflow:hidden;}',
+        '.sn-box:hover{border-color:rgba(79,48,254,0.4);background:#eeebff;}',
+        '.sn-box.sn-active{border-color:#4F30FE;background:#f0edff;box-shadow:0 0 8px rgba(79,48,254,0.15);}',
+        '.sn-box-num{font-size:11px;color:#4F30FE;font-weight:600;margin-bottom:2px;}',
+        '.sn-box-title{font-size:11px;color:rgba(0,0,0,0.55);font-weight:500;white-space:nowrap;',
+        'overflow:hidden;text-overflow:ellipsis;}',
+        '.sn-grid-overlay{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.35);',
+        'backdrop-filter:blur(12px);display:flex;flex-direction:column;align-items:center;justify-content:center;',
+        'opacity:0;pointer-events:none;transition:opacity 0.25s ease;}',
+        '.sn-grid-overlay.sn-visible{opacity:1;pointer-events:auto;}',
+        '.sn-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));',
+        'gap:14px;max-width:1200px;width:100%;padding:40px;overflow-y:auto;max-height:calc(100vh - 80px);}',
+        '.sn-card{background:#ffffff;border-radius:10px;border:2px solid rgba(0,0,0,0.06);',
+        'cursor:pointer;padding:14px 16px;text-align:center;transition:border-color 0.2s,background 0.2s,box-shadow 0.2s;',
+        'font-family:DM Sans,sans-serif;box-shadow:0 1px 4px rgba(0,0,0,0.04);}',
+        '.sn-card:hover{border-color:rgba(79,48,254,0.4);background:#f8f6ff;}',
+        '.sn-card.sn-active{border-color:#4F30FE;background:#f0edff;box-shadow:0 0 10px rgba(79,48,254,0.15);}',
+        '.sn-card-num{font-size:26px;font-weight:600;color:#4F30FE;margin-bottom:2px;}',
+        '.sn-card-title{font-size:11px;color:rgba(0,0,0,0.5);line-height:1.3;display:-webkit-box;',
+        '-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;white-space:normal;}',
+        '.sn-grid-input{margin-top:16px;font-family:DM Sans,sans-serif;font-size:18px;color:#4F30FE;',
+        'background:#ffffff;border:1px solid rgba(79,48,254,0.3);border-radius:8px;',
+        'padding:8px 16px;min-width:120px;text-align:center;pointer-events:none;}',
+        '.sn-grid-hint{font-size:14px;color:rgba(255,255,255,0.7);margin-top:8px;font-family:DM Sans,sans-serif;}'
+      ].join('\n');
+      document.head.appendChild(s);
+    }
+
+    function buildFilmstrip() {
+      filmstrip = document.createElement('div');
+      filmstrip.className = 'sn-filmstrip';
+      slides.forEach(function (slide, i) {
+        var box = document.createElement('div');
+        box.className = 'sn-box' + (i === 0 ? ' sn-active' : '');
+        box.innerHTML = '<div class="sn-box-num">' + (i + 1) + '</div>' +
+                        '<div class="sn-box-title">' + (getSlideTitle(slide) || 'Slide ' + (i + 1)) + '</div>';
+        box.addEventListener('click', function () { goTo(i, 0); });
+        filmstrip.appendChild(box);
+        filmstripBoxes.push(box);
+      });
+      filmstrip.addEventListener('mouseenter', function () { clearTimeout(filmstripHideTimer); });
+      filmstrip.addEventListener('mouseleave', function () { scheduleHideFilmstrip(); });
+      filmstrip.addEventListener('wheel', function (e) { e.stopPropagation(); filmstrip.scrollLeft += e.deltaY; }, { passive: true });
+      document.body.appendChild(filmstrip);
+    }
+
+    function buildGridOverlay() {
+      gridOverlay = document.createElement('div');
+      gridOverlay.className = 'sn-grid-overlay';
+      var grid = document.createElement('div');
+      grid.className = 'sn-grid';
+      slides.forEach(function (slide, i) {
+        var card = document.createElement('div');
+        card.className = 'sn-card' + (i === currentIndex ? ' sn-active' : '');
+        card.innerHTML = '<div class="sn-card-num">' + (i + 1) + '</div>' +
+                         '<div class="sn-card-title">' + (getSlideTitle(slide) || 'Slide ' + (i + 1)) + '</div>';
+        card.addEventListener('click', function () { goTo(i, 0); hideGridOverlay(); });
+        grid.appendChild(card);
+        gridCards.push(card);
+      });
+      gridOverlay.appendChild(grid);
+      gridInputEl = document.createElement('div');
+      gridInputEl.className = 'sn-grid-input';
+      gridInputEl.textContent = 'Type slide #...';
+      gridOverlay.appendChild(gridInputEl);
+      var hint = document.createElement('div');
+      hint.className = 'sn-grid-hint';
+      hint.textContent = 'Enter number + Return to jump  |  Esc to close';
+      gridOverlay.appendChild(hint);
+      gridOverlay.addEventListener('click', function (e) {
+        if (e.target === gridOverlay) hideGridOverlay();
+      });
+      document.body.appendChild(gridOverlay);
+    }
+
+    function updateFilmstripActive(index) {
+      var numEl = document.getElementById('slide-number');
+      if (numEl) numEl.textContent = (index + 1);
+      filmstripBoxes.forEach(function (box, i) {
+        box.classList.toggle('sn-active', i === index);
+      });
+      gridCards.forEach(function (card, i) {
+        card.classList.toggle('sn-active', i === index);
+      });
+      if (filmstrip && filmstripBoxes[index]) {
+        var box = filmstripBoxes[index];
+        var left = box.offsetLeft - filmstrip.offsetWidth / 2 + box.offsetWidth / 2;
+        filmstrip.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
+      }
+    }
+
+    function showFilmstrip() {
+      if (!filmstrip) return;
+      filmstrip.classList.add('sn-visible');
+      clearTimeout(filmstripHideTimer);
+      scheduleHideFilmstrip();
+    }
+
+    function hideFilmstrip() {
+      if (!filmstrip) return;
+      filmstrip.classList.remove('sn-visible');
+      clearTimeout(filmstripHideTimer);
+    }
+
+    function scheduleHideFilmstrip() {
+      clearTimeout(filmstripHideTimer);
+      filmstripHideTimer = setTimeout(hideFilmstrip, 2500);
+    }
+
+    function showGridOverlay() {
+      if (!gridOverlay) return;
+      gridInput = '';
+      updateGridInput();
+      updateFilmstripActive(currentIndex);
+      gridOverlay.classList.add('sn-visible');
+      hideFilmstrip();
+    }
+
+    function hideGridOverlay() {
+      if (!gridOverlay) return;
+      gridOverlay.classList.remove('sn-visible');
+      gridInput = '';
+    }
+
+    function updateGridInput() {
+      if (!gridInputEl) return;
+      gridInputEl.textContent = gridInput.length > 0 ? 'Go to slide ' + gridInput : 'Type slide #...';
+    }
+
+    /* -- mouse proximity for filmstrip -- */
+
+    window.addEventListener('mousemove', function (e) {
+      if (!filmstrip) return;
+      if (gridOverlay && gridOverlay.classList.contains('sn-visible')) return;
+      if (e.clientY > window.innerHeight - 60) {
+        showFilmstrip();
+      }
+    });
+
+    /* -- init -- */
+
+    window.addEventListener('load', function () {
+      if (!fluidScroll) updateMargins();
+      injectNavStyles();
+      buildFilmstrip();
+      buildGridOverlay();
+      if (!fluidScroll) goTo(0, 0, 'instant');
+    });
+
+  }());
+  </script>
+</body>
+</html>
