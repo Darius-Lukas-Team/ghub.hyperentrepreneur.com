@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Live Demo: Creating/Sending Emails</title>
+  <title>Live Demo: Email Specialist For Claude</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     /* =============================================
@@ -102,12 +102,15 @@
       text-align: center;
       padding: 60px 40px;
       max-width: 1200px;
+      position: relative;
     }
 
     .hero-logo {
-      height: 42px;
-      margin-bottom: 28px;
-      opacity: 0.7;
+      height: 32px;
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .hero-topic {
@@ -1365,12 +1368,12 @@ head.appendChild(script);
 
     <!-- Slide 1: Welcome / Pre-Show -->
     <section class="hero" id="welcome">
+      <img class="hero-logo" src="https://assets.cdn.filesafe.space/lNzgml2EfCzIl04kmDr2/media/69c6dec39fc63ab17f2737ea.png" alt="Logo">
       <div class="welcome-banner">
         <span class="welcome-banner-dot"></span>
         <span class="welcome-banner-text">Live Demo</span>
       </div>
-      <img class="hero-logo" src="https://assets.cdn.filesafe.space/lNzgml2EfCzIl04kmDr2/media/69c6dec39fc63ab17f2737ea.png" alt="Logo">
-      <p class="hero-topic">Creating/Sending Emails</p>
+      <p class="hero-topic">Email Specialist For Claude</p>
       <h1 class="hero-title">Watch Claude write, format, and schedule your complete email campaigns <span class="hero-title-highlight">(Promos, Sequences, Follow-Ups, etc)</span></h1>
       <img class="hero-claude-logo" src="../assets/Claude_Logo_2023-s1280.png" alt="Claude AI">
 
@@ -1387,15 +1390,69 @@ head.appendChild(script);
       </div>
     </section>
 
-    <!-- SECRET #2: EMAIL MACHINE                      -->
-    <!-- ============================================= -->
+    <!-- Slide: This Plugin And More Is Part Of (intro) -->
+    <section class="section-header-slide" id="the-program-intro">
+      <p class="section-header-label">This Plugin And More Is Part Of</p>
+      <h2 class="section-header-title"><span class="hero-title-highlight">Claude Cowork:</span> Business Growth Bootcamp</h2>
+      <img class="program-image" src="../assets/product/Course-Devices.png" alt="Claude Cowork: Business Growth Bootcamp">
+      <div style="display:flex;flex-direction:column;gap:20px;margin-top:36px;max-width:720px;width:100%;text-align:left;">
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;min-width:32px;border-radius:50%;background:rgba(79,48,254,0.1);color:#4F30FE;font-size:18px;font-weight:700;">&#10003;</span>
+          <p style="font-size:20px;color:rgba(0,0,0,0.75);line-height:1.5;margin:0;font-weight:500;">Turn Claude into your high-performing marketing team that automates 90% of your tasks.</p>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;min-width:32px;border-radius:50%;background:rgba(79,48,254,0.1);color:#4F30FE;font-size:18px;font-weight:700;">&#10003;</span>
+          <p style="font-size:20px;color:rgba(0,0,0,0.75);line-height:1.5;margin:0;font-weight:500;">Save $10,000 to $50,000 in people costs in the next 6-12 months.</p>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;min-width:32px;border-radius:50%;background:rgba(79,48,254,0.1);color:#4F30FE;font-size:18px;font-weight:700;">&#10003;</span>
+          <p style="font-size:20px;color:rgba(0,0,0,0.75);line-height:1.5;margin:0;font-weight:500;">2X-3X your revenue, profit, and business in the next 6-12 months.</p>
+        </div>
+      </div>
+    </section>
 
-    <!-- Slide 2: Workflow -->
+    <!-- What You Get (intro) -->
+    <section class="section-header-slide" id="what-you-get-intro" style="padding:60px 44px;">
+      <p class="section-header-label">What You Get</p>
+      <div style="display:flex;gap:32px;margin-top:40px;max-width:1000px;width:100%;">
+        <div style="flex:1;background:rgba(79,48,254,0.04);border-radius:16px;padding:32px;text-align:center;">
+          <div style="width:48px;height:48px;border-radius:12px;background:rgba(79,48,254,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F30FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3 style="font-size:20px;font-weight:700;color:#000;margin-bottom:10px;">20+ Claude .Skills</h3>
+          <p style="font-size:15px;color:rgba(0,0,0,0.55);line-height:1.6;margin:0;">Plug-and-play Claude .Skills for emails, Instagram, YouTube, LinkedIn, funnels, pages, and more — built, tested, and ready to install.</p>
+        </div>
+        <div style="flex:1;background:rgba(79,48,254,0.04);border-radius:16px;padding:32px;text-align:center;">
+          <div style="width:48px;height:48px;border-radius:12px;background:rgba(79,48,254,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F30FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 9l5 3-5 3V9z"/></svg>
+          </div>
+          <h3 style="font-size:20px;font-weight:700;color:#000;margin-bottom:10px;">Video Training with Darius and Klemen</h3>
+          <p style="font-size:15px;color:rgba(0,0,0,0.55);line-height:1.6;margin:0;">Step-by-step walkthroughs showing you exactly how to install, run, customized your Claude .Skills, and create new ones.</p>
+        </div>
+        <div style="flex:1;background:rgba(79,48,254,0.04);border-radius:16px;padding:32px;text-align:center;">
+          <div style="width:48px;height:48px;border-radius:12px;background:rgba(79,48,254,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F30FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 style="font-size:20px;font-weight:700;color:#000;margin-bottom:10px;">Private Community</h3>
+          <p style="font-size:15px;color:rgba(0,0,0,0.55);line-height:1.6;margin:0;">Connect and interact with Darius, Klemen, and other 6, 7, and 8-figure founders building AI-native businesses.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide: Live Demo Pill -->
+    <section class="section-header-slide" id="live-demo" style="min-height:100vh;display:flex;justify-content:center;align-items:center;">
+      <div class="welcome-banner">
+        <span class="welcome-banner-dot"></span>
+        <span class="welcome-banner-text">Live Demo</span>
+      </div>
+    </section>
+
+    <!-- Slide: Workflow -->
     <section class="section" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:32px 44px;text-align:center;">
       <h2 class="section-title" style="font-size:40px;margin-bottom:32px;">Workflow</h2>
       <svg class="flowchart-svg" viewBox="0 -30 1100 270">
         <defs><marker id="arr7" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4F30FE"><polygon points="0 0,10 3.5,0 7"/></marker><marker id="arr7gd" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="0" fill="#22c55e"><polygon points="0 0,3.5 10,7 0"/></marker><marker id="arr7r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="rgba(224,48,48,0.5)"><polygon points="0 0,10 3.5,0 7"/></marker></defs>
-        <text x="135" y="34" text-anchor="middle" font-size="22">👤</text>
+        <text x="135" y="34" text-anchor="middle" font-size="22">&#x1F464;</text>
         <rect x="20" y="50" width="230" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
         <text x="135" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">INPUT</text>
         <text x="135" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You or AI</text>
@@ -1407,7 +1464,7 @@ head.appendChild(script);
         <text x="420" y="100" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="600">AI</text>
         <text x="420" y="120" text-anchor="middle" fill="rgba(0,0,0,0.4)" font-size="13">Text, Images, Videos</text>
         <line x1="550" y1="100" x2="585" y2="100" stroke="#4F30FE" stroke-width="2" marker-end="url(#arr7)" stroke-dasharray="6 4" class="animated-dash"/>
-        <text x="710" y="34" text-anchor="middle" font-size="22">👤</text>
+        <text x="710" y="34" text-anchor="middle" font-size="22">&#x1F464;</text>
         <rect x="590" y="50" width="240" height="100" rx="14" fill="rgba(79,48,254,0.05)" stroke="#4F30FE" stroke-width="2"/>
         <text x="710" y="80" text-anchor="middle" fill="#4F30FE" font-size="12" font-weight="700" letter-spacing="1.5">REVIEW</text>
         <text x="710" y="100" text-anchor="middle" fill="#4F30FE" font-size="14" font-weight="600">You</text>
@@ -1424,14 +1481,6 @@ head.appendChild(script);
       </svg>
     </section>
 
-    <!-- Slide: Live Demo Pill -->
-    <section class="section-header-slide" id="live-demo" style="min-height:100vh;display:flex;justify-content:center;align-items:center;">
-      <div class="welcome-banner">
-        <span class="welcome-banner-dot"></span>
-        <span class="welcome-banner-text">Live Demo</span>
-      </div>
-    </section>
-
     <!-- Slide 32: Introducing The Program -->
     <section class="section-header-slide" id="the-program">
       <p class="section-header-label">Get This Plugin And More In</p>
@@ -1440,18 +1489,47 @@ head.appendChild(script);
       <div style="display:flex;flex-direction:column;gap:20px;margin-top:36px;max-width:720px;width:100%;text-align:left;">
         <div style="display:flex;align-items:center;gap:16px;">
           <span style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;min-width:32px;border-radius:50%;background:rgba(79,48,254,0.1);color:#4F30FE;font-size:18px;font-weight:700;">&#10003;</span>
-          <p style="font-size:20px;color:rgba(0,0,0,0.75);line-height:1.5;margin:0;font-weight:500;">Turn Claude into your high-performing marketing team that automates 90% of your tasks</p>
+          <p style="font-size:20px;color:rgba(0,0,0,0.75);line-height:1.5;margin:0;font-weight:500;">Turn Claude into your high-performing marketing team that automates 90% of your tasks.</p>
         </div>
         <div style="display:flex;align-items:center;gap:16px;">
           <span style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;min-width:32px;border-radius:50%;background:rgba(79,48,254,0.1);color:#4F30FE;font-size:18px;font-weight:700;">&#10003;</span>
-          <p style="font-size:20px;color:rgba(0,0,0,0.75);line-height:1.5;margin:0;font-weight:500;">Save $10,000 to $50,000 in people costs in the next 6-12 months</p>
+          <p style="font-size:20px;color:rgba(0,0,0,0.75);line-height:1.5;margin:0;font-weight:500;">Save $10,000 to $50,000 in people costs in the next 6-12 months.</p>
         </div>
         <div style="display:flex;align-items:center;gap:16px;">
           <span style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;min-width:32px;border-radius:50%;background:rgba(79,48,254,0.1);color:#4F30FE;font-size:18px;font-weight:700;">&#10003;</span>
-          <p style="font-size:20px;color:rgba(0,0,0,0.75);line-height:1.5;margin:0;font-weight:500;">2X-3X your revenue, profit, and business in the next 6-12 months</p>
+          <p style="font-size:20px;color:rgba(0,0,0,0.75);line-height:1.5;margin:0;font-weight:500;">2X-3X your revenue, profit, and business in the next 6-12 months.</p>
         </div>
       </div>
     </section>
+
+    <!-- What You Get Slide -->
+    <section class="section-header-slide" id="what-you-get" style="padding:60px 44px;">
+      <p class="section-header-label">What You Get</p>
+      <div style="display:flex;gap:32px;margin-top:40px;max-width:1000px;width:100%;">
+        <div style="flex:1;background:rgba(79,48,254,0.04);border-radius:16px;padding:32px;text-align:center;">
+          <div style="width:48px;height:48px;border-radius:12px;background:rgba(79,48,254,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F30FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3 style="font-size:20px;font-weight:700;color:#000;margin-bottom:10px;">20+ Claude .Skills</h3>
+          <p style="font-size:15px;color:rgba(0,0,0,0.55);line-height:1.6;margin:0;">Plug-and-play Claude .Skills for emails, Instagram, YouTube, LinkedIn, funnels, pages, and more — built, tested, and ready to install.</p>
+        </div>
+        <div style="flex:1;background:rgba(79,48,254,0.04);border-radius:16px;padding:32px;text-align:center;">
+          <div style="width:48px;height:48px;border-radius:12px;background:rgba(79,48,254,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F30FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 9l5 3-5 3V9z"/></svg>
+          </div>
+          <h3 style="font-size:20px;font-weight:700;color:#000;margin-bottom:10px;">Video Training with Darius and Klemen</h3>
+          <p style="font-size:15px;color:rgba(0,0,0,0.55);line-height:1.6;margin:0;">Step-by-step walkthroughs showing you exactly how to install, run, customized your Claude .Skills, and create new ones.</p>
+        </div>
+        <div style="flex:1;background:rgba(79,48,254,0.04);border-radius:16px;padding:32px;text-align:center;">
+          <div style="width:48px;height:48px;border-radius:12px;background:rgba(79,48,254,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F30FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 style="font-size:20px;font-weight:700;color:#000;margin-bottom:10px;">Private Community</h3>
+          <p style="font-size:15px;color:rgba(0,0,0,0.55);line-height:1.6;margin:0;">Connect and interact with Darius, Klemen, and other 6, 7, and 8-figure founders building AI-native businesses.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA Slide -->
     <section class="section-header-slide" id="cta-enroll">
       <p class="section-header-label">Next Step</p>
