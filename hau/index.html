@@ -63,13 +63,13 @@
 
     /* Image placeholders */
     .image-placeholder {
-      background: #F0EDFF;
-      border: 2px dashed var(--color-primary);
+      background: #f5f5f7;
+      border: 2px dashed #ccc;
       border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--color-primary);
+      color: #999;
       font-weight: 600;
       font-size: 14px;
       text-align: center;
@@ -120,6 +120,11 @@
       .event-row {
         grid-template-columns: 1fr;
         gap: 4px;
+      }
+      .venn-wrap {
+        width: calc(100% + 28px);
+        margin-left: -14px !important;
+        margin-right: -14px !important;
       }
     }
   </style>
@@ -885,18 +890,18 @@ head.appendChild(script);
 </section>
 
 <!-- ============================================
-     SECTION 7: WHAT YOU GET — BREAKDOWN (4 Pillars)
+     SECTION 7: WHAT YOU GET — BREAKDOWN (5 Pillars)
      ============================================ -->
 <section id="what-you-get" class="py-16 md:py-24" style="background: #fff;">
   <div class="max-w-6xl mx-auto px-5 md:px-10">
     <div class="text-center mb-12 reveal">
       <span class="text-sm font-bold uppercase tracking-widest mb-4 block" style="color: var(--color-primary);">What's Inside</span>
       <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: #111;">Everything You Get Inside <span style="color: var(--color-primary);">Hyper AI University</span></h2>
-      <p class="text-lg max-w-2xl mx-auto mb-0" style="color: #666;">Four pillars designed to take you from AI-curious to AI-confident &mdash; and keep you there as the landscape evolves.</p>
+      <p class="text-lg max-w-2xl mx-auto mb-0" style="color: #666;">Five pillars designed to take you from AI-curious to AI-confident &mdash; and keep you there as the landscape evolves.</p>
     </div>
 
     <!-- Venn Diagram -->
-    <div class="reveal" style="max-width: 700px; margin: 0 auto 56px; position: relative; aspect-ratio: 1/1;">
+    <div class="reveal venn-wrap" style="max-width: 600px; margin: -8px auto 16px; position: relative; aspect-ratio: 1/1;">
       <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
         <defs>
           <linearGradient id="venn-center" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -904,165 +909,237 @@ head.appendChild(script);
             <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1"/>
           </linearGradient>
         </defs>
-        <!-- Top-left: Education -->
-        <circle cx="195" cy="195" r="140" fill="rgba(124,58,237,0.06)" stroke="rgba(124,58,237,0.15)" stroke-width="1.5"/>
-        <!-- Top-right: Tools -->
-        <circle cx="305" cy="195" r="140" fill="rgba(192,132,252,0.06)" stroke="rgba(192,132,252,0.2)" stroke-width="1.5"/>
-        <!-- Bottom-left: Trends -->
-        <circle cx="195" cy="305" r="140" fill="rgba(192,132,252,0.06)" stroke="rgba(192,132,252,0.2)" stroke-width="1.5"/>
-        <!-- Bottom-right: Community -->
-        <circle cx="305" cy="305" r="140" fill="rgba(124,58,237,0.06)" stroke="rgba(124,58,237,0.15)" stroke-width="1.5"/>
+        <!-- Top: Education -->
+        <circle cx="250" cy="145" r="110" fill="rgba(124,58,237,0.06)" stroke="rgba(124,58,237,0.15)" stroke-width="1.5"/>
+        <!-- Upper-right: Coaching -->
+        <circle cx="350" cy="210" r="110" fill="rgba(192,132,252,0.06)" stroke="rgba(192,132,252,0.2)" stroke-width="1.5"/>
+        <!-- Lower-right: Tools -->
+        <circle cx="315" cy="335" r="110" fill="rgba(124,58,237,0.06)" stroke="rgba(124,58,237,0.15)" stroke-width="1.5"/>
+        <!-- Lower-left: Trends -->
+        <circle cx="185" cy="335" r="110" fill="rgba(192,132,252,0.06)" stroke="rgba(192,132,252,0.2)" stroke-width="1.5"/>
+        <!-- Upper-left: Community -->
+        <circle cx="150" cy="210" r="110" fill="rgba(124,58,237,0.06)" stroke="rgba(124,58,237,0.15)" stroke-width="1.5"/>
 
         <!-- Center highlight -->
-        <circle cx="250" cy="250" r="62" fill="url(#venn-center)" opacity="0.95"/>
+        <circle cx="250" cy="250" r="55" fill="url(#venn-center)" opacity="0.95"/>
 
         <!-- Center text -->
         <text x="250" y="243" text-anchor="middle" fill="#fff" font-family="DM Sans, sans-serif" font-weight="700" font-size="11" letter-spacing="0.5">HYPER AI</text>
         <text x="250" y="260" text-anchor="middle" fill="#fff" font-family="DM Sans, sans-serif" font-weight="700" font-size="11" letter-spacing="0.5">UNIVERSITY</text>
 
-        <!-- Bubble labels -->
-        <text x="140" y="155" text-anchor="middle" fill="#333" font-family="DM Sans, sans-serif" font-weight="700" font-size="16">AI Education</text>
+        <!-- Bubble labels with pill backgrounds -->
+        <!-- Education (top) -->
+        <rect x="197" y="82" width="106" height="28" rx="14" fill="rgba(124,58,237,0.08)"/>
+        <text x="250" y="101" text-anchor="middle" fill="#333" font-family="DM Sans, sans-serif" font-weight="700" font-size="13">AI Education</text>
 
-        <text x="360" y="155" text-anchor="middle" fill="#333" font-family="DM Sans, sans-serif" font-weight="700" font-size="16">AI Tools</text>
+        <!-- Coaching (upper-right) -->
+        <rect x="341" y="196" width="100" height="28" rx="14" fill="rgba(124,58,237,0.08)"/>
+        <text x="391" y="215" text-anchor="middle" fill="#333" font-family="DM Sans, sans-serif" font-weight="700" font-size="13">AI Coaching</text>
 
-        <text x="140" y="355" text-anchor="middle" fill="#333" font-family="DM Sans, sans-serif" font-weight="700" font-size="16">AI Trends</text>
+        <!-- Tools (lower-right) -->
+        <rect x="302" y="365" width="78" height="28" rx="14" fill="rgba(124,58,237,0.08)"/>
+        <text x="341" y="384" text-anchor="middle" fill="#333" font-family="DM Sans, sans-serif" font-weight="700" font-size="13">AI Tools</text>
 
-        <text x="360" y="355" text-anchor="middle" fill="#333" font-family="DM Sans, sans-serif" font-weight="700" font-size="16">AI Community</text>
+        <!-- Trends (lower-left) -->
+        <rect x="113" y="365" width="86" height="28" rx="14" fill="rgba(124,58,237,0.08)"/>
+        <text x="156" y="384" text-anchor="middle" fill="#333" font-family="DM Sans, sans-serif" font-weight="700" font-size="13">AI Trends</text>
+
+        <!-- Community (upper-left) -->
+        <rect x="48" y="196" width="120" height="28" rx="14" fill="rgba(124,58,237,0.08)"/>
+        <text x="108" y="215" text-anchor="middle" fill="#333" font-family="DM Sans, sans-serif" font-weight="700" font-size="13">AI Community</text>
       </svg>
     </div>
 
-    <div class="space-y-6 max-w-4xl mx-auto">
+    <div class="space-y-16 max-w-5xl mx-auto">
 
-      <!-- Pillar 1: Education -->
-      <div class="p-6 md:p-8 reveal" style="background: #f5f5f7; border-radius: 16px;">
-        <div class="flex items-start gap-4 mb-5">
-          <div class="pillar-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="2.5" y="3.75" width="19" height="16.5" rx="2.5" stroke="var(--color-primary)" stroke-width="2"/><path d="M8 9l4 3-4 3V9z" fill="var(--color-primary)"/></svg>
+      <!-- ====== Pillar 1: Education ====== -->
+      <div class="space-y-4 reveal">
+        <!-- Main Card -->
+        <div class="p-6 md:p-10 md:flex md:items-center md:gap-10" style="background: linear-gradient(145deg, #1B1C49, #100E24); border-radius: 20px; overflow: hidden;">
+          <div class="md:flex-1 mb-6 md:mb-0">
+            <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4" style="background: rgba(255,255,255,0.15); color: #fff;">Pillar 1 &middot; AI Education</span>
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3" style="line-height: 1.2;">Learn From the Best AI Trainings &amp; Stay Ahead of the Curve</h3>
+            <p class="text-base" style="color: rgba(255,255,255,0.75);">Unlock 250+ expert-led training recordings, live weekly webclasses, and executive summaries &mdash; so you always know what's new and how to use it.</p>
           </div>
-          <div>
-            <span class="text-sm font-bold uppercase tracking-widest block mb-1" style="color: var(--color-primary);">Pillar 1</span>
-            <h3 class="text-xl font-bold" style="color: #111;">AI Education &amp; Live Trainings</h3>
+          <div class="md:flex-1">
+            <div class="image-placeholder" style="aspect-ratio: 4/3; min-height: 180px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px;">Image Here: Live Training Screenshot</div>
           </div>
         </div>
-        <p class="text-base mb-5" style="color: #555;">Weekly live trainings, webclasses, and Q&amp;A sessions with AI experts. Every training includes a video recording and an executive summary so you can learn at your own pace.</p>
-        <div class="image-placeholder mb-5" style="aspect-ratio: 16/9; min-height: 160px;">Image Here: Live Training Screenshot</div>
-        <ul class="space-y-2">
-          <li class="flex items-start gap-2 text-lg" style="color: #444;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>4+ live expert-led trainings every month</span>
-          </li>
-          <li class="flex items-start gap-2 text-lg" style="color: #444;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>250+ on-demand training recordings in the library</span>
-          </li>
-          <li class="flex items-start gap-2 text-lg" style="color: #444;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Each training = video + executive summary</span>
-          </li>
-          <li class="flex items-start gap-2 text-lg" style="color: #444;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Live Q&amp;A sessions to get your questions answered</span>
-          </li>
-        </ul>
+        <!-- Feature Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">4+ Live Trainings Monthly</h4>
+            <p class="text-sm mb-4" style="color: #666;">Expert-led sessions on the latest AI tools and strategies, with live Q&amp;A.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">250+ On-Demand Recordings</h4>
+            <p class="text-sm mb-4" style="color: #666;">Full training library you can watch anytime, at your own pace.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">Video + Executive Summary</h4>
+            <p class="text-sm mb-4" style="color: #666;">Every training comes with a recording and a written summary of key takeaways.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">Live Q&amp;A Sessions</h4>
+            <p class="text-sm mb-4" style="color: #666;">Get your specific questions answered by AI experts in real time.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+        </div>
       </div>
 
-      <!-- Pillar 2: Tools -->
-      <div class="p-6 md:p-8 reveal" style="background: #f5f5f7; border-radius: 16px;">
-        <div class="flex items-start gap-4 mb-5">
-          <div class="pillar-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <!-- ====== Pillar 2: AI Coaching ====== -->
+      <div class="space-y-4 reveal">
+        <!-- Main Card -->
+        <div class="p-6 md:p-10 md:flex md:items-center md:gap-10" style="background: linear-gradient(145deg, #1B1C49, #100E24); border-radius: 20px; overflow: hidden;">
+          <div class="md:flex-1 mb-6 md:mb-0">
+            <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4" style="background: rgba(255,255,255,0.15); color: #fff;">Pillar 2 &middot; AI Coaching</span>
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3" style="line-height: 1.2;">Get Personalized Guidance to Fast-Track Your AI Results</h3>
+            <p class="text-base" style="color: rgba(255,255,255,0.75);">Whether you're stuck on implementation or want to optimize your workflows, our coaches help you break through faster with tailored advice.</p>
           </div>
-          <div>
-            <span class="text-sm font-bold uppercase tracking-widest block mb-1" style="color: var(--color-primary);">Pillar 2</span>
-            <h3 class="text-xl font-bold" style="color: #111;">AI Tools, Templates &amp; Skills</h3>
+          <div class="md:flex-1">
+            <div class="image-placeholder" style="aspect-ratio: 4/3; min-height: 180px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px;">Image Here: AI Coaching Session Screenshot</div>
           </div>
         </div>
-        <p class="text-base mb-5" style="color: #555;">Ready-to-use Claude .Skills, AI plugins, templates, and automation helpers that you can install and start using immediately. No building from scratch.</p>
-        <div class="image-placeholder mb-5" style="aspect-ratio: 16/9; min-height: 160px;">Image Here: Tools &amp; Templates Library Screenshot</div>
-        <ul class="space-y-2">
-          <li class="flex items-start gap-2 text-lg" style="color: #444;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Claude .Skills for content, emails, ads, and funnels</span>
-          </li>
-          <li class="flex items-start gap-2 text-lg" style="color: #444;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>AI automation templates and plugins</span>
-          </li>
-          <li class="flex items-start gap-2 text-lg" style="color: #444;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Plug-and-play &mdash; install in minutes, run immediately</span>
-          </li>
-          <li class="flex items-start gap-2 text-lg" style="color: #444;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>New tools added regularly</span>
-          </li>
-        </ul>
+        <!-- Feature Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">1-on-1 &amp; Group Sessions</h4>
+            <p class="text-sm mb-4" style="color: #666;">Personalized coaching in private or small-group formats to fit your needs.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">Implementation Roadmaps</h4>
+            <p class="text-sm mb-4" style="color: #666;">Custom AI adoption plans tailored to your business goals and current setup.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">Expert Workflow Feedback</h4>
+            <p class="text-sm mb-4" style="color: #666;">Get direct feedback on your AI workflows from experienced practitioners.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">Accountability</h4>
+            <p class="text-sm mb-4" style="color: #666;">Stay on track with regular check-ins and progress milestones.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+        </div>
       </div>
 
-      <!-- Pillar 3: AI Reports -->
-      <div class="p-6 md:p-8 reveal" style="background: #f5f5f7; border-radius: 16px;">
-        <div class="flex items-start gap-4 mb-5">
-          <div class="pillar-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="var(--color-primary)" stroke-width="2"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round"/></svg>
+      <!-- ====== Pillar 3: Tools ====== -->
+      <div class="space-y-4 reveal">
+        <!-- Main Card -->
+        <div class="p-6 md:p-10 md:flex md:items-center md:gap-10" style="background: linear-gradient(145deg, #1B1C49, #100E24); border-radius: 20px; overflow: hidden;">
+          <div class="md:flex-1 mb-6 md:mb-0">
+            <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4" style="background: rgba(255,255,255,0.15); color: #fff;">Pillar 3 &middot; AI Tools</span>
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3" style="line-height: 1.2;">Plug-and-Play AI Tools, Templates &amp; Skills You Can Use Today</h3>
+            <p class="text-base" style="color: rgba(255,255,255,0.75);">Ready-to-use Claude .Skills, AI plugins, templates, and automation helpers that you can install and start using immediately. No building from scratch.</p>
           </div>
-          <div>
-            <span class="text-sm font-bold uppercase tracking-widest block mb-1" style="color: var(--color-primary);">Pillar 3</span>
-            <h3 class="text-xl font-bold" style="color: #111;">AI Trend Reports</h3>
+          <div class="md:flex-1">
+            <div class="image-placeholder" style="aspect-ratio: 4/3; min-height: 180px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px;">Image Here: Tools &amp; Templates Library Screenshot</div>
           </div>
         </div>
-        <p class="text-base mb-5" style="color: #555;">Stay ahead with bite-sized summaries of AI trends and developments, created specifically for founders and entrepreneurs. New reports delivered weekly.</p>
-        <div class="image-placeholder mb-5" style="aspect-ratio: 16/9; min-height: 160px;">Image Here: AI Reports Library Screenshot</div>
-        <ul class="space-y-2">
-          <li class="flex items-start gap-2 text-lg" style="color: #444;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>120+ AI reports in the library</span>
-          </li>
-          <li class="flex items-start gap-2 text-lg" style="color: #444;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>New briefs delivered every week</span>
-          </li>
-          <li class="flex items-start gap-2 text-lg" style="color: #444;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Featured tools, shortcut demos, and strategic insights</span>
-          </li>
-          <li class="flex items-start gap-2 text-lg" style="color: #444;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Curated for business relevance, not tech hype</span>
-          </li>
-        </ul>
+        <!-- Feature Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">Claude .Skills Library</h4>
+            <p class="text-sm mb-4" style="color: #666;">Pre-built skills for content, emails, ads, and funnels &mdash; ready to use.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">Automation Templates</h4>
+            <p class="text-sm mb-4" style="color: #666;">AI automation templates and plugins to streamline your workflows.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">Plug-and-Play Setup</h4>
+            <p class="text-sm mb-4" style="color: #666;">Install in minutes and start running immediately &mdash; no technical setup.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">Regularly Updated</h4>
+            <p class="text-sm mb-4" style="color: #666;">New tools and templates added regularly as the AI landscape evolves.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+        </div>
       </div>
 
-      <!-- Pillar 4: Community -->
-      <div class="p-6 md:p-8 reveal" style="background: #f5f5f7; border-radius: 16px;">
-        <div class="flex items-start gap-4 mb-5">
-          <div class="pillar-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="var(--color-primary)" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="var(--color-primary)" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="var(--color-primary)" stroke-width="2"/></svg>
+      <!-- ====== Pillar 4: AI Reports ====== -->
+      <div class="space-y-4 reveal">
+        <!-- Main Card -->
+        <div class="p-6 md:p-10 md:flex md:items-center md:gap-10" style="background: linear-gradient(145deg, #1B1C49, #100E24); border-radius: 20px; overflow: hidden;">
+          <div class="md:flex-1 mb-6 md:mb-0">
+            <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4" style="background: rgba(255,255,255,0.15); color: #fff;">Pillar 4 &middot; AI Trends</span>
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3" style="line-height: 1.2;">Stay Ahead of Every AI Trend Before Your Competitors</h3>
+            <p class="text-base" style="color: rgba(255,255,255,0.75);">Bite-sized summaries of AI trends and developments, created specifically for founders and entrepreneurs. New reports delivered weekly.</p>
           </div>
-          <div>
-            <span class="text-sm font-bold uppercase tracking-widest block mb-1" style="color: var(--color-primary);">Pillar 4</span>
-            <h3 class="text-xl font-bold" style="color: #111;">Private Community</h3>
+          <div class="md:flex-1">
+            <div class="image-placeholder" style="aspect-ratio: 4/3; min-height: 180px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px;">Image Here: AI Reports Library Screenshot</div>
           </div>
         </div>
-        <p class="text-base mb-5" style="color: #555;">Join a private community of thousands of entrepreneurs who are implementing AI in their businesses. Ask questions, share wins, and get help from peers and experts.</p>
-        <div class="image-placeholder mb-5" style="aspect-ratio: 16/9; min-height: 160px;">Image Here: Community Screenshot</div>
-        <ul class="space-y-2">
-          <li class="flex items-start gap-2 text-lg" style="color: #444;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Thousands of active members</span>
-          </li>
-          <li class="flex items-start gap-2 text-lg" style="color: #444;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Direct access to instructors and experts</span>
-          </li>
-          <li class="flex items-start gap-2 text-lg" style="color: #444;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Share strategies, templates, and wins</span>
-          </li>
-          <li class="flex items-start gap-2 text-lg" style="color: #444;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0"><path d="M4 8l3 3 5-5" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Accountability and support to stay on track</span>
-          </li>
-        </ul>
+        <!-- Feature Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">120+ Reports Library</h4>
+            <p class="text-sm mb-4" style="color: #666;">Comprehensive library of AI trend reports covering tools, strategies, and breakthroughs.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">Weekly New Briefs</h4>
+            <p class="text-sm mb-4" style="color: #666;">Fresh reports delivered every week so you never fall behind on what matters.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">Tools &amp; Strategic Insights</h4>
+            <p class="text-sm mb-4" style="color: #666;">Featured tools, shortcut demos, and actionable strategic insights in every report.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">Business-First Curation</h4>
+            <p class="text-sm mb-4" style="color: #666;">Curated for business relevance, not tech hype &mdash; only what moves the needle.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== Pillar 5: Community ====== -->
+      <div class="space-y-4 reveal">
+        <!-- Main Card -->
+        <div class="p-6 md:p-10 md:flex md:items-center md:gap-10" style="background: linear-gradient(145deg, #1B1C49, #100E24); border-radius: 20px; overflow: hidden;">
+          <div class="md:flex-1 mb-6 md:mb-0">
+            <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4" style="background: rgba(255,255,255,0.15); color: #fff;">Pillar 5 &middot; Community</span>
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3" style="line-height: 1.2;">Join Thousands of Entrepreneurs Already Winning With AI</h3>
+            <p class="text-base" style="color: rgba(255,255,255,0.75);">A private community of entrepreneurs who are implementing AI in their businesses. Ask questions, share wins, and get help from peers and experts.</p>
+          </div>
+          <div class="md:flex-1">
+            <div class="image-placeholder" style="aspect-ratio: 4/3; min-height: 180px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px;">Image Here: Community Screenshot</div>
+          </div>
+        </div>
+        <!-- Feature Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">Thousands of Active Members</h4>
+            <p class="text-sm mb-4" style="color: #666;">A thriving community of entrepreneurs actively implementing AI in their businesses.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">Direct Expert Access</h4>
+            <p class="text-sm mb-4" style="color: #666;">Connect directly with instructors and AI experts for guidance and answers.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">Share &amp; Collaborate</h4>
+            <p class="text-sm mb-4" style="color: #666;">Exchange strategies, templates, and wins with fellow entrepreneurs.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+          <div class="p-5 md:p-6" style="background: #fff; border-radius: 16px; border: 1px solid #e5e5ea;">
+            <h4 class="text-base font-bold mb-1" style="color: #111;">Accountability &amp; Support</h4>
+            <p class="text-sm mb-4" style="color: #666;">Stay motivated and on track with peer support and community momentum.</p>
+            <div class="image-placeholder" style="aspect-ratio: 16/9; min-height: 120px; border-radius: 10px;">Image Here</div>
+          </div>
+        </div>
       </div>
 
     </div>
