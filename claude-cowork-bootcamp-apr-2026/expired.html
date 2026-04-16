@@ -154,70 +154,20 @@ head.appendChild(script);
            alt="Hyper AI University" class="max-h-7 w-auto opacity-70" loading="eager">
     </a>
     <div class="flex items-center gap-2 md:gap-4">
-      <span class="text-xs md:text-sm font-bold" style="color: #ef4444;">50% OFF Expired. Enrollments Closed.</span>
+      <span class="text-xs md:text-sm font-bold" style="color: #ef4444;">Enrollments Closed.</span>
     </div>
   </div>
 </nav>
 
 <!-- ============================================
-     SECTION: EXPIRED — Enrollment Closed + 30% OFF Form
+     SECTION: EXPIRED — Enrollment Closed + Waitlist
      ============================================ -->
 <section id="expired" class="section-dark pt-32 md:pt-40 pb-16 md:pb-24">
   <div class="max-w-6xl mx-auto px-5 md:px-10">
     <div class="max-w-2xl mx-auto text-center reveal">
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 text-white">
-        Enrollments have been closed. <span style="color: #ef4444;">50% discount has expired.</span>
+        Enrollments have been closed. <span style="color: #ef4444;">The program has started.</span>
       </h2>
-      <p class="text-lg md:text-xl mb-10" style="color: rgba(255,255,255,0.7);">
-        Want to enroll at 30% OFF? Submit this form below to request a payment link.
-      </p>
-
-      <form id="expired-form" class="max-w-md mx-auto text-left space-y-4" novalidate>
-        <!-- Name -->
-        <div>
-          <label for="exp-name" class="block text-sm font-semibold mb-1 text-white">Name</label>
-          <input id="exp-name" name="name" type="text" required placeholder="Your full name"
-                 class="w-full rounded-lg px-4 py-3 text-sm bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-[var(--color-primary)] transition">
-          <p class="text-xs mt-1 hidden text-red-400" data-error="name">Please enter your name.</p>
-        </div>
-
-        <!-- Email -->
-        <div>
-          <label for="exp-email" class="block text-sm font-semibold mb-1 text-white">Email</label>
-          <input id="exp-email" name="email" type="email" required placeholder="you@email.com"
-                 class="w-full rounded-lg px-4 py-3 text-sm bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-[var(--color-primary)] transition">
-          <p class="text-xs mt-1 hidden text-red-400" data-error="email">Please enter a valid email address.</p>
-        </div>
-
-        <!-- Phone with country picker -->
-        <div>
-          <label for="exp-phone" class="block text-sm font-semibold mb-1 text-white">Phone</label>
-          <div class="flex gap-2">
-            <div class="relative" style="min-width: 120px;">
-              <select id="exp-country" name="country"
-                      class="w-full rounded-lg px-3 py-3 text-sm bg-white/10 border border-white/20 text-white focus:outline-none focus:border-[var(--color-primary)] transition appearance-none cursor-pointer"
-                      style="padding-right: 28px;">
-              </select>
-              <svg class="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <input id="exp-phone" name="phone" type="tel" required placeholder="Phone number"
-                   class="flex-1 rounded-lg px-4 py-3 text-sm bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-[var(--color-primary)] transition">
-          </div>
-          <p class="text-xs mt-1 hidden text-red-400" data-error="phone">Please enter your phone number.</p>
-        </div>
-
-        <!-- Submit -->
-        <button type="submit" id="exp-submit"
-                class="cta-btn w-full text-center text-lg mt-2">
-          Request 30% OFF Payment Link
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-
-        <!-- Success message (hidden by default) -->
-        <p id="exp-success" class="text-center text-base font-semibold hidden" style="color: #22c55e;">
-          Request submitted. We'll email and text you shortly.
-        </p>
-      </form>
     </div>
   </div>
 </section>
@@ -1576,163 +1526,6 @@ function toggleFaq(questionEl) {
   }
 }
 
-/* ============================================
-   COUNTRY PICKER — Populate + Auto-detect via IP
-   ============================================ */
-(function() {
-  var countries = [
-    {code:'US',flag:'\u{1F1FA}\u{1F1F8}',dial:'+1',name:'United States'},
-    {code:'GB',flag:'\u{1F1EC}\u{1F1E7}',dial:'+44',name:'United Kingdom'},
-    {code:'CA',flag:'\u{1F1E8}\u{1F1E6}',dial:'+1',name:'Canada'},
-    {code:'AU',flag:'\u{1F1E6}\u{1F1FA}',dial:'+61',name:'Australia'},
-    {code:'DE',flag:'\u{1F1E9}\u{1F1EA}',dial:'+49',name:'Germany'},
-    {code:'FR',flag:'\u{1F1EB}\u{1F1F7}',dial:'+33',name:'France'},
-    {code:'IN',flag:'\u{1F1EE}\u{1F1F3}',dial:'+91',name:'India'},
-    {code:'BR',flag:'\u{1F1E7}\u{1F1F7}',dial:'+55',name:'Brazil'},
-    {code:'MX',flag:'\u{1F1F2}\u{1F1FD}',dial:'+52',name:'Mexico'},
-    {code:'ES',flag:'\u{1F1EA}\u{1F1F8}',dial:'+34',name:'Spain'},
-    {code:'IT',flag:'\u{1F1EE}\u{1F1F9}',dial:'+39',name:'Italy'},
-    {code:'NL',flag:'\u{1F1F3}\u{1F1F1}',dial:'+31',name:'Netherlands'},
-    {code:'SE',flag:'\u{1F1F8}\u{1F1EA}',dial:'+46',name:'Sweden'},
-    {code:'NO',flag:'\u{1F1F3}\u{1F1F4}',dial:'+47',name:'Norway'},
-    {code:'DK',flag:'\u{1F1E9}\u{1F1F0}',dial:'+45',name:'Denmark'},
-    {code:'FI',flag:'\u{1F1EB}\u{1F1EE}',dial:'+358',name:'Finland'},
-    {code:'PL',flag:'\u{1F1F5}\u{1F1F1}',dial:'+48',name:'Poland'},
-    {code:'PT',flag:'\u{1F1F5}\u{1F1F9}',dial:'+351',name:'Portugal'},
-    {code:'CH',flag:'\u{1F1E8}\u{1F1ED}',dial:'+41',name:'Switzerland'},
-    {code:'AT',flag:'\u{1F1E6}\u{1F1F9}',dial:'+43',name:'Austria'},
-    {code:'BE',flag:'\u{1F1E7}\u{1F1EA}',dial:'+32',name:'Belgium'},
-    {code:'IE',flag:'\u{1F1EE}\u{1F1EA}',dial:'+353',name:'Ireland'},
-    {code:'NZ',flag:'\u{1F1F3}\u{1F1FF}',dial:'+64',name:'New Zealand'},
-    {code:'SG',flag:'\u{1F1F8}\u{1F1EC}',dial:'+65',name:'Singapore'},
-    {code:'JP',flag:'\u{1F1EF}\u{1F1F5}',dial:'+81',name:'Japan'},
-    {code:'KR',flag:'\u{1F1F0}\u{1F1F7}',dial:'+82',name:'South Korea'},
-    {code:'ZA',flag:'\u{1F1FF}\u{1F1E6}',dial:'+27',name:'South Africa'},
-    {code:'AE',flag:'\u{1F1E6}\u{1F1EA}',dial:'+971',name:'UAE'},
-    {code:'IL',flag:'\u{1F1EE}\u{1F1F1}',dial:'+972',name:'Israel'},
-    {code:'PH',flag:'\u{1F1F5}\u{1F1ED}',dial:'+63',name:'Philippines'},
-    {code:'MY',flag:'\u{1F1F2}\u{1F1FE}',dial:'+60',name:'Malaysia'},
-    {code:'TH',flag:'\u{1F1F9}\u{1F1ED}',dial:'+66',name:'Thailand'},
-    {code:'ID',flag:'\u{1F1EE}\u{1F1E9}',dial:'+62',name:'Indonesia'},
-    {code:'AR',flag:'\u{1F1E6}\u{1F1F7}',dial:'+54',name:'Argentina'},
-    {code:'CL',flag:'\u{1F1E8}\u{1F1F1}',dial:'+56',name:'Chile'},
-    {code:'CO',flag:'\u{1F1E8}\u{1F1F4}',dial:'+57',name:'Colombia'},
-    {code:'NG',flag:'\u{1F1F3}\u{1F1EC}',dial:'+234',name:'Nigeria'},
-    {code:'EG',flag:'\u{1F1EA}\u{1F1EC}',dial:'+20',name:'Egypt'},
-    {code:'RO',flag:'\u{1F1F7}\u{1F1F4}',dial:'+40',name:'Romania'},
-    {code:'CZ',flag:'\u{1F1E8}\u{1F1FF}',dial:'+420',name:'Czech Republic'},
-    {code:'HU',flag:'\u{1F1ED}\u{1F1FA}',dial:'+36',name:'Hungary'},
-    {code:'GR',flag:'\u{1F1EC}\u{1F1F7}',dial:'+30',name:'Greece'},
-    {code:'HR',flag:'\u{1F1ED}\u{1F1F7}',dial:'+385',name:'Croatia'},
-    {code:'SI',flag:'\u{1F1F8}\u{1F1EE}',dial:'+386',name:'Slovenia'},
-    {code:'SK',flag:'\u{1F1F8}\u{1F1F0}',dial:'+421',name:'Slovakia'},
-    {code:'RS',flag:'\u{1F1F7}\u{1F1F8}',dial:'+381',name:'Serbia'},
-    {code:'BG',flag:'\u{1F1E7}\u{1F1EC}',dial:'+359',name:'Bulgaria'},
-    {code:'UA',flag:'\u{1F1FA}\u{1F1E6}',dial:'+380',name:'Ukraine'},
-    {code:'TR',flag:'\u{1F1F9}\u{1F1F7}',dial:'+90',name:'Turkey'},
-    {code:'SA',flag:'\u{1F1F8}\u{1F1E6}',dial:'+966',name:'Saudi Arabia'},
-    {code:'PK',flag:'\u{1F1F5}\u{1F1F0}',dial:'+92',name:'Pakistan'},
-    {code:'BD',flag:'\u{1F1E7}\u{1F1E9}',dial:'+880',name:'Bangladesh'},
-    {code:'VN',flag:'\u{1F1FB}\u{1F1F3}',dial:'+84',name:'Vietnam'},
-    {code:'TW',flag:'\u{1F1F9}\u{1F1FC}',dial:'+886',name:'Taiwan'},
-    {code:'HK',flag:'\u{1F1ED}\u{1F1F0}',dial:'+852',name:'Hong Kong'},
-    {code:'CN',flag:'\u{1F1E8}\u{1F1F3}',dial:'+86',name:'China'},
-    {code:'RU',flag:'\u{1F1F7}\u{1F1FA}',dial:'+7',name:'Russia'},
-    {code:'KE',flag:'\u{1F1F0}\u{1F1EA}',dial:'+254',name:'Kenya'},
-    {code:'GH',flag:'\u{1F1EC}\u{1F1ED}',dial:'+233',name:'Ghana'},
-    {code:'PE',flag:'\u{1F1F5}\u{1F1EA}',dial:'+51',name:'Peru'},
-    {code:'LT',flag:'\u{1F1F1}\u{1F1F9}',dial:'+370',name:'Lithuania'},
-    {code:'LV',flag:'\u{1F1F1}\u{1F1FB}',dial:'+371',name:'Latvia'},
-    {code:'EE',flag:'\u{1F1EA}\u{1F1EA}',dial:'+372',name:'Estonia'}
-  ];
-
-  var sel = document.getElementById('exp-country');
-  countries.forEach(function(c) {
-    var opt = document.createElement('option');
-    opt.value = c.dial;
-    opt.textContent = c.flag + ' ' + c.code + ' ' + c.dial;
-    opt.dataset.code = c.code;
-    sel.appendChild(opt);
-  });
-
-  // Auto-detect country via IP
-  fetch('https://ip2c.org/s')
-    .then(function(r) { return r.text(); })
-    .then(function(t) {
-      var parts = t.split(';');
-      if (parts[0] === '1') {
-        var cc = parts[1];
-        var match = countries.find(function(c) { return c.code === cc; });
-        if (match) sel.value = match.dial;
-      }
-    })
-    .catch(function() {});
-})();
-
-/* ============================================
-   EXPIRED FORM — Validation + Zapier Webhook
-   ============================================ */
-(function() {
-  var form = document.getElementById('expired-form');
-  var nameInput = document.getElementById('exp-name');
-  var emailInput = document.getElementById('exp-email');
-  var phoneInput = document.getElementById('exp-phone');
-  var countrySelect = document.getElementById('exp-country');
-  var submitBtn = document.getElementById('exp-submit');
-  var successMsg = document.getElementById('exp-success');
-
-  function showError(field) {
-    var el = form.querySelector('[data-error="' + field + '"]');
-    if (el) el.classList.remove('hidden');
-  }
-  function hideError(field) {
-    var el = form.querySelector('[data-error="' + field + '"]');
-    if (el) el.classList.add('hidden');
-  }
-  function hideAllErrors() {
-    form.querySelectorAll('[data-error]').forEach(function(el) { el.classList.add('hidden'); });
-  }
-
-  // Clear errors on input
-  nameInput.addEventListener('input', function() { hideError('name'); });
-  emailInput.addEventListener('input', function() { hideError('email'); });
-  phoneInput.addEventListener('input', function() { hideError('phone'); });
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    hideAllErrors();
-
-    var name = nameInput.value.trim();
-    var email = emailInput.value.trim();
-    var phone = phoneInput.value.trim();
-    var dialCode = countrySelect.value;
-    var valid = true;
-
-    if (!name) { showError('name'); valid = false; }
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('email'); valid = false; }
-    if (!phone || phone.length < 5) { showError('phone'); valid = false; }
-
-    if (!valid) return;
-
-    var fullPhone = dialCode + phone;
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Submitting...';
-
-    var params = new URLSearchParams({ name: name, email: email, phone: fullPhone });
-    fetch('https://hooks.zapier.com/hooks/catch/13864022/u73ukkv/?' + params.toString(), {
-      method: 'POST',
-      mode: 'no-cors'
-    }).then(function() {
-      form.reset();
-      submitBtn.style.display = 'none';
-      successMsg.classList.remove('hidden');
-    }).catch(function() {
-      form.reset();
-      submitBtn.style.display = 'none';
-      successMsg.classList.remove('hidden');
-    });
-  });
-})();
 </script>
 
 </body>
