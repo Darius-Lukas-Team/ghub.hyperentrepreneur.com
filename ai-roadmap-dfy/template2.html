@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Roadmap For Wendy Wong</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://fast.wistia.com/player.js" async></script>
+<script src="https://fast.wistia.com/embed/v1krncxir6.js" async type="module"></script>
+<style>wistia-player[media-id='v1krncxir6']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/v1krncxir6/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
+<style>
+/* ─── Design tokens (Hyper AI University brand) ───────────────────── */
+:root {
+  --purple: #650AEF;
+  --purple-soft: #f0e7ff;
+  --purple-line: #d9c5ff;
+  --purple-ink: #4a08b0;
+  --indigo: #381FC5;
+  --ink: #0a0a0a;
+  --text: #1a1a1a;
+  --muted: #7e7e7e;
+  --muted-2: #4a4a4a;
+  --bg: #ffffff;
+  --bg-alt: #f9f9f9;
+  --border: #ececec;
+  --radius: 16px;
+  --display: "Bricolage Grotesque", system-ui, sans-serif;
+  --body: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 var(--body);
+  margin: 0; padding: 0;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+a { color: var(--indigo); text-decoration: none; transition: color 0.15s; }
+a:hover { color: var(--ink); }
+
+/* ─── Brand logo ──────────────────────────────────────────────────── */
+.brandbar {
+  max-width: 1080px; margin: 0 auto;
+  padding: 18px 28px 0;
+  text-align: center;
+}
+.site-logo { width: 200px; max-width: 100%; height: auto; display: inline-block; }
+.footer-logo { display: block; margin: 0 auto 14px; width: 170px; }
+@media (max-width: 720px) {
+  .brandbar { padding: 14px 20px 0; }
+}
+
+/* ─── Hero ────────────────────────────────────────────────────────── */
+.hero {
+  max-width: 1080px; margin: 0 auto;
+  padding: 40px 28px 40px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+.hero .kicker {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: var(--display);
+  font-size: clamp(30px, 4.8vw, 50px);
+  margin: 0 0 18px; font-weight: 700; letter-spacing: -0.02em;
+  line-height: 1.08; color: var(--ink);
+}
+.hero .sub {
+  color: var(--muted); font-size: 14px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;
+}
+.hero .sub .pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 12px; border-radius: 999px;
+  background: var(--purple-soft);
+  border: 1px solid var(--purple-line);
+  color: var(--purple-ink); font-size: 12px; font-weight: 600;
+}
+@media (max-width: 900px) {
+  .hero { padding-left: 24px; padding-right: 24px; padding-top: 32px; }
+}
+@media (max-width: 720px) {
+  .hero { padding: 28px 20px 28px; }
+}
+
+/* ─── Layout ──────────────────────────────────────────────────────── */
+.layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  max-width: 1080px;
+  margin: 0 auto;
+  gap: 48px;
+  padding: 40px 28px 80px;
+}
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; gap: 24px; padding: 28px 20px 48px; }
+  nav.toc { position: static !important; margin-bottom: 4px; }
+}
+
+/* ─── Sticky sidebar TOC ──────────────────────────────────────────── */
+nav.toc {
+  position: sticky; top: 28px; align-self: start;
+  font-size: 14px;
+}
+nav.toc h3 {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--muted); margin: 0 0 12px; font-weight: 700;
+}
+nav.toc a {
+  display: block; color: var(--muted-2);
+  padding: 8px 12px; border-radius: 8px; margin-bottom: 2px;
+  border-left: 2px solid transparent;
+  transition: all 0.15s;
+}
+nav.toc a:hover { color: var(--ink); background: var(--bg-alt); }
+nav.toc a.active {
+  color: var(--purple-ink); font-weight: 600;
+  background: var(--purple-soft);
+  border-left-color: var(--purple);
+}
+
+/* ─── Typography ──────────────────────────────────────────────────── */
+h2 {
+  font-family: var(--display);
+  font-size: 24px; margin: 52px 0 22px; letter-spacing: -0.02em; font-weight: 700;
+  color: var(--ink);
+  display: flex; align-items: center; gap: 14px;
+}
+section:first-child h2 { margin-top: 0; }
+h2 .section-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: 8px;
+  background: var(--purple);
+  color: #fff; font-size: 14px; font-weight: 700;
+  font-family: var(--body);
+  flex-shrink: 0;
+}
+h3 { font-family: var(--display); font-size: 18px; margin: 20px 0 8px; font-weight: 600; color: var(--ink); }
+p { margin: 0 0 12px; }
+
+/* ─── Welcome Video ───────────────────────────────────────────────── */
+.welcome {
+  background: #f6f1ff;
+  border: 1px solid var(--purple-line);
+  border-radius: var(--radius);
+  padding: 3px;
+  margin-bottom: 8px;
+}
+.welcome h2 { margin: 0 0 16px; }
+.welcome .video-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(101,10,239,0.12);
+}
+.welcome wistia-player { display: block; border-radius: 12px; overflow: hidden; }
+@media (max-width: 720px) {
+  .welcome { padding: 3px; }
+}
+
+/* ─── Collapsible context (Info You Provided) ────────────────────── */
+.context-row {
+  margin: 0 0 18px;
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.context-row > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  display: flex; align-items: center; gap: 14px;
+  user-select: none;
+  transition: background 0.15s;
+}
+.context-row > summary::-webkit-details-marker { display: none; }
+.context-row > summary::before {
+  content: "›";
+  color: var(--muted);
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 400;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  width: 16px;
+  text-align: center;
+}
+.context-row[open] > summary::before { transform: rotate(90deg); }
+.context-row > summary:hover { background: #f3f3f3; }
+.context-row .ctx-profile {
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  background: var(--purple-soft);
+  border: 1px solid var(--purple-line);
+  color: var(--purple-ink);
+  flex-shrink: 0;
+}
+.context-row .ctx-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted-2);
+}
+.context-row .ctx-hint {
+  font-size: 12px;
+  color: var(--muted);
+  margin-left: auto;
+}
+@media (max-width: 480px) {
+  .context-row .ctx-hint { display: none; }
+}
+.context-row .ctx-body {
+  border-top: 1px solid var(--border);
+  padding: 18px 20px 20px;
+}
+.ctx-intro {
+  font-size: 14px; color: var(--muted-2); line-height: 1.6;
+  margin: 0 0 14px;
+}
+.info-rows {
+  display: flex; flex-direction: column;
+}
+.info-row {
+  display: flex; align-items: baseline; gap: 16px;
+  padding: 11px 4px;
+  border-bottom: 1px solid var(--border);
+}
+.info-row:last-child { border-bottom: none; }
+.info-row .info-key {
+  flex: 0 0 160px;
+  font-size: 13px; font-weight: 600; color: var(--muted-2);
+}
+.info-row .info-val {
+  flex: 1 1 auto;
+  font-size: 15px; color: var(--text); font-weight: 500; word-break: break-word;
+}
+@media (max-width: 540px) {
+  .info-row { flex-direction: column; gap: 2px; }
+  .info-row .info-key { flex-basis: auto; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+}
+
+/* ─── Training cards (Top 3) ──────────────────────────────────────── */
+.training-list { display: flex; flex-direction: column; gap: 14px; }
+.training-card {
+  padding: 22px 24px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 18px;
+  align-items: start;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.training-card:hover {
+  border-color: var(--purple-line);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.05);
+}
+.training-num {
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 12px;
+  background: var(--purple-soft);
+  border: 1px solid var(--purple-line);
+  color: var(--purple-ink);
+  font-family: var(--display);
+  font-size: 18px; font-weight: 700; letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+.training-body { min-width: 0; }
+.training-title {
+  font-size: 17px; font-weight: 600; letter-spacing: -0.01em;
+  line-height: 1.35; margin: 0 0 8px;
+  display: inline-flex; align-items: baseline; gap: 8px;
+}
+.training-title a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1px;
+}
+.training-title a:hover { color: var(--indigo); border-bottom-color: var(--indigo); }
+.training-title .ext-icon {
+  width: 12px; height: 12px; opacity: 0.4; flex-shrink: 0; align-self: center;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.training-title a:hover .ext-icon { opacity: 1; transform: translate(1px,-1px); }
+.training-desc {
+  font-size: 15px; color: var(--muted-2); line-height: 1.6; margin: 0;
+}
+.training-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 14px; font-size: 13px; font-weight: 600;
+  color: #fff;
+  padding: 8px 16px; border-radius: 8px;
+  border: 2px solid #EBE8FB;
+  background: linear-gradient(90deg, #c2a1ff 0%, #3538ff 100%);
+  transition: all 0.2s;
+}
+.training-cta:hover {
+  color: #fff;
+  filter: brightness(1.08);
+  box-shadow: 0 6px 18px rgba(53,56,255,0.4);
+}
+@media (max-width: 540px) {
+  .training-card { grid-template-columns: 1fr; padding: 18px; }
+  .training-num { width: 42px; height: 42px; font-size: 16px; border-radius: 10px; }
+}
+
+/* ─── Timeline (30-day & 90-day plans) ────────────────────────────── */
+.timeline {
+  position: relative;
+  display: flex; flex-direction: column; gap: 14px;
+  margin-top: 4px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 23px; top: 16px; bottom: 16px;
+  width: 2px;
+  background: var(--border);
+  pointer-events: none;
+}
+@media (max-width: 540px) {
+  .timeline::before { left: 19px; }
+}
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  .timeline-item { grid-template-columns: 40px 1fr; gap: 14px; }
+}
+.timeline-marker {
+  position: relative;
+  width: 48px; height: 48px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--purple);
+  color: var(--ink);
+  flex-shrink: 0;
+  z-index: 1;
+}
+.timeline-marker .marker-label {
+  font-size: 8.5px; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--muted); line-height: 1;
+}
+.timeline-marker .marker-num {
+  font-family: var(--display);
+  font-size: 18px; font-weight: 700; line-height: 1.1; margin-top: 1px;
+  letter-spacing: -0.02em;
+}
+@media (max-width: 540px) {
+  .timeline-marker { width: 40px; height: 40px; }
+  .timeline-marker .marker-label { font-size: 7.5px; }
+  .timeline-marker .marker-num { font-size: 15px; }
+}
+.timeline-card {
+  position: relative;
+  padding: 18px 22px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.timeline-card:hover {
+  border-color: var(--purple-line);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.05);
+}
+@media (max-width: 540px) {
+  .timeline-card { padding: 14px 16px; }
+}
+.timeline-card .tc-head {
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.timeline-card .tc-title {
+  font-family: var(--display);
+  font-size: 16px; font-weight: 600; letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.timeline-card .tc-range {
+  font-size: 11.5px; color: var(--muted); font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em;
+}
+.timeline-card .tc-body {
+  font-size: 15px; line-height: 1.65; color: var(--muted-2); margin: 0;
+}
+.timeline-card .tc-body strong { color: var(--ink); font-weight: 600; }
+.more-info {
+  margin-top: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+.more-info > summary {
+  list-style: none; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12.5px; font-weight: 600; color: var(--purple-ink);
+  user-select: none;
+}
+.more-info > summary::-webkit-details-marker { display: none; }
+.more-info > summary::before {
+  content: "›"; color: var(--purple); font-size: 18px; line-height: 1;
+  font-weight: 700; transition: transform 0.2s;
+}
+.more-info[open] > summary::before { transform: rotate(90deg); }
+.more-info .mi-body {
+  margin-top: 10px; font-size: 13.5px; color: var(--muted-2); line-height: 1.6;
+}
+.more-info .mi-body p { margin: 0 0 8px; }
+.more-info .mi-body ul { margin: 0; padding-left: 18px; }
+.more-info .mi-body li { margin-bottom: 5px; }
+.more-info .mi-body strong { color: var(--ink); font-weight: 600; }
+
+/* ─── Section intro + sub-section headings ────────────────────────── */
+.section-intro {
+  font-size: 15px; color: var(--muted-2); line-height: 1.6;
+  margin: -8px 0 18px;
+}
+.crit-heading {
+  font-family: var(--display); font-size: 14px; font-weight: 600;
+  color: var(--ink); margin: 0 0 12px;
+}
+.freelancer-criteria {
+  list-style: none; margin: 0 0 26px; padding: 0;
+  display: grid; gap: 11px; max-width: 760px;
+}
+.freelancer-criteria li {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 14px; color: var(--muted-2); line-height: 1.5;
+}
+.freelancer-criteria .crit-icon {
+  flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--purple-soft); border: 1px solid var(--purple-line);
+  color: var(--purple-ink);
+}
+.freelancer-criteria strong { color: var(--ink); font-weight: 700; }
+.upwork-inline {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-weight: 600; color: var(--purple-ink);
+  white-space: nowrap;
+}
+.upwork-inline:hover { color: var(--purple); }
+.upwork-inline img { height: 15px; width: auto; display: inline-block; vertical-align: middle; }
+.freelancer-disclaimer {
+  margin: 26px 0 0; padding: 16px 18px;
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px; line-height: 1.6; color: var(--muted);
+}
+.subsection-title {
+  font-family: var(--display);
+  font-size: 15px; font-weight: 600; color: var(--ink);
+  margin: 28px 0 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.subsection-title { margin-bottom: 6px; }
+.subsection-title .count {
+  font-family: var(--body);
+  font-size: 11.5px; font-weight: 600; color: var(--purple-ink);
+  background: var(--purple-soft); border: 1px solid var(--purple-line);
+  padding: 2px 10px; border-radius: 999px;
+}
+.subsection-note {
+  font-size: 13px; color: var(--muted); font-style: italic;
+  margin: 0 0 16px;
+}
+
+/* ─── YouTube video cards ─────────────────────────────────────────── */
+.video-grid {
+  display: flex; flex-direction: column;
+  gap: 16px;
+}
+.video-card {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.video-card:hover {
+  border-color: var(--purple-line);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.05);
+}
+.video-thumb {
+  aspect-ratio: 16 / 9;
+  background:
+    repeating-linear-gradient(135deg, #f3eefe, #f3eefe 12px, #ede5fd 12px, #ede5fd 24px);
+  border-right: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--purple-ink); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.04em; text-transform: uppercase;
+}
+@media (max-width: 640px) {
+  .video-card { grid-template-columns: 1fr; }
+  .video-thumb { border-right: none; border-bottom: 1px solid var(--border); }
+}
+.video-thumb .play {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(255,255,255,0.85); margin-right: 10px; color: var(--purple);
+}
+.video-info { padding: 16px 20px; display: flex; flex-direction: column; justify-content: flex-start; gap: 9px; }
+.video-title {
+  font-family: var(--display); font-size: 17px; font-weight: 600;
+  color: var(--ink); line-height: 1.3; margin: 0;
+}
+.video-desc { font-size: 14px; color: var(--muted-2); line-height: 1.55; margin: 0; }
+.video-why {
+  font-size: 13px; color: var(--text); line-height: 1.5;
+  background: var(--bg-alt);
+  border-left: 3px solid var(--purple);
+  padding: 8px 12px; border-radius: 0 8px 8px 0;
+  margin-top: 2px;
+}
+.video-why strong {
+  display: block; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--purple-ink); margin-bottom: 2px; font-weight: 700;
+}
+
+/* ─── Freelancer cards (Upwork style) ─────────────────────────────── */
+.freelancer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.freelancer-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  background: var(--bg);
+  text-align: center;
+  display: flex; flex-direction: column; align-items: center;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.freelancer-card:hover {
+  border-color: var(--purple-line);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.05);
+}
+.freelancer-avatar {
+  width: 76px; height: 76px; border-radius: 50%;
+  margin-bottom: 14px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #c2a1ff 0%, #3538ff 100%);
+  color: #fff; font-family: var(--display); font-size: 26px; font-weight: 700;
+  overflow: hidden;
+  border: 1px solid #F0E7FF;
+  box-shadow: 0 0 0 4px #F0E7FF, 0 4px 16px rgba(101,10,239,0.18);
+}
+.freelancer-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.freelancer-name {
+  font-family: var(--display); font-size: 16px; font-weight: 600;
+  color: var(--ink); margin: 0 0 2px;
+}
+.freelancer-title { font-size: 13px; color: var(--muted); margin: 0 0 10px; line-height: 1.4; }
+.freelancer-country {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 600; color: var(--muted-2);
+  margin: 0 0 12px;
+}
+.freelancer-flag { font-size: 15px; line-height: 1; }
+.freelancer-rate {
+  display: inline-flex; align-items: baseline; gap: 2px;
+  font-family: var(--display); font-size: 15px; font-weight: 700;
+  color: var(--purple-ink);
+  background: var(--purple-soft);
+  border: 1px solid var(--purple-line);
+  padding: 4px 12px; border-radius: 999px;
+  margin: 0 0 16px;
+}
+.freelancer-rate .per { font-family: var(--body); font-size: 11px; font-weight: 600; }
+.freelancer-link {
+  margin-top: auto;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 600; color: #fff;
+  padding: 8px 18px; border-radius: 8px;
+  border: 2px solid #EBE8FB;
+  background: linear-gradient(90deg, #c2a1ff 0%, #3538ff 100%);
+  transition: all 0.2s;
+}
+.freelancer-link:hover { color: #fff; filter: brightness(1.08); box-shadow: 0 6px 18px rgba(53,56,255,0.4); }
+
+/* ─── Footer ──────────────────────────────────────────────────────── */
+footer {
+  color: var(--muted); font-size: 13px; text-align: center;
+  padding: 28px 16px 56px;
+  max-width: 1080px; margin: 0 auto;
+  border-top: 1px solid var(--border);
+}
+
+/* ─── Small mobile polish ─────────────────────────────────────────── */
+@media (max-width: 720px) {
+  h2 { font-size: 20px; margin: 40px 0 16px; }
+  h3 { font-size: 16px; }
+  section { scroll-margin-top: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="brandbar">
+  <img class="site-logo" src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/lNzgml2EfCzIl04kmDr2/media/69c15a5feb06d82cf3db3d3a.png" alt="Hyper AI University">
+</div>
+
+<header class="hero">
+  <div class="kicker">Personalized</div>
+  <h1>AI Roadmap For Wendy Wong</h1>
+  <div class="sub">
+    <span>Created on</span>
+    <span class="pill">May 26, 2026 @ 11:34 AM US Eastern</span>
+  </div>
+</header>
+
+<div class="layout">
+
+  <nav class="toc" aria-label="Section navigation">
+    <h3>Your Roadmap</h3>
+    <a href="#welcome">Welcome video</a>
+    <a href="#info">Your info</a>
+    <a href="#plan-7">Your 7-day plan</a>
+    <a href="#plan-30">Your 30-day plan</a>
+    <a href="#plan-90">Your 90-day plan</a>
+    <a href="#trainings">Top 3 trainings</a>
+    <a href="#freelancers">Top AI freelancers</a>
+  </nav>
+
+  <main>
+
+    <!-- ─── Welcome Video ─── -->
+    <section id="welcome">
+      <div class="welcome">
+        <div class="video-wrap">
+          <wistia-player media-id="v1krncxir6" aspect="1.7777777777777777"></wistia-player>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── The Info You Provided (collapsed by default) ─── -->
+    <section id="info">
+      <details class="context-row">
+        <summary>
+          <span class="ctx-profile" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6"/>
+            </svg>
+          </span>
+          <span class="ctx-label">Your Info</span>
+          <span class="ctx-hint">click to expand</span>
+        </summary>
+        <div class="ctx-body">
+          <p class="ctx-intro">This is the info you provided. We created your AI Roadmap based on this info.</p>
+          <div class="info-rows">
+            <div class="info-row">
+              <span class="info-key">Name</span>
+              <span class="info-val">Wendy Wong</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Email</span>
+              <span class="info-val">wendywongpa2@gmail.com</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Product / Service</span>
+              <span class="info-val">Medicare and Social Security information</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Ideal Customer</span>
+              <span class="info-val">Medicare recipients aged 60+</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Business Model</span>
+              <span class="info-val">Other</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Team Setup</span>
+              <span class="info-val">One-person outfit</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Monthly Revenue</span>
+              <span class="info-val">$5k–$10k / month</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Monthly AI Budget</span>
+              <span class="info-val">$200 / month</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">90-Day Goal</span>
+              <span class="info-val">Increase revenue by 30%</span>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <!-- ─── 7-Day Plan ─── -->
+    <section id="plan-7">
+      <h2><span class="section-num">1</span>Your 7-Day Plan</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-label">Day</span>
+            <span class="marker-num">1</span>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-head">
+              <span class="tc-title">Set up your AI toolkit</span>
+              <span class="tc-range">Day 1</span>
+            </div>
+            <p class="tc-body">Create accounts for <strong>Claude</strong>, <strong>ChatGPT</strong>, and <strong>Perplexity</strong>, and organize them into a single workflow you'll use daily.</p>
+            <details class="more-info">
+              <summary>More info</summary>
+              <div class="mi-body">
+                <p>Get your foundation right before anything else.</p>
+                <ul>
+                  <li>Sign up for <strong>Claude</strong>, <strong>ChatGPT</strong>, and <strong>Perplexity</strong> — the free tiers are fine to start.</li>
+                  <li>Bookmark and pin all three in your browser for one-click access.</li>
+                  <li>Create one doc to collect your favorite prompts as you find them.</li>
+                  <li>Spend 20 minutes testing each tool with a simple question to get comfortable.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-label">Day</span>
+            <span class="marker-num">2</span>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-head">
+              <span class="tc-title">Define your audience</span>
+              <span class="tc-range">Day 2</span>
+            </div>
+            <p class="tc-body">Use <strong>Claude</strong> to build a clear profile of your ideal audience and the themes that resonate with them.</p>
+            <details class="more-info">
+              <summary>More info</summary>
+              <div class="mi-body">
+                <p>Clarity on who you serve makes every later step easier.</p>
+                <ul>
+                  <li>Ask Claude to interview you about your current audience and goals.</li>
+                  <li>Have it draft 2–3 detailed audience personas.</li>
+                  <li>List the top 5 themes and pain points that matter most to them.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-label">Day</span>
+            <span class="marker-num">3</span>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-head">
+              <span class="tc-title">Draft your core message</span>
+              <span class="tc-range">Day 3</span>
+            </div>
+            <p class="tc-body">Craft your headline story and key talking points with AI so every post and pitch stays on-message.</p>
+            <details class="more-info">
+              <summary>More info</summary>
+              <div class="mi-body">
+                <p>Your core message keeps everything consistent.</p>
+                <ul>
+                  <li>Write a one-sentence positioning statement with AI's help.</li>
+                  <li>Generate 5 key talking points you can reuse everywhere.</li>
+                  <li>Save these as a reference for all future content and pitches.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-label">Day</span>
+            <span class="marker-num">4</span>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-head">
+              <span class="tc-title">Create your first content batch</span>
+              <span class="tc-range">Day 4</span>
+            </div>
+            <p class="tc-body">Generate a week of Instagram and Facebook posts with <strong>Claude</strong>, complete with captions and hooks.</p>
+            <details class="more-info">
+              <summary>More info</summary>
+              <div class="mi-body">
+                <p>Build momentum by creating in batches.</p>
+                <ul>
+                  <li>Prompt Claude for 7 post ideas tied to your core themes.</li>
+                  <li>Expand each into a full caption with a strong hook and CTA.</li>
+                  <li>Schedule them so posting runs on autopilot this week.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-label">Day</span>
+            <span class="marker-num">5</span>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-head">
+              <span class="tc-title">Build your outreach list</span>
+              <span class="tc-range">Day 5</span>
+            </div>
+            <p class="tc-body">Use <strong>Perplexity</strong> to research 20 potential partners, sponsors, or collaborators and capture their contact details.</p>
+            <details class="more-info">
+              <summary>More info</summary>
+              <div class="mi-body">
+                <p>A solid list is the fuel for outreach.</p>
+                <ul>
+                  <li>Use Perplexity to find 20 relevant partners, sponsors, or collaborators.</li>
+                  <li>Capture name, role, email, and a personalization note for each.</li>
+                  <li>Drop them into a simple spreadsheet or CRM.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-label">Day</span>
+            <span class="marker-num">6</span>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-head">
+              <span class="tc-title">Send your first pitches</span>
+              <span class="tc-range">Day 6</span>
+            </div>
+            <p class="tc-body">Draft and personalize outreach emails with AI, then send your first batch to the most promising contacts.</p>
+            <details class="more-info">
+              <summary>More info</summary>
+              <div class="mi-body">
+                <p>Start real conversations today.</p>
+                <ul>
+                  <li>Draft a short, personalized outreach template with AI.</li>
+                  <li>Customize the opening line for each of your top 10 contacts.</li>
+                  <li>Send them and log who you contacted and when.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-label">Day</span>
+            <span class="marker-num">7</span>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-head">
+              <span class="tc-title">Review &amp; plan ahead</span>
+              <span class="tc-range">Day 7</span>
+            </div>
+            <p class="tc-body">Review what worked, ask AI to summarize early feedback, and lock in your priorities for the week ahead.</p>
+            <details class="more-info">
+              <summary>More info</summary>
+              <div class="mi-body">
+                <p>Reflect, then set up next week for success.</p>
+                <ul>
+                  <li>Note which posts and messages got the best response.</li>
+                  <li>Ask AI to summarize the feedback and suggest improvements.</li>
+                  <li>Pick your top 3 priorities for the week ahead.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── 30-Day Plan ─── -->
+    <section id="plan-30">
+      <h2><span class="section-num">2</span>Your 30-Day Plan</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-label">Week</span>
+            <span class="marker-num">1</span>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-head">
+              <span class="tc-title">Sponsor research &amp; pitches</span>
+              <span class="tc-range">Days 1–7</span>
+            </div>
+            <p class="tc-body">Use <strong>ChatGPT</strong> and <strong>Perplexity</strong> to research potential sponsors (NGOs, ocean conservation brands, disability advocates) and draft tailored sponsorship pitches.</p>
+            <details class="more-info">
+              <summary>More info</summary>
+              <div class="mi-body">
+                <p>Lay the groundwork for revenue partnerships.</p>
+                <ul>
+                  <li>Build a list of 30+ aligned sponsors using ChatGPT and Perplexity.</li>
+                  <li>Research each one's recent campaigns and values.</li>
+                  <li>Draft a tailored pitch angle for your top 10 targets.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-label">Week</span>
+            <span class="marker-num">2</span>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-head">
+              <span class="tc-title">Content engine launch</span>
+              <span class="tc-range">Days 8–14</span>
+            </div>
+            <p class="tc-body">Build a content engine with <strong>Claude</strong> for Instagram and Facebook posts on ocean and accessibility themes.</p>
+            <details class="more-info">
+              <summary>More info</summary>
+              <div class="mi-body">
+                <p>Turn content creation into a repeatable system.</p>
+                <ul>
+                  <li>Define your content pillars around ocean and accessibility themes.</li>
+                  <li>Use Claude to batch a month of posts in one sitting.</li>
+                  <li>Set a simple, consistent weekly publishing schedule.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-label">Week</span>
+            <span class="marker-num">3</span>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-head">
+              <span class="tc-title">Outreach automation</span>
+              <span class="tc-range">Days 15–21</span>
+            </div>
+            <p class="tc-body">Use AI to draft outreach emails to schools, distributors, and influencers.</p>
+            <details class="more-info">
+              <summary>More info</summary>
+              <div class="mi-body">
+                <p>Scale your outreach without the manual grind.</p>
+                <ul>
+                  <li>Create AI email templates for schools, distributors, and influencers.</li>
+                  <li>Personalize at scale using merge fields and AI variations.</li>
+                  <li>Track opens and replies to refine your approach.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-label">Week</span>
+            <span class="marker-num">4</span>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-head">
+              <span class="tc-title">Production assets</span>
+              <span class="tc-range">Days 22–30</span>
+            </div>
+            <p class="tc-body">Generate trailers, captions, and storyboards with AI to speed up production.</p>
+            <details class="more-info">
+              <summary>More info</summary>
+              <div class="mi-body">
+                <p>Speed up production with AI-generated assets.</p>
+                <ul>
+                  <li>Generate trailer scripts and storyboards with AI.</li>
+                  <li>Produce caption and subtitle drafts for accessibility.</li>
+                  <li>Create a shot list and an asset checklist to stay organized.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── 90-Day Plan ─── -->
+    <section id="plan-90">
+      <h2><span class="section-num">3</span>Your 90-Day Plan</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-label">Month</span>
+            <span class="marker-num">1</span>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-head">
+              <span class="tc-title">Lock in sponsors &amp; launch social</span>
+              <span class="tc-range">Days 1–30</span>
+            </div>
+            <p class="tc-body">Lock in sponsors and launch an AI-powered social media presence promoting the film's themes.</p>
+            <details class="more-info">
+              <summary>More info</summary>
+              <div class="mi-body">
+                <p>Build your foundation of sponsors and presence.</p>
+                <ul>
+                  <li>Close your first 2–3 sponsor agreements.</li>
+                  <li>Launch a consistent, AI-powered social presence.</li>
+                  <li>Establish baseline metrics so you can measure growth.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-label">Month</span>
+            <span class="marker-num">2</span>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-head">
+              <span class="tc-title">Cinema release</span>
+              <span class="tc-range">Days 31–60</span>
+            </div>
+            <p class="tc-body">Run cinema release with AI-driven press kits, interview prep, and audience engagement automations. Use <strong>NotebookLM</strong> to organize reviews and feedback.</p>
+            <details class="more-info">
+              <summary>More info</summary>
+              <div class="mi-body">
+                <p>Maximize impact during your cinema release.</p>
+                <ul>
+                  <li>Generate press kits and interview prep with AI.</li>
+                  <li>Automate audience engagement and replies.</li>
+                  <li>Use <strong>NotebookLM</strong> to organize reviews and feedback.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-label">Month</span>
+            <span class="marker-num">3</span>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-head">
+              <span class="tc-title">OTT launch &amp; scale</span>
+              <span class="tc-range">Days 61–90</span>
+            </div>
+            <p class="tc-body">Prepare OTT launch by automating festival submissions, building targeted ad campaigns with AI, and creating behind-the-scenes content. Track viewership data and scale outreach using AI agents.</p>
+            <details class="more-info">
+              <summary>More info</summary>
+              <div class="mi-body">
+                <p>Expand reach and scale what works.</p>
+                <ul>
+                  <li>Automate festival submissions and OTT launch prep.</li>
+                  <li>Launch targeted AI-built ad campaigns.</li>
+                  <li>Track viewership data and scale outreach with AI agents.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── Top 3 Trainings ─── -->
+    <section id="trainings">
+      <h2><span class="section-num">4</span>Top 3 Trainings For You</h2>
+
+      <div class="training-list">
+
+        <article class="training-card">
+          <div class="training-num">01</div>
+          <div class="training-body">
+            <h3 class="training-title">
+              <a href="https://community.hyperentrepreneur.com/c/hau-trainings/instagram-and-linkedin-lead-machine" target="_blank" rel="noopener">
+                Instagram And LinkedIn Lead Machine
+                <svg class="ext-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9.5 2.5h4v4"/><path d="M13.5 2.5L7 9"/>
+                  <path d="M12 9v3.5A1.5 1.5 0 0 1 10.5 14h-7A1.5 1.5 0 0 1 2 12.5v-7A1.5 1.5 0 0 1 3.5 4H7"/>
+                </svg>
+              </a>
+            </h3>
+            <p class="training-desc">Build an automated lead generation system using Claude to attract leads and grow your audience fast.</p>
+            <a class="training-cta" href="https://community.hyperentrepreneur.com/c/hau-trainings/instagram-and-linkedin-lead-machine" target="_blank" rel="noopener">
+              Open training →
+            </a>
+          </div>
+        </article>
+
+        <article class="training-card">
+          <div class="training-num">02</div>
+          <div class="training-body">
+            <h3 class="training-title">
+              <a href="https://community.hyperentrepreneur.com/c/hau-trainings/instagram-growth-with-claude-10x-your-output-reach" target="_blank" rel="noopener">
+                Instagram Growth With Claude: 10x Your Output &amp; Reach
+                <svg class="ext-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9.5 2.5h4v4"/><path d="M13.5 2.5L7 9"/>
+                  <path d="M12 9v3.5A1.5 1.5 0 0 1 10.5 14h-7A1.5 1.5 0 0 1 2 12.5v-7A1.5 1.5 0 0 1 3.5 4H7"/>
+                </svg>
+              </a>
+            </h3>
+            <p class="training-desc">Use Claude to analyze top content, extract winning patterns, and 10x your Instagram output and reach.</p>
+            <a class="training-cta" href="https://community.hyperentrepreneur.com/c/hau-trainings/instagram-growth-with-claude-10x-your-output-reach" target="_blank" rel="noopener">
+              Open training →
+            </a>
+          </div>
+        </article>
+
+        <article class="training-card">
+          <div class="training-num">03</div>
+          <div class="training-body">
+            <h3 class="training-title">
+              <a href="https://community.hyperentrepreneur.com/c/hau-trainings/how-to-create-an-irresistible-offer-with-ai" target="_blank" rel="noopener">
+                How To Create An Irresistible Offer With AI
+                <svg class="ext-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9.5 2.5h4v4"/><path d="M13.5 2.5L7 9"/>
+                  <path d="M12 9v3.5A1.5 1.5 0 0 1 10.5 14h-7A1.5 1.5 0 0 1 2 12.5v-7A1.5 1.5 0 0 1 3.5 4H7"/>
+                </svg>
+              </a>
+            </h3>
+            <p class="training-desc">Use Perplexity AI to research your market, find sponsors, and build irresistible offers backed by data.</p>
+            <a class="training-cta" href="https://community.hyperentrepreneur.com/c/hau-trainings/how-to-create-an-irresistible-offer-with-ai" target="_blank" rel="noopener">
+              Open training →
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ─── Top AI Freelancers ─── -->
+    <section id="freelancers">
+      <h2><span class="section-num">5</span>Top Freelancers To Hire For Implementation</h2>
+      <p class="section-intro">Vetted and top rated experts from <a class="upwork-inline" href="https://www.upwork.com/" target="_blank" rel="noopener">Upwork.com<img src="assets/Upwork_Logo.svg.png" alt="Upwork"></a> who you can hire on an hourly or per project basis to help you implement your AI Roadmap for you — so you can move even faster.</p>
+
+      <p class="crit-heading">Each expert meets these strict criteria:</p>
+      <ul class="freelancer-criteria">
+        <li>
+          <span class="crit-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span><strong>100% job success</strong> (their clients are super happy)</span>
+        </li>
+        <li>
+          <span class="crit-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 16 14"/></svg></span>
+          <span><strong>1,000+ hours billed</strong> (they have tons of experience and track-record)</span>
+        </li>
+        <li>
+          <span class="crit-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <span><strong>$20 – $30 per hour</strong> (they're super affordable given their expertise and the value they can create for your business, measured in saved time and people costs, increase in your online reach, traffic, leads, and sales)</span>
+        </li>
+      </ul>
+
+      <div class="freelancer-grid">
+
+        <article class="freelancer-card">
+          <div class="freelancer-avatar"><img src="assets/freelancer-photos/Gentrit-H.webp" alt="Gentrit H." onerror="this.remove()">GH</div>
+          <h4 class="freelancer-name">Gentrit H.</h4>
+          <p class="freelancer-title">AI Automation Engineer | AI Agent Developer | n8n - Python - CRM</p>
+          <p class="freelancer-country"><span class="freelancer-flag">🇦🇱</span>Albania</p>
+          <p class="freelancer-rate">$65<span class="per">/hr</span></p>
+          <a class="freelancer-link" href="https://www.upwork.com/freelancers/gentrith" target="_blank" rel="noopener">View profile →</a>
+        </article>
+
+        <article class="freelancer-card">
+          <div class="freelancer-avatar"><img src="assets/freelancer-photos/Kashif-A.webp" alt="Kashif A." onerror="this.remove()">KA</div>
+          <h4 class="freelancer-name">Kashif A.</h4>
+          <p class="freelancer-title">AI Engineer | AI Agents | OpenAI | Python | Openclaw | AI Automation</p>
+          <p class="freelancer-country"><span class="freelancer-flag">🇵🇰</span>Pakistan</p>
+          <p class="freelancer-rate">$15<span class="per">/hr</span></p>
+          <a class="freelancer-link" href="https://www.upwork.com/freelancers/kashifamjad" target="_blank" rel="noopener">View profile →</a>
+        </article>
+
+        <article class="freelancer-card">
+          <div class="freelancer-avatar"><img src="assets/freelancer-photos/Rajeev-G.webp" alt="Rajeev G." onerror="this.remove()">RG</div>
+          <h4 class="freelancer-name">Rajeev G.</h4>
+          <p class="freelancer-title">AI Automation Expert</p>
+          <p class="freelancer-country"><span class="freelancer-flag">🇮🇳</span>India</p>
+          <p class="freelancer-rate">$25<span class="per">/hr</span></p>
+          <a class="freelancer-link" href="https://www.upwork.com/freelancers/~010662341dc9644e50" target="_blank" rel="noopener">View profile →</a>
+        </article>
+
+        <article class="freelancer-card">
+          <div class="freelancer-avatar"><img src="assets/freelancer-photos/Matt-P.webp" alt="Matt P." onerror="this.remove()">MP</div>
+          <h4 class="freelancer-name">Matt P.</h4>
+          <p class="freelancer-title">AI Solution Architect | Custom AI Agents, &amp; Workflow Automation</p>
+          <p class="freelancer-country"><span class="freelancer-flag">🇨🇿</span>Czech Republic</p>
+          <p class="freelancer-rate">$30<span class="per">/hr</span></p>
+          <a class="freelancer-link" href="https://www.upwork.com/freelancers/mattpake" target="_blank" rel="noopener">View profile →</a>
+        </article>
+
+        <article class="freelancer-card">
+          <div class="freelancer-avatar"><img src="assets/freelancer-photos/Roman-K.png" alt="Roman K." onerror="this.remove()">RK</div>
+          <h4 class="freelancer-name">Roman K.</h4>
+          <p class="freelancer-title">N8N Automation Architect | AI Voice Agents, Vapi | OpenAI, Claude</p>
+          <p class="freelancer-country"><span class="freelancer-flag">🇺🇦</span>Ukraine</p>
+          <p class="freelancer-rate">$30<span class="per">/hr</span></p>
+          <a class="freelancer-link" href="https://www.upwork.com/freelancers/~017085101bebb2acb8" target="_blank" rel="noopener">View profile →</a>
+        </article>
+
+        <article class="freelancer-card">
+          <div class="freelancer-avatar"><img src="assets/freelancer-photos/Ahmed-A.webp" alt="Ahmed A." onerror="this.remove()">AA</div>
+          <h4 class="freelancer-name">Ahmed A.</h4>
+          <p class="freelancer-title">AI Data Engineer | Web Scraping, High-Quality Annotation &amp; AI Automation</p>
+          <p class="freelancer-country"><span class="freelancer-flag">🇪🇬</span>Egypt</p>
+          <p class="freelancer-rate">$15<span class="per">/hr</span></p>
+          <a class="freelancer-link" href="https://www.upwork.com/freelancers/~011278d31e56526d10" target="_blank" rel="noopener">View profile →</a>
+        </article>
+
+        <article class="freelancer-card">
+          <div class="freelancer-avatar"><img src="assets/freelancer-photos/Akshay-Pal-S.webp" alt="Akshay Pal S." onerror="this.remove()">AP</div>
+          <h4 class="freelancer-name">Akshay Pal S.</h4>
+          <p class="freelancer-title">AI Automation Engineer | n8n, GoHighLevel, API | Voice AI, Custom Build</p>
+          <p class="freelancer-country"><span class="freelancer-flag">🇮🇳</span>India</p>
+          <p class="freelancer-rate">$20<span class="per">/hr</span></p>
+          <a class="freelancer-link" href="https://www.upwork.com/freelancers/~01a47ae4bdfe454058" target="_blank" rel="noopener">View profile →</a>
+        </article>
+
+        <article class="freelancer-card">
+          <div class="freelancer-avatar"><img src="assets/freelancer-photos/Happy-L.webp" alt="Happy L." onerror="this.remove()">HL</div>
+          <h4 class="freelancer-name">Happy L.</h4>
+          <p class="freelancer-title">Automation Expert | Make | n8n | Zapier | Airtable | GHL | Claude I AI</p>
+          <p class="freelancer-country"><span class="freelancer-flag">🇮🇳</span>India</p>
+          <p class="freelancer-rate">$22.50<span class="per">/hr</span></p>
+          <a class="freelancer-link" href="https://www.upwork.com/freelancers/~0106c0dc59a5ba6cca" target="_blank" rel="noopener">View profile →</a>
+        </article>
+
+        <article class="freelancer-card">
+          <div class="freelancer-avatar"><img src="assets/freelancer-photos/Blessing-I.webp" alt="Blessing I." onerror="this.remove()">BI</div>
+          <h4 class="freelancer-name">Blessing I.</h4>
+          <p class="freelancer-title">CRM Automation | Monday/Zoho/GHL/HubSpot/Zapier/n8n &amp; Chat/Voice Agent</p>
+          <p class="freelancer-country"><span class="freelancer-flag">🇬🇧</span>United Kingdom</p>
+          <p class="freelancer-rate">$40<span class="per">/hr</span></p>
+          <a class="freelancer-link" href="https://www.upwork.com/freelancers/~015ce2b8b54f397974" target="_blank" rel="noopener">View profile →</a>
+        </article>
+
+      </div>
+
+      <p class="freelancer-disclaimer">A quick, friendly note 💜 — We don't receive any financial compensation for recommending these freelancers, and we're not affiliated with any of them in any way. We've simply hand-picked them based on their public Upwork track record because we genuinely think they're great. Any agreement, payment, or work you arrange is strictly between you and the freelancer, so we'd always encourage you to review each profile, have a quick chat, and pick whoever feels like the best fit for you and your project. Happy building!</p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <img class="site-logo footer-logo" src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/lNzgml2EfCzIl04kmDr2/media/69c15a5feb06d82cf3db3d3a.png" alt="Hyper AI University">
+  AI Roadmap · Generated for Wendy Wong
+</footer>
+
+<script>
+// Scrollspy: highlight the active TOC link as sections enter view
+(function () {
+  const links = Array.from(document.querySelectorAll('nav.toc a[href^="#"]'));
+  const map = new Map();
+  links.forEach(a => {
+    const id = a.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if (target) map.set(target, a);
+  });
+  if (!map.size || !('IntersectionObserver' in window)) return;
+
+  const setActive = (link) => {
+    links.forEach(a => a.classList.remove('active'));
+    if (link) link.classList.add('active');
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+    if (visible.length) setActive(map.get(visible[0].target));
+  }, { rootMargin: '-20% 0px -65% 0px', threshold: 0 });
+
+  map.forEach((_link, section) => observer.observe(section));
+})();
+</script>
+
+</body>
+</html>
